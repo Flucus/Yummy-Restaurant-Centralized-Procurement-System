@@ -31,7 +31,7 @@ namespace YummyRestaurantSystem
             panel4.BackColor = Color.White;
             txtuser.BackColor = SystemColors.Control;
             panel3.BackColor = SystemColors.Control;
-            
+            txtpw.PasswordChar = '●';
         }
 
         private void cbnShowPw_CheckedChanged(object sender, EventArgs e)
