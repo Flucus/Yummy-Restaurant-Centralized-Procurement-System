@@ -55,12 +55,12 @@
             // 
             // test
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.test.AutoSize = true;
+            this.test.Location = new System.Drawing.Point(151, 199);
+            this.test.Name = "label3";
+            this.test.Size = new System.Drawing.Size(33, 12);
+            this.test.TabIndex = 2;
+            this.test.Text = "label3";
             // 
             // Form1
             // 
