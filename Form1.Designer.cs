@@ -57,10 +57,10 @@
             // 
             this.test.AutoSize = true;
             this.test.Location = new System.Drawing.Point(151, 199);
-            this.test.Name = "label3";
-            this.test.Size = new System.Drawing.Size(33, 12);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(77, 15);
             this.test.TabIndex = 2;
-            this.test.Text = "label3";
+            this.test.Text = "test by oscar";
             // 
             // Form1
             // 
