@@ -2,6 +2,7 @@
 {
     partial class Form1
     {
+        /// test #1:53 tony
         /// <summary>
         /// 設計工具所需的變數。
         /// </summary>
@@ -29,34 +30,23 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 94);
+            this.label1.Location = new System.Drawing.Point(214, 102);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 12);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Testing By Kelvin  ## 30/5 by tony";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "testing by Ryan";
+            this.label1.Text = "oscar testing 9:36";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 360);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(600, 390);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Form1";
@@ -69,7 +59,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
