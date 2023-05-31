@@ -2,6 +2,7 @@
 {
     partial class Form1
     {
+        /// test #1:53 tony
         /// <summary>
         /// 設計工具所需的變數。
         /// </summary>
@@ -54,13 +55,12 @@
             // 
             // test
             // 
-            this.test.AutoSize = true;
-            this.test.Location = new System.Drawing.Point(201, 249);
-            this.test.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(95, 15);
-            this.test.TabIndex = 2;
-            this.test.Text = "Tested by oscar";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(151, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 12);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
             // 
             // Form1
             // 
