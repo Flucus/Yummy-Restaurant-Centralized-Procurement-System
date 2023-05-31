@@ -130,7 +130,7 @@ namespace YummyRestaurantSystem
             // 
             this.cbnShowPw.AutoSize = true;
             this.cbnShowPw.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.cbnShowPw.Location = new System.Drawing.Point(404, 324);
+            this.cbnShowPw.Location = new System.Drawing.Point(398, 324);
             this.cbnShowPw.Name = "cbnShowPw";
             this.cbnShowPw.Size = new System.Drawing.Size(99, 17);
             this.cbnShowPw.TabIndex = 7;
@@ -171,14 +171,14 @@ namespace YummyRestaurantSystem
             this.panel4.Controls.Add(this.picpw);
             this.panel4.Location = new System.Drawing.Point(0, 269);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(534, 49);
+            this.panel4.Size = new System.Drawing.Size(497, 49);
             this.panel4.TabIndex = 4;
             // 
             // txtpw
             // 
             this.txtpw.Location = new System.Drawing.Point(59, 14);
             this.txtpw.Name = "txtpw";
-            this.txtpw.Size = new System.Drawing.Size(454, 20);
+            this.txtpw.Size = new System.Drawing.Size(429, 20);
             this.txtpw.TabIndex = 2;
             this.txtpw.Click += new System.EventHandler(this.txtpw_Click);
             // 
@@ -199,14 +199,14 @@ namespace YummyRestaurantSystem
             this.panel3.Controls.Add(this.picuser);
             this.panel3.Location = new System.Drawing.Point(0, 213);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(534, 49);
+            this.panel3.Size = new System.Drawing.Size(497, 49);
             this.panel3.TabIndex = 3;
             // 
             // txtuser
             // 
             this.txtuser.Location = new System.Drawing.Point(59, 14);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(454, 20);
+            this.txtuser.Size = new System.Drawing.Size(429, 20);
             this.txtuser.TabIndex = 1;
             this.txtuser.Click += new System.EventHandler(this.txtuser_Click);
             // 
