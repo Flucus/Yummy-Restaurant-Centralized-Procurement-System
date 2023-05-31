@@ -30,46 +30,47 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.test = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 94);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(285, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 12);
+            this.label1.Size = new System.Drawing.Size(209, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Testing By Kelvin  ## 30/5 by tony";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(214, 144);
+            this.label2.Location = new System.Drawing.Point(285, 180);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 12);
+            this.label2.Size = new System.Drawing.Size(95, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "testing by Ryan";
             // 
-            // label3
+            // test
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(151, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 12);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.test.AutoSize = true;
+            this.test.Location = new System.Drawing.Point(201, 249);
+            this.test.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(95, 15);
+            this.test.TabIndex = 2;
+            this.test.Text = "Tested by oscar";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 360);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.test);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -81,7 +82,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label test;
     }
 }
 
