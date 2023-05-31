@@ -2,6 +2,7 @@
 {
     partial class Form1
     {
+        /// test #1:53 tony
         /// <summary>
         /// 設計工具所需的變數。
         /// </summary>
