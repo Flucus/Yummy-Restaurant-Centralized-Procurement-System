@@ -88,12 +88,6 @@
     <Compile Include="FrmOrderManagement.Designer.cs">
       <DependentUpon>FrmOrderManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmStockCheck.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmStockCheck.Designer.cs">
-      <DependentUpon>FrmStockCheck.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmStockModify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOrderManagement.resx">
       <DependentUpon>FrmOrderManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmStockCheck.resx">
-      <DependentUpon>FrmStockCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStockModify.resx">
       <DependentUpon>FrmStockModify.cs</DependentUpon>
