@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmCategoryManagement
+    partial class FrmCategoryManage
     {
         /// <summary>
         /// Required designer variable.

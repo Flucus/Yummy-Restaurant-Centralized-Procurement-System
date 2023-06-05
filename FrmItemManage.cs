@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmItemManagement : Form
+    public partial class FrmItemManage : Form
     {
-        public FrmItemManagement()
+        public FrmItemManage()
         {
             InitializeComponent();
         }
