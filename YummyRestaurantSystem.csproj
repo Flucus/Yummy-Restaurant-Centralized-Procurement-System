@@ -64,6 +64,18 @@
     <Compile Include="FrmCategoryManage.Designer.cs">
       <DependentUpon>FrmCategoryManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmContractMange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContractMange.Designer.cs">
+      <DependentUpon>FrmContractMange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateAgreement.Designer.cs">
+      <DependentUpon>FrmCreateAgreement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInvManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoryManage.resx">
       <DependentUpon>FrmCategoryManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContractMange.resx">
+      <DependentUpon>FrmContractMange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateAgreement.resx">
+      <DependentUpon>FrmCreateAgreement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInvManage.resx">
       <DependentUpon>FrmInvManage.cs</DependentUpon>
