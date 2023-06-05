@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmItemManagement
+    partial class FrmVirtualIDMapping
     {
         /// <summary>
         /// Required designer variable.
@@ -40,9 +40,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 46);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 48);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(772, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 334);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblRestaurant
@@ -52,9 +52,9 @@
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(399, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(402, 24);
             this.lblRestaurant.TabIndex = 5;
-            this.lblRestaurant.Text = "The Yummy Restaurant Item Management";
+            this.lblRestaurant.Text = "The Yummy Restaurant Virtual ID Mapping";
             // 
             // btnClose
             // 
@@ -62,10 +62,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnClose.Location = new System.Drawing.Point(16, 400);
+            this.btnClose.Location = new System.Drawing.Point(16, 402);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(134, 38);
-            this.btnClose.TabIndex = 21;
+            this.btnClose.TabIndex = 22;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
@@ -75,11 +75,11 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(654, 400);
+            this.btnCreate.Location = new System.Drawing.Point(654, 402);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(134, 38);
-            this.btnCreate.TabIndex = 22;
-            this.btnCreate.Text = "Create Item";
+            this.btnCreate.TabIndex = 23;
+            this.btnCreate.Text = "Create Linking";
             this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // btnEdit
@@ -88,11 +88,11 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(514, 400);
+            this.btnEdit.Location = new System.Drawing.Point(514, 402);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(134, 38);
-            this.btnEdit.TabIndex = 23;
-            this.btnEdit.Text = "Edit Item";
+            this.btnEdit.TabIndex = 24;
+            this.btnEdit.Text = "Edit Linking";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnDelete
@@ -101,14 +101,14 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(374, 400);
+            this.btnDelete.Location = new System.Drawing.Point(374, 402);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(134, 38);
-            this.btnDelete.TabIndex = 26;
-            this.btnDelete.Text = "Delete Item";
+            this.btnDelete.TabIndex = 25;
+            this.btnDelete.Text = "Delete Linking";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // FrmItemManagement
+            // FrmVirtualIDMapping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,8 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmItemManagement";
-            this.Text = "Item Management";
+            this.Name = "FrmVirtualIDMapping";
+            this.Text = "Virtual ID Mapping";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
