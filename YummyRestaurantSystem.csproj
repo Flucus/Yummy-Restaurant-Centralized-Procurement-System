@@ -76,6 +76,12 @@
     <Compile Include="FrmItemManagement.Designer.cs">
       <DependentUpon>FrmItemManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmManagement.Designer.cs">
+      <DependentUpon>FrmManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmItemRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="FrmStockManagement.Designer.cs">
       <DependentUpon>FrmStockManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUpdateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateStock.Designer.cs">
+      <DependentUpon>FrmUpdateStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVirtualIDMapping.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,9 @@
     <EmbeddedResource Include="FrmItemManagement.resx">
       <DependentUpon>FrmItemManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmManagement.resx">
+      <DependentUpon>FrmManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmItemRequest.resx">
       <DependentUpon>FrmItemRequest.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStockManagement.resx">
       <DependentUpon>FrmStockManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateStock.resx">
+      <DependentUpon>FrmUpdateStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVirtualIDMapping.resx">
       <DependentUpon>FrmVirtualIDMapping.cs</DependentUpon>
