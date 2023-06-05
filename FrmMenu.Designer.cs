@@ -41,13 +41,13 @@
             // lblHelloMsg
             // 
             this.lblHelloMsg.AutoSize = true;
-            this.lblHelloMsg.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblHelloMsg.Location = new System.Drawing.Point(12, 13);
             this.lblHelloMsg.Name = "lblHelloMsg";
-            this.lblHelloMsg.Size = new System.Drawing.Size(164, 25);
+            this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
             this.lblHelloMsg.TabIndex = 3;
-            this.lblHelloMsg.Text = "Hello XXXXX!";
+            this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
             // btnLogout
             // 

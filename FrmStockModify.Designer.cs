@@ -41,31 +41,31 @@ namespace YummyRestaurantSystem
             // lblRestaurant
             // 
             this.lblRestaurant.AutoSize = true;
-            this.lblRestaurant.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(12, 27);
+            this.lblRestaurant.Location = new System.Drawing.Point(12, 29);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(365, 25);
+            this.lblRestaurant.Size = new System.Drawing.Size(372, 24);
             this.lblRestaurant.TabIndex = 16;
-            this.lblRestaurant.Text = "XXX Restaurant Stock MODIFY";
+            this.lblRestaurant.Text = "[restaurant] Restaurant Stock MODIFY";
             this.lblRestaurant.Click += new System.EventHandler(this.lblRestaurant_Click);
             // 
             // lblItem
             // 
             this.lblItem.AutoSize = true;
-            this.lblItem.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItem.Location = new System.Drawing.Point(46, 75);
+            this.lblItem.Location = new System.Drawing.Point(60, 81);
             this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(64, 25);
+            this.lblItem.Size = new System.Drawing.Size(50, 24);
             this.lblItem.TabIndex = 17;
             this.lblItem.Text = "Item";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(116, 75);
+            this.txtSearch.Location = new System.Drawing.Point(116, 81);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(207, 22);
+            this.txtSearch.Size = new System.Drawing.Size(207, 20);
             this.txtSearch.TabIndex = 18;
             // 
             // btnModify
@@ -74,28 +74,28 @@ namespace YummyRestaurantSystem
             this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModify.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModify.ForeColor = System.Drawing.Color.Black;
-            this.btnModify.Location = new System.Drawing.Point(243, 203);
+            this.btnModify.Location = new System.Drawing.Point(243, 220);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(134, 35);
+            this.btnModify.Size = new System.Drawing.Size(134, 38);
             this.btnModify.TabIndex = 21;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 129);
+            this.textBox1.Location = new System.Drawing.Point(116, 140);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 22);
+            this.textBox1.Size = new System.Drawing.Size(207, 20);
             this.textBox1.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(12, 126);
+            this.label1.Location = new System.Drawing.Point(26, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 25);
+            this.label1.Size = new System.Drawing.Size(84, 24);
             this.label1.TabIndex = 22;
             this.label1.Text = "amount ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -106,18 +106,18 @@ namespace YummyRestaurantSystem
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(17, 203);
+            this.btnCancel.Location = new System.Drawing.Point(17, 220);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 35);
+            this.btnCancel.Size = new System.Drawing.Size(134, 38);
             this.btnCancel.TabIndex = 24;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // FrmStockModify
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 261);
+            this.ClientSize = new System.Drawing.Size(399, 283);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);

@@ -227,9 +227,9 @@ namespace YummyRestaurantSystem
             this.lblLoginmsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLoginmsg.Location = new System.Drawing.Point(54, 115);
             this.lblLoginmsg.Name = "lblLoginmsg";
-            this.lblLoginmsg.Size = new System.Drawing.Size(263, 25);
+            this.lblLoginmsg.Size = new System.Drawing.Size(277, 25);
             this.lblLoginmsg.TabIndex = 2;
-            this.lblLoginmsg.Text = "Loin to your account";
+            this.lblLoginmsg.Text = "Login to your account";
             // 
             // contextMenuStrip1
             // 

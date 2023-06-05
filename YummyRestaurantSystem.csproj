@@ -64,6 +64,12 @@
     <Compile Include="FrmInventoryManagement.Designer.cs">
       <DependentUpon>FrmInventoryManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmItemManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItemManagement.Designer.cs">
+      <DependentUpon>FrmItemManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmItemRequest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInventoryManagement.resx">
       <DependentUpon>FrmInventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmItemManagement.resx">
+      <DependentUpon>FrmItemManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmItemRequest.resx">
       <DependentUpon>FrmItemRequest.cs</DependentUpon>

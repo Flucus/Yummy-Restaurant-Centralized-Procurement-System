@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmRequestMapping
+    partial class FrmItemManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblRestaurant = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDetails = new System.Windows.Forms.Button();
+            this.lblRestaurant = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 46);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(772, 339);
+            this.dataGridView1.TabIndex = 0;
             // 
             // lblRestaurant
             // 
@@ -43,30 +51,35 @@
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(383, 24);
-            this.lblRestaurant.TabIndex = 4;
-            this.lblRestaurant.Text = "[restaurant] Restaurant Recent Request";
+            this.lblRestaurant.Size = new System.Drawing.Size(399, 24);
+            this.lblRestaurant.TabIndex = 5;
+            this.lblRestaurant.Text = "The Yummy Restaurant Item Management";
             // 
-            // dataGridView1
+            // btnClose
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(771, 344);
-            this.dataGridView1.TabIndex = 5;
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnClose.Location = new System.Drawing.Point(16, 400);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(134, 38);
+            this.btnClose.TabIndex = 21;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // btnDetails
+            // btnCreate
             // 
-            this.btnDetails.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetails.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetails.ForeColor = System.Drawing.Color.Black;
-            this.btnDetails.Location = new System.Drawing.Point(654, 400);
-            this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(134, 38);
-            this.btnDetails.TabIndex = 15;
-            this.btnDetails.Text = "Details";
-            this.btnDetails.UseVisualStyleBackColor = false;
+            this.btnCreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.Black;
+            this.btnCreate.Location = new System.Drawing.Point(654, 400);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(134, 38);
+            this.btnCreate.TabIndex = 22;
+            this.btnCreate.Text = "Create Item";
+            this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // btnEdit
             // 
@@ -77,35 +90,22 @@
             this.btnEdit.Location = new System.Drawing.Point(514, 400);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(134, 38);
-            this.btnEdit.TabIndex = 16;
-            this.btnEdit.Text = "Edit Request";
+            this.btnEdit.TabIndex = 23;
+            this.btnEdit.Text = "Edit Item";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(12, 400);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 38);
-            this.btnCancel.TabIndex = 20;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // FrmRequestMapping
+            // FrmItemManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnDetails);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
-            this.Name = "FrmRequestMapping";
-            this.Text = "Request Mapping";
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "FrmItemManagement";
+            this.Text = "Item Management";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,10 +114,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnDetails;
+        private System.Windows.Forms.Label lblRestaurant;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnCancel;
     }
 }

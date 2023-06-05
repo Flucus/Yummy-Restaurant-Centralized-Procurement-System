@@ -46,22 +46,22 @@
             // lblRestaurant
             // 
             this.lblRestaurant.AutoSize = true;
-            this.lblRestaurant.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(363, 25);
+            this.lblRestaurant.Size = new System.Drawing.Size(356, 24);
             this.lblRestaurant.TabIndex = 4;
-            this.lblRestaurant.Text = "XXX Restaurant Item Request";
+            this.lblRestaurant.Text = "[restaurant] Restaurant Item Request";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblName.Location = new System.Drawing.Point(12, 43);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(129, 25);
+            this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Item Name";
             // 
@@ -75,11 +75,11 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblID.Location = new System.Drawing.Point(12, 77);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(94, 25);
+            this.lblID.Size = new System.Drawing.Size(77, 24);
             this.lblID.TabIndex = 12;
             this.lblID.Text = "Item ID";
             // 
@@ -93,11 +93,11 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblQuantity.Location = new System.Drawing.Point(12, 111);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(119, 25);
+            this.lblQuantity.Size = new System.Drawing.Size(88, 24);
             this.lblQuantity.TabIndex = 14;
             this.lblQuantity.Text = "Quantity";
             // 
