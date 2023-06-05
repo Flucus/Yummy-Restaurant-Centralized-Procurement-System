@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmItemManagementMain
+    partial class FrmItemManageMain
     {
         /// <summary>
         /// Required designer variable.
@@ -43,9 +43,9 @@
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(353, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(354, 24);
             this.lblRestaurant.TabIndex = 29;
-            this.lblRestaurant.Text = "The Yummy Restaurant Management";
+            this.lblRestaurant.Text = "The Yummy Restaurant Item Manage";
             // 
             // btnItemManage
             // 
@@ -112,7 +112,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // FrmManagement
+            // FrmItemManageMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,7 +123,7 @@
             this.Controls.Add(this.btnCategoryManage);
             this.Controls.Add(this.btnItemManage);
             this.Controls.Add(this.lblRestaurant);
-            this.Name = "FrmManagement";
+            this.Name = "FrmItemManageMain";
             this.Text = "Item Management Main Page";
             this.ResumeLayout(false);
             this.PerformLayout();
