@@ -33,6 +33,7 @@
             this.btnCategoryManage = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRestaurant
@@ -98,11 +99,25 @@
             this.btnMap.Text = "Virtual ID";
             this.btnMap.UseVisualStyleBackColor = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnClose.Location = new System.Drawing.Point(113, 278);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(134, 34);
+            this.btnClose.TabIndex = 37;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
             // FrmManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 295);
+            this.ClientSize = new System.Drawing.Size(376, 340);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnMap);
             this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnCategoryManage);
@@ -122,5 +137,6 @@
         private System.Windows.Forms.Button btnCategoryManage;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnMap;
+        private System.Windows.Forms.Button btnClose;
     }
 }
