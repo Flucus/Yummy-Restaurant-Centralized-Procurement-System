@@ -52,17 +52,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAdmin.cs">
+    <Compile Include="FrmUserManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdmin.Designer.cs">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    <Compile Include="FrmUserManage.Designer.cs">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategoryManage.cs">
+    <Compile Include="FrmCategoryManage%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCategoryManage.Designer.cs">
-      <DependentUpon>FrmCategoryManage.cs</DependentUpon>
+    <Compile Include="FrmCategoryManage%28Cat Man%29.Designer.cs">
+      <DependentUpon>FrmCategoryManage%28Cat Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmContractMange.cs">
       <SubType>Form</SubType>
@@ -76,29 +76,29 @@
     <Compile Include="FrmCreateAgreement.Designer.cs">
       <DependentUpon>FrmCreateAgreement.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInvManage.cs">
+    <Compile Include="FrmInvManage%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInvManage.Designer.cs">
-      <DependentUpon>FrmInvManage.cs</DependentUpon>
+    <Compile Include="FrmInvManage%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmInvManage%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmItemManage.cs">
+    <Compile Include="FrmItemManage%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmItemManage.Designer.cs">
-      <DependentUpon>FrmItemManage.cs</DependentUpon>
+    <Compile Include="FrmItemManage%28Wh Clerk%29.Designer.cs">
+      <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmItemManageMain.cs">
+    <Compile Include="FrmItemManageMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmItemManageMain.Designer.cs">
-      <DependentUpon>FrmItemManageMain.cs</DependentUpon>
+    <Compile Include="FrmItemManageMenu.Designer.cs">
+      <DependentUpon>FrmItemManageMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmItemRequest.cs">
+    <Compile Include="FrmItemRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmItemRequest.Designer.cs">
-      <DependentUpon>FrmItemRequest.cs</DependentUpon>
+    <Compile Include="FrmItemRequest%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmItemRequest%28Rest Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -111,12 +111,6 @@
     </Compile>
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmOrderManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmOrderManage.Designer.cs">
-      <DependentUpon>FrmOrderManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmStockModify.cs">
       <SubType>Form</SubType>
@@ -153,11 +147,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdmin.resx">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUserManage.resx">
+      <DependentUpon>FrmUserManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategoryManage.resx">
-      <DependentUpon>FrmCategoryManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCategoryManage%28Cat Man%29.resx">
+      <DependentUpon>FrmCategoryManage%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmContractMange.resx">
       <DependentUpon>FrmContractMange.cs</DependentUpon>
@@ -165,26 +159,23 @@
     <EmbeddedResource Include="FrmCreateAgreement.resx">
       <DependentUpon>FrmCreateAgreement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInvManage.resx">
-      <DependentUpon>FrmInvManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInvManage%28Rest Man%29.resx">
+      <DependentUpon>FrmInvManage%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmItemManage.resx">
-      <DependentUpon>FrmItemManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmItemManage%28Wh Clerk%29.resx">
+      <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmItemManageMain.resx">
-      <DependentUpon>FrmItemManageMain.cs</DependentUpon>
+    <EmbeddedResource Include="FrmItemManageMenu.resx">
+      <DependentUpon>FrmItemManageMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmItemRequest.resx">
-      <DependentUpon>FrmItemRequest.cs</DependentUpon>
+    <EmbeddedResource Include="FrmItemRequest%28Rest Man%29.resx">
+      <DependentUpon>FrmItemRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmOrderManage.resx">
-      <DependentUpon>FrmOrderManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStockModify.resx">
       <DependentUpon>FrmStockModify.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmAdmin
+    partial class FrmUserManage
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
-            this.lblAdminPage = new System.Windows.Forms.Label();
+            this.lblUserManage = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             this.SuspendLayout();
@@ -153,16 +153,16 @@
             this.btnLog.Text = "Activity Log";
             this.btnLog.UseVisualStyleBackColor = false;
             // 
-            // lblAdminPage
+            // lblUserManage
             // 
-            this.lblAdminPage.AutoSize = true;
-            this.lblAdminPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAdminPage.Location = new System.Drawing.Point(7, 9);
-            this.lblAdminPage.Name = "lblAdminPage";
-            this.lblAdminPage.Size = new System.Drawing.Size(419, 24);
-            this.lblAdminPage.TabIndex = 15;
-            this.lblAdminPage.Text = "The Yummy Restaurant System Admin Page";
+            this.lblUserManage.AutoSize = true;
+            this.lblUserManage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserManage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUserManage.Location = new System.Drawing.Point(7, 9);
+            this.lblUserManage.Name = "lblUserManage";
+            this.lblUserManage.Size = new System.Drawing.Size(434, 24);
+            this.lblUserManage.TabIndex = 15;
+            this.lblUserManage.Text = "The Yummy Restaurant System User Manage";
             // 
             // btnClose
             // 
@@ -177,13 +177,13 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // FrmAdmin
+            // FrmUserManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 420);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.lblAdminPage);
+            this.Controls.Add(this.lblUserManage);
             this.Controls.Add(this.btnLog);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnDelete);
@@ -194,8 +194,8 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvUserList);
-            this.Name = "FrmAdmin";
-            this.Text = "Admin Page";
+            this.Name = "FrmUserManage";
+            this.Text = "User Management";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnLog;
-        private System.Windows.Forms.Label lblAdminPage;
+        private System.Windows.Forms.Label lblUserManage;
         private System.Windows.Forms.Button btnClose;
     }
 }

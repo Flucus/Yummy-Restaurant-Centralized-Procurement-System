@@ -108,7 +108,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(772, 339);
             this.dataGridView1.TabIndex = 27;
             // 
-            // FrmCategoryManagement
+            // FrmCategoryManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,8 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmCategoryManagement";
-            this.Text = "FrmCategoryManagement";
+            this.Name = "FrmCategoryManage";
+            this.Text = "Category Management";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

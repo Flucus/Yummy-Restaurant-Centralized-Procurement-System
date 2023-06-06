@@ -81,6 +81,7 @@ namespace YummyRestaurantSystem
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.tabControlCPA.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -90,10 +91,10 @@ namespace YummyRestaurantSystem
             // 
             this.tabControlCPA.Controls.Add(this.tabPage1);
             this.tabControlCPA.Controls.Add(this.tabPage2);
-            this.tabControlCPA.Location = new System.Drawing.Point(62, 13);
+            this.tabControlCPA.Location = new System.Drawing.Point(62, 50);
             this.tabControlCPA.Name = "tabControlCPA";
             this.tabControlCPA.SelectedIndex = 0;
-            this.tabControlCPA.Size = new System.Drawing.Size(841, 760);
+            this.tabControlCPA.Size = new System.Drawing.Size(841, 716);
             this.tabControlCPA.TabIndex = 1;
             // 
             // tabPage1
@@ -123,7 +124,7 @@ namespace YummyRestaurantSystem
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(833, 734);
+            this.tabPage1.Size = new System.Drawing.Size(833, 690);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Contract Purchase Agreement";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -624,20 +625,33 @@ namespace YummyRestaurantSystem
             this.dateTimePicker4.Size = new System.Drawing.Size(188, 20);
             this.dateTimePicker4.TabIndex = 50;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(402, 24);
+            this.lblTitle.TabIndex = 92;
+            this.lblTitle.Text = "The Yummy Restaurant Create Agreement";
+            // 
             // FrmCreateAgreement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1048, 778);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.tabControlCPA);
             this.Name = "FrmCreateAgreement";
-            this.Text = "FrmCreateAgreement";
+            this.Text = "Create Agreement";
             this.tabControlCPA.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -695,5 +709,6 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.Label lblTitle;
     }
 }

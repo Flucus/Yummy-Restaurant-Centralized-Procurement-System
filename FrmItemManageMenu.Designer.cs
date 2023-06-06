@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmItemManageMain
+    partial class FrmItemManageMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -124,7 +124,7 @@
             this.Controls.Add(this.btnItemManage);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmItemManageMain";
-            this.Text = "Item Management Main Page";
+            this.Text = "Item Management";
             this.ResumeLayout(false);
             this.PerformLayout();
 
