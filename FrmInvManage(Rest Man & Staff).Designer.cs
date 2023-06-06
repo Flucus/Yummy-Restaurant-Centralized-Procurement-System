@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmStockManage
+    partial class FrmInvManage
     {
         /// <summary>
         /// Required designer variable.
@@ -115,7 +115,7 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // FrmStockManage
+            // FrmInvManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.lblRestaurant);
-            this.Name = "FrmStockManage";
+            this.Name = "FrmInvManage";
             this.Text = "Inventory Management";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

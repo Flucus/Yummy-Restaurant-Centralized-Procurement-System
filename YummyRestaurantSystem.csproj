@@ -52,6 +52,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenu%28Cat Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu%28Cat Man%29.Designer.cs">
+      <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu%28Pur Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmMenu%28Pur Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu%28Wh Clerk%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu%28Wh Clerk%29.Designer.cs">
+      <DependentUpon>FrmMenu%28Wh Clerk%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUserManage%28Admin%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +93,6 @@
     </Compile>
     <Compile Include="FrmCreateAgreement%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInvManage%28Rest Man%29.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInvManage%28Rest Man%29.Designer.cs">
-      <DependentUpon>FrmInvManage%28Rest Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmItemManage%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
@@ -141,6 +153,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu%28Cat Man%29.resx">
+      <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu%28Pur Man%29.resx">
+      <DependentUpon>FrmMenu%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu%28Wh Clerk%29.resx">
+      <DependentUpon>FrmMenu%28Wh Clerk%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUserManage%28Admin%29.resx">
       <DependentUpon>FrmUserManage%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateAgreement%28Pur Man%29.resx">
       <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInvManage%28Rest Man%29.resx">
-      <DependentUpon>FrmInvManage%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmItemManage%28Wh Clerk%29.resx">
       <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>

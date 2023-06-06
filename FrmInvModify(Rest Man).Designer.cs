@@ -1,7 +1,7 @@
 ﻿
 namespace YummyRestaurantSystem
 {
-    partial class FrmStockModify
+    partial class FrmInvModify
     {
         /// <summary>
         /// Required designer variable.
@@ -113,7 +113,7 @@ namespace YummyRestaurantSystem
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // FrmStockModify
+            // FrmInvModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +125,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.lblRestaurant);
-            this.Name = "FrmStockModify";
+            this.Name = "FrmInvModify";
             this.Text = "Inventory Modify";
             this.ResumeLayout(false);
             this.PerformLayout();

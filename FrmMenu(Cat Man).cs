@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmInvModify : Form
+    public partial class FrmMenu_Cat_Man_ : Form
     {
-        public FrmInvModify()
+        public FrmMenu_Cat_Man_()
         {
             InitializeComponent();
-        }
-
-        private void lblRestaurant_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
