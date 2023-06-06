@@ -43,11 +43,11 @@ namespace YummyRestaurantSystem
             this.lblRestaurant.AutoSize = true;
             this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(12, 29);
+            this.lblRestaurant.Location = new System.Drawing.Point(40, 29);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(372, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(297, 24);
             this.lblRestaurant.TabIndex = 16;
-            this.lblRestaurant.Text = "[restaurant] Restaurant Stock MODIFY";
+            this.lblRestaurant.Text = "[restaurant] Inventory MODIFY";
             this.lblRestaurant.Click += new System.EventHandler(this.lblRestaurant_Click);
             // 
             // lblItem
@@ -126,7 +126,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmStockModify";
-            this.Text = "FrmModify";
+            this.Text = "Inventory Modify";
             this.ResumeLayout(false);
             this.PerformLayout();
 

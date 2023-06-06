@@ -112,11 +112,11 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmStockModify.cs">
+    <Compile Include="FrmInvModify%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmStockModify.Designer.cs">
-      <DependentUpon>FrmStockModify.cs</DependentUpon>
+    <Compile Include="FrmInvModify%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmInvModify%28Rest Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRequestMapping.cs">
       <SubType>Form</SubType>
@@ -124,11 +124,11 @@
     <Compile Include="FrmRequestMapping.Designer.cs">
       <DependentUpon>FrmRequestMapping.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmStockManage.cs">
+    <Compile Include="FrmInvManage%28Rest Man &amp; Staff%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmStockManage.Designer.cs">
-      <DependentUpon>FrmStockManage.cs</DependentUpon>
+    <Compile Include="FrmInvManage%28Rest Man &amp; Staff%29.Designer.cs">
+      <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUpdateStock.cs">
       <SubType>Form</SubType>
@@ -136,11 +136,11 @@
     <Compile Include="FrmUpdateStock.Designer.cs">
       <DependentUpon>FrmUpdateStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVirtualIDMapping.cs">
+    <Compile Include="FrmVirtualIDMapping%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVirtualIDMapping.Designer.cs">
-      <DependentUpon>FrmVirtualIDMapping.cs</DependentUpon>
+    <Compile Include="FrmVirtualIDMapping%28Cat Man%29.Designer.cs">
+      <DependentUpon>FrmVirtualIDMapping%28Cat Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,20 +177,20 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmStockModify.resx">
-      <DependentUpon>FrmStockModify.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInvModify%28Rest Man%29.resx">
+      <DependentUpon>FrmInvModify%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRequestMapping.resx">
       <DependentUpon>FrmRequestMapping.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmStockManage.resx">
-      <DependentUpon>FrmStockManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInvManage%28Rest Man &amp; Staff%29.resx">
+      <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdateStock.resx">
       <DependentUpon>FrmUpdateStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVirtualIDMapping.resx">
-      <DependentUpon>FrmVirtualIDMapping.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVirtualIDMapping%28Cat Man%29.resx">
+      <DependentUpon>FrmVirtualIDMapping%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -45,9 +45,9 @@
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(310, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(344, 24);
             this.lblRestaurant.TabIndex = 4;
-            this.lblRestaurant.Text = "[Restaurant] Stock Management";
+            this.lblRestaurant.Text = "[Restaurant] Inventory Management";
             // 
             // dataGridView1
             // 
@@ -128,7 +128,7 @@
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmStockManage";
-            this.Text = "Stock Management";
+            this.Text = "Inventory Management";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -46,9 +46,9 @@
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(383, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(266, 24);
             this.lblRestaurant.TabIndex = 4;
-            this.lblRestaurant.Text = "[restaurant] Restaurant Recent Request";
+            this.lblRestaurant.Text = "[restaurant] Check Request";
             // 
             // dataGridView1
             // 
@@ -142,7 +142,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmRequestMapping";
-            this.Text = "Request Mapping";
+            this.Text = "Check Request";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
