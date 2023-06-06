@@ -52,11 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUserManage.cs">
+    <Compile Include="FrmUserManage%28Admin%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUserManage.Designer.cs">
-      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    <Compile Include="FrmUserManage%28Admin%29.Designer.cs">
+      <DependentUpon>FrmUserManage%28Admin%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCategoryManage%28Cat Man%29.cs">
       <SubType>Form</SubType>
@@ -118,11 +118,11 @@
     <Compile Include="FrmInvModify%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmInvModify%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRequestMapping.cs">
+    <Compile Include="FrmCheckReq%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRequestMapping.Designer.cs">
-      <DependentUpon>FrmRequestMapping.cs</DependentUpon>
+    <Compile Include="FrmCheckReq%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmCheckReq%28Rest Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInvManage%28Rest Man &amp; Staff%29.cs">
       <SubType>Form</SubType>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUserManage.resx">
-      <DependentUpon>FrmUserManage.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUserManage%28Admin%29.resx">
+      <DependentUpon>FrmUserManage%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoryManage%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryManage%28Cat Man%29.cs</DependentUpon>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="FrmInvModify%28Rest Man%29.resx">
       <DependentUpon>FrmInvModify%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRequestMapping.resx">
-      <DependentUpon>FrmRequestMapping.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCheckReq%28Rest Man%29.resx">
+      <DependentUpon>FrmCheckReq%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInvManage%28Rest Man &amp; Staff%29.resx">
       <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>

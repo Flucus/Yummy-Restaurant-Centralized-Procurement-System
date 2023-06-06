@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmRequestMapping
+    partial class test
     {
         /// <summary>
         /// Required designer variable.
