@@ -112,7 +112,7 @@ namespace YummyRestaurantSystem
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(672, 231);
+            this.btnCreate.Location = new System.Drawing.Point(640, 184);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(62, 37);
             this.btnCreate.TabIndex = 85;
@@ -125,9 +125,9 @@ namespace YummyRestaurantSystem
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(604, 232);
+            this.btnEdit.Location = new System.Drawing.Point(572, 183);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(62, 37);
+            this.btnEdit.Size = new System.Drawing.Size(62, 38);
             this.btnEdit.TabIndex = 84;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@ namespace YummyRestaurantSystem
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.Color.Black;
-            this.btnCheck.Location = new System.Drawing.Point(536, 232);
+            this.btnCheck.Location = new System.Drawing.Point(504, 183);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(62, 37);
             this.btnCheck.TabIndex = 83;
@@ -169,7 +169,7 @@ namespace YummyRestaurantSystem
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(740, 232);
+            this.btnSearch.Location = new System.Drawing.Point(708, 184);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(62, 37);
             this.btnSearch.TabIndex = 79;
@@ -199,7 +199,7 @@ namespace YummyRestaurantSystem
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnClose.Location = new System.Drawing.Point(467, 232);
+            this.btnClose.Location = new System.Drawing.Point(436, 183);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(62, 38);
             this.btnClose.TabIndex = 92;
