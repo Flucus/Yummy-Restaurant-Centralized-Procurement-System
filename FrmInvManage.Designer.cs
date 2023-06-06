@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmInventoryManagement
+    partial class FrmInvManage
     {
         /// <summary>
         /// Required designer variable.
@@ -39,19 +39,20 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnItemRequest = new System.Windows.Forms.Button();
             this.btnMapping = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRestaurant
             // 
             this.lblRestaurant.AutoSize = true;
-            this.lblRestaurant.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(405, 25);
+            this.lblRestaurant.Size = new System.Drawing.Size(385, 24);
             this.lblRestaurant.TabIndex = 3;
-            this.lblRestaurant.Text = "XXX Restaurant Item List Search";
+            this.lblRestaurant.Text = "[restaurant] Restaurant Item List Search";
             // 
             // dataGridView1
             // 
@@ -64,11 +65,11 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblCategory.Location = new System.Drawing.Point(12, 45);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(123, 25);
+            this.lblCategory.Size = new System.Drawing.Size(96, 24);
             this.lblCategory.TabIndex = 5;
             this.lblCategory.Text = "Category";
             // 
@@ -83,22 +84,22 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblName.Location = new System.Drawing.Point(12, 79);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(129, 25);
+            this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "Item Name";
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblID.Location = new System.Drawing.Point(12, 113);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(94, 25);
+            this.lblID.Size = new System.Drawing.Size(77, 24);
             this.lblID.TabIndex = 9;
             this.lblID.Text = "Item ID";
             // 
@@ -155,11 +156,25 @@
             this.btnMapping.Text = "Request Mapping";
             this.btnMapping.UseVisualStyleBackColor = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCancel.Location = new System.Drawing.Point(69, 207);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(134, 38);
+            this.btnCancel.TabIndex = 21;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
             // FrmInventoryManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 257);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnMapping);
             this.Controls.Add(this.btnItemRequest);
             this.Controls.Add(this.btnSearch);
@@ -192,5 +207,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnItemRequest;
         private System.Windows.Forms.Button btnMapping;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

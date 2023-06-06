@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmInventoryManagement : Form
+    public partial class FrmItemManage : Form
     {
-        public FrmInventoryManagement()
+        public FrmItemManage()
         {
             InitializeComponent();
-        }
-
-        private void lblItemListSearch_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

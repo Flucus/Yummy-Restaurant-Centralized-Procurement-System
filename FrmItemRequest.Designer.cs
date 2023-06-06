@@ -46,66 +46,73 @@
             // lblRestaurant
             // 
             this.lblRestaurant.AutoSize = true;
-            this.lblRestaurant.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
+            this.lblRestaurant.Location = new System.Drawing.Point(16, 10);
+            this.lblRestaurant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(363, 25);
+            this.lblRestaurant.Size = new System.Drawing.Size(324, 32);
             this.lblRestaurant.TabIndex = 4;
-            this.lblRestaurant.Text = "XXX Restaurant Item Request";
+            this.lblRestaurant.Text = "[restaurant] Item Request";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(12, 43);
+            this.lblName.Location = new System.Drawing.Point(16, 50);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(129, 25);
+            this.lblName.Size = new System.Drawing.Size(146, 32);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Item Name";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(147, 43);
+            this.txtName.Location = new System.Drawing.Point(196, 50);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(121, 20);
+            this.txtName.Size = new System.Drawing.Size(160, 25);
             this.txtName.TabIndex = 11;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblID.Location = new System.Drawing.Point(12, 77);
+            this.lblID.Location = new System.Drawing.Point(16, 89);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(94, 25);
+            this.lblID.Size = new System.Drawing.Size(103, 32);
             this.lblID.TabIndex = 12;
             this.lblID.Text = "Item ID";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(147, 77);
+            this.txtID.Location = new System.Drawing.Point(196, 89);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(121, 20);
+            this.txtID.Size = new System.Drawing.Size(160, 25);
             this.txtID.TabIndex = 13;
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblQuantity.Location = new System.Drawing.Point(12, 111);
+            this.lblQuantity.Location = new System.Drawing.Point(16, 128);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(119, 25);
+            this.lblQuantity.Size = new System.Drawing.Size(116, 32);
             this.lblQuantity.TabIndex = 14;
             this.lblQuantity.Text = "Quantity";
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(147, 111);
+            this.txtQuantity.Location = new System.Drawing.Point(196, 128);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(121, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(160, 25);
             this.txtQuantity.TabIndex = 15;
             // 
             // btnRemove
@@ -114,9 +121,10 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRemove.Location = new System.Drawing.Point(274, 70);
+            this.btnRemove.Location = new System.Drawing.Point(365, 81);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(71, 32);
+            this.btnRemove.Size = new System.Drawing.Size(95, 37);
             this.btnRemove.TabIndex = 16;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
@@ -127,9 +135,10 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(351, 70);
+            this.btnAdd.Location = new System.Drawing.Point(468, 81);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(71, 32);
+            this.btnAdd.Size = new System.Drawing.Size(95, 37);
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -137,9 +146,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 148);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 171);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(405, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(540, 173);
             this.dataGridView1.TabIndex = 18;
             // 
             // btnCancel
@@ -148,9 +159,10 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(17, 314);
+            this.btnCancel.Location = new System.Drawing.Point(23, 362);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 38);
+            this.btnCancel.Size = new System.Drawing.Size(179, 44);
             this.btnCancel.TabIndex = 19;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -161,18 +173,19 @@
             this.btnRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequest.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequest.ForeColor = System.Drawing.Color.Black;
-            this.btnRequest.Location = new System.Drawing.Point(288, 314);
+            this.btnRequest.Location = new System.Drawing.Point(384, 362);
+            this.btnRequest.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(134, 38);
+            this.btnRequest.Size = new System.Drawing.Size(179, 44);
             this.btnRequest.TabIndex = 20;
             this.btnRequest.Text = "Request";
             this.btnRequest.UseVisualStyleBackColor = false;
             // 
             // FrmItemRequest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 371);
+            this.ClientSize = new System.Drawing.Size(581, 428);
             this.Controls.Add(this.btnRequest);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dataGridView1);
@@ -185,6 +198,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblRestaurant);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmItemRequest";
             this.Text = "Item Request";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

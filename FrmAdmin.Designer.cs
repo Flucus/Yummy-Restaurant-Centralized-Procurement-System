@@ -39,6 +39,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
             this.lblAdminPage = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +67,11 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblName.Location = new System.Drawing.Point(12, 364);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(134, 25);
+            this.lblName.Size = new System.Drawing.Size(114, 24);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "User Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -78,26 +79,26 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblID.Location = new System.Drawing.Point(12, 389);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(99, 25);
+            this.lblID.Size = new System.Drawing.Size(81, 24);
             this.lblID.TabIndex = 8;
             this.lblID.Text = "User ID";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(152, 367);
+            this.txtName.Location = new System.Drawing.Point(132, 367);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(199, 20);
+            this.txtName.Size = new System.Drawing.Size(219, 20);
             this.txtName.TabIndex = 9;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(152, 393);
+            this.txtID.Location = new System.Drawing.Point(132, 393);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(199, 20);
+            this.txtID.Size = new System.Drawing.Size(219, 20);
             this.txtID.TabIndex = 10;
             // 
             // btnModify
@@ -155,19 +156,33 @@
             // lblAdminPage
             // 
             this.lblAdminPage.AutoSize = true;
-            this.lblAdminPage.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminPage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdminPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAdminPage.Location = new System.Drawing.Point(7, 9);
             this.lblAdminPage.Name = "lblAdminPage";
-            this.lblAdminPage.Size = new System.Drawing.Size(512, 25);
+            this.lblAdminPage.Size = new System.Drawing.Size(419, 24);
             this.lblAdminPage.TabIndex = 15;
             this.lblAdminPage.Text = "The Yummy Restaurant System Admin Page";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnClose.Location = new System.Drawing.Point(375, 37);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(134, 38);
+            this.btnClose.TabIndex = 21;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 420);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblAdminPage);
             this.Controls.Add(this.btnLog);
             this.Controls.Add(this.btnCreate);
@@ -200,5 +215,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnLog;
         private System.Windows.Forms.Label lblAdminPage;
+        private System.Windows.Forms.Button btnClose;
     }
 }

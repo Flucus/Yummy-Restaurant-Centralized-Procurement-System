@@ -58,11 +58,41 @@
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInventoryManagement.cs">
+    <Compile Include="FrmCategoryManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInventoryManagement.Designer.cs">
-      <DependentUpon>FrmInventoryManagement.cs</DependentUpon>
+    <Compile Include="FrmCategoryManage.Designer.cs">
+      <DependentUpon>FrmCategoryManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContractMange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContractMange.Designer.cs">
+      <DependentUpon>FrmContractMange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateAgreement.Designer.cs">
+      <DependentUpon>FrmCreateAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInvManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInvManage.Designer.cs">
+      <DependentUpon>FrmInvManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmItemManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItemManage.Designer.cs">
+      <DependentUpon>FrmItemManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmItemManageMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItemManageMain.Designer.cs">
+      <DependentUpon>FrmItemManageMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmItemRequest.cs">
       <SubType>Form</SubType>
@@ -82,11 +112,11 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOrderManagement.cs">
+    <Compile Include="FrmOrderManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOrderManagement.Designer.cs">
-      <DependentUpon>FrmOrderManagement.cs</DependentUpon>
+    <Compile Include="FrmOrderManage.Designer.cs">
+      <DependentUpon>FrmOrderManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmStockModify.cs">
       <SubType>Form</SubType>
@@ -100,11 +130,23 @@
     <Compile Include="FrmRequestMapping.Designer.cs">
       <DependentUpon>FrmRequestMapping.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmStockManagement.cs">
+    <Compile Include="FrmStockManage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmStockManagement.Designer.cs">
-      <DependentUpon>FrmStockManagement.cs</DependentUpon>
+    <Compile Include="FrmStockManage.Designer.cs">
+      <DependentUpon>FrmStockManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateStock.Designer.cs">
+      <DependentUpon>FrmUpdateStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVirtualIDMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVirtualIDMapping.Designer.cs">
+      <DependentUpon>FrmVirtualIDMapping.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,8 +156,23 @@
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInventoryManagement.resx">
-      <DependentUpon>FrmInventoryManagement.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCategoryManage.resx">
+      <DependentUpon>FrmCategoryManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContractMange.resx">
+      <DependentUpon>FrmContractMange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateAgreement.resx">
+      <DependentUpon>FrmCreateAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInvManage.resx">
+      <DependentUpon>FrmInvManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmItemManage.resx">
+      <DependentUpon>FrmItemManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmItemManageMain.resx">
+      <DependentUpon>FrmItemManageMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmItemRequest.resx">
       <DependentUpon>FrmItemRequest.cs</DependentUpon>
@@ -126,8 +183,8 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOrderManagement.resx">
-      <DependentUpon>FrmOrderManagement.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOrderManage.resx">
+      <DependentUpon>FrmOrderManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStockModify.resx">
       <DependentUpon>FrmStockModify.cs</DependentUpon>
@@ -135,8 +192,14 @@
     <EmbeddedResource Include="FrmRequestMapping.resx">
       <DependentUpon>FrmRequestMapping.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmStockManagement.resx">
-      <DependentUpon>FrmStockManagement.cs</DependentUpon>
+    <EmbeddedResource Include="FrmStockManage.resx">
+      <DependentUpon>FrmStockManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateStock.resx">
+      <DependentUpon>FrmUpdateStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVirtualIDMapping.resx">
+      <DependentUpon>FrmVirtualIDMapping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
