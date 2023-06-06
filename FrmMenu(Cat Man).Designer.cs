@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmMenu_Cat_Man_
+    partial class FrmMenuCatMan
     {
         /// <summary>
         /// Required designer variable.
@@ -84,7 +84,7 @@
             this.lblHelloMsg.TabIndex = 16;
             this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
-            // FrmMenu_Cat_Man_
+            // FrmMenuCatMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +93,7 @@
             this.Controls.Add(this.btnCategoryManage);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
-            this.Name = "FrmMenu_Cat_Man_";
+            this.Name = "FrmMenuCatMan";
             this.Text = "Menu";
             this.ResumeLayout(false);
             this.PerformLayout();

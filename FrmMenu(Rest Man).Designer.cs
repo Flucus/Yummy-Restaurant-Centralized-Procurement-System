@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmMenu
+    partial class FrmMenuRestMan
     {
         /// <summary>
         /// Required designer variable.
@@ -112,7 +112,7 @@
             this.btnOrderPlacement.Text = "Order Placement";
             this.btnOrderPlacement.UseVisualStyleBackColor = false;
             // 
-            // FrmMenu
+            // FrmMenuRestMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,7 +123,7 @@
             this.Controls.Add(this.btnInvMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
-            this.Name = "FrmMenu";
+            this.Name = "FrmMenuRestMan";
             this.Text = "Menu";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmMenu_Cat_Man_ : Form
+    public partial class FrmMenuCatMan : Form
     {
-        public FrmMenu_Cat_Man_()
+        public FrmMenuCatMan()
         {
             InitializeComponent();
         }

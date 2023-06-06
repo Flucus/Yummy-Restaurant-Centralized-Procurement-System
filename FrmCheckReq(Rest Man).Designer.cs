@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class test
+    partial class FrmCheckReq
     {
         /// <summary>
         /// Required designer variable.
@@ -128,7 +128,7 @@
             this.lblItem.TabIndex = 21;
             this.lblItem.Text = "Request ID";
             // 
-            // FrmRequestMapping
+            // FrmCheckReq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +141,7 @@
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblRestaurant);
-            this.Name = "FrmRequestMapping";
+            this.Name = "FrmCheckReq";
             this.Text = "Check Request";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
