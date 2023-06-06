@@ -30,10 +30,10 @@
         {
             this.lblHelloMsg = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnRequestManagement = new System.Windows.Forms.Button();
-            this.btnContractManagement = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnItemManagement = new System.Windows.Forms.Button();
+            this.btnInvMan = new System.Windows.Forms.Button();
+            this.btnCheckReq = new System.Windows.Forms.Button();
+            this.btnGrade = new System.Windows.Forms.Button();
+            this.btnOrderPlacement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHelloMsg
@@ -41,10 +41,9 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(16, 15);
-            this.lblHelloMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHelloMsg.Location = new System.Drawing.Point(12, 13);
             this.lblHelloMsg.Name = "lblHelloMsg";
-            this.lblHelloMsg.Size = new System.Drawing.Size(235, 32);
+            this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
             this.lblHelloMsg.TabIndex = 3;
             this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
@@ -54,84 +53,78 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(261, 14);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLogout.Location = new System.Drawing.Point(196, 12);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(168, 39);
+            this.btnLogout.Size = new System.Drawing.Size(126, 34);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
-            // btnRequestManagement
+            // btnInvMan
             // 
-            this.btnRequestManagement.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnRequestManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequestManagement.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequestManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnRequestManagement.Location = new System.Drawing.Point(129, 70);
-            this.btnRequestManagement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnRequestManagement.Name = "btnRequestManagement";
-            this.btnRequestManagement.Size = new System.Drawing.Size(168, 44);
-            this.btnRequestManagement.TabIndex = 8;
-            this.btnRequestManagement.Text = "Request Manage";
-            this.btnRequestManagement.UseVisualStyleBackColor = false;
+            this.btnInvMan.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnInvMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvMan.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvMan.ForeColor = System.Drawing.Color.Black;
+            this.btnInvMan.Location = new System.Drawing.Point(92, 63);
+            this.btnInvMan.Name = "btnInvMan";
+            this.btnInvMan.Size = new System.Drawing.Size(140, 38);
+            this.btnInvMan.TabIndex = 8;
+            this.btnInvMan.Text = "Inventory Manage";
+            this.btnInvMan.UseVisualStyleBackColor = false;
             // 
-            // btnContractManagement
+            // btnCheckReq
             // 
-            this.btnContractManagement.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnContractManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContractManagement.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContractManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnContractManagement.Location = new System.Drawing.Point(129, 198);
-            this.btnContractManagement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnContractManagement.Name = "btnContractManagement";
-            this.btnContractManagement.Size = new System.Drawing.Size(168, 44);
-            this.btnContractManagement.TabIndex = 10;
-            this.btnContractManagement.Text = "Contract Manage";
-            this.btnContractManagement.UseVisualStyleBackColor = false;
+            this.btnCheckReq.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCheckReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckReq.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckReq.ForeColor = System.Drawing.Color.Black;
+            this.btnCheckReq.Location = new System.Drawing.Point(92, 174);
+            this.btnCheckReq.Name = "btnCheckReq";
+            this.btnCheckReq.Size = new System.Drawing.Size(140, 38);
+            this.btnCheckReq.TabIndex = 10;
+            this.btnCheckReq.Text = "Check Request";
+            this.btnCheckReq.UseVisualStyleBackColor = false;
             // 
-            // btnAdmin
+            // btnGrade
             // 
-            this.btnAdmin.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin.Location = new System.Drawing.Point(129, 261);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(168, 44);
-            this.btnAdmin.TabIndex = 11;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnGrade.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrade.ForeColor = System.Drawing.Color.Black;
+            this.btnGrade.Location = new System.Drawing.Point(92, 228);
+            this.btnGrade.Name = "btnGrade";
+            this.btnGrade.Size = new System.Drawing.Size(140, 38);
+            this.btnGrade.TabIndex = 11;
+            this.btnGrade.Text = "Supplier Grading";
+            this.btnGrade.UseVisualStyleBackColor = false;
             // 
-            // btnItemManagement
+            // btnOrderPlacement
             // 
-            this.btnItemManagement.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnItemManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnItemManagement.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnItemManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnItemManagement.Location = new System.Drawing.Point(129, 136);
-            this.btnItemManagement.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnItemManagement.Name = "btnItemManagement";
-            this.btnItemManagement.Size = new System.Drawing.Size(168, 44);
-            this.btnItemManagement.TabIndex = 9;
-            this.btnItemManagement.Text = "Item Manage";
-            this.btnItemManagement.UseVisualStyleBackColor = false;
+            this.btnOrderPlacement.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOrderPlacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderPlacement.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderPlacement.ForeColor = System.Drawing.Color.Black;
+            this.btnOrderPlacement.Location = new System.Drawing.Point(92, 120);
+            this.btnOrderPlacement.Name = "btnOrderPlacement";
+            this.btnOrderPlacement.Size = new System.Drawing.Size(140, 38);
+            this.btnOrderPlacement.TabIndex = 9;
+            this.btnOrderPlacement.Text = "Order Placement";
+            this.btnOrderPlacement.UseVisualStyleBackColor = false;
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 335);
-            this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.btnContractManagement);
-            this.Controls.Add(this.btnItemManagement);
-            this.Controls.Add(this.btnRequestManagement);
+            this.ClientSize = new System.Drawing.Size(333, 290);
+            this.Controls.Add(this.btnGrade);
+            this.Controls.Add(this.btnCheckReq);
+            this.Controls.Add(this.btnOrderPlacement);
+            this.Controls.Add(this.btnInvMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmMenu";
-            this.Text = "Main Menu";
+            this.Text = "Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,9 +134,9 @@
 
         private System.Windows.Forms.Label lblHelloMsg;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnRequestManagement;
-        private System.Windows.Forms.Button btnContractManagement;
-        private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Button btnItemManagement;
+        private System.Windows.Forms.Button btnInvMan;
+        private System.Windows.Forms.Button btnCheckReq;
+        private System.Windows.Forms.Button btnGrade;
+        private System.Windows.Forms.Button btnOrderPlacement;
     }
 }
