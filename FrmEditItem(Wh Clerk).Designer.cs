@@ -37,6 +37,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblRestaurant = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -45,7 +47,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(16, 168);
+            this.btnCancel.Location = new System.Drawing.Point(16, 194);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 38);
             this.btnCancel.TabIndex = 47;
@@ -58,7 +60,7 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(277, 168);
+            this.btnCreate.Location = new System.Drawing.Point(277, 194);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(134, 38);
             this.btnCreate.TabIndex = 46;
@@ -67,7 +69,7 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(134, 128);
+            this.txtDescription.Location = new System.Drawing.Point(134, 152);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(277, 20);
             this.txtDescription.TabIndex = 45;
@@ -77,7 +79,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDescription.Location = new System.Drawing.Point(12, 124);
+            this.lblDescription.Location = new System.Drawing.Point(12, 148);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(116, 24);
             this.lblDescription.TabIndex = 44;
@@ -86,7 +88,7 @@
             // cboCat
             // 
             this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(134, 87);
+            this.cboCat.Location = new System.Drawing.Point(134, 116);
             this.cboCat.Name = "cboCat";
             this.cboCat.Size = new System.Drawing.Size(277, 21);
             this.cboCat.TabIndex = 43;
@@ -96,7 +98,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCategory.Location = new System.Drawing.Point(12, 84);
+            this.lblCategory.Location = new System.Drawing.Point(12, 113);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(96, 24);
             this.lblCategory.TabIndex = 42;
@@ -104,7 +106,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(134, 50);
+            this.txtName.Location = new System.Drawing.Point(134, 45);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(277, 20);
             this.txtName.TabIndex = 41;
@@ -114,7 +116,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(12, 46);
+            this.lblName.Location = new System.Drawing.Point(12, 45);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 40;
@@ -131,11 +133,31 @@
             this.lblRestaurant.TabIndex = 39;
             this.lblRestaurant.Text = "The Yummy Restaurant Edit Item";
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(134, 81);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(277, 20);
+            this.txtID.TabIndex = 49;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblID.Location = new System.Drawing.Point(12, 81);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(77, 24);
+            this.lblID.TabIndex = 48;
+            this.lblID.Text = "Item ID";
+            // 
             // FrmEditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 218);
+            this.ClientSize = new System.Drawing.Size(422, 244);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtDescription);
@@ -163,5 +185,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblRestaurant;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblID;
     }
 }
