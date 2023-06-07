@@ -49,27 +49,25 @@ namespace YummyRestaurantSystem
             this.lblContractNum = new System.Windows.Forms.Label();
             this.dateCreate = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtCurrency = new System.Windows.Forms.TextBox();
+            this.txtAmountAgreed = new System.Windows.Forms.TextBox();
             this.lblAmountAgreed = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblCurrency = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtItemInfo_BPA = new System.Windows.Forms.TextBox();
+            this.txtTerms_BPA = new System.Windows.Forms.TextBox();
+            this.txtBuyerName_BPA = new System.Windows.Forms.TextBox();
+            this.txtSupplierName_BPA = new System.Windows.Forms.TextBox();
             this.lblTerms_BPA = new System.Windows.Forms.Label();
             this.lblItemInfo_BPA = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateEffect_BPA = new System.Windows.Forms.DateTimePicker();
             this.lblCreatedDate_BPA = new System.Windows.Forms.Label();
             this.llblEffectiveDates_BPA = new System.Windows.Forms.Label();
             this.lblSupplierName_BPA = new System.Windows.Forms.Label();
             this.lblBuyerName_BPA = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dateCreate_BPA = new System.Windows.Forms.DateTimePicker();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tabControlCPA.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -278,27 +276,25 @@ namespace YummyRestaurantSystem
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox17);
-            this.tabPage2.Controls.Add(this.textBox16);
-            this.tabPage2.Controls.Add(this.textBox15);
+            this.tabPage2.Controls.Add(this.txtCurrency);
+            this.tabPage2.Controls.Add(this.txtAmountAgreed);
             this.tabPage2.Controls.Add(this.lblAmountAgreed);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.lblCurrency);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.textBox9);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox14);
+            this.tabPage2.Controls.Add(this.txtItemInfo_BPA);
+            this.tabPage2.Controls.Add(this.txtTerms_BPA);
+            this.tabPage2.Controls.Add(this.txtBuyerName_BPA);
+            this.tabPage2.Controls.Add(this.txtSupplierName_BPA);
             this.tabPage2.Controls.Add(this.lblTerms_BPA);
             this.tabPage2.Controls.Add(this.lblItemInfo_BPA);
-            this.tabPage2.Controls.Add(this.dateTimePicker3);
+            this.tabPage2.Controls.Add(this.dateEffect_BPA);
             this.tabPage2.Controls.Add(this.lblCreatedDate_BPA);
             this.tabPage2.Controls.Add(this.llblEffectiveDates_BPA);
             this.tabPage2.Controls.Add(this.lblSupplierName_BPA);
             this.tabPage2.Controls.Add(this.lblBuyerName_BPA);
             this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.dateTimePicker4);
+            this.tabPage2.Controls.Add(this.dateCreate_BPA);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -307,26 +303,19 @@ namespace YummyRestaurantSystem
             this.tabPage2.Text = "Blanket Purchase Agreement";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textBox17
+            // txtCurrency
             // 
-            this.textBox17.Location = new System.Drawing.Point(220, 267);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(188, 22);
-            this.textBox17.TabIndex = 77;
+            this.txtCurrency.Location = new System.Drawing.Point(220, 274);
+            this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.Size = new System.Drawing.Size(188, 22);
+            this.txtCurrency.TabIndex = 76;
             // 
-            // textBox16
+            // txtAmountAgreed
             // 
-            this.textBox16.Location = new System.Drawing.Point(220, 299);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(188, 22);
-            this.textBox16.TabIndex = 76;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(220, 233);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(188, 22);
-            this.textBox15.TabIndex = 75;
+            this.txtAmountAgreed.Location = new System.Drawing.Point(220, 233);
+            this.txtAmountAgreed.Name = "txtAmountAgreed";
+            this.txtAmountAgreed.Size = new System.Drawing.Size(188, 22);
+            this.txtAmountAgreed.TabIndex = 75;
             // 
             // lblAmountAgreed
             // 
@@ -339,27 +328,16 @@ namespace YummyRestaurantSystem
             this.lblAmountAgreed.TabIndex = 74;
             this.lblAmountAgreed.Text = "Amount Agreed:";
             // 
-            // label21
+            // lblCurrency
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(3, 262);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(206, 24);
-            this.label21.TabIndex = 73;
-            this.label21.Text = "Terms and Condition:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(3, 295);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(101, 24);
-            this.label20.TabIndex = 72;
-            this.label20.Text = "Currency:";
+            this.lblCurrency.AutoSize = true;
+            this.lblCurrency.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCurrency.Location = new System.Drawing.Point(6, 268);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(101, 24);
+            this.lblCurrency.TabIndex = 72;
+            this.lblCurrency.Text = "Currency:";
             // 
             // button1
             // 
@@ -367,7 +345,7 @@ namespace YummyRestaurantSystem
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(274, 370);
+            this.button1.Location = new System.Drawing.Point(274, 344);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 35);
             this.button1.TabIndex = 71;
@@ -380,40 +358,40 @@ namespace YummyRestaurantSystem
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(30, 370);
+            this.button2.Location = new System.Drawing.Point(30, 344);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 35);
             this.button2.TabIndex = 70;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // textBox8
+            // txtItemInfo_BPA
             // 
-            this.textBox8.Location = new System.Drawing.Point(220, 200);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(188, 22);
-            this.textBox8.TabIndex = 69;
+            this.txtItemInfo_BPA.Location = new System.Drawing.Point(220, 200);
+            this.txtItemInfo_BPA.Name = "txtItemInfo_BPA";
+            this.txtItemInfo_BPA.Size = new System.Drawing.Size(188, 22);
+            this.txtItemInfo_BPA.TabIndex = 69;
             // 
-            // textBox9
+            // txtTerms_BPA
             // 
-            this.textBox9.Location = new System.Drawing.Point(220, 169);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(188, 22);
-            this.textBox9.TabIndex = 68;
+            this.txtTerms_BPA.Location = new System.Drawing.Point(220, 169);
+            this.txtTerms_BPA.Name = "txtTerms_BPA";
+            this.txtTerms_BPA.Size = new System.Drawing.Size(188, 22);
+            this.txtTerms_BPA.TabIndex = 68;
             // 
-            // textBox11
+            // txtBuyerName_BPA
             // 
-            this.textBox11.Location = new System.Drawing.Point(220, 135);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(188, 22);
-            this.textBox11.TabIndex = 66;
+            this.txtBuyerName_BPA.Location = new System.Drawing.Point(220, 135);
+            this.txtBuyerName_BPA.Name = "txtBuyerName_BPA";
+            this.txtBuyerName_BPA.Size = new System.Drawing.Size(188, 22);
+            this.txtBuyerName_BPA.TabIndex = 66;
             // 
-            // textBox14
+            // txtSupplierName_BPA
             // 
-            this.textBox14.Location = new System.Drawing.Point(220, 103);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(188, 22);
-            this.textBox14.TabIndex = 63;
+            this.txtSupplierName_BPA.Location = new System.Drawing.Point(220, 103);
+            this.txtSupplierName_BPA.Name = "txtSupplierName_BPA";
+            this.txtSupplierName_BPA.Size = new System.Drawing.Size(188, 22);
+            this.txtSupplierName_BPA.TabIndex = 63;
             // 
             // lblTerms_BPA
             // 
@@ -437,12 +415,12 @@ namespace YummyRestaurantSystem
             this.lblItemInfo_BPA.TabIndex = 61;
             this.lblItemInfo_BPA.Text = "Item Information:";
             // 
-            // dateTimePicker3
+            // dateEffect_BPA
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(220, 71);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(188, 22);
-            this.dateTimePicker3.TabIndex = 57;
+            this.dateEffect_BPA.Location = new System.Drawing.Point(220, 71);
+            this.dateEffect_BPA.Name = "dateEffect_BPA";
+            this.dateEffect_BPA.Size = new System.Drawing.Size(188, 22);
+            this.dateEffect_BPA.TabIndex = 57;
             // 
             // lblCreatedDate_BPA
             // 
@@ -499,12 +477,12 @@ namespace YummyRestaurantSystem
             this.label19.TabIndex = 51;
             this.label19.Text = "Purchase Order Revision:";
             // 
-            // dateTimePicker4
+            // dateCreate_BPA
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(220, 37);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(188, 22);
-            this.dateTimePicker4.TabIndex = 50;
+            this.dateCreate_BPA.Location = new System.Drawing.Point(220, 37);
+            this.dateCreate_BPA.Name = "dateCreate_BPA";
+            this.dateCreate_BPA.Size = new System.Drawing.Size(188, 22);
+            this.dateCreate_BPA.TabIndex = 50;
             // 
             // lblTitle
             // 
@@ -557,27 +535,25 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblContractNum;
         private System.Windows.Forms.DateTimePicker dateCreate;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtCurrency;
+        private System.Windows.Forms.TextBox txtAmountAgreed;
         private System.Windows.Forms.Label lblAmountAgreed;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblCurrency;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtItemInfo_BPA;
+        private System.Windows.Forms.TextBox txtTerms_BPA;
+        private System.Windows.Forms.TextBox txtBuyerName_BPA;
+        private System.Windows.Forms.TextBox txtSupplierName_BPA;
         private System.Windows.Forms.Label lblTerms_BPA;
         private System.Windows.Forms.Label lblItemInfo_BPA;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateEffect_BPA;
         private System.Windows.Forms.Label lblCreatedDate_BPA;
         private System.Windows.Forms.Label llblEffectiveDates_BPA;
         private System.Windows.Forms.Label lblSupplierName_BPA;
         private System.Windows.Forms.Label lblBuyerName_BPA;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateCreate_BPA;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
     }

@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCheckofStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckofStatus.Designer.cs">
+      <DependentUpon>FrmCheckofStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckofStatus.resx">
+      <DependentUpon>FrmCheckofStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu%28Cat Man%29.resx">
       <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
