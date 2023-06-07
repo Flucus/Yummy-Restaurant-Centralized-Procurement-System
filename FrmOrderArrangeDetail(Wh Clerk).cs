@@ -16,5 +16,10 @@ namespace YummyRestaurantSystem
         {
             InitializeComponent();
         }
+
+        private void lblRestaurant_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
