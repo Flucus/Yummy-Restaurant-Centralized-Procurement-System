@@ -64,11 +64,11 @@
     <Compile Include="FrmDetailsRequest%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditAgreement.cs">
+    <Compile Include="FrmEditAgreement%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditAgreement.Designer.cs">
-      <DependentUpon>FrmEditAgreement.cs</DependentUpon>
+    <Compile Include="FrmEditAgreement%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEditRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
@@ -160,10 +160,6 @@
     <Compile Include="FrmInvManage%28Rest Man &amp; Staff%29.Designer.cs">
       <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUpdateStock.cs" />
-    <Compile Include="FrmUpdateStock.Designer.cs">
-      <DependentUpon>FrmUpdateStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmVirtualIDMapping%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,8 +177,8 @@
     <EmbeddedResource Include="FrmDetailsRequest%28Rest Man%29.resx">
       <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditAgreement.resx">
-      <DependentUpon>FrmEditAgreement.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEditAgreement%28Pur Man%29.resx">
+      <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditRequest%28Rest Man%29.resx">
       <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>
@@ -228,9 +224,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInvManage%28Rest Man &amp; Staff%29.resx">
       <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmUpdateStock.resx">
-      <DependentUpon>FrmUpdateStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVirtualIDMapping%28Cat Man%29.resx">
       <DependentUpon>FrmVirtualIDMapping%28Cat Man%29.cs</DependentUpon>
