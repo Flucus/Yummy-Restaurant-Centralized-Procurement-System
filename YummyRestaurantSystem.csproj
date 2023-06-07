@@ -58,6 +58,24 @@
     <Compile Include="FrmCheckofStatus%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDetailsRequest%28Rest Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailsRequest%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditAgreement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditAgreement.Designer.cs">
+      <DependentUpon>FrmEditAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditRequest%28Rest Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditRequest%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +179,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCheckofStatus%28Pur Man%29.resx">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailsRequest%28Rest Man%29.resx">
+      <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditAgreement.resx">
+      <DependentUpon>FrmEditAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditRequest%28Rest Man%29.resx">
+      <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu%28Cat Man%29.resx">
       <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
