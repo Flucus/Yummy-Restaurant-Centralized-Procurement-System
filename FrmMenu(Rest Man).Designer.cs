@@ -32,7 +32,6 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnInvMan = new System.Windows.Forms.Button();
             this.btnCheckReq = new System.Windows.Forms.Button();
-            this.btnGrade = new System.Windows.Forms.Button();
             this.btnOrderPlacement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -86,19 +85,6 @@
             this.btnCheckReq.Text = "Check Request";
             this.btnCheckReq.UseVisualStyleBackColor = false;
             // 
-            // btnGrade
-            // 
-            this.btnGrade.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGrade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrade.ForeColor = System.Drawing.Color.Black;
-            this.btnGrade.Location = new System.Drawing.Point(92, 228);
-            this.btnGrade.Name = "btnGrade";
-            this.btnGrade.Size = new System.Drawing.Size(140, 38);
-            this.btnGrade.TabIndex = 11;
-            this.btnGrade.Text = "Supplier Grading";
-            this.btnGrade.UseVisualStyleBackColor = false;
-            // 
             // btnOrderPlacement
             // 
             this.btnOrderPlacement.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -116,8 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 290);
-            this.Controls.Add(this.btnGrade);
+            this.ClientSize = new System.Drawing.Size(333, 244);
             this.Controls.Add(this.btnCheckReq);
             this.Controls.Add(this.btnOrderPlacement);
             this.Controls.Add(this.btnInvMan);
@@ -136,7 +121,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnInvMan;
         private System.Windows.Forms.Button btnCheckReq;
-        private System.Windows.Forms.Button btnGrade;
         private System.Windows.Forms.Button btnOrderPlacement;
     }
 }
