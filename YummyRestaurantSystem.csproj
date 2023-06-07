@@ -58,6 +58,12 @@
     <Compile Include="FrmCheckofStatus%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCreateItem%28Wh Clerk%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateItem%28Wh Clerk%29.Designer.cs">
+      <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDetailsRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="FrmEditAgreement%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditItem%28Wh Clerk%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditItem%28Wh Clerk%29.Designer.cs">
+      <DependentUpon>FrmEditItem%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEditRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
@@ -186,11 +198,17 @@
     <EmbeddedResource Include="FrmCheckofStatus%28Pur Man%29.resx">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateItem%28Wh Clerk%29.resx">
+      <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailsRequest%28Rest Man%29.resx">
       <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditAgreement%28Pur Man%29.resx">
       <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditItem%28Wh Clerk%29.resx">
+      <DependentUpon>FrmEditItem%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditRequest%28Rest Man%29.resx">
       <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>

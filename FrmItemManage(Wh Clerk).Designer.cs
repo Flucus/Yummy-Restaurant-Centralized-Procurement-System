@@ -34,15 +34,20 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 46);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 97);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(772, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 288);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblRestaurant
@@ -108,18 +113,72 @@
             this.btnDelete.Text = "Delete Item";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // FrmItemManagement
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(128, 70);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 27;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblName.Location = new System.Drawing.Point(12, 43);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(110, 24);
+            this.lblName.TabIndex = 28;
+            this.lblName.Text = "Item Name";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblID.Location = new System.Drawing.Point(12, 70);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(77, 24);
+            this.lblID.TabIndex = 29;
+            this.lblID.Text = "Item ID";
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(128, 47);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 30;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(234, 59);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(63, 31);
+            this.btnSearch.TabIndex = 31;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // FrmItemManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmItemManagement";
+            this.Name = "FrmItemManage";
             this.Text = "Item Management";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -135,5 +194,10 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
