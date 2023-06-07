@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPurOrder = new System.Windows.Forms.Button();
+            this.btnCreOrder = new System.Windows.Forms.Button();
             this.btnOrderMan = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblHelloMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnPurOrder
+            // btnCreOrder
             // 
-            this.btnPurOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPurOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPurOrder.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPurOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnPurOrder.Location = new System.Drawing.Point(90, 120);
-            this.btnPurOrder.Name = "btnPurOrder";
-            this.btnPurOrder.Size = new System.Drawing.Size(140, 38);
-            this.btnPurOrder.TabIndex = 15;
-            this.btnPurOrder.Text = "Purchase Order";
-            this.btnPurOrder.UseVisualStyleBackColor = false;
+            this.btnCreOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCreOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreOrder.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreOrder.ForeColor = System.Drawing.Color.Black;
+            this.btnCreOrder.Location = new System.Drawing.Point(90, 120);
+            this.btnCreOrder.Name = "btnCreOrder";
+            this.btnCreOrder.Size = new System.Drawing.Size(140, 38);
+            this.btnCreOrder.TabIndex = 15;
+            this.btnCreOrder.Text = "Create Order";
+            this.btnCreOrder.UseVisualStyleBackColor = false;
             // 
             // btnOrderMan
             // 
@@ -89,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 198);
-            this.Controls.Add(this.btnPurOrder);
+            this.Controls.Add(this.btnCreOrder);
             this.Controls.Add(this.btnOrderMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
@@ -101,7 +101,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnPurOrder;
+        private System.Windows.Forms.Button btnCreOrder;
         private System.Windows.Forms.Button btnOrderMan;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblHelloMsg;
