@@ -52,11 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCheckofStatus.cs">
+    <Compile Include="FrmCheckofStatus%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCheckofStatus.Designer.cs">
-      <DependentUpon>FrmCheckofStatus.cs</DependentUpon>
+    <Compile Include="FrmCheckofStatus%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenu%28Cat Man%29.cs">
       <SubType>Form</SubType>
@@ -159,8 +159,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCheckofStatus.resx">
-      <DependentUpon>FrmCheckofStatus.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCheckofStatus%28Pur Man%29.resx">
+      <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu%28Cat Man%29.resx">
       <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
