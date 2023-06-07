@@ -70,6 +70,12 @@
     <Compile Include="FrmCheckofStatus%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCreateAccount%28Admin%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateAccount%28Admin%29.Designer.cs">
+      <DependentUpon>FrmCreateAccount%28Admin%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCreateItem%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="FrmMenu%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmMenu%28Wh Clerk%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifyAccount%28Admin%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifyAccount%28Admin%29.Designer.cs">
+      <DependentUpon>FrmModifyAccount%28Admin%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmOrderArrange%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
@@ -228,6 +240,9 @@
     <EmbeddedResource Include="FrmCheckofStatus%28Pur Man%29.resx">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateAccount%28Admin%29.resx">
+      <DependentUpon>FrmCreateAccount%28Admin%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateItem%28Wh Clerk%29.resx">
       <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu%28Wh Clerk%29.resx">
       <DependentUpon>FrmMenu%28Wh Clerk%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifyAccount%28Admin%29.resx">
+      <DependentUpon>FrmModifyAccount%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmOrderArrange%28Wh Clerk%29.resx">
       <DependentUpon>FrmOrderArrange%28Wh Clerk%29.cs</DependentUpon>
