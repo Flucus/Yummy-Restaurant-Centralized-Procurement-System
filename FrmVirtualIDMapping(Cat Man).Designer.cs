@@ -34,15 +34,20 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
+            this.cblType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 106);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(772, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(772, 276);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblRestaurant
@@ -108,11 +113,66 @@
             this.btnDelete.Text = "Delete Linking";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(76, 44);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 26;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(203, 61);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(64, 30);
+            this.btnSearch.TabIndex = 27;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSearch.Location = new System.Drawing.Point(20, 43);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(50, 24);
+            this.lblSearch.TabIndex = 28;
+            this.lblSearch.Text = "Item";
+            // 
+            // lblType
+            // 
+            this.lblType.AutoSize = true;
+            this.lblType.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblType.Location = new System.Drawing.Point(19, 67);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(55, 24);
+            this.lblType.TabIndex = 32;
+            this.lblType.Text = "Type";
+            // 
+            // cblType
+            // 
+            this.cblType.FormattingEnabled = true;
+            this.cblType.Location = new System.Drawing.Point(76, 70);
+            this.cblType.Name = "cblType";
+            this.cblType.Size = new System.Drawing.Size(121, 21);
+            this.cblType.TabIndex = 31;
+            // 
             // FrmVirtualIDMapping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.cblType);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCreate);
@@ -135,5 +195,10 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.ComboBox cblType;
     }
 }
