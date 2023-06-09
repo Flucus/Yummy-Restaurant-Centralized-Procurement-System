@@ -48,6 +48,8 @@ namespace YummyRestaurantSystem
             this.picuser = new System.Windows.Forms.PictureBox();
             this.lblLoginmsg = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -60,6 +62,7 @@ namespace YummyRestaurantSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.lblcompanyName3);
             this.panel1.Controls.Add(this.lblcompanyName2);
             this.panel1.Controls.Add(this.lblcompanyName1);
@@ -236,6 +239,19 @@ namespace YummyRestaurantSystem
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(17, 484);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(29, 12);
+            this.lblTime.TabIndex = 4;
+            this.lblTime.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -245,6 +261,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.panel1);
             this.Name = "FrmLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -279,5 +296,7 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblLoginmsg;
         private System.Windows.Forms.CheckBox cbnShowPw;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
