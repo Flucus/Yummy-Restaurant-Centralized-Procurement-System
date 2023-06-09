@@ -18,6 +18,7 @@ namespace YummyRestaurantSystem
         {
             InitializeComponent();
             this.staffData = staffData;
+            lblHelloMsg.Text = $"Hello {staffData["Name"]}!";
         }
 
         private void btnInvMan_Click(object sender, EventArgs e)

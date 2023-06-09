@@ -92,130 +92,130 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategoryCreate%28Cat Man%29.cs">
+    <Compile Include="src\CM\FrmCategoryCreate%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCategoryCreate%28Cat Man%29.Designer.cs">
+    <Compile Include="src\CM\FrmCategoryCreate%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmCategoryCreate%28Cat Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategoryEdit%28Cat Man%29.cs">
+    <Compile Include="src\CM\FrmCategoryEdit%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCategoryEdit%28Cat Man%29.Designer.cs">
+    <Compile Include="src\CM\FrmCategoryEdit%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmCategoryEdit%28Cat Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCheckofStatus%28Pur Man%29.cs">
+    <Compile Include="src\PM\FrmCheckofStatus%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCheckofStatus%28Pur Man%29.Designer.cs">
+    <Compile Include="src\PM\FrmCheckofStatus%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCreateAccount%28Admin%29.cs">
+    <Compile Include="src\Admin\FrmCreateAccount%28Admin%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCreateAccount%28Admin%29.Designer.cs">
+    <Compile Include="src\Admin\FrmCreateAccount%28Admin%29.Designer.cs">
       <DependentUpon>FrmCreateAccount%28Admin%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCreateItem%28Wh Clerk%29.cs">
+    <Compile Include="src\WC\FrmCreateItem%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCreateItem%28Wh Clerk%29.Designer.cs">
+    <Compile Include="src\WC\FrmCreateItem%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDetailsRequest%28Rest Man%29.cs">
+    <Compile Include="src\RM\FrmDetailsRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDetailsRequest%28Rest Man%29.Designer.cs">
+    <Compile Include="src\RM\FrmDetailsRequest%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditAgreement%28Pur Man%29.cs">
+    <Compile Include="src\PM\FrmEditAgreement%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditAgreement%28Pur Man%29.Designer.cs">
+    <Compile Include="src\PM\FrmEditAgreement%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditItem%28Wh Clerk%29.cs">
+    <Compile Include="src\WC\FrmEditItem%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditItem%28Wh Clerk%29.Designer.cs">
+    <Compile Include="src\WC\FrmEditItem%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmEditItem%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditRequest%28Rest Man%29.cs">
+    <Compile Include="src\RM\FrmEditRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditRequest%28Rest Man%29.Designer.cs">
+    <Compile Include="src\RM\FrmEditRequest%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu%28Cat Man%29.cs">
+    <Compile Include="src\FrmMenu%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu%28Cat Man%29.Designer.cs">
+    <Compile Include="src\FrmMenu%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu%28Pur Man%29.cs">
+    <Compile Include="src\FrmMenu%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu%28Pur Man%29.Designer.cs">
+    <Compile Include="src\FrmMenu%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmMenu%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu%28Wh Clerk%29.cs">
+    <Compile Include="src\FrmMenu%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu%28Wh Clerk%29.Designer.cs">
+    <Compile Include="src\FrmMenu%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmMenu%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModifyAccount%28Admin%29.cs">
+    <Compile Include="src\Admin\FrmModifyAccount%28Admin%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModifyAccount%28Admin%29.Designer.cs">
+    <Compile Include="src\Admin\FrmModifyAccount%28Admin%29.Designer.cs">
       <DependentUpon>FrmModifyAccount%28Admin%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOrderArrange%28Wh Clerk%29.cs">
+    <Compile Include="src\WC\FrmOrderArrange%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOrderArrange%28Wh Clerk%29.Designer.cs">
+    <Compile Include="src\WC\FrmOrderArrange%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmOrderArrange%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOrderArrangeDetail%28Wh Clerk%29.cs">
+    <Compile Include="src\WC\FrmOrderArrangeDetail%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOrderArrangeDetail%28Wh Clerk%29.Designer.cs">
+    <Compile Include="src\WC\FrmOrderArrangeDetail%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmOrderArrangeDetail%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUserManage%28Admin%29.cs">
+    <Compile Include="src\Admin\FrmUserManage%28Admin%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUserManage%28Admin%29.Designer.cs">
+    <Compile Include="src\Admin\FrmUserManage%28Admin%29.Designer.cs">
       <DependentUpon>FrmUserManage%28Admin%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategoryManage%28Cat Man%29.cs">
+    <Compile Include="src\CM\FrmCategoryManage%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCategoryManage%28Cat Man%29.Designer.cs">
+    <Compile Include="src\CM\FrmCategoryManage%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmCategoryManage%28Cat Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmContractMange%28Pur Man%29.cs">
+    <Compile Include="src\PM\FrmContractMange%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmContractMange%28Pur Man%29.Designer.cs">
+    <Compile Include="src\PM\FrmContractMange%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmContractMange%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCreateAgreement%28Pur Man%29.cs">
+    <Compile Include="src\PM\FrmCreateAgreement%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCreateAgreement%28Pur Man%29.Designer.cs">
+    <Compile Include="src\PM\FrmCreateAgreement%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmItemManage%28Wh Clerk%29.cs">
+    <Compile Include="src\WC\FrmItemManage%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmItemManage%28Wh Clerk%29.Designer.cs">
+    <Compile Include="src\WC\FrmItemManage%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmItemRequest%28Rest Man%29.cs">
+    <Compile Include="src\RM\FrmItemRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmItemRequest%28Rest Man%29.Designer.cs">
+    <Compile Include="src\RM\FrmItemRequest%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmItemRequest%28Rest Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
@@ -224,46 +224,46 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenu%28Rest Man%29.cs">
+    <Compile Include="src\FrmMenu%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMenu%28Rest Man%29.Designer.cs">
+    <Compile Include="src\FrmMenu%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmMenu%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInvModify%28Rest Man%29.cs">
+    <Compile Include="src\RM\FrmInvModify%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInvModify%28Rest Man%29.Designer.cs">
+    <Compile Include="src\RM\FrmInvModify%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmInvModify%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCheckReq%28Rest Man%29.cs">
+    <Compile Include="src\RM\FrmCheckReq%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCheckReq%28Rest Man%29.Designer.cs">
+    <Compile Include="src\RM\FrmCheckReq%28Rest Man%29.Designer.cs">
       <DependentUpon>FrmCheckReq%28Rest Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInvManage%28Rest Man &amp; Staff%29.cs">
+    <Compile Include="src\RM\FrmInvManage%28Rest Man &amp; Staff%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInvManage%28Rest Man &amp; Staff%29.Designer.cs">
+    <Compile Include="src\RM\FrmInvManage%28Rest Man &amp; Staff%29.Designer.cs">
       <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVirtualIDCreate%28Cat Man%29.cs">
+    <Compile Include="src\CM\FrmVirtualIDCreate%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVirtualIDCreate%28Cat Man%29.Designer.cs">
+    <Compile Include="src\CM\FrmVirtualIDCreate%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmVirtualIDCreate%28Cat Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVirtualIDEdit%28Cat Man%29.cs">
+    <Compile Include="src\CM\FrmVirtualIDEdit%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVirtualIDEdit%28Cat Man%29.Designer.cs">
+    <Compile Include="src\CM\FrmVirtualIDEdit%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmVirtualIDEdit%28Cat Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVirtualIDMapping%28Cat Man%29.cs">
+    <Compile Include="src\CM\FrmVirtualIDMapping%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVirtualIDMapping%28Cat Man%29.Designer.cs">
+    <Compile Include="src\CM\FrmVirtualIDMapping%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmVirtualIDMapping%28Cat Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -272,91 +272,91 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategoryCreate%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\CM\FrmCategoryCreate%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryCreate%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategoryEdit%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\CM\FrmCategoryEdit%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryEdit%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCheckofStatus%28Pur Man%29.resx">
+    <EmbeddedResource Include="src\PM\FrmCheckofStatus%28Pur Man%29.resx">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCreateAccount%28Admin%29.resx">
+    <EmbeddedResource Include="src\Admin\FrmCreateAccount%28Admin%29.resx">
       <DependentUpon>FrmCreateAccount%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCreateItem%28Wh Clerk%29.resx">
+    <EmbeddedResource Include="src\WC\FrmCreateItem%28Wh Clerk%29.resx">
       <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDetailsRequest%28Rest Man%29.resx">
+    <EmbeddedResource Include="src\RM\FrmDetailsRequest%28Rest Man%29.resx">
       <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditAgreement%28Pur Man%29.resx">
+    <EmbeddedResource Include="src\PM\FrmEditAgreement%28Pur Man%29.resx">
       <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditItem%28Wh Clerk%29.resx">
+    <EmbeddedResource Include="src\WC\FrmEditItem%28Wh Clerk%29.resx">
       <DependentUpon>FrmEditItem%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditRequest%28Rest Man%29.resx">
+    <EmbeddedResource Include="src\RM\FrmEditRequest%28Rest Man%29.resx">
       <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\FrmMenu%28Cat Man%29.resx">
       <DependentUpon>FrmMenu%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu%28Pur Man%29.resx">
+    <EmbeddedResource Include="src\FrmMenu%28Pur Man%29.resx">
       <DependentUpon>FrmMenu%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu%28Wh Clerk%29.resx">
+    <EmbeddedResource Include="src\FrmMenu%28Wh Clerk%29.resx">
       <DependentUpon>FrmMenu%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModifyAccount%28Admin%29.resx">
+    <EmbeddedResource Include="src\Admin\FrmModifyAccount%28Admin%29.resx">
       <DependentUpon>FrmModifyAccount%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOrderArrange%28Wh Clerk%29.resx">
+    <EmbeddedResource Include="src\WC\FrmOrderArrange%28Wh Clerk%29.resx">
       <DependentUpon>FrmOrderArrange%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOrderArrangeDetail%28Wh Clerk%29.resx">
+    <EmbeddedResource Include="src\WC\FrmOrderArrangeDetail%28Wh Clerk%29.resx">
       <DependentUpon>FrmOrderArrangeDetail%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUserManage%28Admin%29.resx">
+    <EmbeddedResource Include="src\Admin\FrmUserManage%28Admin%29.resx">
       <DependentUpon>FrmUserManage%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategoryManage%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\CM\FrmCategoryManage%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryManage%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmContractMange%28Pur Man%29.resx">
+    <EmbeddedResource Include="src\PM\FrmContractMange%28Pur Man%29.resx">
       <DependentUpon>FrmContractMange%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCreateAgreement%28Pur Man%29.resx">
+    <EmbeddedResource Include="src\PM\FrmCreateAgreement%28Pur Man%29.resx">
       <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmItemManage%28Wh Clerk%29.resx">
+    <EmbeddedResource Include="src\WC\FrmItemManage%28Wh Clerk%29.resx">
       <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmItemRequest%28Rest Man%29.resx">
+    <EmbeddedResource Include="src\RM\FrmItemRequest%28Rest Man%29.resx">
       <DependentUpon>FrmItemRequest%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenu%28Rest Man%29.resx">
+    <EmbeddedResource Include="src\FrmMenu%28Rest Man%29.resx">
       <DependentUpon>FrmMenu%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInvModify%28Rest Man%29.resx">
+    <EmbeddedResource Include="src\RM\FrmInvModify%28Rest Man%29.resx">
       <DependentUpon>FrmInvModify%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCheckReq%28Rest Man%29.resx">
+    <EmbeddedResource Include="src\RM\FrmCheckReq%28Rest Man%29.resx">
       <DependentUpon>FrmCheckReq%28Rest Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInvManage%28Rest Man &amp; Staff%29.resx">
+    <EmbeddedResource Include="src\RM\FrmInvManage%28Rest Man &amp; Staff%29.resx">
       <DependentUpon>FrmInvManage%28Rest Man &amp; Staff%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVirtualIDCreate%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\CM\FrmVirtualIDCreate%28Cat Man%29.resx">
       <DependentUpon>FrmVirtualIDCreate%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVirtualIDEdit%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\CM\FrmVirtualIDEdit%28Cat Man%29.resx">
       <DependentUpon>FrmVirtualIDEdit%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVirtualIDMapping%28Cat Man%29.resx">
+    <EmbeddedResource Include="src\CM\FrmVirtualIDMapping%28Cat Man%29.resx">
       <DependentUpon>FrmVirtualIDMapping%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -382,5 +382,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
