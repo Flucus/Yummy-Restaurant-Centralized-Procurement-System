@@ -12,17 +12,18 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmMenuRestMan : Form
     {
-        private DataRow data;
-        public FrmMenuRestMan(DataRow data)
+        private DataRow staffData;
+
+        public FrmMenuRestMan(DataRow staffData)
         {
             InitializeComponent();
-            this.data = data;
+            this.staffData = staffData;
         }
 
         private void btnInvMan_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmInvManage form = new FrmInvManage(data);
+            FrmInvManage form = new FrmInvManage(staffData);
             form.ShowDialog();
             this.Visible = true;
         }
@@ -30,7 +31,7 @@ namespace YummyRestaurantSystem
         private void btnOrderPlacement_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmItemRequest form = new FrmItemRequest(data);
+            FrmItemRequest form = new FrmItemRequest(staffData);
             form.ShowDialog();
             this.Visible = true;
         }
@@ -38,7 +39,7 @@ namespace YummyRestaurantSystem
         private void btnCheckReq_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FrmCheckReq form = new FrmCheckReq(data);
+            FrmCheckReq form = new FrmCheckReq(staffData);
             form.ShowDialog();
             this.Visible = true;
         }

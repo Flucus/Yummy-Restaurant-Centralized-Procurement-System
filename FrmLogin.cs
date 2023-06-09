@@ -72,67 +72,68 @@ namespace YummyRestaurantSystem
                 return;
             };
             string userGroup = (string)data["UserGroup"];
+            string staffID = (string)data["StaffID"];
             switch (userGroup)
             {
                 case "Restaurant Manager":
                     {
                         this.Visible = false;
-                        FrmMenuRestMan menu = new FrmMenuRestMan(data);
+                        DataRow staffData = SQLHandler.GetStaffData(staffID);
+                        FrmMenuRestMan menu = new FrmMenuRestMan(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
-                        return;
                     }
+                    break;
                 case "Restaurant Staff":
                     {
                         this.Visible = false;
-                        FrmInvManage menu = new FrmInvManage(data);
+                        DataRow staffData = SQLHandler.GetStaffData(staffID);
+                        FrmInvManage menu = new FrmInvManage(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
-                        return;
                     }
+                    break;
                 case "Category Manager":
                     {
                         this.Visible = false;
-                        FrmMenuCatMan menu = new FrmMenuCatMan(data);
+                        FrmMenuCatMan menu = new FrmMenuCatMan();
                         menu.ShowDialog();
                         this.Visible = true;
-                        return;
                     }
+                    break;
                 case "Administrator":
                     {
                         this.Visible = false;
-                        FrmUserManage menu = new FrmUserManage(data);
+                        FrmUserManage menu = new FrmUserManage();
                         menu.ShowDialog();
                         this.Visible = true;
-                        return;
                     }
+                    break;
                 case "Purchase Manager":
                     {
                         this.Visible = false;
-                        FrmMenuPurMan menu = new FrmMenuPurMan(data);
+                        FrmMenuPurMan menu = new FrmMenuPurMan();
                         menu.ShowDialog();
                         this.Visible = true;
-                        return;
                     }
+                    break;
                 case "Warehouse Clerk":
                     {
                         this.Visible = false;
-                        FrmMenuWhClerk menu = new FrmMenuWhClerk(data);
+                        FrmMenuWhClerk menu = new FrmMenuWhClerk();
                         menu.ShowDialog();
                         this.Visible = true;
-                        return;
                     }
+                    break;
                 case "Buyer":
-                    {
-                        MessageBox.Show("This client is not for buyer.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        return;
-                    }
+                    MessageBox.Show("This client is not for buyer.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    break;
                 default:
-                    {
-                        MessageBox.Show("Unknown user group.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        return;
-                    }
+                    MessageBox.Show("Unknown user group.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    break;
             }
+            txtuser.Text = "";
+            txtpw.Text = "";
         }
 
         private void btnforgot_Click(object sender, EventArgs e)

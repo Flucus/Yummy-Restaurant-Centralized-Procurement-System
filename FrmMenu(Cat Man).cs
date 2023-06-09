@@ -12,13 +12,9 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmMenuCatMan : Form
     {
-        private DataRow data;
-        public FrmMenuCatMan(DataRow data)
+        public FrmMenuCatMan()
         {
             InitializeComponent();
-            this.data = data;
         }
-
-
     }
 }
