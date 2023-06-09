@@ -61,8 +61,10 @@ namespace YummyRestaurantSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string acc = txtuser.Text;
-            string pw = txtpw.Text;
+            //string acc = txtuser.Text;
+            //string pw = txtpw.Text;
+            string acc = "JohnSmith01";
+            string pw = "12345678";
             DataRow data = SQLHandler.CheckLogin(acc, pw);
             if (data == null)
             {
@@ -131,6 +133,12 @@ namespace YummyRestaurantSystem
                         return;
                     }
             }
+        }
+
+        private void btnforgot_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Unspported in prototye version.", "Fail to open", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
         }
     }
 }

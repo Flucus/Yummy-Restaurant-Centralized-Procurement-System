@@ -171,6 +171,7 @@ namespace YummyRestaurantSystem
             this.btnforgot.TabIndex = 6;
             this.btnforgot.Text = "Forgot password";
             this.btnforgot.UseVisualStyleBackColor = false;
+            this.btnforgot.Click += new System.EventHandler(this.btnforgot_Click);
             // 
             // btnLogin
             // 
