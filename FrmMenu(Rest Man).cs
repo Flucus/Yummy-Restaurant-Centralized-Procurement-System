@@ -42,5 +42,10 @@ namespace YummyRestaurantSystem
             form.ShowDialog();
             this.Visible = true;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
