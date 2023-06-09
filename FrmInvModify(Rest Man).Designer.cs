@@ -29,13 +29,22 @@ namespace YummyRestaurantSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvModify));
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.lblItem = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnModify = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCR = new System.Windows.Forms.Button();
+            this.btnOP = new System.Windows.Forms.Button();
+            this.btnIM = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRestaurant
@@ -43,7 +52,7 @@ namespace YummyRestaurantSystem
             this.lblRestaurant.AutoSize = true;
             this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(40, 29);
+            this.lblRestaurant.Location = new System.Drawing.Point(474, 40);
             this.lblRestaurant.Name = "lblRestaurant";
             this.lblRestaurant.Size = new System.Drawing.Size(297, 24);
             this.lblRestaurant.TabIndex = 16;
@@ -55,7 +64,7 @@ namespace YummyRestaurantSystem
             this.lblItem.AutoSize = true;
             this.lblItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItem.Location = new System.Drawing.Point(60, 81);
+            this.lblItem.Location = new System.Drawing.Point(474, 176);
             this.lblItem.Name = "lblItem";
             this.lblItem.Size = new System.Drawing.Size(50, 24);
             this.lblItem.TabIndex = 17;
@@ -63,7 +72,7 @@ namespace YummyRestaurantSystem
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(116, 81);
+            this.txtSearch.Location = new System.Drawing.Point(564, 176);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(207, 20);
             this.txtSearch.TabIndex = 18;
@@ -74,31 +83,31 @@ namespace YummyRestaurantSystem
             this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModify.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModify.ForeColor = System.Drawing.Color.Black;
-            this.btnModify.Location = new System.Drawing.Point(243, 220);
+            this.btnModify.Location = new System.Drawing.Point(637, 423);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(134, 38);
             this.btnModify.TabIndex = 21;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 20);
-            this.textBox1.TabIndex = 23;
+            this.txtAmount.Location = new System.Drawing.Point(564, 282);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(207, 20);
+            this.txtAmount.TabIndex = 23;
             // 
-            // label1
+            // lblAmount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(26, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 24);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "amount ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAmount.Location = new System.Drawing.Point(474, 277);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(85, 24);
+            this.lblAmount.TabIndex = 22;
+            this.lblAmount.Text = "Amount ";
+            this.lblAmount.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCancel
             // 
@@ -106,27 +115,105 @@ namespace YummyRestaurantSystem
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(17, 220);
+            this.btnCancel.Location = new System.Drawing.Point(478, 423);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 38);
             this.btnCancel.TabIndex = 24;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnCR);
+            this.panel1.Controls.Add(this.btnOP);
+            this.panel1.Controls.Add(this.btnIM);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.TabIndex = 101;
+            // 
+            // btnCR
+            // 
+            this.btnCR.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCR.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCR.ForeColor = System.Drawing.Color.Black;
+            this.btnCR.Location = new System.Drawing.Point(12, 413);
+            this.btnCR.Name = "btnCR";
+            this.btnCR.Size = new System.Drawing.Size(203, 38);
+            this.btnCR.TabIndex = 96;
+            this.btnCR.Text = "Check Request";
+            this.btnCR.UseVisualStyleBackColor = false;
+            // 
+            // btnOP
+            // 
+            this.btnOP.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOP.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOP.ForeColor = System.Drawing.Color.Black;
+            this.btnOP.Location = new System.Drawing.Point(12, 353);
+            this.btnOP.Name = "btnOP";
+            this.btnOP.Size = new System.Drawing.Size(203, 38);
+            this.btnOP.TabIndex = 95;
+            this.btnOP.Text = "Order Placement";
+            this.btnOP.UseVisualStyleBackColor = false;
+            // 
+            // btnIM
+            // 
+            this.btnIM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIM.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIM.ForeColor = System.Drawing.Color.Black;
+            this.btnIM.Location = new System.Drawing.Point(12, 290);
+            this.btnIM.Name = "btnIM";
+            this.btnIM.Size = new System.Drawing.Size(203, 38);
+            this.btnIM.TabIndex = 94;
+            this.btnIM.Text = "Inventory Manage";
+            this.btnIM.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.Location = new System.Drawing.Point(153, 594);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(62, 38);
+            this.button4.TabIndex = 93;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmInvModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 283);
+            this.ClientSize = new System.Drawing.Size(1071, 645);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmInvModify";
             this.Text = "Inventory Modify";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +225,14 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnModify;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnCR;
+        private System.Windows.Forms.Button btnOP;
+        private System.Windows.Forms.Button btnIM;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -29,19 +29,27 @@ namespace YummyRestaurantSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoryEdit_Cat_Man_));
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblVirtualID = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblTypeName = new System.Windows.Forms.Label();
+            this.txtTypeID = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
+            this.txtVirtualID = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVID = new System.Windows.Forms.Button();
+            this.btnCM = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRestaurant
@@ -49,7 +57,7 @@ namespace YummyRestaurantSystem
             this.lblRestaurant.AutoSize = true;
             this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
+            this.lblRestaurant.Location = new System.Drawing.Point(434, 41);
             this.lblRestaurant.Name = "lblRestaurant";
             this.lblRestaurant.Size = new System.Drawing.Size(361, 24);
             this.lblRestaurant.TabIndex = 29;
@@ -61,9 +69,9 @@ namespace YummyRestaurantSystem
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnClose.Location = new System.Drawing.Point(12, 366);
+            this.btnClose.Location = new System.Drawing.Point(447, 501);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(134, 35);
+            this.btnClose.Size = new System.Drawing.Size(134, 38);
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -74,125 +82,188 @@ namespace YummyRestaurantSystem
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(263, 366);
+            this.btnEdit.Location = new System.Drawing.Point(661, 501);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(134, 35);
+            this.btnEdit.Size = new System.Drawing.Size(134, 38);
             this.btnEdit.TabIndex = 32;
             this.btnEdit.Text = "Edit ";
             this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(156, 70);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(217, 22);
-            this.txtName.TabIndex = 34;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(21, 70);
+            this.lblName.Location = new System.Drawing.Point(443, 145);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 33;
             this.lblName.Text = "Item Name";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(156, 120);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(217, 22);
-            this.txtID.TabIndex = 36;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblID.Location = new System.Drawing.Point(21, 120);
+            this.lblID.Location = new System.Drawing.Point(443, 199);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(77, 24);
             this.lblID.TabIndex = 35;
             this.lblID.Text = "Item ID";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(156, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 22);
-            this.textBox1.TabIndex = 38;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblVirtualID
             // 
             this.lblVirtualID.AutoSize = true;
             this.lblVirtualID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVirtualID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVirtualID.Location = new System.Drawing.Point(21, 167);
+            this.lblVirtualID.Location = new System.Drawing.Point(443, 250);
             this.lblVirtualID.Name = "lblVirtualID";
             this.lblVirtualID.Size = new System.Drawing.Size(95, 24);
             this.lblVirtualID.TabIndex = 37;
             this.lblVirtualID.Text = "Virtual ID";
             this.lblVirtualID.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(156, 212);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 22);
-            this.textBox2.TabIndex = 40;
-            // 
             // lblType
             // 
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblType.Location = new System.Drawing.Point(21, 257);
+            this.lblType.Location = new System.Drawing.Point(443, 348);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(82, 24);
             this.lblType.TabIndex = 39;
             this.lblType.Text = "Type ID";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(156, 257);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 22);
-            this.textBox3.TabIndex = 42;
             // 
             // lblTypeName
             // 
             this.lblTypeName.AutoSize = true;
             this.lblTypeName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTypeName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTypeName.Location = new System.Drawing.Point(21, 212);
+            this.lblTypeName.Location = new System.Drawing.Point(443, 299);
             this.lblTypeName.Name = "lblTypeName";
             this.lblTypeName.Size = new System.Drawing.Size(115, 24);
             this.lblTypeName.TabIndex = 41;
             this.lblTypeName.Text = "Type Name";
             // 
+            // txtTypeID
+            // 
+            this.txtTypeID.Location = new System.Drawing.Point(578, 348);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(217, 20);
+            this.txtTypeID.TabIndex = 102;
+            // 
+            // txtTypeName
+            // 
+            this.txtTypeName.Location = new System.Drawing.Point(578, 299);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(217, 20);
+            this.txtTypeName.TabIndex = 101;
+            // 
+            // txtVirtualID
+            // 
+            this.txtVirtualID.Location = new System.Drawing.Point(578, 250);
+            this.txtVirtualID.Name = "txtVirtualID";
+            this.txtVirtualID.Size = new System.Drawing.Size(217, 20);
+            this.txtVirtualID.TabIndex = 100;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(578, 199);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(217, 20);
+            this.textBox4.TabIndex = 99;
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Location = new System.Drawing.Point(578, 145);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(217, 20);
+            this.txtItemName.TabIndex = 98;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnVID);
+            this.panel1.Controls.Add(this.btnCM);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.TabIndex = 103;
+            // 
+            // btnVID
+            // 
+            this.btnVID.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVID.ForeColor = System.Drawing.Color.Black;
+            this.btnVID.Location = new System.Drawing.Point(12, 353);
+            this.btnVID.Name = "btnVID";
+            this.btnVID.Size = new System.Drawing.Size(203, 38);
+            this.btnVID.TabIndex = 95;
+            this.btnVID.Text = "Vitural ID Mapping";
+            this.btnVID.UseVisualStyleBackColor = false;
+            // 
+            // btnCM
+            // 
+            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCM.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCM.ForeColor = System.Drawing.Color.Black;
+            this.btnCM.Location = new System.Drawing.Point(12, 290);
+            this.btnCM.Name = "btnCM";
+            this.btnCM.Size = new System.Drawing.Size(203, 38);
+            this.btnCM.TabIndex = 94;
+            this.btnCM.Text = "Category Manage";
+            this.btnCM.UseVisualStyleBackColor = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogout.Location = new System.Drawing.Point(153, 594);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(62, 38);
+            this.btnLogout.TabIndex = 93;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmCategoryEdit_Cat_Man_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 413);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(1071, 645);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtTypeID);
+            this.Controls.Add(this.txtTypeName);
+            this.Controls.Add(this.txtVirtualID);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.lblTypeName);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblType);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblVirtualID);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmCategoryEdit_Cat_Man_";
             this.Text = "FrmCategoryEdit_Cat_Man_";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,15 +274,20 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblVirtualID;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblTypeName;
+        private System.Windows.Forms.TextBox txtTypeID;
+        private System.Windows.Forms.TextBox txtTypeName;
+        private System.Windows.Forms.TextBox txtVirtualID;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtItemName;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnVID;
+        private System.Windows.Forms.Button btnCM;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
