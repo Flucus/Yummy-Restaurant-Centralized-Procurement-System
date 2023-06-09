@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditItem));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -39,6 +40,11 @@
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -47,9 +53,9 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(16, 194);
+            this.btnCancel.Location = new System.Drawing.Point(430, 453);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 38);
+            this.btnCancel.Size = new System.Drawing.Size(134, 35);
             this.btnCancel.TabIndex = 47;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -60,18 +66,18 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(277, 194);
+            this.btnCreate.Location = new System.Drawing.Point(691, 453);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(134, 38);
+            this.btnCreate.Size = new System.Drawing.Size(134, 35);
             this.btnCreate.TabIndex = 46;
             this.btnCreate.Text = "Edit Item";
             this.btnCreate.UseVisualStyleBackColor = false;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(134, 152);
+            this.txtDescription.Location = new System.Drawing.Point(548, 351);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(277, 20);
+            this.txtDescription.Size = new System.Drawing.Size(277, 22);
             this.txtDescription.TabIndex = 45;
             // 
             // lblDescription
@@ -79,7 +85,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDescription.Location = new System.Drawing.Point(12, 148);
+            this.lblDescription.Location = new System.Drawing.Point(426, 348);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(116, 24);
             this.lblDescription.TabIndex = 44;
@@ -88,9 +94,9 @@
             // cboCat
             // 
             this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(134, 116);
+            this.cboCat.Location = new System.Drawing.Point(548, 285);
             this.cboCat.Name = "cboCat";
-            this.cboCat.Size = new System.Drawing.Size(277, 21);
+            this.cboCat.Size = new System.Drawing.Size(277, 20);
             this.cboCat.TabIndex = 43;
             // 
             // lblCategory
@@ -98,7 +104,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCategory.Location = new System.Drawing.Point(12, 113);
+            this.lblCategory.Location = new System.Drawing.Point(426, 282);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(96, 24);
             this.lblCategory.TabIndex = 42;
@@ -106,9 +112,9 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(134, 45);
+            this.txtName.Location = new System.Drawing.Point(548, 142);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 20);
+            this.txtName.Size = new System.Drawing.Size(277, 22);
             this.txtName.TabIndex = 41;
             // 
             // lblName
@@ -116,7 +122,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(12, 45);
+            this.lblName.Location = new System.Drawing.Point(426, 142);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 40;
@@ -127,7 +133,7 @@
             this.lblRestaurant.AutoSize = true;
             this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(12, 9);
+            this.lblRestaurant.Location = new System.Drawing.Point(461, 28);
             this.lblRestaurant.Name = "lblRestaurant";
             this.lblRestaurant.Size = new System.Drawing.Size(315, 24);
             this.lblRestaurant.TabIndex = 39;
@@ -135,9 +141,9 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(134, 81);
+            this.txtID.Location = new System.Drawing.Point(548, 215);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(277, 20);
+            this.txtID.Size = new System.Drawing.Size(277, 22);
             this.txtID.TabIndex = 49;
             // 
             // lblID
@@ -145,17 +151,51 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblID.Location = new System.Drawing.Point(12, 81);
+            this.lblID.Location = new System.Drawing.Point(426, 215);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(77, 24);
             this.lblID.TabIndex = 48;
             this.lblID.Text = "Item ID";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 595);
+            this.panel1.TabIndex = 95;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogout.Location = new System.Drawing.Point(153, 548);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(62, 35);
+            this.btnLogout.TabIndex = 93;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 174);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmEditItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 244);
+            this.ClientSize = new System.Drawing.Size(1071, 595);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnCancel);
@@ -169,6 +209,8 @@
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmEditItem";
             this.Text = "Edit Item";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +229,8 @@
         private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

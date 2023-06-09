@@ -62,7 +62,7 @@
             this.lblUserManage.AutoSize = true;
             this.lblUserManage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserManage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUserManage.Location = new System.Drawing.Point(265, 28);
+            this.lblUserManage.Location = new System.Drawing.Point(424, 28);
             this.lblUserManage.Name = "lblUserManage";
             this.lblUserManage.Size = new System.Drawing.Size(453, 24);
             this.lblUserManage.TabIndex = 16;
@@ -73,7 +73,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(265, 83);
+            this.lblName.Location = new System.Drawing.Point(424, 97);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(64, 24);
             this.lblName.TabIndex = 17;
@@ -82,7 +82,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(403, 86);
+            this.txtName.Location = new System.Drawing.Point(562, 100);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(305, 22);
             this.txtName.TabIndex = 18;
@@ -92,7 +92,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.Location = new System.Drawing.Point(265, 114);
+            this.lblEmail.Location = new System.Drawing.Point(424, 128);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(61, 24);
             this.lblEmail.TabIndex = 19;
@@ -101,7 +101,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(403, 119);
+            this.txtEmail.Location = new System.Drawing.Point(562, 133);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(305, 22);
             this.txtEmail.TabIndex = 20;
@@ -111,7 +111,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPhone.Location = new System.Drawing.Point(265, 149);
+            this.lblPhone.Location = new System.Drawing.Point(424, 163);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(70, 24);
             this.lblPhone.TabIndex = 21;
@@ -120,14 +120,14 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(403, 153);
+            this.txtPhone.Location = new System.Drawing.Point(562, 167);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(305, 22);
             this.txtPhone.TabIndex = 22;
             // 
             // dtpDoB
             // 
-            this.dtpDoB.Location = new System.Drawing.Point(403, 187);
+            this.dtpDoB.Location = new System.Drawing.Point(562, 201);
             this.dtpDoB.Name = "dtpDoB";
             this.dtpDoB.Size = new System.Drawing.Size(305, 22);
             this.dtpDoB.TabIndex = 23;
@@ -137,7 +137,7 @@
             this.lblDoB.AutoSize = true;
             this.lblDoB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDoB.Location = new System.Drawing.Point(265, 185);
+            this.lblDoB.Location = new System.Drawing.Point(424, 199);
             this.lblDoB.Name = "lblDoB";
             this.lblDoB.Size = new System.Drawing.Size(128, 24);
             this.lblDoB.TabIndex = 24;
@@ -149,7 +149,7 @@
             this.lblHD.AutoSize = true;
             this.lblHD.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHD.Location = new System.Drawing.Point(265, 221);
+            this.lblHD.Location = new System.Drawing.Point(424, 235);
             this.lblHD.Name = "lblHD";
             this.lblHD.Size = new System.Drawing.Size(99, 24);
             this.lblHD.TabIndex = 26;
@@ -158,14 +158,14 @@
             // 
             // dtpHd
             // 
-            this.dtpHd.Location = new System.Drawing.Point(403, 223);
+            this.dtpHd.Location = new System.Drawing.Point(562, 237);
             this.dtpHd.Name = "dtpHd";
             this.dtpHd.Size = new System.Drawing.Size(305, 22);
             this.dtpHd.TabIndex = 25;
             // 
             // txtSal
             // 
-            this.txtSal.Location = new System.Drawing.Point(403, 260);
+            this.txtSal.Location = new System.Drawing.Point(562, 274);
             this.txtSal.Name = "txtSal";
             this.txtSal.Size = new System.Drawing.Size(305, 22);
             this.txtSal.TabIndex = 28;
@@ -175,7 +175,7 @@
             this.lblSal.AutoSize = true;
             this.lblSal.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSal.Location = new System.Drawing.Point(265, 256);
+            this.lblSal.Location = new System.Drawing.Point(424, 270);
             this.lblSal.Name = "lblSal";
             this.lblSal.Size = new System.Drawing.Size(70, 24);
             this.lblSal.TabIndex = 27;
@@ -184,7 +184,7 @@
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(403, 298);
+            this.txtState.Location = new System.Drawing.Point(562, 312);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(305, 22);
             this.txtState.TabIndex = 30;
@@ -194,7 +194,7 @@
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblState.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblState.Location = new System.Drawing.Point(265, 298);
+            this.lblState.Location = new System.Drawing.Point(424, 312);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(60, 24);
             this.lblState.TabIndex = 29;
@@ -207,7 +207,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(269, 457);
+            this.btnCancel.Location = new System.Drawing.Point(428, 488);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 35);
             this.btnCancel.TabIndex = 31;
@@ -220,7 +220,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(574, 457);
+            this.btnSubmit.Location = new System.Drawing.Point(733, 488);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(134, 35);
             this.btnSubmit.TabIndex = 32;
@@ -230,7 +230,7 @@
             // cboLoc
             // 
             this.cboLoc.FormattingEnabled = true;
-            this.cboLoc.Location = new System.Drawing.Point(403, 341);
+            this.cboLoc.Location = new System.Drawing.Point(562, 355);
             this.cboLoc.Name = "cboLoc";
             this.cboLoc.Size = new System.Drawing.Size(305, 20);
             this.cboLoc.TabIndex = 33;
@@ -240,7 +240,7 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLocation.Location = new System.Drawing.Point(265, 337);
+            this.lblLocation.Location = new System.Drawing.Point(424, 351);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(91, 24);
             this.lblLocation.TabIndex = 34;
@@ -249,7 +249,7 @@
             // 
             // txtJobTitle
             // 
-            this.txtJobTitle.Location = new System.Drawing.Point(403, 379);
+            this.txtJobTitle.Location = new System.Drawing.Point(562, 393);
             this.txtJobTitle.Name = "txtJobTitle";
             this.txtJobTitle.Size = new System.Drawing.Size(305, 22);
             this.txtJobTitle.TabIndex = 36;
@@ -259,7 +259,7 @@
             this.lblJT.AutoSize = true;
             this.lblJT.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJT.Location = new System.Drawing.Point(268, 373);
+            this.lblJT.Location = new System.Drawing.Point(427, 387);
             this.lblJT.Name = "lblJT";
             this.lblJT.Size = new System.Drawing.Size(88, 24);
             this.lblJT.TabIndex = 35;
