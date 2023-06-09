@@ -41,10 +41,9 @@
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnOA = new System.Windows.Forms.Button();
+            this.btnIM = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,9 +53,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(262, 157);
+            this.dataGridView1.Location = new System.Drawing.Point(262, 170);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(791, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(791, 333);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblRestaurant
@@ -64,7 +63,7 @@
             this.lblRestaurant.AutoSize = true;
             this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(258, 28);
+            this.lblRestaurant.Location = new System.Drawing.Point(258, 30);
             this.lblRestaurant.Name = "lblRestaurant";
             this.lblRestaurant.Size = new System.Drawing.Size(399, 24);
             this.lblRestaurant.TabIndex = 5;
@@ -76,9 +75,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnClose.Location = new System.Drawing.Point(262, 495);
+            this.btnClose.Location = new System.Drawing.Point(262, 536);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(134, 35);
+            this.btnClose.Size = new System.Drawing.Size(134, 38);
             this.btnClose.TabIndex = 21;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -89,9 +88,9 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(919, 495);
+            this.btnCreate.Location = new System.Drawing.Point(919, 536);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(134, 35);
+            this.btnCreate.Size = new System.Drawing.Size(134, 38);
             this.btnCreate.TabIndex = 22;
             this.btnCreate.Text = "Create Item";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -102,9 +101,9 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(779, 495);
+            this.btnEdit.Location = new System.Drawing.Point(779, 536);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(134, 35);
+            this.btnEdit.Size = new System.Drawing.Size(134, 38);
             this.btnEdit.TabIndex = 23;
             this.btnEdit.Text = "Edit Item";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -115,18 +114,18 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(639, 495);
+            this.btnDelete.Location = new System.Drawing.Point(639, 536);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(134, 35);
+            this.btnDelete.Size = new System.Drawing.Size(134, 38);
             this.btnDelete.TabIndex = 26;
             this.btnDelete.Text = "Delete Item";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // txtItemID
             // 
-            this.txtItemID.Location = new System.Drawing.Point(374, 113);
+            this.txtItemID.Location = new System.Drawing.Point(374, 122);
             this.txtItemID.Name = "txtItemID";
-            this.txtItemID.Size = new System.Drawing.Size(100, 22);
+            this.txtItemID.Size = new System.Drawing.Size(100, 20);
             this.txtItemID.TabIndex = 27;
             // 
             // lblName
@@ -134,7 +133,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(258, 76);
+            this.lblName.Location = new System.Drawing.Point(258, 82);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 28;
@@ -145,7 +144,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblID.Location = new System.Drawing.Point(258, 113);
+            this.lblID.Location = new System.Drawing.Point(258, 122);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(77, 24);
             this.lblID.TabIndex = 29;
@@ -153,9 +152,9 @@
             // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(374, 78);
+            this.txtItemName.Location = new System.Drawing.Point(374, 84);
             this.txtItemName.Name = "txtItemName";
-            this.txtItemName.Size = new System.Drawing.Size(100, 22);
+            this.txtItemName.Size = new System.Drawing.Size(100, 20);
             this.txtItemName.TabIndex = 30;
             // 
             // btnSearch
@@ -164,9 +163,9 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(514, 78);
+            this.btnSearch.Location = new System.Drawing.Point(514, 84);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(63, 29);
+            this.btnSearch.Size = new System.Drawing.Size(63, 31);
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -174,83 +173,69 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnOA);
+            this.panel1.Controls.Add(this.btnIM);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 595);
-            this.panel1.TabIndex = 99;
+            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.TabIndex = 101;
             // 
-            // button3
+            // btnOA
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(12, 381);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(203, 35);
-            this.button3.TabIndex = 96;
-            this.button3.Text = "Agreement Management";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnOA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOA.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOA.ForeColor = System.Drawing.Color.Black;
+            this.btnOA.Location = new System.Drawing.Point(12, 353);
+            this.btnOA.Name = "btnOA";
+            this.btnOA.Size = new System.Drawing.Size(203, 38);
+            this.btnOA.TabIndex = 95;
+            this.btnOA.Text = "Order Arrange";
+            this.btnOA.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnIM
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(12, 326);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(203, 35);
-            this.button2.TabIndex = 95;
-            this.button2.Text = "Item Management";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnIM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIM.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIM.ForeColor = System.Drawing.Color.Black;
+            this.btnIM.Location = new System.Drawing.Point(12, 290);
+            this.btnIM.Name = "btnIM";
+            this.btnIM.Size = new System.Drawing.Size(203, 38);
+            this.btnIM.TabIndex = 94;
+            this.btnIM.Text = "Inventory Manage";
+            this.btnIM.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // button4
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(12, 268);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 35);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "Request Management";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(153, 548);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(62, 35);
-            this.btnLogout.TabIndex = 93;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.Location = new System.Drawing.Point(153, 594);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(62, 38);
+            this.button4.TabIndex = 93;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 174);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FrmItemManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 595);
+            this.ClientSize = new System.Drawing.Size(1071, 645);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtItemName);
@@ -287,10 +272,9 @@
         private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnOA;
+        private System.Windows.Forms.Button btnIM;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
