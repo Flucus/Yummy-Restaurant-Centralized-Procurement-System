@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +12,11 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmMenuWhClerk : Form
     {
-        public FrmMenuWhClerk()
+        private DataRow data;
+        public FrmMenuWhClerk(DataRow data)
         {
             InitializeComponent();
+            this.data = data;
         }
     }
 }

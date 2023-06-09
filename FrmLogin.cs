@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,8 @@ namespace YummyRestaurantSystem
             if (cbnShowPw.Checked)
             {
                 txtpw.PasswordChar = '\0';
-            }else
+            }
+            else
             {
                 txtpw.PasswordChar = '●';
             }
@@ -54,6 +56,80 @@ namespace YummyRestaurantSystem
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string acc = txtuser.Text;
+            string pw = txtpw.Text;
+            DataRow data = SQLHandler.CheckLogin(acc, pw);
+            if (data == null)
+            {
+                MessageBox.Show("Wrong account name or password.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
+            string userGroup = (string)data["UserGroup"];
+            switch (userGroup)
+            {
+                case "Restaurant Manager":
+                    {
+                        this.Visible = false;
+                        FrmMenuRestMan menu = new FrmMenuRestMan(data);
+                        menu.ShowDialog();
+                        this.Visible = true;
+                        return;
+                    }
+                case "Restaurant Staff":
+                    {
+                        this.Visible = false;
+                        FrmInvManage menu = new FrmInvManage(data);
+                        menu.ShowDialog();
+                        this.Visible = true;
+                        return;
+                    }
+                case "Category Manager":
+                    {
+                        this.Visible = false;
+                        FrmMenuCatMan menu = new FrmMenuCatMan(data);
+                        menu.ShowDialog();
+                        this.Visible = true;
+                        return;
+                    }
+                case "Administrator":
+                    {
+                        this.Visible = false;
+                        FrmUserManage menu = new FrmUserManage(data);
+                        menu.ShowDialog();
+                        this.Visible = true;
+                        return;
+                    }
+                case "Purchase Manager":
+                    {
+                        this.Visible = false;
+                        FrmMenuPurMan menu = new FrmMenuPurMan(data);
+                        menu.ShowDialog();
+                        this.Visible = true;
+                        return;
+                    }
+                case "Warehouse Clerk":
+                    {
+                        this.Visible = false;
+                        FrmMenuWhClerk menu = new FrmMenuWhClerk(data);
+                        menu.ShowDialog();
+                        this.Visible = true;
+                        return;
+                    }
+                case "Buyer":
+                    {
+                        MessageBox.Show("This client is not for buyer.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                default:
+                    {
+                        MessageBox.Show("Unknown user group.", "Fail to login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+            }
         }
     }
 }
