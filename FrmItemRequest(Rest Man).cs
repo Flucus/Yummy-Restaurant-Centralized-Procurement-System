@@ -12,9 +12,11 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmItemRequest : Form
     {
-        public FrmItemRequest()
+        private DataRow data;
+        public FrmItemRequest(DataRow data)
         {
             InitializeComponent();
+            this.data = data;
         }
     }
 }

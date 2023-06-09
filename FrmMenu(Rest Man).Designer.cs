@@ -83,6 +83,7 @@
             this.btnInvMan.TabIndex = 8;
             this.btnInvMan.Text = "Inventory Manage";
             this.btnInvMan.UseVisualStyleBackColor = false;
+            this.btnInvMan.Click += new System.EventHandler(this.btnInvMan_Click);
             // 
             // btnCheckReq
             // 
@@ -97,6 +98,7 @@
             this.btnCheckReq.TabIndex = 10;
             this.btnCheckReq.Text = "Check Request";
             this.btnCheckReq.UseVisualStyleBackColor = false;
+            this.btnCheckReq.Click += new System.EventHandler(this.btnCheckReq_Click);
             // 
             // btnOrderPlacement
             // 
@@ -111,6 +113,7 @@
             this.btnOrderPlacement.TabIndex = 9;
             this.btnOrderPlacement.Text = "Order Placement";
             this.btnOrderPlacement.UseVisualStyleBackColor = false;
+            this.btnOrderPlacement.Click += new System.EventHandler(this.btnOrderPlacement_Click);
             // 
             // panel1
             // 

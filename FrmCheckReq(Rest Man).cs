@@ -12,9 +12,11 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmCheckReq : Form
     {
-        public FrmCheckReq()
+        private DataRow data;
+        public FrmCheckReq(DataRow data)
         {
             InitializeComponent();
+            this.data = data;
         }
     }
 }
