@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModifyAccount));
             this.txtJobTitle = new System.Windows.Forms.TextBox();
             this.lblJT = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
@@ -51,13 +52,18 @@
             this.lblUserManage = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.lblStaffID = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtJobTitle
             // 
-            this.txtJobTitle.Location = new System.Drawing.Point(561, 91);
+            this.txtJobTitle.Location = new System.Drawing.Point(411, 416);
             this.txtJobTitle.Name = "txtJobTitle";
-            this.txtJobTitle.Size = new System.Drawing.Size(230, 20);
+            this.txtJobTitle.Size = new System.Drawing.Size(305, 22);
             this.txtJobTitle.TabIndex = 57;
             // 
             // lblJT
@@ -65,7 +71,7 @@
             this.lblJT.AutoSize = true;
             this.lblJT.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJT.Location = new System.Drawing.Point(467, 86);
+            this.lblJT.Location = new System.Drawing.Point(276, 410);
             this.lblJT.Name = "lblJT";
             this.lblJT.Size = new System.Drawing.Size(88, 24);
             this.lblJT.TabIndex = 56;
@@ -77,7 +83,7 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLocation.Location = new System.Drawing.Point(464, 47);
+            this.lblLocation.Location = new System.Drawing.Point(273, 374);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.Size = new System.Drawing.Size(91, 24);
             this.lblLocation.TabIndex = 55;
@@ -87,9 +93,9 @@
             // cboLoc
             // 
             this.cboLoc.FormattingEnabled = true;
-            this.cboLoc.Location = new System.Drawing.Point(561, 52);
+            this.cboLoc.Location = new System.Drawing.Point(411, 378);
             this.cboLoc.Name = "cboLoc";
-            this.cboLoc.Size = new System.Drawing.Size(230, 21);
+            this.cboLoc.Size = new System.Drawing.Size(305, 20);
             this.cboLoc.TabIndex = 54;
             // 
             // btnEdit
@@ -98,9 +104,9 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(657, 402);
+            this.btnEdit.Location = new System.Drawing.Point(582, 501);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(134, 38);
+            this.btnEdit.Size = new System.Drawing.Size(134, 35);
             this.btnEdit.TabIndex = 53;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -111,18 +117,18 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(9, 402);
+            this.btnCancel.Location = new System.Drawing.Point(280, 501);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 38);
+            this.btnCancel.Size = new System.Drawing.Size(134, 35);
             this.btnCancel.TabIndex = 52;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(156, 319);
+            this.txtState.Location = new System.Drawing.Point(411, 331);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(305, 20);
+            this.txtState.Size = new System.Drawing.Size(305, 22);
             this.txtState.TabIndex = 51;
             // 
             // lblState
@@ -130,7 +136,7 @@
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblState.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblState.Location = new System.Drawing.Point(18, 315);
+            this.lblState.Location = new System.Drawing.Point(273, 328);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(60, 24);
             this.lblState.TabIndex = 50;
@@ -139,9 +145,9 @@
             // 
             // txtSal
             // 
-            this.txtSal.Location = new System.Drawing.Point(156, 278);
+            this.txtSal.Location = new System.Drawing.Point(411, 294);
             this.txtSal.Name = "txtSal";
-            this.txtSal.Size = new System.Drawing.Size(305, 20);
+            this.txtSal.Size = new System.Drawing.Size(305, 22);
             this.txtSal.TabIndex = 49;
             // 
             // lblSal
@@ -149,7 +155,7 @@
             this.lblSal.AutoSize = true;
             this.lblSal.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSal.Location = new System.Drawing.Point(18, 274);
+            this.lblSal.Location = new System.Drawing.Point(273, 290);
             this.lblSal.Name = "lblSal";
             this.lblSal.Size = new System.Drawing.Size(70, 24);
             this.lblSal.TabIndex = 48;
@@ -161,7 +167,7 @@
             this.lblHD.AutoSize = true;
             this.lblHD.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHD.Location = new System.Drawing.Point(18, 236);
+            this.lblHD.Location = new System.Drawing.Point(273, 255);
             this.lblHD.Name = "lblHD";
             this.lblHD.Size = new System.Drawing.Size(99, 24);
             this.lblHD.TabIndex = 47;
@@ -170,9 +176,9 @@
             // 
             // dtpHd
             // 
-            this.dtpHd.Location = new System.Drawing.Point(156, 238);
+            this.dtpHd.Location = new System.Drawing.Point(411, 257);
             this.dtpHd.Name = "dtpHd";
-            this.dtpHd.Size = new System.Drawing.Size(305, 20);
+            this.dtpHd.Size = new System.Drawing.Size(305, 22);
             this.dtpHd.TabIndex = 46;
             // 
             // lblDoB
@@ -180,7 +186,7 @@
             this.lblDoB.AutoSize = true;
             this.lblDoB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDoB.Location = new System.Drawing.Point(18, 197);
+            this.lblDoB.Location = new System.Drawing.Point(273, 219);
             this.lblDoB.Name = "lblDoB";
             this.lblDoB.Size = new System.Drawing.Size(128, 24);
             this.lblDoB.TabIndex = 45;
@@ -189,16 +195,16 @@
             // 
             // dtpDoB
             // 
-            this.dtpDoB.Location = new System.Drawing.Point(156, 199);
+            this.dtpDoB.Location = new System.Drawing.Point(411, 221);
             this.dtpDoB.Name = "dtpDoB";
-            this.dtpDoB.Size = new System.Drawing.Size(305, 20);
+            this.dtpDoB.Size = new System.Drawing.Size(305, 22);
             this.dtpDoB.TabIndex = 44;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(156, 162);
+            this.txtPhone.Location = new System.Drawing.Point(411, 187);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(305, 20);
+            this.txtPhone.Size = new System.Drawing.Size(305, 22);
             this.txtPhone.TabIndex = 43;
             // 
             // lblPhone
@@ -206,7 +212,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPhone.Location = new System.Drawing.Point(18, 158);
+            this.lblPhone.Location = new System.Drawing.Point(273, 183);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(70, 24);
             this.lblPhone.TabIndex = 42;
@@ -215,9 +221,9 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(156, 125);
+            this.txtEmail.Location = new System.Drawing.Point(411, 152);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(305, 20);
+            this.txtEmail.Size = new System.Drawing.Size(305, 22);
             this.txtEmail.TabIndex = 41;
             // 
             // lblEmail
@@ -225,7 +231,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.Location = new System.Drawing.Point(18, 120);
+            this.lblEmail.Location = new System.Drawing.Point(273, 148);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(61, 24);
             this.lblEmail.TabIndex = 40;
@@ -234,9 +240,9 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(156, 90);
+            this.txtName.Location = new System.Drawing.Point(411, 120);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(305, 20);
+            this.txtName.Size = new System.Drawing.Size(305, 22);
             this.txtName.TabIndex = 39;
             // 
             // lblName
@@ -244,7 +250,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(18, 86);
+            this.lblName.Location = new System.Drawing.Point(273, 116);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(64, 24);
             this.lblName.TabIndex = 38;
@@ -256,7 +262,7 @@
             this.lblUserManage.AutoSize = true;
             this.lblUserManage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserManage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUserManage.Location = new System.Drawing.Point(15, 11);
+            this.lblUserManage.Location = new System.Drawing.Point(273, 28);
             this.lblUserManage.Name = "lblUserManage";
             this.lblUserManage.Size = new System.Drawing.Size(425, 24);
             this.lblUserManage.TabIndex = 37;
@@ -264,9 +270,9 @@
             // 
             // txtStaffID
             // 
-            this.txtStaffID.Location = new System.Drawing.Point(156, 51);
+            this.txtStaffID.Location = new System.Drawing.Point(411, 84);
             this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(305, 20);
+            this.txtStaffID.Size = new System.Drawing.Size(305, 22);
             this.txtStaffID.TabIndex = 59;
             // 
             // lblStaffID
@@ -274,18 +280,52 @@
             this.lblStaffID.AutoSize = true;
             this.lblStaffID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStaffID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblStaffID.Location = new System.Drawing.Point(18, 47);
+            this.lblStaffID.Location = new System.Drawing.Point(273, 80);
             this.lblStaffID.Name = "lblStaffID";
             this.lblStaffID.Size = new System.Drawing.Size(81, 24);
             this.lblStaffID.TabIndex = 58;
             this.lblStaffID.Text = "Staff ID";
             this.lblStaffID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 595);
+            this.panel1.TabIndex = 100;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogout.Location = new System.Drawing.Point(153, 548);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(62, 35);
+            this.btnLogout.TabIndex = 93;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 174);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmModifyAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1071, 595);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtStaffID);
             this.Controls.Add(this.lblStaffID);
             this.Controls.Add(this.txtJobTitle);
@@ -311,6 +351,8 @@
             this.Controls.Add(this.lblUserManage);
             this.Name = "FrmModifyAccount";
             this.Text = "Modify Account";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,5 +383,8 @@
         private System.Windows.Forms.Label lblUserManage;
         private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.Label lblStaffID;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
