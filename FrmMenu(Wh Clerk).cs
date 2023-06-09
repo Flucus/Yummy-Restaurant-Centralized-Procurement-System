@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmMenuWhCkerk : Form
+    public partial class FrmMenuWhClerk : Form
     {
-        public FrmMenuWhCkerk()
+        public FrmMenuWhClerk()
         {
             InitializeComponent();
         }

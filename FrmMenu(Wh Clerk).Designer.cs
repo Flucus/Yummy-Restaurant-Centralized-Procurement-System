@@ -1,6 +1,6 @@
 ﻿namespace YummyRestaurantSystem
 {
-    partial class FrmMenuWhCkerk
+    partial class FrmMenuWhClerk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuWhCkerk));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuWhClerk));
             this.btnOrderArrangement = new System.Windows.Forms.Button();
             this.btnInvMan = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -153,7 +153,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // FrmMenuWhCkerk
+            // FrmMenuWhClerk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,7 +163,7 @@
             this.Controls.Add(this.btnInvMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
-            this.Name = "FrmMenuWhCkerk";
+            this.Name = "FrmMenuWhClerk";
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
