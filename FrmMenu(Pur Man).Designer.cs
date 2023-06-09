@@ -46,11 +46,12 @@
             // 
             this.btnCreOrder.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCreOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreOrder.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnCreOrder.Location = new System.Drawing.Point(705, 198);
+            this.btnCreOrder.Location = new System.Drawing.Point(940, 228);
+            this.btnCreOrder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreOrder.Name = "btnCreOrder";
-            this.btnCreOrder.Size = new System.Drawing.Size(200, 108);
+            this.btnCreOrder.Size = new System.Drawing.Size(267, 125);
             this.btnCreOrder.TabIndex = 15;
             this.btnCreOrder.Text = "Create Order";
             this.btnCreOrder.UseVisualStyleBackColor = false;
@@ -59,11 +60,12 @@
             // 
             this.btnOrderMan.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOrderMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderMan.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderMan.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderMan.Location = new System.Drawing.Point(294, 198);
+            this.btnOrderMan.Location = new System.Drawing.Point(392, 228);
+            this.btnOrderMan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOrderMan.Name = "btnOrderMan";
-            this.btnOrderMan.Size = new System.Drawing.Size(200, 108);
+            this.btnOrderMan.Size = new System.Drawing.Size(267, 125);
             this.btnOrderMan.TabIndex = 14;
             this.btnOrderMan.Text = "Order Manage";
             this.btnOrderMan.UseVisualStyleBackColor = false;
@@ -72,11 +74,12 @@
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(933, 30);
+            this.btnLogout.Location = new System.Drawing.Point(1244, 35);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(126, 34);
+            this.btnLogout.Size = new System.Drawing.Size(168, 39);
             this.btnLogout.TabIndex = 13;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -86,9 +89,10 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(284, 30);
+            this.lblHelloMsg.Location = new System.Drawing.Point(379, 35);
+            this.lblHelloMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHelloMsg.Name = "lblHelloMsg";
-            this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
+            this.lblHelloMsg.Size = new System.Drawing.Size(235, 32);
             this.lblHelloMsg.TabIndex = 12;
             this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
@@ -101,19 +105,21 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.Size = new System.Drawing.Size(307, 744);
             this.panel1.TabIndex = 100;
             // 
             // btnCO
             // 
             this.btnCO.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCO.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCO.ForeColor = System.Drawing.Color.Black;
-            this.btnCO.Location = new System.Drawing.Point(12, 353);
+            this.btnCO.Location = new System.Drawing.Point(16, 407);
+            this.btnCO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCO.Name = "btnCO";
-            this.btnCO.Size = new System.Drawing.Size(203, 38);
+            this.btnCO.Size = new System.Drawing.Size(271, 44);
             this.btnCO.TabIndex = 95;
             this.btnCO.Text = "Create Order";
             this.btnCO.UseVisualStyleBackColor = false;
@@ -122,11 +128,12 @@
             // 
             this.btnOM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOM.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOM.ForeColor = System.Drawing.Color.Black;
-            this.btnOM.Location = new System.Drawing.Point(12, 290);
+            this.btnOM.Location = new System.Drawing.Point(16, 335);
+            this.btnOM.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOM.Name = "btnOM";
-            this.btnOM.Size = new System.Drawing.Size(203, 38);
+            this.btnOM.Size = new System.Drawing.Size(271, 44);
             this.btnOM.TabIndex = 94;
             this.btnOM.Text = "Order Manage";
             this.btnOM.UseVisualStyleBackColor = false;
@@ -135,11 +142,12 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Control;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(153, 594);
+            this.button4.Location = new System.Drawing.Point(204, 685);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 38);
+            this.button4.Size = new System.Drawing.Size(83, 44);
             this.button4.TabIndex = 93;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
@@ -147,24 +155,26 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 217);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FrmMenuPurMan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 645);
+            this.ClientSize = new System.Drawing.Size(1428, 744);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCreOrder);
             this.Controls.Add(this.btnOrderMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmMenuPurMan";
-            this.Text = "Menu";
+            this.Text = "Purchase Manager Menu";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
