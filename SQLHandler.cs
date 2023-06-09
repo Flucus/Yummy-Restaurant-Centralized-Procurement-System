@@ -15,7 +15,7 @@ namespace YummyRestaurantSystem
         private static readonly string connString = "server=127.0.0.1;port=3306;user id=root;password=;database=YummyRestaurantGroupDB;charset=utf8;";
         private static Random random = new Random();
 
-        public static string GenerateSalt()
+        private static string GenerateSalt()
         {
             const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             const int length = 16;
@@ -46,6 +46,19 @@ namespace YummyRestaurantSystem
 
             bool result = hash.Equals(passwordHash);
             return result ? response : null;
+        }
+
+        public static DataRow GetStaffData(string staffID) {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $"SELECT * FROM Staff WHERE StaffID = '{staffID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0)
+                return null;
+
+            DataRow response = dt.Rows[0];
+            return response;
         }
     }
 }
