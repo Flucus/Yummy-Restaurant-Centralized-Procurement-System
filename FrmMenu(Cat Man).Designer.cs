@@ -40,9 +40,9 @@
             this.btnVIDMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVIDMap.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVIDMap.ForeColor = System.Drawing.Color.Black;
-            this.btnVIDMap.Location = new System.Drawing.Point(91, 120);
+            this.btnVIDMap.Location = new System.Drawing.Point(91, 111);
             this.btnVIDMap.Name = "btnVIDMap";
-            this.btnVIDMap.Size = new System.Drawing.Size(140, 38);
+            this.btnVIDMap.Size = new System.Drawing.Size(140, 35);
             this.btnVIDMap.TabIndex = 19;
             this.btnVIDMap.Text = "Vitural ID Mapping";
             this.btnVIDMap.UseVisualStyleBackColor = false;
@@ -53,9 +53,9 @@
             this.btnCategoryManage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategoryManage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoryManage.ForeColor = System.Drawing.Color.Black;
-            this.btnCategoryManage.Location = new System.Drawing.Point(91, 63);
+            this.btnCategoryManage.Location = new System.Drawing.Point(91, 58);
             this.btnCategoryManage.Name = "btnCategoryManage";
-            this.btnCategoryManage.Size = new System.Drawing.Size(140, 38);
+            this.btnCategoryManage.Size = new System.Drawing.Size(140, 35);
             this.btnCategoryManage.TabIndex = 18;
             this.btnCategoryManage.Text = "Category Manage";
             this.btnCategoryManage.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(195, 12);
+            this.btnLogout.Location = new System.Drawing.Point(195, 11);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(126, 34);
+            this.btnLogout.Size = new System.Drawing.Size(126, 31);
             this.btnLogout.TabIndex = 17;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(11, 13);
+            this.lblHelloMsg.Location = new System.Drawing.Point(11, 12);
             this.lblHelloMsg.Name = "lblHelloMsg";
             this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
             this.lblHelloMsg.TabIndex = 16;
@@ -86,9 +86,9 @@
             // 
             // FrmMenuCatMan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 185);
+            this.ClientSize = new System.Drawing.Size(330, 171);
             this.Controls.Add(this.btnVIDMap);
             this.Controls.Add(this.btnCategoryManage);
             this.Controls.Add(this.btnLogout);

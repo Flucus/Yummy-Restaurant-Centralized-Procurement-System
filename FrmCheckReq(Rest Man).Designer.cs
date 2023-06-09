@@ -36,7 +36,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblItem = new System.Windows.Forms.Label();
+            this.lblRequestID = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,7 +61,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(266, 144);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(771, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 329);
             this.dataGridView1.TabIndex = 5;
             // 
             // btnDetails
@@ -123,16 +123,16 @@
             this.txtSearch.Size = new System.Drawing.Size(207, 22);
             this.txtSearch.TabIndex = 22;
             // 
-            // lblItem
+            // lblRequestID
             // 
-            this.lblItem.AutoSize = true;
-            this.lblItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItem.Location = new System.Drawing.Point(263, 82);
-            this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(115, 24);
-            this.lblItem.TabIndex = 21;
-            this.lblItem.Text = "Request ID";
+            this.lblRequestID.AutoSize = true;
+            this.lblRequestID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequestID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblRequestID.Location = new System.Drawing.Point(263, 82);
+            this.lblRequestID.Name = "lblRequestID";
+            this.lblRequestID.Size = new System.Drawing.Size(115, 24);
+            this.lblRequestID.TabIndex = 21;
+            this.lblRequestID.Text = "Request ID";
             // 
             // panel1
             // 
@@ -175,7 +175,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.lblItem);
+            this.Controls.Add(this.lblRequestID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDetails);
@@ -200,7 +200,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblItem;
+        private System.Windows.Forms.Label lblRequestID;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;

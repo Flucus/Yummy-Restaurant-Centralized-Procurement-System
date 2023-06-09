@@ -33,19 +33,19 @@ namespace YummyRestaurantSystem
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblVirtualID = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.lblTypeName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtTypeID = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
+            this.txtVirtualID = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,13 +87,6 @@ namespace YummyRestaurantSystem
             this.btnEdit.Text = "Edit ";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(578, 134);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(217, 22);
-            this.txtName.TabIndex = 34;
-            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
@@ -105,13 +98,6 @@ namespace YummyRestaurantSystem
             this.lblName.TabIndex = 33;
             this.lblName.Text = "Item Name";
             // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(578, 184);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(217, 22);
-            this.txtID.TabIndex = 36;
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -122,14 +108,6 @@ namespace YummyRestaurantSystem
             this.lblID.Size = new System.Drawing.Size(77, 24);
             this.lblID.TabIndex = 35;
             this.lblID.Text = "Item ID";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(578, 231);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 22);
-            this.textBox1.TabIndex = 38;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblVirtualID
             // 
@@ -143,13 +121,6 @@ namespace YummyRestaurantSystem
             this.lblVirtualID.Text = "Virtual ID";
             this.lblVirtualID.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(578, 276);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 22);
-            this.textBox2.TabIndex = 40;
-            // 
             // lblType
             // 
             this.lblType.AutoSize = true;
@@ -160,13 +131,6 @@ namespace YummyRestaurantSystem
             this.lblType.Size = new System.Drawing.Size(82, 24);
             this.lblType.TabIndex = 39;
             this.lblType.Text = "Type ID";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(578, 321);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 22);
-            this.textBox3.TabIndex = 42;
             // 
             // lblTypeName
             // 
@@ -212,21 +176,56 @@ namespace YummyRestaurantSystem
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtTypeID
+            // 
+            this.txtTypeID.Location = new System.Drawing.Point(578, 321);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(217, 22);
+            this.txtTypeID.TabIndex = 102;
+            // 
+            // txtTypeName
+            // 
+            this.txtTypeName.Location = new System.Drawing.Point(578, 276);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(217, 22);
+            this.txtTypeName.TabIndex = 101;
+            // 
+            // txtVirtualID
+            // 
+            this.txtVirtualID.Location = new System.Drawing.Point(578, 231);
+            this.txtVirtualID.Name = "txtVirtualID";
+            this.txtVirtualID.Size = new System.Drawing.Size(217, 22);
+            this.txtVirtualID.TabIndex = 100;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(578, 184);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(217, 22);
+            this.textBox4.TabIndex = 99;
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Location = new System.Drawing.Point(578, 134);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(217, 22);
+            this.txtItemName.TabIndex = 98;
+            // 
             // FrmCategoryEdit_Cat_Man_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 595);
+            this.Controls.Add(this.txtTypeID);
+            this.Controls.Add(this.txtTypeName);
+            this.Controls.Add(this.txtVirtualID);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.lblTypeName);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblType);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblVirtualID);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnClose);
@@ -245,18 +244,18 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblVirtualID;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lblTypeName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtTypeID;
+        private System.Windows.Forms.TextBox txtTypeName;
+        private System.Windows.Forms.TextBox txtVirtualID;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtItemName;
     }
 }

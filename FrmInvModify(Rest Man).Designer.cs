@@ -34,8 +34,8 @@ namespace YummyRestaurantSystem
             this.lblItem = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnModify = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -87,24 +87,24 @@ namespace YummyRestaurantSystem
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(564, 260);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 22);
-            this.textBox1.TabIndex = 23;
+            this.txtAmount.Location = new System.Drawing.Point(564, 260);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(207, 22);
+            this.txtAmount.TabIndex = 23;
             // 
-            // label1
+            // lblAmount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(474, 256);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 24);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "amount ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAmount.Location = new System.Drawing.Point(474, 256);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(85, 24);
+            this.lblAmount.TabIndex = 22;
+            this.lblAmount.Text = "Amount ";
+            this.lblAmount.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCancel
             // 
@@ -159,8 +159,8 @@ namespace YummyRestaurantSystem
             this.ClientSize = new System.Drawing.Size(1071, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtAmount);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblItem);
@@ -180,8 +180,8 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnModify;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;

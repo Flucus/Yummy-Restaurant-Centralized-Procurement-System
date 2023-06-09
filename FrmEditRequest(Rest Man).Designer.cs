@@ -34,13 +34,13 @@ namespace YummyRestaurantSystem
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtItemID = new System.Windows.Forms.TextBox();
             this.lblItemID = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
+            this.lblItemName = new System.Windows.Forms.Label();
             this.lblRemark = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtRemark = new System.Windows.Forms.TextBox();
+            this.lblRequestID = new System.Windows.Forms.Label();
             this.txtRequestID = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -97,13 +97,13 @@ namespace YummyRestaurantSystem
             this.lblQuantity.TabIndex = 78;
             this.lblQuantity.Text = "Quantity";
             // 
-            // txtID
+            // txtItemID
             // 
-            this.txtID.Location = new System.Drawing.Point(430, 210);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(172, 22);
-            this.txtID.TabIndex = 77;
+            this.txtItemID.Location = new System.Drawing.Point(430, 210);
+            this.txtItemID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtItemID.Name = "txtItemID";
+            this.txtItemID.Size = new System.Drawing.Size(172, 22);
+            this.txtItemID.TabIndex = 77;
             // 
             // lblItemID
             // 
@@ -124,16 +124,16 @@ namespace YummyRestaurantSystem
             this.txtItemName.Size = new System.Drawing.Size(172, 22);
             this.txtItemName.TabIndex = 75;
             // 
-            // lblName
+            // lblItemName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(267, 155);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(110, 24);
-            this.lblName.TabIndex = 74;
-            this.lblName.Text = "Item Name";
+            this.lblItemName.AutoSize = true;
+            this.lblItemName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblItemName.Location = new System.Drawing.Point(267, 155);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(110, 24);
+            this.lblItemName.TabIndex = 74;
+            this.lblItemName.Text = "Item Name";
             // 
             // lblRemark
             // 
@@ -146,24 +146,24 @@ namespace YummyRestaurantSystem
             this.lblRemark.TabIndex = 80;
             this.lblRemark.Text = "Remark";
             // 
-            // textBox1
+            // txtRemark
             // 
-            this.textBox1.Location = new System.Drawing.Point(430, 321);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(172, 22);
-            this.textBox1.TabIndex = 81;
+            this.txtRemark.Location = new System.Drawing.Point(430, 321);
+            this.txtRemark.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(172, 22);
+            this.txtRemark.TabIndex = 81;
             // 
-            // label2
+            // lblRequestID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(267, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 24);
-            this.label2.TabIndex = 82;
-            this.label2.Text = "Request ID";
+            this.lblRequestID.AutoSize = true;
+            this.lblRequestID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequestID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblRequestID.Location = new System.Drawing.Point(267, 102);
+            this.lblRequestID.Name = "lblRequestID";
+            this.lblRequestID.Size = new System.Drawing.Size(115, 24);
+            this.lblRequestID.TabIndex = 82;
+            this.lblRequestID.Text = "Request ID";
             // 
             // txtRequestID
             // 
@@ -266,15 +266,15 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtRequestID);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblRequestID);
+            this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.lblRemark);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtItemID);
             this.Controls.Add(this.lblItemID);
             this.Controls.Add(this.txtItemName);
-            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblItemName);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmEditRequest";
@@ -292,13 +292,13 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtItemID;
         private System.Windows.Forms.Label lblItemID;
         private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblItemName;
         private System.Windows.Forms.Label lblRemark;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtRemark;
+        private System.Windows.Forms.Label lblRequestID;
         private System.Windows.Forms.TextBox txtRequestID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdd;

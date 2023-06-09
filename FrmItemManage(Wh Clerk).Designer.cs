@@ -35,10 +35,10 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtItemID = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -119,12 +119,12 @@
             this.btnDelete.Text = "Delete Item";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // txtID
+            // txtItemID
             // 
-            this.txtID.Location = new System.Drawing.Point(374, 113);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 22);
-            this.txtID.TabIndex = 27;
+            this.txtItemID.Location = new System.Drawing.Point(374, 113);
+            this.txtItemID.Name = "txtItemID";
+            this.txtItemID.Size = new System.Drawing.Size(100, 22);
+            this.txtItemID.TabIndex = 27;
             // 
             // lblName
             // 
@@ -148,12 +148,12 @@
             this.lblID.TabIndex = 29;
             this.lblID.Text = "Item ID";
             // 
-            // txtName
+            // txtItemName
             // 
-            this.txtName.Location = new System.Drawing.Point(374, 78);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 22);
-            this.txtName.TabIndex = 30;
+            this.txtItemName.Location = new System.Drawing.Point(374, 78);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(100, 22);
+            this.txtItemName.TabIndex = 30;
             // 
             // btnSearch
             // 
@@ -208,10 +208,10 @@
             this.ClientSize = new System.Drawing.Size(1071, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtItemID);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCreate);
@@ -236,10 +236,10 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtItemID;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;

@@ -40,9 +40,9 @@
             this.btnOrderArrangement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderArrangement.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderArrangement.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderArrangement.Location = new System.Drawing.Point(94, 120);
+            this.btnOrderArrangement.Location = new System.Drawing.Point(94, 111);
             this.btnOrderArrangement.Name = "btnOrderArrangement";
-            this.btnOrderArrangement.Size = new System.Drawing.Size(140, 38);
+            this.btnOrderArrangement.Size = new System.Drawing.Size(140, 35);
             this.btnOrderArrangement.TabIndex = 15;
             this.btnOrderArrangement.Text = "Order Arrange";
             this.btnOrderArrangement.UseVisualStyleBackColor = false;
@@ -53,9 +53,9 @@
             this.btnInvMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvMan.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvMan.ForeColor = System.Drawing.Color.Black;
-            this.btnInvMan.Location = new System.Drawing.Point(94, 63);
+            this.btnInvMan.Location = new System.Drawing.Point(94, 58);
             this.btnInvMan.Name = "btnInvMan";
-            this.btnInvMan.Size = new System.Drawing.Size(140, 38);
+            this.btnInvMan.Size = new System.Drawing.Size(140, 35);
             this.btnInvMan.TabIndex = 14;
             this.btnInvMan.Text = "Inventory Manage";
             this.btnInvMan.UseVisualStyleBackColor = false;
@@ -66,9 +66,9 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(198, 12);
+            this.btnLogout.Location = new System.Drawing.Point(198, 11);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(126, 34);
+            this.btnLogout.Size = new System.Drawing.Size(126, 31);
             this.btnLogout.TabIndex = 13;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(14, 13);
+            this.lblHelloMsg.Location = new System.Drawing.Point(14, 12);
             this.lblHelloMsg.Name = "lblHelloMsg";
             this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
             this.lblHelloMsg.TabIndex = 12;
@@ -86,9 +86,9 @@
             // 
             // FrmMenuWhCkerk
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 185);
+            this.ClientSize = new System.Drawing.Size(339, 171);
             this.Controls.Add(this.btnOrderArrangement);
             this.Controls.Add(this.btnInvMan);
             this.Controls.Add(this.btnLogout);

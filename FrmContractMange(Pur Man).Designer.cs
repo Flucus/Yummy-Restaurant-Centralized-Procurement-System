@@ -32,7 +32,7 @@ namespace YummyRestaurantSystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmContractMange));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAgreement = new System.Windows.Forms.Label();
-            this.cbnAgreement = new System.Windows.Forms.ComboBox();
+            this.cboAgreement = new System.Windows.Forms.ComboBox();
             this.lblSupplierName = new System.Windows.Forms.Label();
             this.lblCreateDate = new System.Windows.Forms.Label();
             this.txtSupplierName = new System.Windows.Forms.TextBox();
@@ -42,11 +42,11 @@ namespace YummyRestaurantSystem
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtSearchContactNum = new System.Windows.Forms.TextBox();
+            this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,13 +74,13 @@ namespace YummyRestaurantSystem
             this.lblAgreement.TabIndex = 90;
             this.lblAgreement.Text = " Agreement:";
             // 
-            // cbnAgreement
+            // cboAgreement
             // 
-            this.cbnAgreement.FormattingEnabled = true;
-            this.cbnAgreement.Location = new System.Drawing.Point(452, 201);
-            this.cbnAgreement.Name = "cbnAgreement";
-            this.cbnAgreement.Size = new System.Drawing.Size(143, 20);
-            this.cbnAgreement.TabIndex = 89;
+            this.cboAgreement.FormattingEnabled = true;
+            this.cboAgreement.Location = new System.Drawing.Point(452, 201);
+            this.cboAgreement.Name = "cboAgreement";
+            this.cboAgreement.Size = new System.Drawing.Size(143, 20);
+            this.cboAgreement.TabIndex = 89;
             // 
             // lblSupplierName
             // 
@@ -98,7 +98,7 @@ namespace YummyRestaurantSystem
             this.lblCreateDate.AutoSize = true;
             this.lblCreateDate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreateDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCreateDate.Location = new System.Drawing.Point(629, 89);
+            this.lblCreateDate.Location = new System.Drawing.Point(263, 239);
             this.lblCreateDate.Name = "lblCreateDate";
             this.lblCreateDate.Size = new System.Drawing.Size(142, 24);
             this.lblCreateDate.TabIndex = 87;
@@ -150,9 +150,9 @@ namespace YummyRestaurantSystem
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(789, 93);
+            this.dateTimePicker.Location = new System.Drawing.Point(452, 241);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker.Size = new System.Drawing.Size(143, 22);
             this.dateTimePicker.TabIndex = 81;
             // 
             // btnSearch
@@ -178,12 +178,12 @@ namespace YummyRestaurantSystem
             this.dataGridView1.Size = new System.Drawing.Size(790, 288);
             this.dataGridView1.TabIndex = 78;
             // 
-            // txtSearchContactNum
+            // txtContactNumber
             // 
-            this.txtSearchContactNum.Location = new System.Drawing.Point(452, 91);
-            this.txtSearchContactNum.Name = "txtSearchContactNum";
-            this.txtSearchContactNum.Size = new System.Drawing.Size(143, 22);
-            this.txtSearchContactNum.TabIndex = 77;
+            this.txtContactNumber.Location = new System.Drawing.Point(452, 91);
+            this.txtContactNumber.Name = "txtContactNumber";
+            this.txtContactNumber.Size = new System.Drawing.Size(143, 22);
+            this.txtContactNumber.TabIndex = 77;
             // 
             // btnClose
             // 
@@ -209,15 +209,6 @@ namespace YummyRestaurantSystem
             this.panel1.Size = new System.Drawing.Size(230, 595);
             this.panel1.TabIndex = 93;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 174);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.Control;
@@ -231,6 +222,15 @@ namespace YummyRestaurantSystem
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(22, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 174);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmContractMange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -240,7 +240,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblAgreement);
-            this.Controls.Add(this.cbnAgreement);
+            this.Controls.Add(this.cboAgreement);
             this.Controls.Add(this.lblSupplierName);
             this.Controls.Add(this.lblCreateDate);
             this.Controls.Add(this.txtSupplierName);
@@ -250,7 +250,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtSearchContactNum);
+            this.Controls.Add(this.txtContactNumber);
             this.Name = "FrmContractMange";
             this.Text = "Contract Mangement";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -265,7 +265,7 @@ namespace YummyRestaurantSystem
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAgreement;
-        private System.Windows.Forms.ComboBox cbnAgreement;
+        private System.Windows.Forms.ComboBox cboAgreement;
         private System.Windows.Forms.Label lblSupplierName;
         private System.Windows.Forms.Label lblCreateDate;
         private System.Windows.Forms.TextBox txtSupplierName;
@@ -275,7 +275,7 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtSearchContactNum;
+        private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;

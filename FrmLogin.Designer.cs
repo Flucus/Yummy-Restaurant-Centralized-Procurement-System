@@ -73,33 +73,33 @@ namespace YummyRestaurantSystem
             // lblcompanyName3
             // 
             this.lblcompanyName3.AutoSize = true;
-            this.lblcompanyName3.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompanyName3.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcompanyName3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblcompanyName3.Location = new System.Drawing.Point(3, 320);
+            this.lblcompanyName3.Location = new System.Drawing.Point(12, 323);
             this.lblcompanyName3.Name = "lblcompanyName3";
-            this.lblcompanyName3.Size = new System.Drawing.Size(95, 25);
+            this.lblcompanyName3.Size = new System.Drawing.Size(82, 27);
             this.lblcompanyName3.TabIndex = 3;
             this.lblcompanyName3.Text = "System";
             // 
             // lblcompanyName2
             // 
             this.lblcompanyName2.AutoSize = true;
-            this.lblcompanyName2.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompanyName2.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcompanyName2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblcompanyName2.Location = new System.Drawing.Point(3, 279);
+            this.lblcompanyName2.Location = new System.Drawing.Point(12, 282);
             this.lblcompanyName2.Name = "lblcompanyName2";
-            this.lblcompanyName2.Size = new System.Drawing.Size(243, 25);
+            this.lblcompanyName2.Size = new System.Drawing.Size(210, 27);
             this.lblcompanyName2.TabIndex = 2;
             this.lblcompanyName2.Text = "Yummy Restaurant ";
             // 
             // lblcompanyName1
             // 
             this.lblcompanyName1.AutoSize = true;
-            this.lblcompanyName1.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompanyName1.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcompanyName1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblcompanyName1.Location = new System.Drawing.Point(3, 238);
+            this.lblcompanyName1.Location = new System.Drawing.Point(12, 241);
             this.lblcompanyName1.Name = "lblcompanyName1";
-            this.lblcompanyName1.Size = new System.Drawing.Size(207, 25);
+            this.lblcompanyName1.Size = new System.Drawing.Size(179, 27);
             this.lblcompanyName1.TabIndex = 1;
             this.lblcompanyName1.Text = "Weclocme to the";
             // 
@@ -223,11 +223,11 @@ namespace YummyRestaurantSystem
             // lblLoginmsg
             // 
             this.lblLoginmsg.AutoSize = true;
-            this.lblLoginmsg.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginmsg.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginmsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLoginmsg.Location = new System.Drawing.Point(43, 106);
             this.lblLoginmsg.Name = "lblLoginmsg";
-            this.lblLoginmsg.Size = new System.Drawing.Size(277, 25);
+            this.lblLoginmsg.Size = new System.Drawing.Size(229, 27);
             this.lblLoginmsg.TabIndex = 2;
             this.lblLoginmsg.Text = "Login to your account";
             // 

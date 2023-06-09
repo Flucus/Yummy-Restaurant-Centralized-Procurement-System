@@ -30,15 +30,15 @@ namespace YummyRestaurantSystem
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTypeID = new System.Windows.Forms.TextBox();
             this.lblTypeName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtVirtualID = new System.Windows.Forms.TextBox();
             this.lblVirtualID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -50,12 +50,12 @@ namespace YummyRestaurantSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox3
+            // txtTypeID
             // 
-            this.textBox3.Location = new System.Drawing.Point(576, 326);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(217, 22);
-            this.textBox3.TabIndex = 55;
+            this.txtTypeID.Location = new System.Drawing.Point(576, 326);
+            this.txtTypeID.Name = "txtTypeID";
+            this.txtTypeID.Size = new System.Drawing.Size(217, 22);
+            this.txtTypeID.TabIndex = 55;
             // 
             // lblTypeName
             // 
@@ -68,12 +68,12 @@ namespace YummyRestaurantSystem
             this.lblTypeName.TabIndex = 54;
             this.lblTypeName.Text = "Type Name";
             // 
-            // textBox2
+            // txtTypeName
             // 
-            this.textBox2.Location = new System.Drawing.Point(576, 281);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 22);
-            this.textBox2.TabIndex = 53;
+            this.txtTypeName.Location = new System.Drawing.Point(576, 281);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(217, 22);
+            this.txtTypeName.TabIndex = 53;
             // 
             // lblType
             // 
@@ -86,12 +86,12 @@ namespace YummyRestaurantSystem
             this.lblType.TabIndex = 52;
             this.lblType.Text = "Type ID";
             // 
-            // textBox1
+            // txtVirtualID
             // 
-            this.textBox1.Location = new System.Drawing.Point(576, 236);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 22);
-            this.textBox1.TabIndex = 51;
+            this.txtVirtualID.Location = new System.Drawing.Point(576, 236);
+            this.txtVirtualID.Name = "txtVirtualID";
+            this.txtVirtualID.Size = new System.Drawing.Size(217, 22);
+            this.txtVirtualID.TabIndex = 51;
             // 
             // lblVirtualID
             // 
@@ -122,12 +122,12 @@ namespace YummyRestaurantSystem
             this.lblID.TabIndex = 48;
             this.lblID.Text = "Item ID";
             // 
-            // txtName
+            // txtItemName
             // 
-            this.txtName.Location = new System.Drawing.Point(576, 139);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(217, 22);
-            this.txtName.TabIndex = 47;
+            this.txtItemName.Location = new System.Drawing.Point(576, 139);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(217, 22);
+            this.txtItemName.TabIndex = 47;
             // 
             // lblName
             // 
@@ -216,15 +216,15 @@ namespace YummyRestaurantSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 595);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtTypeID);
             this.Controls.Add(this.lblTypeName);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTypeName);
             this.Controls.Add(this.lblType);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtVirtualID);
             this.Controls.Add(this.lblVirtualID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnClose);
@@ -240,15 +240,15 @@ namespace YummyRestaurantSystem
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTypeID;
         private System.Windows.Forms.Label lblTypeName;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTypeName;
         private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtVirtualID;
         private System.Windows.Forms.Label lblVirtualID;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClose;

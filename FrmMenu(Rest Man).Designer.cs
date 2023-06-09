@@ -40,7 +40,7 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(12, 13);
+            this.lblHelloMsg.Location = new System.Drawing.Point(12, 12);
             this.lblHelloMsg.Name = "lblHelloMsg";
             this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
             this.lblHelloMsg.TabIndex = 3;
@@ -52,9 +52,9 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(196, 12);
+            this.btnLogout.Location = new System.Drawing.Point(196, 11);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(126, 34);
+            this.btnLogout.Size = new System.Drawing.Size(126, 31);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -65,9 +65,9 @@
             this.btnInvMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvMan.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvMan.ForeColor = System.Drawing.Color.Black;
-            this.btnInvMan.Location = new System.Drawing.Point(92, 63);
+            this.btnInvMan.Location = new System.Drawing.Point(92, 58);
             this.btnInvMan.Name = "btnInvMan";
-            this.btnInvMan.Size = new System.Drawing.Size(140, 38);
+            this.btnInvMan.Size = new System.Drawing.Size(140, 35);
             this.btnInvMan.TabIndex = 8;
             this.btnInvMan.Text = "Inventory Manage";
             this.btnInvMan.UseVisualStyleBackColor = false;
@@ -78,9 +78,9 @@
             this.btnCheckReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckReq.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckReq.ForeColor = System.Drawing.Color.Black;
-            this.btnCheckReq.Location = new System.Drawing.Point(92, 174);
+            this.btnCheckReq.Location = new System.Drawing.Point(92, 161);
             this.btnCheckReq.Name = "btnCheckReq";
-            this.btnCheckReq.Size = new System.Drawing.Size(140, 38);
+            this.btnCheckReq.Size = new System.Drawing.Size(140, 35);
             this.btnCheckReq.TabIndex = 10;
             this.btnCheckReq.Text = "Check Request";
             this.btnCheckReq.UseVisualStyleBackColor = false;
@@ -91,18 +91,18 @@
             this.btnOrderPlacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderPlacement.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderPlacement.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderPlacement.Location = new System.Drawing.Point(92, 120);
+            this.btnOrderPlacement.Location = new System.Drawing.Point(92, 111);
             this.btnOrderPlacement.Name = "btnOrderPlacement";
-            this.btnOrderPlacement.Size = new System.Drawing.Size(140, 38);
+            this.btnOrderPlacement.Size = new System.Drawing.Size(140, 35);
             this.btnOrderPlacement.TabIndex = 9;
             this.btnOrderPlacement.Text = "Order Placement";
             this.btnOrderPlacement.UseVisualStyleBackColor = false;
             // 
             // FrmMenuRestMan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 244);
+            this.ClientSize = new System.Drawing.Size(333, 225);
             this.Controls.Add(this.btnCheckReq);
             this.Controls.Add(this.btnOrderPlacement);
             this.Controls.Add(this.btnInvMan);

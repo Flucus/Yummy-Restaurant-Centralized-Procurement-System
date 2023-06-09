@@ -35,11 +35,11 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtItem = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.lblSearch = new System.Windows.Forms.Label();
+            this.lblItem = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
-            this.cblType = new System.Windows.Forms.ComboBox();
+            this.cboType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -119,12 +119,12 @@
             this.btnDelete.Text = "Delete Linking";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtItem
             // 
-            this.textBox1.Location = new System.Drawing.Point(327, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 26;
+            this.txtItem.Location = new System.Drawing.Point(327, 81);
+            this.txtItem.Name = "txtItem";
+            this.txtItem.Size = new System.Drawing.Size(121, 22);
+            this.txtItem.TabIndex = 26;
             // 
             // btnSearch
             // 
@@ -139,16 +139,16 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // lblSearch
+            // lblItem
             // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSearch.Location = new System.Drawing.Point(271, 81);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(50, 24);
-            this.lblSearch.TabIndex = 28;
-            this.lblSearch.Text = "Item";
+            this.lblItem.AutoSize = true;
+            this.lblItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblItem.Location = new System.Drawing.Point(271, 81);
+            this.lblItem.Name = "lblItem";
+            this.lblItem.Size = new System.Drawing.Size(50, 24);
+            this.lblItem.TabIndex = 28;
+            this.lblItem.Text = "Item";
             // 
             // lblType
             // 
@@ -161,13 +161,13 @@
             this.lblType.TabIndex = 32;
             this.lblType.Text = "Type";
             // 
-            // cblType
+            // cboType
             // 
-            this.cblType.FormattingEnabled = true;
-            this.cblType.Location = new System.Drawing.Point(327, 120);
-            this.cblType.Name = "cblType";
-            this.cblType.Size = new System.Drawing.Size(121, 20);
-            this.cblType.TabIndex = 31;
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Location = new System.Drawing.Point(327, 120);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(121, 20);
+            this.cboType.TabIndex = 31;
             // 
             // panel1
             // 
@@ -209,10 +209,10 @@
             this.ClientSize = new System.Drawing.Size(1071, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblType);
-            this.Controls.Add(this.cblType);
-            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.cboType);
+            this.Controls.Add(this.lblItem);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtItem);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCreate);
@@ -237,11 +237,11 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtItem;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.Label lblType;
-        private System.Windows.Forms.ComboBox cblType;
+        private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
