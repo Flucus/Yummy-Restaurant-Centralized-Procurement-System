@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,13 +14,13 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmMenuCatMan : Form
     {
-        private DataRow data;
+        private DataRow staffData;
 
-        public FrmMenuCatMan(DataRow data)
+        public FrmMenuCatMan(DataRow staffData)
         {
             InitializeComponent();
-            this.data = data;
-            lblHelloMsg.Text = $"Hello {(string)data["Name"]}!";
+            this.staffData = staffData;
+            lblHelloMsg.Text = $"Hello {(string)staffData["Name"]}!";
         }
 
         private void FrmMenuCatMan_Load(object sender, EventArgs e)
@@ -40,7 +41,32 @@ namespace YummyRestaurantSystem
 
         private void btnCategoryManage_Click(object sender, EventArgs e)
         {
+            Visible = false;
+            FrmCategoryManage form = new FrmCategoryManage();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
 
+        private void btnVIDMap_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmVirtualIDMapping form = new FrmVirtualIDMapping();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }

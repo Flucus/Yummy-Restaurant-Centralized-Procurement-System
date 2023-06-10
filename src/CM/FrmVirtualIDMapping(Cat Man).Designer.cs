@@ -30,14 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVirtualIDMapping));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.VIDMappingTable = new System.Windows.Forms.DataGridView();
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtItem = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.lblItem = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.cboType = new System.Windows.Forms.ComboBox();
@@ -48,20 +47,21 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VIDMappingTable)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // VIDMappingTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(365, 211);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1029, 395);
-            this.dataGridView1.TabIndex = 0;
+            this.VIDMappingTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VIDMappingTable.Location = new System.Drawing.Point(365, 211);
+            this.VIDMappingTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.VIDMappingTable.Name = "VIDMappingTable";
+            this.VIDMappingTable.RowHeadersWidth = 51;
+            this.VIDMappingTable.Size = new System.Drawing.Size(1029, 395);
+            this.VIDMappingTable.TabIndex = 0;
+            this.VIDMappingTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VIDMappingTable_CellClick);
             // 
             // lblRestaurant
             // 
@@ -71,9 +71,9 @@
             this.lblRestaurant.Location = new System.Drawing.Point(361, 35);
             this.lblRestaurant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(532, 32);
+            this.lblRestaurant.Size = new System.Drawing.Size(561, 32);
             this.lblRestaurant.TabIndex = 5;
-            this.lblRestaurant.Text = "The Yummy Restaurant Virtual ID Mapping";
+            this.lblRestaurant.Text = "Yummy Restaurant Group Virtual ID Mapping";
             // 
             // btnClose
             // 
@@ -96,13 +96,14 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(1216, 651);
+            this.btnCreate.Location = new System.Drawing.Point(1202, 651);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(179, 44);
+            this.btnCreate.Size = new System.Drawing.Size(193, 44);
             this.btnCreate.TabIndex = 23;
             this.btnCreate.Text = "Create Linking";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnEdit
             // 
@@ -110,13 +111,14 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnEdit.Location = new System.Drawing.Point(1029, 651);
+            this.btnEdit.Location = new System.Drawing.Point(1015, 651);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(179, 44);
             this.btnEdit.TabIndex = 24;
             this.btnEdit.Text = "Edit Linking";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -124,68 +126,57 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(843, 651);
+            this.btnDelete.Location = new System.Drawing.Point(828, 651);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(179, 44);
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "Delete Linking";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtItem
             // 
-            this.txtItem.Location = new System.Drawing.Point(436, 102);
+            this.txtItem.Location = new System.Drawing.Point(525, 116);
             this.txtItem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtItem.Name = "txtItem";
             this.txtItem.Size = new System.Drawing.Size(160, 25);
             this.txtItem.TabIndex = 26;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(649, 99);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(123, 35);
-            this.btnSearch.TabIndex = 27;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
             // 
             // lblItem
             // 
             this.lblItem.AutoSize = true;
             this.lblItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItem.Location = new System.Drawing.Point(361, 102);
+            this.lblItem.Location = new System.Drawing.Point(361, 109);
             this.lblItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(67, 32);
+            this.lblItem.Size = new System.Drawing.Size(146, 32);
             this.lblItem.TabIndex = 28;
-            this.lblItem.Text = "Item";
+            this.lblItem.Text = "Item Name";
             // 
             // lblType
             // 
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblType.Location = new System.Drawing.Point(360, 145);
+            this.lblType.Location = new System.Drawing.Point(361, 145);
             this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(73, 32);
+            this.lblType.Size = new System.Drawing.Size(152, 32);
             this.lblType.TabIndex = 32;
-            this.lblType.Text = "Type";
+            this.lblType.Text = "Type Name";
             // 
             // cboType
             // 
             this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(436, 150);
+            this.cboType.Location = new System.Drawing.Point(525, 154);
             this.cboType.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(160, 23);
             this.cboType.TabIndex = 31;
+            this.cboType.SelectedIndexChanged += new System.EventHandler(this.cboType_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -278,18 +269,17 @@
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.lblItem);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtItem);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.VIDMappingTable);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmVirtualIDMapping";
             this.Text = "Virtual ID Mapping";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VIDMappingTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -300,14 +290,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView VIDMappingTable;
         private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtItem;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.ComboBox cboType;

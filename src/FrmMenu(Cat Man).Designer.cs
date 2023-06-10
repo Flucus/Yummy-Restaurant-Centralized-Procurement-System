@@ -52,12 +52,13 @@
             this.btnVIDMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVIDMap.ForeColor = System.Drawing.Color.Black;
             this.btnVIDMap.Location = new System.Drawing.Point(940, 229);
-            this.btnVIDMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVIDMap.Margin = new System.Windows.Forms.Padding(4);
             this.btnVIDMap.Name = "btnVIDMap";
             this.btnVIDMap.Size = new System.Drawing.Size(267, 125);
             this.btnVIDMap.TabIndex = 19;
             this.btnVIDMap.Text = "Vitural ID Mapping";
             this.btnVIDMap.UseVisualStyleBackColor = false;
+            this.btnVIDMap.Click += new System.EventHandler(this.btnVIDMap_Click);
             // 
             // btnCategoryManage
             // 
@@ -66,7 +67,7 @@
             this.btnCategoryManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategoryManage.ForeColor = System.Drawing.Color.Black;
             this.btnCategoryManage.Location = new System.Drawing.Point(392, 229);
-            this.btnCategoryManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCategoryManage.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategoryManage.Name = "btnCategoryManage";
             this.btnCategoryManage.Size = new System.Drawing.Size(267, 125);
             this.btnCategoryManage.TabIndex = 18;
@@ -81,7 +82,7 @@
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogout.Location = new System.Drawing.Point(1244, 35);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(168, 39);
             this.btnLogout.TabIndex = 17;
@@ -111,7 +112,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 744);
             this.panel1.TabIndex = 100;
@@ -123,7 +124,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Location = new System.Drawing.Point(200, 688);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(103, 39);
             this.button4.TabIndex = 97;
@@ -148,7 +149,7 @@
             this.btnVID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVID.ForeColor = System.Drawing.Color.Black;
             this.btnVID.Location = new System.Drawing.Point(16, 408);
-            this.btnVID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVID.Margin = new System.Windows.Forms.Padding(4);
             this.btnVID.Name = "btnVID";
             this.btnVID.Size = new System.Drawing.Size(271, 44);
             this.btnVID.TabIndex = 95;
@@ -162,7 +163,7 @@
             this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCM.ForeColor = System.Drawing.Color.Black;
             this.btnCM.Location = new System.Drawing.Point(16, 335);
-            this.btnCM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCM.Margin = new System.Windows.Forms.Padding(4);
             this.btnCM.Name = "btnCM";
             this.btnCM.Size = new System.Drawing.Size(271, 44);
             this.btnCM.TabIndex = 94;
@@ -173,7 +174,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(29, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 218);
             this.pictureBox1.TabIndex = 0;
@@ -193,7 +194,7 @@
             this.Controls.Add(this.btnCategoryManage);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenuCatMan";
             this.Text = "Category Manager Menu";
             this.panel1.ResumeLayout(false);

@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
 using System.CodeDom;
 using System.Data;
+using Org.BouncyCastle.Utilities;
 
 namespace YummyRestaurantSystem
 {
@@ -193,6 +194,112 @@ namespace YummyRestaurantSystem
             sql = $@"DELETE FROM RequestItem WHERE RequestID = '{requestID}' AND ItemID = '{itemID}'";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
+            conn.Close();
+            return count == 1;
+        }
+
+        public static DataTable GetVIDMapping(string itemNameMatch, string typeNameMatch)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = @"SELECT v.VirtualID, v.TypeID, rt.TypeName, v.ItemID, si.Name, si.Category, si.Description
+                FROM VirtualItem AS v
+                JOIN RestaurantType AS rt ON rt.TypeID = v.TypeID
+                JOIN Item AS i ON i.ItemID = v.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID";
+            if (itemNameMatch.Length > 0 && typeNameMatch.Length > 0)
+            {
+                sql += $" WHERE si.Name LIKE '%{itemNameMatch}%' AND rt.TypeName = '{typeNameMatch}'";
+            }
+            else if (itemNameMatch.Length > 0)
+            {
+                sql += $" WHERE si.Name LIKE '%{itemNameMatch}%'";
+            }
+            else if (typeNameMatch.Length > 0)
+            {
+                sql += $" WHERE rt.TypeName = '{typeNameMatch}'";
+            }
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        public static bool DeleteVIDMapping(string VID, string typeID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"DELETE FROM VirtualItem WHERE VirtualID = '{VID}' AND TypeID = '{typeID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+            return count == 1;
+        }
+
+        public static DataTable GetAllRestaurantType()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT DISTINCT TypeID, TypeName FROM RestaurantType";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        public static string GetItemNameByItemID(string itemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $@"SELECT si.Name
+                FROM Item AS i
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                WHERE ItemID = '{itemID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                string itemName = (string)dt.Rows[0]["Name"];
+                return itemName;
+            }
+            return null;
+        }
+        public static string GetTypeNameByTypeID(string typeID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $"SELECT TypeName FROM RestaurantType WHERE TypeID = '{typeID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                string typeName = (string)dt.Rows[0]["TypeName"];
+                return typeName;
+            }
+            return null;
+        }
+
+        public static bool CreateVIDMapping(string VID, string typeID, string itemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"INSERT INTO VirtualItem VALUES ('{VID}', '{typeID}', '{itemID}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool UpdateVIDMapping(string VID, string typeID, string itemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"UPDATE VirtualItem SET ItemID = '{itemID}' WHERE VirtualID = '{VID}' AND TypeID = '{typeID}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
             conn.Close();
             return count == 1;
         }

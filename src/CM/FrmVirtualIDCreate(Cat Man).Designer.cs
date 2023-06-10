@@ -33,15 +33,12 @@
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.txtVID = new System.Windows.Forms.TextBox();
             this.lblVID = new System.Windows.Forms.Label();
-            this.lblType = new System.Windows.Forms.Label();
+            this.lblTypeID = new System.Windows.Forms.Label();
             this.lblItemName = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.lblItem = new System.Windows.Forms.Label();
-            this.txtVIName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.lblVname = new System.Windows.Forms.Label();
             this.txtItemName = new System.Windows.Forms.TextBox();
-            this.cboType = new System.Windows.Forms.ComboBox();
+            this.cboTypeID = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.txtItemID = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,6 +48,8 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.typeNameLbl = new System.Windows.Forms.Label();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +68,7 @@
             // 
             // txtVID
             // 
-            this.txtVID.Location = new System.Drawing.Point(863, 453);
+            this.txtVID.Location = new System.Drawing.Point(863, 454);
             this.txtVID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtVID.Name = "txtVID";
             this.txtVID.Size = new System.Drawing.Size(160, 25);
@@ -80,70 +79,48 @@
             this.lblVID.AutoSize = true;
             this.lblVID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVID.Location = new System.Drawing.Point(623, 453);
+            this.lblVID.Location = new System.Drawing.Point(623, 444);
             this.lblVID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVID.Name = "lblVID";
             this.lblVID.Size = new System.Drawing.Size(126, 32);
             this.lblVID.TabIndex = 29;
             this.lblVID.Text = "Virtual ID";
             // 
-            // lblType
+            // lblTypeID
             // 
-            this.lblType.AutoSize = true;
-            this.lblType.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblType.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblType.Location = new System.Drawing.Point(623, 166);
-            this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(73, 32);
-            this.lblType.TabIndex = 30;
-            this.lblType.Text = "Type";
+            this.lblTypeID.AutoSize = true;
+            this.lblTypeID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTypeID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTypeID.Location = new System.Drawing.Point(623, 166);
+            this.lblTypeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTypeID.Name = "lblTypeID";
+            this.lblTypeID.Size = new System.Drawing.Size(109, 32);
+            this.lblTypeID.TabIndex = 30;
+            this.lblTypeID.Text = "Type ID";
             // 
             // lblItemName
             // 
             this.lblItemName.AutoSize = true;
             this.lblItemName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItemName.Location = new System.Drawing.Point(623, 307);
+            this.lblItemName.Location = new System.Drawing.Point(623, 368);
             this.lblItemName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemName.Name = "lblItemName";
             this.lblItemName.Size = new System.Drawing.Size(146, 32);
             this.lblItemName.TabIndex = 35;
             this.lblItemName.Text = "Item Name";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(907, 531);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(117, 35);
-            this.btnSearch.TabIndex = 34;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
             // lblItem
             // 
             this.lblItem.AutoSize = true;
             this.lblItem.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItem.Location = new System.Drawing.Point(623, 234);
+            this.lblItem.Location = new System.Drawing.Point(623, 295);
             this.lblItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItem.Name = "lblItem";
             this.lblItem.Size = new System.Drawing.Size(103, 32);
             this.lblItem.TabIndex = 33;
             this.lblItem.Text = "Item ID";
-            // 
-            // txtVIName
-            // 
-            this.txtVIName.Location = new System.Drawing.Point(863, 385);
-            this.txtVIName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtVIName.Name = "txtVIName";
-            this.txtVIName.Size = new System.Drawing.Size(160, 25);
-            this.txtVIName.TabIndex = 38;
             // 
             // btnCancel
             // 
@@ -160,34 +137,24 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // lblVname
-            // 
-            this.lblVname.AutoSize = true;
-            this.lblVname.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblVname.Location = new System.Drawing.Point(623, 380);
-            this.lblVname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblVname.Name = "lblVname";
-            this.lblVname.Size = new System.Drawing.Size(230, 32);
-            this.lblVname.TabIndex = 37;
-            this.lblVname.Text = "Virtual Item Name";
-            // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(863, 312);
+            this.txtItemName.Location = new System.Drawing.Point(863, 373);
             this.txtItemName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtItemName.Name = "txtItemName";
+            this.txtItemName.ReadOnly = true;
             this.txtItemName.Size = new System.Drawing.Size(160, 25);
             this.txtItemName.TabIndex = 36;
             // 
-            // cboType
+            // cboTypeID
             // 
-            this.cboType.FormattingEnabled = true;
-            this.cboType.Location = new System.Drawing.Point(863, 171);
-            this.cboType.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(160, 23);
-            this.cboType.TabIndex = 7;
+            this.cboTypeID.FormattingEnabled = true;
+            this.cboTypeID.Location = new System.Drawing.Point(863, 171);
+            this.cboTypeID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cboTypeID.Name = "cboTypeID";
+            this.cboTypeID.Size = new System.Drawing.Size(160, 23);
+            this.cboTypeID.TabIndex = 7;
+            this.cboTypeID.SelectedIndexChanged += new System.EventHandler(this.cboType_SelectedIndexChanged);
             // 
             // btnCreate
             // 
@@ -202,14 +169,16 @@
             this.btnCreate.TabIndex = 31;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtItemID
             // 
-            this.txtItemID.Location = new System.Drawing.Point(863, 240);
+            this.txtItemID.Location = new System.Drawing.Point(863, 301);
             this.txtItemID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtItemID.Name = "txtItemID";
             this.txtItemID.Size = new System.Drawing.Size(160, 25);
             this.txtItemID.TabIndex = 8;
+            this.txtItemID.TextChanged += new System.EventHandler(this.txtItemID_TextChanged);
             // 
             // panel1
             // 
@@ -293,25 +262,45 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // typeNameLbl
+            // 
+            this.typeNameLbl.AutoSize = true;
+            this.typeNameLbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeNameLbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.typeNameLbl.Location = new System.Drawing.Point(623, 229);
+            this.typeNameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.typeNameLbl.Name = "typeNameLbl";
+            this.typeNameLbl.Size = new System.Drawing.Size(152, 32);
+            this.typeNameLbl.TabIndex = 100;
+            this.typeNameLbl.Text = "Type Name";
+            // 
+            // txtTypeName
+            // 
+            this.txtTypeName.Location = new System.Drawing.Point(863, 239);
+            this.txtTypeName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.ReadOnly = true;
+            this.txtTypeName.Size = new System.Drawing.Size(160, 25);
+            this.txtTypeName.TabIndex = 101;
+            // 
             // FrmVirtualIDCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 744);
+            this.Controls.Add(this.txtTypeName);
+            this.Controls.Add(this.typeNameLbl);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtVIName);
-            this.Controls.Add(this.lblVname);
             this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.lblItemName);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.lblTypeID);
             this.Controls.Add(this.lblVID);
             this.Controls.Add(this.txtVID);
             this.Controls.Add(this.txtItemID);
-            this.Controls.Add(this.cboType);
+            this.Controls.Add(this.cboTypeID);
             this.Controls.Add(this.lblRestaurant);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmVirtualIDCreate";
@@ -329,15 +318,12 @@
         private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.TextBox txtVID;
         private System.Windows.Forms.Label lblVID;
-        private System.Windows.Forms.Label lblType;
+        private System.Windows.Forms.Label lblTypeID;
         private System.Windows.Forms.Label lblItemName;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblItem;
-        private System.Windows.Forms.TextBox txtVIName;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label lblVname;
         private System.Windows.Forms.TextBox txtItemName;
-        private System.Windows.Forms.ComboBox cboType;
+        private System.Windows.Forms.ComboBox cboTypeID;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.TextBox txtItemID;
         private System.Windows.Forms.Panel panel1;
@@ -347,5 +333,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label typeNameLbl;
+        private System.Windows.Forms.TextBox txtTypeName;
     }
 }

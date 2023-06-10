@@ -13,11 +13,20 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmVirtualIDEdit : Form
     {
-        public bool logout = false;
+        private DataRow record;
 
-        public FrmVirtualIDEdit()
+        public bool logout = false;
+        public bool edited = false;
+
+        public FrmVirtualIDEdit(DataRow record)
         {
             InitializeComponent();
+            this.record = record;
+            txtTypeID.Text = (string)record["TypeID"];
+            txtTypeName.Text = (string)record["TypeName"];
+            txtVID.Text = (string)record["VirtualID"];
+            txtItemID.Text = (string)record["ItemID"];
+            txtItemName.Text = (string)record["ItemName"];
         }
 
         private void FrmVirtualIDEdit_Load(object sender, EventArgs e)
@@ -40,6 +49,31 @@ namespace YummyRestaurantSystem
         {
             logout = true;
             Close();
+        }
+
+        private void txtItemID_TextChanged(object sender, EventArgs e)
+        {
+            txtItemName.Text = "";
+            string itemName = SQLHandler.GetItemNameByItemID(txtItemID.Text);
+            if (itemName != null)
+            {
+                txtItemName.Text = itemName;
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (txtItemName.Text.Length > 0)
+            {
+                bool success = SQLHandler.UpdateVIDMapping(txtVID.Text, txtTypeID.Text, txtItemID.Text);
+                if (!success)
+                {
+                    MessageBox.Show("Error occurred.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
+                MessageBox.Show("Record updated.", "Edit complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            MessageBox.Show("Invalid item ID.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
