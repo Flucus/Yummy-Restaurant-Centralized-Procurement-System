@@ -23,31 +23,52 @@ namespace YummyRestaurantSystem
 
         private void btnInvMan_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            Visible = false;
             FrmInvManage form = new FrmInvManage(staffData);
             form.ShowDialog();
-            this.Visible = true;
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
         private void btnOrderPlacement_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            Visible = false;
             FrmItemRequest form = new FrmItemRequest(staffData);
             form.ShowDialog();
-            this.Visible = true;
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
         private void btnCheckReq_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+            Visible = false;
             FrmCheckReq form = new FrmCheckReq(staffData);
             form.ShowDialog();
-            this.Visible = true;
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

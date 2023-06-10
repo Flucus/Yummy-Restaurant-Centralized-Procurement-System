@@ -63,7 +63,7 @@ namespace YummyRestaurantSystem
         {
             //string acc = txtuser.Text;
             //string pw = txtpw.Text;
-            string acc = "JohnSmith01";
+            string acc = "BobChan03";
             string pw = "12345678";
             DataRow data = SQLHandler.CheckLogin(acc, pw);
             if (data == null)
