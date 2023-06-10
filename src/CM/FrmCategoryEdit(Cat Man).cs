@@ -27,7 +27,7 @@ namespace YummyRestaurantSystem
 
         }
 
-        public void FrmCategoryEdit_Load(object sender, EventArgs e)
+        private void FrmCategoryEdit_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

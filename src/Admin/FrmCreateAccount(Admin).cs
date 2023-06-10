@@ -17,7 +17,7 @@ namespace YummyRestaurantSystem
             InitializeComponent();
         }
 
-        public void FrmCreateAccount_Load(object sender, EventArgs e)
+        private void FrmCreateAccount_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

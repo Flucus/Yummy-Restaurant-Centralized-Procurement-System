@@ -17,7 +17,7 @@ namespace YummyRestaurantSystem
             InitializeComponent();
         }
 
-        public void FrmCategoryManage_Load(object sender, EventArgs e)
+        private void FrmCategoryManage_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }
