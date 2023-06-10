@@ -29,6 +29,7 @@ namespace YummyRestaurantSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.txtTypeID = new System.Windows.Forms.TextBox();
             this.lblTypeName = new System.Windows.Forms.Label();
@@ -48,6 +49,8 @@ namespace YummyRestaurantSystem
             this.btnCM = new System.Windows.Forms.Button();
             this.btnVID = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -230,6 +233,7 @@ namespace YummyRestaurantSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.btnVID);
             this.panel1.Controls.Add(this.btnCM);
             this.panel1.Controls.Add(this.btnLogout);
@@ -239,6 +243,19 @@ namespace YummyRestaurantSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 645);
             this.panel1.TabIndex = 98;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(19, 608);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(30, 13);
+            this.lblTime.TabIndex = 96;
+            this.lblTime.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form2
             // 
@@ -260,9 +277,10 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRestaurant);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Category Create";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +306,7 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Button btnCM;
         private System.Windows.Forms.Button btnVID;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
