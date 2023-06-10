@@ -76,7 +76,8 @@ namespace YummyRestaurantSystem
                 return;
             }
 
-            row = SQLHandler.GetItemByVID(txtItemID.Text);
+            string typeID = (string)restData["TypeID"];
+            row = SQLHandler.GetItemNameByVIDTypeID(txtItemID.Text, typeID);
             if (row != null)
             {
                 vaildVID = true;
@@ -105,10 +106,10 @@ namespace YummyRestaurantSystem
             }
 
             string input = txtQuantity.Text.Trim();
-            int quantity = string.IsNullOrEmpty(input) ? 0 : Int32.Parse(input);
+            int quantity = string.IsNullOrEmpty(input) ? 0 : int.Parse(input);
             if (quantity <= 0)
             {
-                MessageBox.Show("Invaild quantity.", "Fail to insert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Invalid quantity.", "Fail to insert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 

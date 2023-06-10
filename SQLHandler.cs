@@ -13,7 +13,7 @@ namespace YummyRestaurantSystem
 {
     public static class SQLHandler
     {
-        private static readonly string connString = "server=127.0.0.1;port=3306;user id=root;password=;database=YummyRestaurantGroupDB;charset=utf8;";
+        private static readonly string connString = "server=127.0.0.1;port=3306;user id=root;password=;database=YummyRestaurantGroupDB;charset=utf8;convert zero datetime=True";
         private static Random random = new Random();
 
         private static string GenerateSalt()
@@ -138,17 +138,17 @@ namespace YummyRestaurantSystem
             return response;
         }
 
-        public static DataRow GetItemByVID(string VID)
+        public static DataRow GetItemNameByVIDTypeID(string VID, string typeID)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = $@"SELECT s.Name FROM RestaurantRequest AS rr
+            string sql = $@"SELECT s.Name, i.ItemID FROM RestaurantRequest AS rr
                 JOIN Restaurant AS r ON r.LocID = rr.RestaurantID
                 JOIN RestaurantType as rt ON rt.TypeID = r.TypeID
                 JOIN RequestItem as ri ON ri.RequestID = rr.RequestID
                 JOIN VirtualItem as v ON v.TypeID = rt.TypeID
                 JOIN Item as i ON i.ItemID = v.ItemID
                 JOIN SupplierItem as s ON s.SupplierID = i.SupplierID AND s.SupplierItemID = i.SupplierItemID
-                WHERE v.VirtualID = '{VID}'";
+                WHERE v.VirtualID = '{VID}' AND v.TypeID = '{typeID}'";
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -302,6 +302,51 @@ namespace YummyRestaurantSystem
 
             conn.Close();
             return count == 1;
+        }
+
+        public static bool CreateRestaurantRequest(DataRow staffData, DataRow restData, DataTable item, string remark)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = "SELECT * FROM RestaurantRequest ORDER BY RequestID DESC LIMIT 1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            DataRow response = dt.Rows[0];
+            string lastRequestID = (string)response["RequestID"];
+
+            int numID = int.Parse(lastRequestID.Substring(1)) + 1;
+            string newID = 'R' + numID.ToString().PadLeft(9, '0');
+            string managerID = (string)staffData["StaffID"];
+            string restID = (string)staffData["LocID"];
+            string createDate = DateTime.Now.ToString("yyyy-mm-dd");
+            string expDate = (DateTime.Now.AddDays(3)).ToString("yyyy-mm-dd");
+
+            sql = $"INSERT INTO RestaurantRequest VALUES ('{newID}', '{managerID}', '{createDate}', '{restID}', '{expDate}', '{remark}', 'P')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+            if (count == 0) return false;
+
+            sql = "INSERT INTO RequestItem VALUES ";
+            string typeID = (string)restData["TypeID"];
+            foreach (DataRow row in item.Rows)
+            {
+                string VID = (string)row["ItemID"];
+                int quantity = (int)row["Quantity"];
+
+                DataRow res = GetItemNameByVIDTypeID(VID, typeID);
+                string itemID = (string)res["ItemID"];
+
+                sql += $"('{newID}', '{itemID}', {quantity}), ";
+            }
+            sql = sql.Substring(0, sql.Length - 2);
+            cmd = new MySqlCommand(sql, conn);
+            count = cmd.ExecuteNonQuery();
+            if (count == 0) return false;
+
+            conn.Close();
+            return true;
         }
     }
 }

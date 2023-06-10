@@ -39,7 +39,7 @@
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tempItemTable = new System.Windows.Forms.DataGridView();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRequest = new System.Windows.Forms.Button();
             this.lblRemark = new System.Windows.Forms.Label();
@@ -52,7 +52,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.tempItemTable)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +89,7 @@
             this.txtItemName.Location = new System.Drawing.Point(588, 111);
             this.txtItemName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtItemName.Name = "txtItemName";
+            this.txtItemName.ReadOnly = true;
             this.txtItemName.Size = new System.Drawing.Size(256, 25);
             this.txtItemName.TabIndex = 11;
             // 
@@ -108,6 +112,7 @@
             this.txtItemID.Name = "txtItemID";
             this.txtItemID.Size = new System.Drawing.Size(256, 25);
             this.txtItemID.TabIndex = 13;
+            this.txtItemID.TextChanged += new System.EventHandler(this.txtItemID_TextChanged);
             // 
             // lblQuantity
             // 
@@ -135,13 +140,14 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRemove.Location = new System.Drawing.Point(1105, 215);
+            this.btnRemove.Location = new System.Drawing.Point(1105, 189);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(95, 37);
+            this.btnRemove.Size = new System.Drawing.Size(113, 37);
             this.btnRemove.TabIndex = 16;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -149,23 +155,29 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(1268, 215);
+            this.btnAdd.Location = new System.Drawing.Point(1242, 189);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 37);
+            this.btnAdd.Size = new System.Drawing.Size(121, 37);
             this.btnAdd.TabIndex = 17;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataGridView1
+            // tempItemTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(413, 283);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(963, 317);
-            this.dataGridView1.TabIndex = 18;
+            this.tempItemTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tempItemTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.ItemName,
+            this.Quantity});
+            this.tempItemTable.Location = new System.Drawing.Point(413, 258);
+            this.tempItemTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tempItemTable.Name = "tempItemTable";
+            this.tempItemTable.RowHeadersWidth = 51;
+            this.tempItemTable.Size = new System.Drawing.Size(963, 342);
+            this.tempItemTable.TabIndex = 18;
+            this.tempItemTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tempItemTable_CellClick);
             // 
             // btnCancel
             // 
@@ -195,13 +207,14 @@
             this.btnRequest.TabIndex = 20;
             this.btnRequest.Text = "Request";
             this.btnRequest.UseVisualStyleBackColor = false;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // lblRemark
             // 
             this.lblRemark.AutoSize = true;
             this.lblRemark.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRemark.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRemark.Location = new System.Drawing.Point(408, 230);
+            this.lblRemark.Location = new System.Drawing.Point(642, 655);
             this.lblRemark.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRemark.Name = "lblRemark";
             this.lblRemark.Size = new System.Drawing.Size(109, 32);
@@ -210,10 +223,10 @@
             // 
             // txtRemark
             // 
-            this.txtRemark.Location = new System.Drawing.Point(588, 234);
+            this.txtRemark.Location = new System.Drawing.Point(750, 655);
             this.txtRemark.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(256, 25);
+            this.txtRemark.Size = new System.Drawing.Size(365, 25);
             this.txtRemark.TabIndex = 82;
             // 
             // panel1
@@ -313,6 +326,33 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ItemID
+            // 
+            this.ItemID.Frozen = true;
+            this.ItemID.HeaderText = "ItemID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            this.ItemID.ReadOnly = true;
+            this.ItemID.Width = 125;
+            // 
+            // ItemName
+            // 
+            this.ItemName.Frozen = true;
+            this.ItemName.HeaderText = "ItemName";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 125;
+            // 
+            // Quantity
+            // 
+            this.Quantity.Frozen = true;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 125;
+            // 
             // FrmItemRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -323,7 +363,7 @@
             this.Controls.Add(this.lblRemark);
             this.Controls.Add(this.btnRequest);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tempItemTable);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.txtQuantity);
@@ -336,7 +376,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmItemRequest";
             this.Text = "Item Request";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tempItemTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -356,7 +396,7 @@
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tempItemTable;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRequest;
         private System.Windows.Forms.Label lblRemark;
@@ -369,5 +409,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }
