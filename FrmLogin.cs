@@ -141,5 +141,10 @@ namespace YummyRestaurantSystem
             MessageBox.Show("Unspported in prototye version.", "Fail to open", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return;
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

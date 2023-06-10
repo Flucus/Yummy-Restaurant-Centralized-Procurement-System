@@ -29,6 +29,7 @@ namespace YummyRestaurantSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetailsRequestRestMan));
             this.btnCancel = new System.Windows.Forms.Button();
             this.dateExpect = new System.Windows.Forms.DateTimePicker();
@@ -52,6 +53,8 @@ namespace YummyRestaurantSystem
             this.btnIM = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -233,6 +236,7 @@ namespace YummyRestaurantSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.btnCR);
             this.panel1.Controls.Add(this.btnOP);
             this.panel1.Controls.Add(this.btnIM);
@@ -312,6 +316,19 @@ namespace YummyRestaurantSystem
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(19, 608);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(30, 13);
+            this.lblTime.TabIndex = 102;
+            this.lblTime.Text = "Time";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmDetailsRequestRestMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -338,6 +355,7 @@ namespace YummyRestaurantSystem
             this.Name = "FrmDetailsRequestRestMan";
             this.Text = "Request Details";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -368,5 +386,7 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Button btnIM;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

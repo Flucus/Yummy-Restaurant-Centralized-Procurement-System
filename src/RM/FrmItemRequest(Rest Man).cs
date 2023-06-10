@@ -21,5 +21,17 @@ namespace YummyRestaurantSystem
             InitializeComponent();
             this.data = data;
         }
+
+        private void FrmItemRequest_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            timer1.Start();
+        }
     }
 }
