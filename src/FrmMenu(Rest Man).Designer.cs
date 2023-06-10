@@ -40,7 +40,7 @@
             this.btnCR = new System.Windows.Forms.Button();
             this.btnOP = new System.Windows.Forms.Button();
             this.btnIM = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnLogout2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -121,7 +121,7 @@
             this.panel1.Controls.Add(this.btnCR);
             this.panel1.Controls.Add(this.btnOP);
             this.panel1.Controls.Add(this.btnIM);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btnLogout2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -177,18 +177,20 @@
             this.btnIM.Text = "Inventory Manage";
             this.btnIM.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnLogout2
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(150, 550);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 31);
-            this.button4.TabIndex = 93;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnLogout2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLogout2.Location = new System.Drawing.Point(181, 685);
+            this.btnLogout2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLogout2.Name = "btnLogout2";
+            this.btnLogout2.Size = new System.Drawing.Size(106, 44);
+            this.btnLogout2.TabIndex = 93;
+            this.btnLogout2.Text = "Logout";
+            this.btnLogout2.UseVisualStyleBackColor = false;
+            this.btnLogout2.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // pictureBox1
             // 
@@ -235,7 +237,7 @@
         private System.Windows.Forms.Button btnCR;
         private System.Windows.Forms.Button btnOP;
         private System.Windows.Forms.Button btnIM;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnLogout2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;

@@ -13,6 +13,9 @@ namespace YummyRestaurantSystem
     public partial class FrmItemRequest : Form
     {
         private DataRow data;
+
+        public bool logout = false;
+
         public FrmItemRequest(DataRow data)
         {
             InitializeComponent();

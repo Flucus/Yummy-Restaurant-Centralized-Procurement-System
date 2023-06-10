@@ -13,6 +13,9 @@ namespace YummyRestaurantSystem
     public partial class FrmInvManage : Form
     {
         private DataRow data;
+
+        public bool logout = false;
+
         public FrmInvManage(DataRow data)
         {
             InitializeComponent();
