@@ -31,12 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvManage));
             this.lblRestaurant = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.invTable = new System.Windows.Forms.DataGridView();
             this.btnModify = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblItem = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnCR = new System.Windows.Forms.Button();
@@ -45,7 +44,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invTable)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,15 +61,16 @@
             this.lblRestaurant.TabIndex = 4;
             this.lblRestaurant.Text = "[Restaurant] Inventory Management";
             // 
-            // dataGridView1
+            // invTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(359, 185);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1013, 393);
-            this.dataGridView1.TabIndex = 14;
+            this.invTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.invTable.Location = new System.Drawing.Point(359, 185);
+            this.invTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.invTable.Name = "invTable";
+            this.invTable.RowHeadersWidth = 51;
+            this.invTable.Size = new System.Drawing.Size(1013, 393);
+            this.invTable.TabIndex = 14;
+            this.invTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invTable_CellClick);
             // 
             // btnModify
             // 
@@ -85,6 +85,7 @@
             this.btnModify.TabIndex = 15;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnCancel
             // 
@@ -109,31 +110,18 @@
             this.lblItem.Location = new System.Drawing.Point(352, 115);
             this.lblItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItem.Name = "lblItem";
-            this.lblItem.Size = new System.Drawing.Size(67, 32);
+            this.lblItem.Size = new System.Drawing.Size(146, 32);
             this.lblItem.TabIndex = 6;
-            this.lblItem.Text = "Item";
+            this.lblItem.Text = "Item Name";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(445, 115);
+            this.txtSearch.Location = new System.Drawing.Point(515, 122);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(275, 25);
             this.txtSearch.TabIndex = 11;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(729, 111);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(99, 42);
-            this.btnSearch.TabIndex = 13;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel1
             // 
@@ -240,15 +228,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnModify);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.invTable);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblItem);
             this.Controls.Add(this.lblRestaurant);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmInvManage";
             this.Text = "Inventory Management";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -260,12 +247,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblRestaurant;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView invTable;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCR;
         private System.Windows.Forms.Button btnOP;

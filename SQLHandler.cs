@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.CodeDom;
 using System.Data;
 using Org.BouncyCastle.Utilities;
+using Org.BouncyCastle.Asn1.Ocsp;
 
 namespace YummyRestaurantSystem
 {
@@ -138,7 +139,7 @@ namespace YummyRestaurantSystem
             return response;
         }
 
-        public static DataRow GetItemNameByVIDTypeID(string VID, string typeID)
+        public static DataRow GetItemByVIDTypeID(string VID, string typeID)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $@"SELECT s.Name, i.ItemID FROM RestaurantRequest AS rr
@@ -335,7 +336,7 @@ namespace YummyRestaurantSystem
                 string VID = (string)row["ItemID"];
                 int quantity = (int)row["Quantity"];
 
-                DataRow res = GetItemNameByVIDTypeID(VID, typeID);
+                DataRow res = GetItemByVIDTypeID(VID, typeID);
                 string itemID = (string)res["ItemID"];
 
                 sql += $"('{newID}', '{itemID}', {quantity}), ";
@@ -347,6 +348,38 @@ namespace YummyRestaurantSystem
 
             conn.Close();
             return true;
+        }
+
+        public static DataTable GetInventoryByLocID(string locID, string nameMatch = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $@"SELECT vi.VirtualID, si.Name, iv.Count, si.Category, si.Description
+                FROM Inventory AS iv
+                JOIN Restaurant AS r ON r.LocID = iv.LocID
+                JOIN VirtualItem AS vi ON vi.ItemID = iv.ItemID AND vi.TypeID = r.TypeID
+                JOIN Item AS i ON i.ItemID = iv.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                WHERE r.LocID = '{locID}'";
+            if (nameMatch.Length > 0)
+            {
+                sql += $" AND si.Name LIKE '%{nameMatch}%'";
+            }
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static void UpdateInvCount(string locID, string itemID, int count)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+            string sql = $"UPDATE Inventory SET Count = {count} WHERE LocID = '{locID}' AND ItemID = '{itemID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

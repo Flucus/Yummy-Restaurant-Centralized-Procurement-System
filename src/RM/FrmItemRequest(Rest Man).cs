@@ -59,7 +59,7 @@ namespace YummyRestaurantSystem
         {
             txtItemName.Text = "";
             string typeID = (string)restData["TypeID"];
-            DataRow row = SQLHandler.GetItemNameByVIDTypeID(txtItemID.Text, typeID);
+            DataRow row = SQLHandler.GetItemByVIDTypeID(txtItemID.Text, typeID);
             if (row != null)
             {
                 string itemName = (string)row["Name"];

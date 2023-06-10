@@ -77,7 +77,7 @@ namespace YummyRestaurantSystem
             }
 
             string typeID = (string)restData["TypeID"];
-            row = SQLHandler.GetItemNameByVIDTypeID(txtItemID.Text, typeID);
+            row = SQLHandler.GetItemByVIDTypeID(txtItemID.Text, typeID);
             if (row != null)
             {
                 vaildVID = true;

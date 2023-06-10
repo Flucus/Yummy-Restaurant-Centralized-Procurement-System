@@ -61,7 +61,6 @@ namespace YummyRestaurantSystem
             this.lblRestaurant.Size = new System.Drawing.Size(388, 32);
             this.lblRestaurant.TabIndex = 16;
             this.lblRestaurant.Text = "[restaurant] Inventory MODIFY";
-            this.lblRestaurant.Click += new System.EventHandler(this.lblRestaurant_Click);
             // 
             // lblItem
             // 
@@ -80,6 +79,7 @@ namespace YummyRestaurantSystem
             this.txtSearch.Location = new System.Drawing.Point(752, 203);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSearch.Name = "txtSearch";
+            this.txtSearch.ReadOnly = true;
             this.txtSearch.Size = new System.Drawing.Size(275, 25);
             this.txtSearch.TabIndex = 18;
             // 
@@ -96,6 +96,7 @@ namespace YummyRestaurantSystem
             this.btnModify.TabIndex = 21;
             this.btnModify.Text = "Modify";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // txtAmount
             // 
@@ -116,7 +117,6 @@ namespace YummyRestaurantSystem
             this.lblAmount.Size = new System.Drawing.Size(115, 32);
             this.lblAmount.TabIndex = 22;
             this.lblAmount.Text = "Amount ";
-            this.lblAmount.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCancel
             // 
@@ -246,6 +246,7 @@ namespace YummyRestaurantSystem
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmInvModify";
             this.Text = "Inventory Modify";
+            this.Load += new System.EventHandler(this.FrmInvModify_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
