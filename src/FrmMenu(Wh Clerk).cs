@@ -21,11 +21,16 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

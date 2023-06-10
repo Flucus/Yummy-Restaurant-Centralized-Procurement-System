@@ -63,8 +63,8 @@ namespace YummyRestaurantSystem
         {
             //string acc = txtuser.Text;
             //string pw = txtpw.Text;
-            string acc = "BobChan03";
-            string pw = "12345678";
+            string acc = "AliceWong04";
+            string pw = "test1";
             DataRow data = SQLHandler.CheckLogin(acc, pw);
             if (data == null)
             {
@@ -73,12 +73,12 @@ namespace YummyRestaurantSystem
             };
             string userGroup = (string)data["UserGroup"];
             string staffID = (string)data["StaffID"];
+            DataRow staffData = SQLHandler.GetStaffData(staffID);
             switch (userGroup)
             {
                 case "Restaurant Manager":
                     {
                         this.Visible = false;
-                        DataRow staffData = SQLHandler.GetStaffData(staffID);
                         FrmMenuRestMan menu = new FrmMenuRestMan(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
@@ -87,7 +87,6 @@ namespace YummyRestaurantSystem
                 case "Restaurant Staff":
                     {
                         this.Visible = false;
-                        DataRow staffData = SQLHandler.GetStaffData(staffID);
                         FrmInvManage menu = new FrmInvManage(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
@@ -96,7 +95,7 @@ namespace YummyRestaurantSystem
                 case "Category Manager":
                     {
                         this.Visible = false;
-                        FrmMenuCatMan menu = new FrmMenuCatMan();
+                        FrmMenuCatMan menu = new FrmMenuCatMan(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
                     }

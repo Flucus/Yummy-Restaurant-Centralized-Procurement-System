@@ -12,6 +12,9 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmOrderArrangeDetail_Wh_Clerk_ : Form
     {
+
+        public bool logout = false;
+
         public FrmOrderArrangeDetail_Wh_Clerk_()
         {
             InitializeComponent();
@@ -26,11 +29,22 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }

@@ -12,6 +12,10 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmCreateItem : Form
     {
+
+        public bool logout = false;
+
+
         public FrmCreateItem()
         {
             InitializeComponent();
@@ -21,11 +25,22 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
-        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }

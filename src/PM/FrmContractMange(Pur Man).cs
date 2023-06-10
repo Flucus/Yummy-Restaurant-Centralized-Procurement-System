@@ -12,6 +12,9 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmContractMange : Form
     {
+
+        public bool logout = false;
+
         public FrmContractMange()
         {
             InitializeComponent();
@@ -26,6 +29,17 @@ namespace YummyRestaurantSystem
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }

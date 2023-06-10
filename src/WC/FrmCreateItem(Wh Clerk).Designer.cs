@@ -40,11 +40,11 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.btnOA = new System.Windows.Forms.Button();
             this.btnIM = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,17 +55,19 @@
             this.lblRestaurant.AutoSize = true;
             this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(412, 30);
+            this.lblRestaurant.Location = new System.Drawing.Point(549, 35);
+            this.lblRestaurant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(343, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(451, 32);
             this.lblRestaurant.TabIndex = 6;
             this.lblRestaurant.Text = "The Yummy Restaurant Create Item";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(549, 147);
+            this.txtName.Location = new System.Drawing.Point(732, 170);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(277, 20);
+            this.txtName.Size = new System.Drawing.Size(368, 25);
             this.txtName.TabIndex = 32;
             // 
             // lblName
@@ -73,9 +75,10 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(412, 141);
+            this.lblName.Location = new System.Drawing.Point(549, 163);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(110, 24);
+            this.lblName.Size = new System.Drawing.Size(146, 32);
             this.lblName.TabIndex = 31;
             this.lblName.Text = "Item Name";
             // 
@@ -84,25 +87,28 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCategory.Location = new System.Drawing.Point(412, 216);
+            this.lblCategory.Location = new System.Drawing.Point(549, 249);
+            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(96, 24);
+            this.lblCategory.Size = new System.Drawing.Size(125, 32);
             this.lblCategory.TabIndex = 33;
             this.lblCategory.Text = "Category";
             // 
             // cboCat
             // 
             this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(549, 222);
+            this.cboCat.Location = new System.Drawing.Point(732, 256);
+            this.cboCat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cboCat.Name = "cboCat";
-            this.cboCat.Size = new System.Drawing.Size(277, 21);
+            this.cboCat.Size = new System.Drawing.Size(368, 23);
             this.cboCat.TabIndex = 34;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(549, 309);
+            this.txtDescription.Location = new System.Drawing.Point(732, 357);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(277, 20);
+            this.txtDescription.Size = new System.Drawing.Size(368, 25);
             this.txtDescription.TabIndex = 36;
             // 
             // lblDescription
@@ -110,9 +116,10 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDescription.Location = new System.Drawing.Point(412, 307);
+            this.lblDescription.Location = new System.Drawing.Point(549, 354);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(116, 24);
+            this.lblDescription.Size = new System.Drawing.Size(151, 32);
             this.lblDescription.TabIndex = 35;
             this.lblDescription.Text = "Description";
             // 
@@ -120,11 +127,12 @@
             // 
             this.btnCreate.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(677, 446);
+            this.btnCreate.Location = new System.Drawing.Point(903, 515);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(134, 38);
+            this.btnCreate.Size = new System.Drawing.Size(179, 44);
             this.btnCreate.TabIndex = 37;
             this.btnCreate.Text = "Create Item";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -133,14 +141,16 @@
             // 
             this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(416, 446);
+            this.btnCancel.Location = new System.Drawing.Point(555, 515);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 38);
+            this.btnCancel.Size = new System.Drawing.Size(179, 44);
             this.btnCancel.TabIndex = 38;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel1
             // 
@@ -152,19 +162,31 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.Size = new System.Drawing.Size(307, 744);
             this.panel1.TabIndex = 101;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(25, 702);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(37, 15);
+            this.lblTime.TabIndex = 102;
+            this.lblTime.Text = "Time";
             // 
             // btnOA
             // 
             this.btnOA.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOA.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOA.ForeColor = System.Drawing.Color.Black;
-            this.btnOA.Location = new System.Drawing.Point(12, 353);
+            this.btnOA.Location = new System.Drawing.Point(16, 407);
+            this.btnOA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOA.Name = "btnOA";
-            this.btnOA.Size = new System.Drawing.Size(203, 38);
+            this.btnOA.Size = new System.Drawing.Size(271, 44);
             this.btnOA.TabIndex = 95;
             this.btnOA.Text = "Order Arrange";
             this.btnOA.UseVisualStyleBackColor = false;
@@ -173,11 +195,12 @@
             // 
             this.btnIM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIM.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIM.ForeColor = System.Drawing.Color.Black;
-            this.btnIM.Location = new System.Drawing.Point(12, 290);
+            this.btnIM.Location = new System.Drawing.Point(16, 335);
+            this.btnIM.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnIM.Name = "btnIM";
-            this.btnIM.Size = new System.Drawing.Size(203, 38);
+            this.btnIM.Size = new System.Drawing.Size(271, 44);
             this.btnIM.TabIndex = 94;
             this.btnIM.Text = "Inventory Manage";
             this.btnIM.UseVisualStyleBackColor = false;
@@ -186,32 +209,26 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Control;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(153, 594);
+            this.button4.Location = new System.Drawing.Point(204, 685);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(62, 38);
+            this.button4.Size = new System.Drawing.Size(83, 44);
             this.button4.TabIndex = 93;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 217);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(19, 608);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(30, 13);
-            this.lblTime.TabIndex = 102;
-            this.lblTime.Text = "Time";
             // 
             // timer1
             // 
@@ -219,9 +236,9 @@
             // 
             // FrmCreateItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 645);
+            this.ClientSize = new System.Drawing.Size(1428, 744);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreate);
@@ -232,6 +249,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblRestaurant);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmCreateItem";
             this.Text = "Create Item";
             this.panel1.ResumeLayout(false);

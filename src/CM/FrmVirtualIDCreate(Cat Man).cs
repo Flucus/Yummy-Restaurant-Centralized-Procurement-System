@@ -12,6 +12,9 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmVirtualIDCreate : Form
     {
+
+        public bool logout = false;
+
         public FrmVirtualIDCreate()
         {
             InitializeComponent();
@@ -26,6 +29,17 @@ namespace YummyRestaurantSystem
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }
