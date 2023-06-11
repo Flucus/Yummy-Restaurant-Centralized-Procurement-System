@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmEditAgreement : Form
+    public partial class FrmCreateAgreement : Form
     {
-        private DataRow record;
 
         public bool logout = false;
 
-        public FrmEditAgreement(DataRow record)
+        public FrmCreateAgreement()
         {
             InitializeComponent();
-            this.record = record;
         }
 
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
@@ -39,7 +38,12 @@ namespace YummyRestaurantSystem
             Close();
         }
 
-        private void FrmEditAgreement_Load(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCreateAgreement_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

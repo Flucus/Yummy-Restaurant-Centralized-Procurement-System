@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem.src.PM
 {
-    public partial class FrmCreateAgreement : Form
+    public partial class FrmEditItem : Form
     {
-        public FrmCreateAgreement()
+        public FrmEditItem()
         {
             InitializeComponent();
         }
 
-        private void FrmCreateAgreement_Load(object sender, EventArgs e)
+        private void FrmEditAgreement_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }
