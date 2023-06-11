@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,7 @@ using System.Data;
 using Org.BouncyCastle.Utilities;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System.Drawing.Printing;
+using System.Text.RegularExpressions;
 
 namespace YummyRestaurantSystem
 {
@@ -482,6 +483,89 @@ namespace YummyRestaurantSystem
 
             conn.Close();
             return count == 1;
+        }
+
+        public static DataTable GetAllAgreementRecord(string agreeID = "", string suppName = "", string AgreementType = "", string createDate = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = @"SELECT DISTINCT a.AgreementID, s.Name AS SupplierName, a.BuyerID, a.AgreementType, a.CreatedDate, a.EffectiveDate, a.State
+                FROM Agreement AS a
+                LEFT JOIN BPAItem AS b ON b.BPA_ID = a.AgreementID
+                LEFT JOIN CPAItem AS c ON c.CPA_ID = a.AgreementID
+                LEFT JOIN PPOItem AS p ON p.PPO_ID = a.AgreementID
+                JOIN Item AS i ON i.ItemID = b.ItemID OR i.ItemID = c.ItemID OR i.ItemID = p.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+
+            string connector = "WHERE";
+            if (suppName.Length > 0)
+            {
+                sql += $" WHERE s.Name LIKE '%{suppName}%'";
+                connector = "AND";
+            }
+            if (agreeID.Length > 0)
+            {
+                sql += $" {connector} a.AgreementID LIKE '%{agreeID}%'";
+                connector = "AND";
+            }
+            if (AgreementType.Length > 0)
+            {
+                sql += $" {connector} a.AgreementType = '{AgreementType}'";
+                connector = "AND";
+            }
+            if (createDate.Length > 0)
+            {
+                sql += $@" {connector} a.CreatedDate >= DATE_SUB('{createDate}', INTERVAL 7 DAY)
+                    AND a.CreatedDate <= DATE_ADD('{createDate}', INTERVAL 7 DAY)";
+            }
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static DataTable[] GetAgreementDetail()
+        {
+            DataTable[] result= new DataTable[3];
+
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = @"SELECT *
+                FROM Agreement AS a
+                INNER JOIN BPAItem AS b ON b.BPA_ID = a.AgreementID
+                JOIN Item AS i ON i.ItemID = b.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            result[0] = new DataTable();
+            adapter.Fill(result[0]);
+
+            sql = @"SELECT *
+                FROM Agreement AS a
+                INNER JOIN CPAItem AS c ON c.CPA_ID = a.AgreementID
+                JOIN Item AS i ON i.ItemID = c.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+            adapter = new MySqlDataAdapter(sql, conn);
+            result[1] = new DataTable();
+            adapter.Fill(result[1]);
+
+            sql = @"SELECT *
+                FROM Agreement AS a
+                INNER JOIN PPOItem AS p ON p.PPO_ID = a.AgreementID
+                JOIN Item AS i ON i.ItemID = p.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+            adapter = new MySqlDataAdapter(sql, conn);
+            result[2] = new DataTable();
+            adapter.Fill(result[2]);
+
+            conn.Close();
+            return result;
         }
     }
 }

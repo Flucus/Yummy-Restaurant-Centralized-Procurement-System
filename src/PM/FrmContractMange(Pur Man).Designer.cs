@@ -40,9 +40,8 @@ namespace YummyRestaurantSystem
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.lblContractNumber = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.createDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.contractTable = new System.Windows.Forms.DataGridView();
             this.txtContactNumber = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,7 +51,7 @@ namespace YummyRestaurantSystem
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractTable)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +88,7 @@ namespace YummyRestaurantSystem
             this.cboAgreement.Name = "cboAgreement";
             this.cboAgreement.Size = new System.Drawing.Size(189, 23);
             this.cboAgreement.TabIndex = 89;
+            this.cboAgreement.SelectedIndexChanged += new System.EventHandler(this.txtContactNumber_TextChanged);
             // 
             // lblSupplierName
             // 
@@ -110,9 +110,9 @@ namespace YummyRestaurantSystem
             this.lblCreateDate.Location = new System.Drawing.Point(351, 299);
             this.lblCreateDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCreateDate.Name = "lblCreateDate";
-            this.lblCreateDate.Size = new System.Drawing.Size(185, 32);
+            this.lblCreateDate.Size = new System.Drawing.Size(223, 32);
             this.lblCreateDate.TabIndex = 87;
-            this.lblCreateDate.Text = "Created Date:";
+            this.lblCreateDate.Text = "Created Date ±7:";
             // 
             // txtSupplierName
             // 
@@ -121,6 +121,7 @@ namespace YummyRestaurantSystem
             this.txtSupplierName.Name = "txtSupplierName";
             this.txtSupplierName.Size = new System.Drawing.Size(189, 25);
             this.txtSupplierName.TabIndex = 86;
+            this.txtSupplierName.TextChanged += new System.EventHandler(this.txtContactNumber_TextChanged);
             // 
             // btnEdit
             // 
@@ -164,38 +165,26 @@ namespace YummyRestaurantSystem
             this.lblContractNumber.TabIndex = 82;
             this.lblContractNumber.Text = "Contract Number:";
             // 
-            // dateTimePicker
+            // createDatePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(603, 301);
-            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(189, 25);
-            this.dateTimePicker.TabIndex = 81;
+            this.createDatePicker.Location = new System.Drawing.Point(603, 301);
+            this.createDatePicker.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.createDatePicker.Name = "createDatePicker";
+            this.createDatePicker.Size = new System.Drawing.Size(189, 25);
+            this.createDatePicker.TabIndex = 81;
+            this.createDatePicker.ValueChanged += new System.EventHandler(this.txtContactNumber_TextChanged);
             // 
-            // btnSearch
+            // contractTable
             // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(1274, 286);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(136, 43);
-            this.btnSearch.TabIndex = 79;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(356, 348);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1053, 360);
-            this.dataGridView1.TabIndex = 78;
+            this.contractTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.contractTable.Location = new System.Drawing.Point(356, 348);
+            this.contractTable.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.contractTable.Name = "contractTable";
+            this.contractTable.RowHeadersWidth = 51;
+            this.contractTable.RowTemplate.Height = 24;
+            this.contractTable.Size = new System.Drawing.Size(1053, 360);
+            this.contractTable.TabIndex = 78;
+            this.contractTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txtContactNumber
             // 
@@ -204,6 +193,7 @@ namespace YummyRestaurantSystem
             this.txtContactNumber.Name = "txtContactNumber";
             this.txtContactNumber.Size = new System.Drawing.Size(189, 25);
             this.txtContactNumber.TabIndex = 77;
+            this.txtContactNumber.TextChanged += new System.EventHandler(this.txtContactNumber_TextChanged);
             // 
             // btnClose
             // 
@@ -318,14 +308,13 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblContractNumber);
-            this.Controls.Add(this.dateTimePicker);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.createDatePicker);
+            this.Controls.Add(this.contractTable);
             this.Controls.Add(this.txtContactNumber);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmContractMange";
             this.Text = "Contract Mangement";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -345,9 +334,8 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Label lblContractNumber;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker createDatePicker;
+        private System.Windows.Forms.DataGridView contractTable;
         private System.Windows.Forms.TextBox txtContactNumber;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel1;

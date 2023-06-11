@@ -20,6 +20,10 @@ namespace YummyRestaurantSystem
         {
             InitializeComponent();
             this.record = record;
+            DataTable[] agreeTables = SQLHandler.GetAgreementDetail();
+            BPATabel.DataSource = agreeTables[0];
+            CPATable.DataSource = agreeTables[1];
+            PPOTable.DataSource = agreeTables[2];
         }
 
         private void FrmCheckofStatus_Load(object sender, EventArgs e)
