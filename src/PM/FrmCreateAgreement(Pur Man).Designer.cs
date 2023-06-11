@@ -78,22 +78,46 @@ namespace YummyRestaurantSystem
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtAmount_PPO = new System.Windows.Forms.TextBox();
+            this.lblAmount = new System.Windows.Forms.Label();
+            this.txtTerms_PPO = new System.Windows.Forms.TextBox();
+            this.lblTerms_PPO = new System.Windows.Forms.Label();
+            this.txtBuyerName_PPO = new System.Windows.Forms.TextBox();
+            this.txtSupplierName_PPO = new System.Windows.Forms.TextBox();
+            this.dateEffect_PPO = new System.Windows.Forms.DateTimePicker();
+            this.lblCreatedDate_PPO = new System.Windows.Forms.Label();
+            this.llblEffectiveDates_PPO = new System.Windows.Forms.Label();
+            this.lblSupplierName_PPO = new System.Windows.Forms.Label();
+            this.lblBuyerName_PPO = new System.Windows.Forms.Label();
+            this.dateCreate_PPO = new System.Windows.Forms.DateTimePicker();
+            this.cboAddress_PPO = new System.Windows.Forms.ComboBox();
+            this.cboDeliverySchedule_PPO = new System.Windows.Forms.ComboBox();
+            this.txtCurrency_PPO = new System.Windows.Forms.TextBox();
+            this.lblCurrency_PPO = new System.Windows.Forms.Label();
+            this.lblDeliverySchedule = new System.Windows.Forms.Label();
+            this.lblAddress_PPO = new System.Windows.Forms.Label();
+            this.lblPOR_PPO = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControlCPA.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlCPA
             // 
             this.tabControlCPA.Controls.Add(this.tabPage1);
             this.tabControlCPA.Controls.Add(this.tabPage2);
-            this.tabControlCPA.Location = new System.Drawing.Point(573, 118);
-            this.tabControlCPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabControlCPA.Controls.Add(this.tabPage3);
+            this.tabControlCPA.Location = new System.Drawing.Point(430, 94);
+            this.tabControlCPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControlCPA.Name = "tabControlCPA";
             this.tabControlCPA.SelectedIndex = 0;
-            this.tabControlCPA.Size = new System.Drawing.Size(604, 573);
+            this.tabControlCPA.Size = new System.Drawing.Size(453, 458);
             this.tabControlCPA.TabIndex = 1;
             // 
             // tabPage1
@@ -115,11 +139,11 @@ namespace YummyRestaurantSystem
             this.tabPage1.Controls.Add(this.txtContractNum);
             this.tabPage1.Controls.Add(this.lblContractNum);
             this.tabPage1.Controls.Add(this.dateCreate);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Size = new System.Drawing.Size(596, 544);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(445, 432);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Contract Purchase Agreement";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -129,10 +153,9 @@ namespace YummyRestaurantSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(8, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(6, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 32);
+            this.label1.Size = new System.Drawing.Size(252, 24);
             this.label1.TabIndex = 52;
             this.label1.Text = "Purchase Order Revision:";
             // 
@@ -142,10 +165,10 @@ namespace YummyRestaurantSystem
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(363, 418);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCreate.Location = new System.Drawing.Point(272, 334);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(179, 44);
+            this.btnCreate.Size = new System.Drawing.Size(134, 35);
             this.btnCreate.TabIndex = 49;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -157,10 +180,10 @@ namespace YummyRestaurantSystem
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(60, 418);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancel.Location = new System.Drawing.Point(45, 334);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(179, 44);
+            this.btnCancel.Size = new System.Drawing.Size(134, 35);
             this.btnCancel.TabIndex = 48;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -168,34 +191,34 @@ namespace YummyRestaurantSystem
             // 
             // txtItemID
             // 
-            this.txtItemID.Location = new System.Drawing.Point(291, 294);
-            this.txtItemID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtItemID.Location = new System.Drawing.Point(218, 235);
+            this.txtItemID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtItemID.Name = "txtItemID";
-            this.txtItemID.Size = new System.Drawing.Size(249, 25);
+            this.txtItemID.Size = new System.Drawing.Size(188, 22);
             this.txtItemID.TabIndex = 46;
             // 
             // txtTerms
             // 
-            this.txtTerms.Location = new System.Drawing.Point(291, 250);
-            this.txtTerms.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTerms.Location = new System.Drawing.Point(218, 200);
+            this.txtTerms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTerms.Name = "txtTerms";
-            this.txtTerms.Size = new System.Drawing.Size(249, 25);
+            this.txtTerms.Size = new System.Drawing.Size(188, 22);
             this.txtTerms.TabIndex = 45;
             // 
             // txtBuyerName
             // 
-            this.txtBuyerName.Location = new System.Drawing.Point(291, 208);
-            this.txtBuyerName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtBuyerName.Location = new System.Drawing.Point(218, 166);
+            this.txtBuyerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuyerName.Name = "txtBuyerName";
-            this.txtBuyerName.Size = new System.Drawing.Size(249, 25);
+            this.txtBuyerName.Size = new System.Drawing.Size(188, 22);
             this.txtBuyerName.TabIndex = 43;
             // 
             // txtSupplierName
             // 
-            this.txtSupplierName.Location = new System.Drawing.Point(291, 168);
-            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSupplierName.Location = new System.Drawing.Point(218, 134);
+            this.txtSupplierName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(249, 25);
+            this.txtSupplierName.Size = new System.Drawing.Size(188, 22);
             this.txtSupplierName.TabIndex = 40;
             // 
             // lblTerms
@@ -203,10 +226,9 @@ namespace YummyRestaurantSystem
             this.lblTerms.AutoSize = true;
             this.lblTerms.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTerms.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTerms.Location = new System.Drawing.Point(8, 246);
-            this.lblTerms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTerms.Location = new System.Drawing.Point(6, 197);
             this.lblTerms.Name = "lblTerms";
-            this.lblTerms.Size = new System.Drawing.Size(271, 32);
+            this.lblTerms.Size = new System.Drawing.Size(206, 24);
             this.lblTerms.TabIndex = 39;
             this.lblTerms.Text = "Terms and Condition:";
             // 
@@ -215,19 +237,18 @@ namespace YummyRestaurantSystem
             this.lblItemInfo.AutoSize = true;
             this.lblItemInfo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItemInfo.Location = new System.Drawing.Point(8, 288);
-            this.lblItemInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblItemInfo.Location = new System.Drawing.Point(6, 230);
             this.lblItemInfo.Name = "lblItemInfo";
-            this.lblItemInfo.Size = new System.Drawing.Size(111, 32);
+            this.lblItemInfo.Size = new System.Drawing.Size(83, 24);
             this.lblItemInfo.TabIndex = 38;
             this.lblItemInfo.Text = "Item ID:";
             // 
             // dateEffect
             // 
-            this.dateEffect.Location = new System.Drawing.Point(291, 125);
-            this.dateEffect.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateEffect.Location = new System.Drawing.Point(218, 100);
+            this.dateEffect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateEffect.Name = "dateEffect";
-            this.dateEffect.Size = new System.Drawing.Size(249, 25);
+            this.dateEffect.Size = new System.Drawing.Size(188, 22);
             this.dateEffect.TabIndex = 32;
             // 
             // lblCreatedDate
@@ -235,10 +256,9 @@ namespace YummyRestaurantSystem
             this.lblCreatedDate.AutoSize = true;
             this.lblCreatedDate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreatedDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCreatedDate.Location = new System.Drawing.Point(8, 83);
-            this.lblCreatedDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCreatedDate.Location = new System.Drawing.Point(6, 66);
             this.lblCreatedDate.Name = "lblCreatedDate";
-            this.lblCreatedDate.Size = new System.Drawing.Size(185, 32);
+            this.lblCreatedDate.Size = new System.Drawing.Size(142, 24);
             this.lblCreatedDate.TabIndex = 31;
             this.lblCreatedDate.Text = "Created Date:";
             // 
@@ -247,10 +267,9 @@ namespace YummyRestaurantSystem
             this.lblEffectiveDates.AutoSize = true;
             this.lblEffectiveDates.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEffectiveDates.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEffectiveDates.Location = new System.Drawing.Point(8, 122);
-            this.lblEffectiveDates.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEffectiveDates.Location = new System.Drawing.Point(6, 98);
             this.lblEffectiveDates.Name = "lblEffectiveDates";
-            this.lblEffectiveDates.Size = new System.Drawing.Size(205, 32);
+            this.lblEffectiveDates.Size = new System.Drawing.Size(161, 24);
             this.lblEffectiveDates.TabIndex = 30;
             this.lblEffectiveDates.Text = "Effective Dates:";
             // 
@@ -259,10 +278,9 @@ namespace YummyRestaurantSystem
             this.lblSupplierName.AutoSize = true;
             this.lblSupplierName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplierName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSupplierName.Location = new System.Drawing.Point(8, 164);
-            this.lblSupplierName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSupplierName.Location = new System.Drawing.Point(6, 131);
             this.lblSupplierName.Name = "lblSupplierName";
-            this.lblSupplierName.Size = new System.Drawing.Size(200, 32);
+            this.lblSupplierName.Size = new System.Drawing.Size(151, 24);
             this.lblSupplierName.TabIndex = 29;
             this.lblSupplierName.Text = "Supplier Name:";
             // 
@@ -271,19 +289,18 @@ namespace YummyRestaurantSystem
             this.lblBuyerName.AutoSize = true;
             this.lblBuyerName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuyerName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBuyerName.Location = new System.Drawing.Point(8, 203);
-            this.lblBuyerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBuyerName.Location = new System.Drawing.Point(6, 162);
             this.lblBuyerName.Name = "lblBuyerName";
-            this.lblBuyerName.Size = new System.Drawing.Size(192, 32);
+            this.lblBuyerName.Size = new System.Drawing.Size(147, 24);
             this.lblBuyerName.TabIndex = 28;
             this.lblBuyerName.Text = "Buyer’s Name:";
             // 
             // txtContractNum
             // 
-            this.txtContractNum.Location = new System.Drawing.Point(291, 47);
-            this.txtContractNum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtContractNum.Location = new System.Drawing.Point(218, 38);
+            this.txtContractNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContractNum.Name = "txtContractNum";
-            this.txtContractNum.Size = new System.Drawing.Size(249, 25);
+            this.txtContractNum.Size = new System.Drawing.Size(188, 22);
             this.txtContractNum.TabIndex = 27;
             // 
             // lblContractNum
@@ -291,19 +308,18 @@ namespace YummyRestaurantSystem
             this.lblContractNum.AutoSize = true;
             this.lblContractNum.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContractNum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblContractNum.Location = new System.Drawing.Point(8, 43);
-            this.lblContractNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContractNum.Location = new System.Drawing.Point(6, 34);
             this.lblContractNum.Name = "lblContractNum";
-            this.lblContractNum.Size = new System.Drawing.Size(229, 32);
+            this.lblContractNum.Size = new System.Drawing.Size(173, 24);
             this.lblContractNum.TabIndex = 6;
             this.lblContractNum.Text = "Contract Number:";
             // 
             // dateCreate
             // 
-            this.dateCreate.Location = new System.Drawing.Point(291, 88);
-            this.dateCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateCreate.Location = new System.Drawing.Point(218, 70);
+            this.dateCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateCreate.Name = "dateCreate";
-            this.dateCreate.Size = new System.Drawing.Size(249, 25);
+            this.dateCreate.Size = new System.Drawing.Size(188, 22);
             this.dateCreate.TabIndex = 0;
             // 
             // tabPage2
@@ -327,29 +343,29 @@ namespace YummyRestaurantSystem
             this.tabPage2.Controls.Add(this.lblBuyerName_BPA);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.dateCreate_BPA);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage2.Size = new System.Drawing.Size(596, 544);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(445, 432);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Blanket Purchase Agreement";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // txtCurrency
             // 
-            this.txtCurrency.Location = new System.Drawing.Point(293, 343);
-            this.txtCurrency.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCurrency.Location = new System.Drawing.Point(220, 274);
+            this.txtCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCurrency.Name = "txtCurrency";
-            this.txtCurrency.Size = new System.Drawing.Size(249, 25);
+            this.txtCurrency.Size = new System.Drawing.Size(188, 22);
             this.txtCurrency.TabIndex = 76;
             // 
             // txtAmountAgreed
             // 
-            this.txtAmountAgreed.Location = new System.Drawing.Point(293, 291);
-            this.txtAmountAgreed.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAmountAgreed.Location = new System.Drawing.Point(220, 233);
+            this.txtAmountAgreed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAmountAgreed.Name = "txtAmountAgreed";
-            this.txtAmountAgreed.Size = new System.Drawing.Size(249, 25);
+            this.txtAmountAgreed.Size = new System.Drawing.Size(188, 22);
             this.txtAmountAgreed.TabIndex = 75;
             // 
             // lblAmountAgreed
@@ -357,10 +373,9 @@ namespace YummyRestaurantSystem
             this.lblAmountAgreed.AutoSize = true;
             this.lblAmountAgreed.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmountAgreed.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAmountAgreed.Location = new System.Drawing.Point(4, 286);
-            this.lblAmountAgreed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmountAgreed.Location = new System.Drawing.Point(3, 229);
             this.lblAmountAgreed.Name = "lblAmountAgreed";
-            this.lblAmountAgreed.Size = new System.Drawing.Size(209, 32);
+            this.lblAmountAgreed.Size = new System.Drawing.Size(156, 24);
             this.lblAmountAgreed.TabIndex = 74;
             this.lblAmountAgreed.Text = "Amount Agreed:";
             // 
@@ -369,10 +384,9 @@ namespace YummyRestaurantSystem
             this.lblCurrency.AutoSize = true;
             this.lblCurrency.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrency.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCurrency.Location = new System.Drawing.Point(8, 335);
-            this.lblCurrency.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCurrency.Location = new System.Drawing.Point(6, 268);
             this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(133, 32);
+            this.lblCurrency.Size = new System.Drawing.Size(101, 24);
             this.lblCurrency.TabIndex = 72;
             this.lblCurrency.Text = "Currency:";
             // 
@@ -382,10 +396,10 @@ namespace YummyRestaurantSystem
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(365, 430);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Location = new System.Drawing.Point(274, 344);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 44);
+            this.button1.Size = new System.Drawing.Size(134, 35);
             this.button1.TabIndex = 71;
             this.button1.Text = "Create";
             this.button1.UseVisualStyleBackColor = false;
@@ -396,44 +410,44 @@ namespace YummyRestaurantSystem
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(40, 430);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Location = new System.Drawing.Point(30, 344);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(179, 44);
+            this.button2.Size = new System.Drawing.Size(134, 35);
             this.button2.TabIndex = 70;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // txtItemID_BPA
             // 
-            this.txtItemID_BPA.Location = new System.Drawing.Point(293, 250);
-            this.txtItemID_BPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtItemID_BPA.Location = new System.Drawing.Point(220, 200);
+            this.txtItemID_BPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtItemID_BPA.Name = "txtItemID_BPA";
-            this.txtItemID_BPA.Size = new System.Drawing.Size(249, 25);
+            this.txtItemID_BPA.Size = new System.Drawing.Size(188, 22);
             this.txtItemID_BPA.TabIndex = 69;
             // 
             // txtTerms_BPA
             // 
-            this.txtTerms_BPA.Location = new System.Drawing.Point(293, 211);
-            this.txtTerms_BPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtTerms_BPA.Location = new System.Drawing.Point(220, 169);
+            this.txtTerms_BPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTerms_BPA.Name = "txtTerms_BPA";
-            this.txtTerms_BPA.Size = new System.Drawing.Size(249, 25);
+            this.txtTerms_BPA.Size = new System.Drawing.Size(188, 22);
             this.txtTerms_BPA.TabIndex = 68;
             // 
             // txtBuyerName_BPA
             // 
-            this.txtBuyerName_BPA.Location = new System.Drawing.Point(293, 168);
-            this.txtBuyerName_BPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtBuyerName_BPA.Location = new System.Drawing.Point(220, 134);
+            this.txtBuyerName_BPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuyerName_BPA.Name = "txtBuyerName_BPA";
-            this.txtBuyerName_BPA.Size = new System.Drawing.Size(249, 25);
+            this.txtBuyerName_BPA.Size = new System.Drawing.Size(188, 22);
             this.txtBuyerName_BPA.TabIndex = 66;
             // 
             // txtSupplierName_BPA
             // 
-            this.txtSupplierName_BPA.Location = new System.Drawing.Point(293, 129);
-            this.txtSupplierName_BPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSupplierName_BPA.Location = new System.Drawing.Point(220, 103);
+            this.txtSupplierName_BPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSupplierName_BPA.Name = "txtSupplierName_BPA";
-            this.txtSupplierName_BPA.Size = new System.Drawing.Size(249, 25);
+            this.txtSupplierName_BPA.Size = new System.Drawing.Size(188, 22);
             this.txtSupplierName_BPA.TabIndex = 63;
             // 
             // lblTerms_BPA
@@ -441,10 +455,9 @@ namespace YummyRestaurantSystem
             this.lblTerms_BPA.AutoSize = true;
             this.lblTerms_BPA.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTerms_BPA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTerms_BPA.Location = new System.Drawing.Point(4, 207);
-            this.lblTerms_BPA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTerms_BPA.Location = new System.Drawing.Point(3, 166);
             this.lblTerms_BPA.Name = "lblTerms_BPA";
-            this.lblTerms_BPA.Size = new System.Drawing.Size(271, 32);
+            this.lblTerms_BPA.Size = new System.Drawing.Size(206, 24);
             this.lblTerms_BPA.TabIndex = 62;
             this.lblTerms_BPA.Text = "Terms and Condition:";
             // 
@@ -453,19 +466,18 @@ namespace YummyRestaurantSystem
             this.lblItemID_BPA.AutoSize = true;
             this.lblItemID_BPA.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemID_BPA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItemID_BPA.Location = new System.Drawing.Point(4, 246);
-            this.lblItemID_BPA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblItemID_BPA.Location = new System.Drawing.Point(3, 197);
             this.lblItemID_BPA.Name = "lblItemID_BPA";
-            this.lblItemID_BPA.Size = new System.Drawing.Size(111, 32);
+            this.lblItemID_BPA.Size = new System.Drawing.Size(83, 24);
             this.lblItemID_BPA.TabIndex = 61;
             this.lblItemID_BPA.Text = "Item ID:";
             // 
             // dateEffect_BPA
             // 
-            this.dateEffect_BPA.Location = new System.Drawing.Point(293, 89);
-            this.dateEffect_BPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateEffect_BPA.Location = new System.Drawing.Point(220, 71);
+            this.dateEffect_BPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateEffect_BPA.Name = "dateEffect_BPA";
-            this.dateEffect_BPA.Size = new System.Drawing.Size(249, 25);
+            this.dateEffect_BPA.Size = new System.Drawing.Size(188, 22);
             this.dateEffect_BPA.TabIndex = 57;
             // 
             // lblCreatedDate_BPA
@@ -473,10 +485,9 @@ namespace YummyRestaurantSystem
             this.lblCreatedDate_BPA.AutoSize = true;
             this.lblCreatedDate_BPA.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreatedDate_BPA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCreatedDate_BPA.Location = new System.Drawing.Point(4, 44);
-            this.lblCreatedDate_BPA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCreatedDate_BPA.Location = new System.Drawing.Point(3, 35);
             this.lblCreatedDate_BPA.Name = "lblCreatedDate_BPA";
-            this.lblCreatedDate_BPA.Size = new System.Drawing.Size(185, 32);
+            this.lblCreatedDate_BPA.Size = new System.Drawing.Size(142, 24);
             this.lblCreatedDate_BPA.TabIndex = 56;
             this.lblCreatedDate_BPA.Text = "Created Date:";
             // 
@@ -485,10 +496,9 @@ namespace YummyRestaurantSystem
             this.llblEffectiveDates_BPA.AutoSize = true;
             this.llblEffectiveDates_BPA.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblEffectiveDates_BPA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.llblEffectiveDates_BPA.Location = new System.Drawing.Point(4, 84);
-            this.llblEffectiveDates_BPA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llblEffectiveDates_BPA.Location = new System.Drawing.Point(3, 67);
             this.llblEffectiveDates_BPA.Name = "llblEffectiveDates_BPA";
-            this.llblEffectiveDates_BPA.Size = new System.Drawing.Size(205, 32);
+            this.llblEffectiveDates_BPA.Size = new System.Drawing.Size(161, 24);
             this.llblEffectiveDates_BPA.TabIndex = 55;
             this.llblEffectiveDates_BPA.Text = "Effective Dates:";
             // 
@@ -497,10 +507,9 @@ namespace YummyRestaurantSystem
             this.lblSupplierName_BPA.AutoSize = true;
             this.lblSupplierName_BPA.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplierName_BPA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSupplierName_BPA.Location = new System.Drawing.Point(4, 125);
-            this.lblSupplierName_BPA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSupplierName_BPA.Location = new System.Drawing.Point(3, 100);
             this.lblSupplierName_BPA.Name = "lblSupplierName_BPA";
-            this.lblSupplierName_BPA.Size = new System.Drawing.Size(200, 32);
+            this.lblSupplierName_BPA.Size = new System.Drawing.Size(151, 24);
             this.lblSupplierName_BPA.TabIndex = 54;
             this.lblSupplierName_BPA.Text = "Supplier Name:";
             // 
@@ -509,10 +518,9 @@ namespace YummyRestaurantSystem
             this.lblBuyerName_BPA.AutoSize = true;
             this.lblBuyerName_BPA.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuyerName_BPA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBuyerName_BPA.Location = new System.Drawing.Point(4, 164);
-            this.lblBuyerName_BPA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBuyerName_BPA.Location = new System.Drawing.Point(3, 131);
             this.lblBuyerName_BPA.Name = "lblBuyerName_BPA";
-            this.lblBuyerName_BPA.Size = new System.Drawing.Size(192, 32);
+            this.lblBuyerName_BPA.Size = new System.Drawing.Size(147, 24);
             this.lblBuyerName_BPA.TabIndex = 53;
             this.lblBuyerName_BPA.Text = "Buyer’s Name:";
             // 
@@ -521,19 +529,18 @@ namespace YummyRestaurantSystem
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(4, 3);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(3, 2);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(325, 32);
+            this.label19.Size = new System.Drawing.Size(252, 24);
             this.label19.TabIndex = 51;
             this.label19.Text = "Purchase Order Revision:";
             // 
             // dateCreate_BPA
             // 
-            this.dateCreate_BPA.Location = new System.Drawing.Point(293, 46);
-            this.dateCreate_BPA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dateCreate_BPA.Location = new System.Drawing.Point(220, 37);
+            this.dateCreate_BPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateCreate_BPA.Name = "dateCreate_BPA";
-            this.dateCreate_BPA.Size = new System.Drawing.Size(249, 25);
+            this.dateCreate_BPA.Size = new System.Drawing.Size(188, 22);
             this.dateCreate_BPA.TabIndex = 50;
             // 
             // lblTitle
@@ -541,10 +548,9 @@ namespace YummyRestaurantSystem
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitle.Location = new System.Drawing.Point(568, 35);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(426, 28);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(529, 32);
+            this.lblTitle.Size = new System.Drawing.Size(402, 24);
             this.lblTitle.TabIndex = 92;
             this.lblTitle.Text = "The Yummy Restaurant Create Agreement";
             // 
@@ -558,18 +564,17 @@ namespace YummyRestaurantSystem
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 744);
+            this.panel1.Size = new System.Drawing.Size(230, 595);
             this.panel1.TabIndex = 101;
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(25, 702);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(19, 562);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(37, 15);
+            this.lblTime.Size = new System.Drawing.Size(29, 12);
             this.lblTime.TabIndex = 96;
             this.lblTime.Text = "Time";
             // 
@@ -579,10 +584,10 @@ namespace YummyRestaurantSystem
             this.btnCO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCO.ForeColor = System.Drawing.Color.Black;
-            this.btnCO.Location = new System.Drawing.Point(16, 407);
-            this.btnCO.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCO.Location = new System.Drawing.Point(12, 326);
+            this.btnCO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCO.Name = "btnCO";
-            this.btnCO.Size = new System.Drawing.Size(271, 44);
+            this.btnCO.Size = new System.Drawing.Size(203, 35);
             this.btnCO.TabIndex = 95;
             this.btnCO.Text = "Create Order";
             this.btnCO.UseVisualStyleBackColor = false;
@@ -593,10 +598,10 @@ namespace YummyRestaurantSystem
             this.btnOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOM.ForeColor = System.Drawing.Color.Black;
-            this.btnOM.Location = new System.Drawing.Point(16, 335);
-            this.btnOM.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnOM.Location = new System.Drawing.Point(12, 268);
+            this.btnOM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOM.Name = "btnOM";
-            this.btnOM.Size = new System.Drawing.Size(271, 44);
+            this.btnOM.Size = new System.Drawing.Size(203, 35);
             this.btnOM.TabIndex = 94;
             this.btnOM.Text = "Order Manage";
             this.btnOM.UseVisualStyleBackColor = false;
@@ -607,10 +612,10 @@ namespace YummyRestaurantSystem
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(204, 685);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button4.Location = new System.Drawing.Point(153, 548);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 44);
+            this.button4.Size = new System.Drawing.Size(62, 35);
             this.button4.TabIndex = 93;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
@@ -619,10 +624,10 @@ namespace YummyRestaurantSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 217);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 174);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -630,15 +635,255 @@ namespace YummyRestaurantSystem
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.txtAmount_PPO);
+            this.tabPage3.Controls.Add(this.lblAmount);
+            this.tabPage3.Controls.Add(this.txtTerms_PPO);
+            this.tabPage3.Controls.Add(this.lblTerms_PPO);
+            this.tabPage3.Controls.Add(this.txtBuyerName_PPO);
+            this.tabPage3.Controls.Add(this.txtSupplierName_PPO);
+            this.tabPage3.Controls.Add(this.dateEffect_PPO);
+            this.tabPage3.Controls.Add(this.lblCreatedDate_PPO);
+            this.tabPage3.Controls.Add(this.llblEffectiveDates_PPO);
+            this.tabPage3.Controls.Add(this.lblSupplierName_PPO);
+            this.tabPage3.Controls.Add(this.lblBuyerName_PPO);
+            this.tabPage3.Controls.Add(this.dateCreate_PPO);
+            this.tabPage3.Controls.Add(this.cboAddress_PPO);
+            this.tabPage3.Controls.Add(this.cboDeliverySchedule_PPO);
+            this.tabPage3.Controls.Add(this.txtCurrency_PPO);
+            this.tabPage3.Controls.Add(this.lblCurrency_PPO);
+            this.tabPage3.Controls.Add(this.lblDeliverySchedule);
+            this.tabPage3.Controls.Add(this.lblAddress_PPO);
+            this.tabPage3.Controls.Add(this.lblPOR_PPO);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(445, 432);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Planned Purchase Order";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // txtAmount_PPO
+            // 
+            this.txtAmount_PPO.Location = new System.Drawing.Point(220, 329);
+            this.txtAmount_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAmount_PPO.Name = "txtAmount_PPO";
+            this.txtAmount_PPO.Size = new System.Drawing.Size(188, 22);
+            this.txtAmount_PPO.TabIndex = 113;
+            // 
+            // lblAmount
+            // 
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAmount.Location = new System.Drawing.Point(3, 323);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(79, 24);
+            this.lblAmount.TabIndex = 112;
+            this.lblAmount.Text = "Amount";
+            // 
+            // txtTerms_PPO
+            // 
+            this.txtTerms_PPO.Location = new System.Drawing.Point(220, 175);
+            this.txtTerms_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTerms_PPO.Name = "txtTerms_PPO";
+            this.txtTerms_PPO.Size = new System.Drawing.Size(188, 22);
+            this.txtTerms_PPO.TabIndex = 111;
+            // 
+            // lblTerms_PPO
+            // 
+            this.lblTerms_PPO.AutoSize = true;
+            this.lblTerms_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTerms_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTerms_PPO.Location = new System.Drawing.Point(0, 173);
+            this.lblTerms_PPO.Name = "lblTerms_PPO";
+            this.lblTerms_PPO.Size = new System.Drawing.Size(200, 24);
+            this.lblTerms_PPO.TabIndex = 110;
+            this.lblTerms_PPO.Text = "Terms and Condition";
+            // 
+            // txtBuyerName_PPO
+            // 
+            this.txtBuyerName_PPO.Location = new System.Drawing.Point(220, 141);
+            this.txtBuyerName_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuyerName_PPO.Name = "txtBuyerName_PPO";
+            this.txtBuyerName_PPO.Size = new System.Drawing.Size(188, 22);
+            this.txtBuyerName_PPO.TabIndex = 109;
+            // 
+            // txtSupplierName_PPO
+            // 
+            this.txtSupplierName_PPO.Location = new System.Drawing.Point(220, 110);
+            this.txtSupplierName_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSupplierName_PPO.Name = "txtSupplierName_PPO";
+            this.txtSupplierName_PPO.Size = new System.Drawing.Size(188, 22);
+            this.txtSupplierName_PPO.TabIndex = 108;
+            // 
+            // dateEffect_PPO
+            // 
+            this.dateEffect_PPO.Location = new System.Drawing.Point(220, 78);
+            this.dateEffect_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateEffect_PPO.Name = "dateEffect_PPO";
+            this.dateEffect_PPO.Size = new System.Drawing.Size(188, 22);
+            this.dateEffect_PPO.TabIndex = 107;
+            // 
+            // lblCreatedDate_PPO
+            // 
+            this.lblCreatedDate_PPO.AutoSize = true;
+            this.lblCreatedDate_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreatedDate_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCreatedDate_PPO.Location = new System.Drawing.Point(3, 42);
+            this.lblCreatedDate_PPO.Name = "lblCreatedDate_PPO";
+            this.lblCreatedDate_PPO.Size = new System.Drawing.Size(136, 24);
+            this.lblCreatedDate_PPO.TabIndex = 106;
+            this.lblCreatedDate_PPO.Text = "Created Date";
+            // 
+            // llblEffectiveDates_PPO
+            // 
+            this.llblEffectiveDates_PPO.AutoSize = true;
+            this.llblEffectiveDates_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblEffectiveDates_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.llblEffectiveDates_PPO.Location = new System.Drawing.Point(3, 74);
+            this.llblEffectiveDates_PPO.Name = "llblEffectiveDates_PPO";
+            this.llblEffectiveDates_PPO.Size = new System.Drawing.Size(155, 24);
+            this.llblEffectiveDates_PPO.TabIndex = 105;
+            this.llblEffectiveDates_PPO.Text = "Effective Dates";
+            // 
+            // lblSupplierName_PPO
+            // 
+            this.lblSupplierName_PPO.AutoSize = true;
+            this.lblSupplierName_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplierName_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSupplierName_PPO.Location = new System.Drawing.Point(3, 107);
+            this.lblSupplierName_PPO.Name = "lblSupplierName_PPO";
+            this.lblSupplierName_PPO.Size = new System.Drawing.Size(145, 24);
+            this.lblSupplierName_PPO.TabIndex = 104;
+            this.lblSupplierName_PPO.Text = "Supplier Name";
+            // 
+            // lblBuyerName_PPO
+            // 
+            this.lblBuyerName_PPO.AutoSize = true;
+            this.lblBuyerName_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuyerName_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBuyerName_PPO.Location = new System.Drawing.Point(3, 138);
+            this.lblBuyerName_PPO.Name = "lblBuyerName_PPO";
+            this.lblBuyerName_PPO.Size = new System.Drawing.Size(141, 24);
+            this.lblBuyerName_PPO.TabIndex = 103;
+            this.lblBuyerName_PPO.Text = "Buyer’s Name";
+            // 
+            // dateCreate_PPO
+            // 
+            this.dateCreate_PPO.Location = new System.Drawing.Point(220, 44);
+            this.dateCreate_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateCreate_PPO.Name = "dateCreate_PPO";
+            this.dateCreate_PPO.Size = new System.Drawing.Size(188, 22);
+            this.dateCreate_PPO.TabIndex = 102;
+            // 
+            // cboAddress_PPO
+            // 
+            this.cboAddress_PPO.FormattingEnabled = true;
+            this.cboAddress_PPO.Location = new System.Drawing.Point(220, 216);
+            this.cboAddress_PPO.Name = "cboAddress_PPO";
+            this.cboAddress_PPO.Size = new System.Drawing.Size(188, 20);
+            this.cboAddress_PPO.TabIndex = 101;
+            // 
+            // cboDeliverySchedule_PPO
+            // 
+            this.cboDeliverySchedule_PPO.FormattingEnabled = true;
+            this.cboDeliverySchedule_PPO.Location = new System.Drawing.Point(220, 250);
+            this.cboDeliverySchedule_PPO.Name = "cboDeliverySchedule_PPO";
+            this.cboDeliverySchedule_PPO.Size = new System.Drawing.Size(188, 20);
+            this.cboDeliverySchedule_PPO.TabIndex = 100;
+            // 
+            // txtCurrency_PPO
+            // 
+            this.txtCurrency_PPO.Location = new System.Drawing.Point(220, 285);
+            this.txtCurrency_PPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCurrency_PPO.Name = "txtCurrency_PPO";
+            this.txtCurrency_PPO.Size = new System.Drawing.Size(188, 22);
+            this.txtCurrency_PPO.TabIndex = 99;
+            // 
+            // lblCurrency_PPO
+            // 
+            this.lblCurrency_PPO.AutoSize = true;
+            this.lblCurrency_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrency_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCurrency_PPO.Location = new System.Drawing.Point(3, 283);
+            this.lblCurrency_PPO.Name = "lblCurrency_PPO";
+            this.lblCurrency_PPO.Size = new System.Drawing.Size(95, 24);
+            this.lblCurrency_PPO.TabIndex = 98;
+            this.lblCurrency_PPO.Text = "Currency";
+            // 
+            // lblDeliverySchedule
+            // 
+            this.lblDeliverySchedule.AutoSize = true;
+            this.lblDeliverySchedule.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeliverySchedule.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDeliverySchedule.Location = new System.Drawing.Point(0, 250);
+            this.lblDeliverySchedule.Name = "lblDeliverySchedule";
+            this.lblDeliverySchedule.Size = new System.Drawing.Size(179, 24);
+            this.lblDeliverySchedule.TabIndex = 97;
+            this.lblDeliverySchedule.Text = "DeliverySchedule ";
+            // 
+            // lblAddress_PPO
+            // 
+            this.lblAddress_PPO.AutoSize = true;
+            this.lblAddress_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAddress_PPO.Location = new System.Drawing.Point(3, 216);
+            this.lblAddress_PPO.Name = "lblAddress_PPO";
+            this.lblAddress_PPO.Size = new System.Drawing.Size(86, 24);
+            this.lblAddress_PPO.TabIndex = 96;
+            this.lblAddress_PPO.Text = "Address";
+            // 
+            // lblPOR_PPO
+            // 
+            this.lblPOR_PPO.AutoSize = true;
+            this.lblPOR_PPO.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPOR_PPO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPOR_PPO.Location = new System.Drawing.Point(3, 9);
+            this.lblPOR_PPO.Name = "lblPOR_PPO";
+            this.lblPOR_PPO.Size = new System.Drawing.Size(252, 24);
+            this.lblPOR_PPO.TabIndex = 95;
+            this.lblPOR_PPO.Text = "Purchase Order Revision:";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(274, 376);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(134, 35);
+            this.button3.TabIndex = 115;
+            this.button3.Text = "Create";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button5.Location = new System.Drawing.Point(30, 376);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(134, 35);
+            this.button5.TabIndex = 114;
+            this.button5.Text = "Cancel";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // FrmCreateAgreement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 744);
+            this.ClientSize = new System.Drawing.Size(1071, 595);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.tabControlCPA);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateAgreement";
             this.Text = "Create Agreement";
             this.tabControlCPA.ResumeLayout(false);
@@ -649,6 +894,8 @@ namespace YummyRestaurantSystem
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,5 +950,27 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox txtAmount_PPO;
+        private System.Windows.Forms.Label lblAmount;
+        private System.Windows.Forms.TextBox txtTerms_PPO;
+        private System.Windows.Forms.Label lblTerms_PPO;
+        private System.Windows.Forms.TextBox txtBuyerName_PPO;
+        private System.Windows.Forms.TextBox txtSupplierName_PPO;
+        private System.Windows.Forms.DateTimePicker dateEffect_PPO;
+        private System.Windows.Forms.Label lblCreatedDate_PPO;
+        private System.Windows.Forms.Label llblEffectiveDates_PPO;
+        private System.Windows.Forms.Label lblSupplierName_PPO;
+        private System.Windows.Forms.Label lblBuyerName_PPO;
+        private System.Windows.Forms.DateTimePicker dateCreate_PPO;
+        private System.Windows.Forms.ComboBox cboAddress_PPO;
+        private System.Windows.Forms.ComboBox cboDeliverySchedule_PPO;
+        private System.Windows.Forms.TextBox txtCurrency_PPO;
+        private System.Windows.Forms.Label lblCurrency_PPO;
+        private System.Windows.Forms.Label lblDeliverySchedule;
+        private System.Windows.Forms.Label lblAddress_PPO;
+        private System.Windows.Forms.Label lblPOR_PPO;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }
