@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -322,8 +322,8 @@ namespace YummyRestaurantSystem
             string newID = 'R' + numID.ToString().PadLeft(9, '0');
             string managerID = (string)staffData["StaffID"];
             string restID = (string)staffData["LocID"];
-            string createDate = DateTime.Now.ToString("yyyy-mm-dd");
-            string expDate = (DateTime.Now.AddDays(3)).ToString("yyyy-mm-dd");
+            string createDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string expDate = (DateTime.Now.AddDays(3)).ToString("yyyy-MM-dd");
 
             sql = $"INSERT INTO RestaurantRequest VALUES ('{newID}', '{managerID}', '{createDate}', '{restID}', '{expDate}', '{remark}', 'P')";
             MySqlCommand cmd = new MySqlCommand(sql, conn);

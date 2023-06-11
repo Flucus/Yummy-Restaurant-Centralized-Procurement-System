@@ -71,8 +71,8 @@ namespace YummyRestaurantSystem
                 txtName.Text,
                 txtEmail.Text,
                 txtPhone.Text,
-                dtpDoB.Value.ToString("yyyy-mm-dd"),
-                dtpHd.Value.ToString("yyyy-mm-dd"),
+                dtpDoB.Value.ToString("yyyy-MM-dd"),
+                dtpHd.Value.ToString("yyyy-MM-dd"),
                 txtSal.Text,
                 txtState.Text
             };
