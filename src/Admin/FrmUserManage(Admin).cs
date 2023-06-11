@@ -26,11 +26,6 @@ namespace YummyRestaurantSystem
             }
         }
 
-        private void FrmUserManage_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
@@ -121,6 +116,11 @@ namespace YummyRestaurantSystem
             {
                 lastIndex = 0;
             }
+        }
+
+        private void FrmUserManage_Load_1(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

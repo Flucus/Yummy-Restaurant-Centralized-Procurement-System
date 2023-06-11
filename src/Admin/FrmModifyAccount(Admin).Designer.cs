@@ -371,6 +371,7 @@
             this.Controls.Add(this.lblUserManage);
             this.Name = "FrmModifyAccount";
             this.Text = "Modify Account";
+            this.Load += new System.EventHandler(this.FrmModifyAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

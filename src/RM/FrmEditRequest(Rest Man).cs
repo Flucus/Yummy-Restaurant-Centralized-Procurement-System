@@ -149,12 +149,6 @@ namespace YummyRestaurantSystem
         {
             Close();
         }
-
-
-        private void FrmEditRequest_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
         
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -166,6 +160,11 @@ namespace YummyRestaurantSystem
         {
             logout = true;
             Close();
+        }
+
+        private void FrmEditRequest_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

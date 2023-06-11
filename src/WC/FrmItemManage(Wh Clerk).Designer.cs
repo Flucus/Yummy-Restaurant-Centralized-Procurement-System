@@ -270,6 +270,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmItemManage";
             this.Text = "Item Management";
+            this.Load += new System.EventHandler(this.FrmItemManage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

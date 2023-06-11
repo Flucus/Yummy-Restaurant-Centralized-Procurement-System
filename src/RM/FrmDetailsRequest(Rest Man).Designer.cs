@@ -332,6 +332,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.lblManagerID);
             this.Name = "FrmDetailsRequestRestMan";
             this.Text = "Request Details";
+            this.Load += new System.EventHandler(this.FrmDetailsRequestRestMan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

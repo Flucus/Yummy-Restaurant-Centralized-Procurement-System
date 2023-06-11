@@ -348,6 +348,7 @@
             this.Controls.Add(this.lblUserManage);
             this.Name = "FrmCreateAccount";
             this.Text = "Create Account";
+            this.Load += new System.EventHandler(this.FrmCreateAccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

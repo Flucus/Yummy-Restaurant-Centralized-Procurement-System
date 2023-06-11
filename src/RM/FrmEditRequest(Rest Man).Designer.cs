@@ -337,6 +337,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmEditRequest";
             this.Text = "Edit Request";
+            this.Load += new System.EventHandler(this.FrmEditRequest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

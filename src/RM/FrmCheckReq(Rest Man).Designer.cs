@@ -238,6 +238,7 @@
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmCheckReq";
             this.Text = "Check Request";
+            this.Load += new System.EventHandler(this.FrmCheckReq_Load);
             ((System.ComponentModel.ISupportInitialize)(this.requestTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

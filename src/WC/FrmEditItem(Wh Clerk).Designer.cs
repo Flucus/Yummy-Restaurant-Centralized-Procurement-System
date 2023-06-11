@@ -258,6 +258,7 @@
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmEditItem";
             this.Text = "Edit Item";
+            this.Load += new System.EventHandler(this.FrmEditItem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

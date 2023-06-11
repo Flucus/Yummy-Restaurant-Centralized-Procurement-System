@@ -285,6 +285,7 @@
             this.Controls.Add(this.lblRestaurant);
             this.Name = "FrmVirtualIDEdit";
             this.Text = "Virtual ID Edit";
+            this.Load += new System.EventHandler(this.FrmVirtualIDEdit_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

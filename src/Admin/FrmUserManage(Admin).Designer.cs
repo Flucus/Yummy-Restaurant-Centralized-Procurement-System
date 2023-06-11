@@ -248,6 +248,7 @@
             this.Controls.Add(this.dgvUserList);
             this.Name = "FrmUserManage";
             this.Text = "User Management";
+            this.Load += new System.EventHandler(this.FrmUserManage_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

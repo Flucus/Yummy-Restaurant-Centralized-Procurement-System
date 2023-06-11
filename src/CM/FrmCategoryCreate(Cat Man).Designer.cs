@@ -280,6 +280,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.lblRestaurant);
             this.Name = "Form2";
             this.Text = "Category Create";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

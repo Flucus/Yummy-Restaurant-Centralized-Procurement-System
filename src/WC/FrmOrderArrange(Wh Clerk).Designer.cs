@@ -212,6 +212,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmOrderArrange_Wh_Clerk_";
             this.Text = "Order Arrange";
+            this.Load += new System.EventHandler(this.FrmOrderArrange_Wh_Clerk__Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
