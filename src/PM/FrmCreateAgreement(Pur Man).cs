@@ -41,5 +41,10 @@ namespace YummyRestaurantSystem
             logout = true;
             Close();
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

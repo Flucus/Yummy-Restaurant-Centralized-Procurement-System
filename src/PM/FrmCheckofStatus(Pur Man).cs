@@ -12,12 +12,14 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmCheckofStatus : Form
     {
+        private DataRow record;
 
         public bool logout = false;
 
-        public FrmCheckofStatus()
+        public FrmCheckofStatus(DataRow record)
         {
             InitializeComponent();
+            this.record = record;
         }
 
         private void FrmCheckofStatus_Load(object sender, EventArgs e)

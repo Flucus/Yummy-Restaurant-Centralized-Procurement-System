@@ -149,6 +149,7 @@ namespace YummyRestaurantSystem
             this.btnCreate.TabIndex = 49;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnCancel
             // 

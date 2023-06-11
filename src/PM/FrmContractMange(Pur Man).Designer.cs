@@ -135,6 +135,7 @@ namespace YummyRestaurantSystem
             this.btnEdit.TabIndex = 84;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnCheck
             // 
@@ -149,6 +150,7 @@ namespace YummyRestaurantSystem
             this.btnCheck.TabIndex = 83;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // lblContractNumber
             // 

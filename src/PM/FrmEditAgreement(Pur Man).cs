@@ -12,12 +12,14 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmEditAgreement : Form
     {
+        private DataRow record;
+
         public bool logout = false;
 
-
-        public FrmEditAgreement()
+        public FrmEditAgreement(DataRow record)
         {
             InitializeComponent();
+            this.record = record;
         }
 
         private void FrmEditAgreement_Load(object sender, EventArgs e)
