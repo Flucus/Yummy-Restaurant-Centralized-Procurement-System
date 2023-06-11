@@ -32,12 +32,6 @@ namespace YummyRestaurantSystem
             lblRestaurant.Text = $"{restName} Item Request";
         }
 
-        private void FrmItemRequest_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
@@ -122,6 +116,11 @@ namespace YummyRestaurantSystem
             }
             MessageBox.Show("New request have uploaded to database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             tempItemTable.Rows.Clear();
+        }
+
+        private void FrmItemRequest_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

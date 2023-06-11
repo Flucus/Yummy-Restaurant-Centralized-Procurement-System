@@ -10,25 +10,40 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmMenuWhClerk : Form
+    public partial class FrmCreateAgreement : Form
     {
-        public FrmMenuWhClerk()
+
+        public bool logout = false;
+
+        public FrmCreateAgreement()
         {
             InitializeComponent();
         }
 
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void FrmMenuWhClerk_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmCreateAgreement_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

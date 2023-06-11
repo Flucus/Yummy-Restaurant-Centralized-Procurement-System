@@ -117,6 +117,24 @@
     <Compile Include="src\Admin\FrmCreateAccount%28Admin%29.Designer.cs">
       <DependentUpon>FrmCreateAccount%28Admin%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\PM\FrmCreateAgreement%28Pur Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PM\FrmCreateAgreement%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\PM\FrmEditItem%28Pur Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PM\FrmEditItem%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmEditItem%28Pur Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\PM\FrmCreatePPO%28Pur Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PM\FrmCreatePPO%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmCreatePPO%28Pur Man%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\WC\FrmCreateItem%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,11 +219,11 @@
     <Compile Include="src\PM\FrmContractMange%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmContractMange%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\PM\FrmCreateAgreement%28Pur Man%29.cs">
+    <Compile Include="src\PM\FrmCreateItem%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\PM\FrmCreateAgreement%28Pur Man%29.Designer.cs">
-      <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
+    <Compile Include="src\PM\FrmCreateItem%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmCreateItem%28Pur Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\WC\FrmItemManage%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
@@ -285,6 +303,15 @@
     <EmbeddedResource Include="src\Admin\FrmCreateAccount%28Admin%29.resx">
       <DependentUpon>FrmCreateAccount%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\PM\FrmCreateAgreement%28Pur Man%29.resx">
+      <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PM\FrmEditItem%28Pur Man%29.resx">
+      <DependentUpon>FrmEditItem%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PM\FrmCreatePPO%28Pur Man%29.resx">
+      <DependentUpon>FrmCreatePPO%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\WC\FrmCreateItem%28Wh Clerk%29.resx">
       <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,8 +354,8 @@
     <EmbeddedResource Include="src\PM\FrmContractMange%28Pur Man%29.resx">
       <DependentUpon>FrmContractMange%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\PM\FrmCreateAgreement%28Pur Man%29.resx">
-      <DependentUpon>FrmCreateAgreement%28Pur Man%29.cs</DependentUpon>
+    <EmbeddedResource Include="src\PM\FrmCreateItem%28Pur Man%29.resx">
+      <DependentUpon>FrmCreateItem%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\WC\FrmItemManage%28Wh Clerk%29.resx">
       <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>

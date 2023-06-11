@@ -29,11 +29,6 @@ namespace YummyRestaurantSystem
             txtItemName.Text = (string)record["ItemName"];
         }
 
-        private void FrmVirtualIDEdit_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
@@ -74,6 +69,11 @@ namespace YummyRestaurantSystem
                 MessageBox.Show("Record updated.", "Edit complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             MessageBox.Show("Invalid item ID.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void FrmVirtualIDEdit_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

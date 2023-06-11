@@ -28,11 +28,6 @@ namespace YummyRestaurantSystem
             }
         }
 
-        private void FrmVirtualIDCreate_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
@@ -82,6 +77,11 @@ namespace YummyRestaurantSystem
             }
             MessageBox.Show("New Virtual ID mapping have inserted into database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             created = true;
+        }
+
+        private void FrmVirtualIDCreate_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }
