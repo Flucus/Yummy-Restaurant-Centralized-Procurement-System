@@ -41,10 +41,6 @@ namespace YummyRestaurantSystem
             cboLoc.SelectedIndex = cboLoc.FindString((string)record["LocID"]);
         }
 
-        private void FrmModifyAccount_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -99,6 +95,11 @@ namespace YummyRestaurantSystem
             }
             MessageBox.Show("Error occurred.", "Fail to modify", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+        }
+
+        private void FrmModifyAccount_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }
