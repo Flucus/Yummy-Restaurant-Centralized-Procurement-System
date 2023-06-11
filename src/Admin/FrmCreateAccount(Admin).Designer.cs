@@ -247,6 +247,7 @@
             this.btnSubmit.TabIndex = 32;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cboLoc
             // 

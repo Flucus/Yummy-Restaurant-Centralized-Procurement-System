@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserManage));
             this.dgvUserList = new System.Windows.Forms.DataGridView();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -61,20 +60,7 @@
             this.dgvUserList.RowHeadersWidth = 51;
             this.dgvUserList.Size = new System.Drawing.Size(533, 435);
             this.dgvUserList.TabIndex = 0;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(1189, 650);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(179, 44);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.dgvUserList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserList_CellClick);
             // 
             // lblName
             // 
@@ -84,9 +70,9 @@
             this.lblName.Location = new System.Drawing.Point(383, 584);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(150, 32);
+            this.lblName.Size = new System.Drawing.Size(148, 32);
             this.lblName.TabIndex = 7;
-            this.lblName.Text = "User Name";
+            this.lblName.Text = "Staff Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblID
@@ -97,9 +83,9 @@
             this.lblID.Location = new System.Drawing.Point(383, 650);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(107, 32);
+            this.lblID.Size = new System.Drawing.Size(105, 32);
             this.lblID.TabIndex = 8;
-            this.lblID.Text = "User ID";
+            this.lblID.Text = "Staff ID";
             // 
             // txtName
             // 
@@ -108,6 +94,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(291, 25);
             this.txtName.TabIndex = 9;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtID
             // 
@@ -116,6 +103,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(291, 25);
             this.txtID.TabIndex = 10;
+            this.txtID.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // btnModify
             // 
@@ -130,6 +118,7 @@
             this.btnModify.TabIndex = 11;
             this.btnModify.Text = "Modify Account";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // btnDelete
             // 
@@ -144,6 +133,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete Account";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCreate
             // 
@@ -158,6 +148,7 @@
             this.btnCreate.TabIndex = 13;
             this.btnCreate.Text = "Create Account";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnLog
             // 
@@ -172,6 +163,7 @@
             this.btnLog.TabIndex = 14;
             this.btnLog.Text = "Activity Log";
             this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // lblUserManage
             // 
@@ -181,9 +173,9 @@
             this.lblUserManage.Location = new System.Drawing.Point(383, 35);
             this.lblUserManage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserManage.Name = "lblUserManage";
-            this.lblUserManage.Size = new System.Drawing.Size(570, 32);
+            this.lblUserManage.Size = new System.Drawing.Size(568, 32);
             this.lblUserManage.TabIndex = 15;
-            this.lblUserManage.Text = "The Yummy Restaurant System User Manage";
+            this.lblUserManage.Text = "The Yummy Restaurant System Staff Manage";
             // 
             // btnLogout
             // 
@@ -268,7 +260,6 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvUserList);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmUserManage";
@@ -285,7 +276,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvUserList;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtName;

@@ -13,11 +13,18 @@ namespace YummyRestaurantSystem
     public partial class FrmCreateAccount : Form
     {
 
+        private static readonly IReadOnlyCollection<string> JobTitleSet = new HashSet<string> { "Restaurant Manager", "Restaurant Staff", "Category Manager", "Buyer", "Administrator", "Purchase Manager", "Warehouse Clerk" };
+
         public bool logout = false;
+        public bool created = false;
 
         public FrmCreateAccount()
         {
             InitializeComponent();
+            string[] LocIDArray = SQLHandler.GetAllLocID();
+            cboLoc.Items.AddRange(LocIDArray);
+            dtpDoB.Value = DateTime.Now;
+            dtpHd.Value = DateTime.Now;
         }
 
         private void FrmCreateAccount_Load(object sender, EventArgs e)
@@ -40,6 +47,43 @@ namespace YummyRestaurantSystem
         {
             logout = true;
             Close();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            int salary;
+            if (!int.TryParse(txtSal.Text, out salary) || salary < 0)
+            {
+                MessageBox.Show("Invalid salary.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (!JobTitleSet.Contains(txtJobTitle.Text))
+            {
+                MessageBox.Show("Invalid job title.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            string[] stringData = new string[] {
+                null,
+                cboLoc.SelectedItem.ToString(),
+                txtJobTitle.Text,
+                txtName.Text,
+                txtEmail.Text,
+                txtPhone.Text,
+                dtpDoB.Value.ToString("yyyy-mm-dd"),
+                dtpHd.Value.ToString("yyyy-mm-dd"),
+                txtSal.Text,
+                txtState.Text
+            };
+
+            if (SQLHandler.CreateStaffRecord(stringData))
+            {
+                created = true;
+                MessageBox.Show("New staff record have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

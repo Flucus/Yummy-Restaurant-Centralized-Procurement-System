@@ -9,6 +9,7 @@ using System.CodeDom;
 using System.Data;
 using Org.BouncyCastle.Utilities;
 using Org.BouncyCastle.Asn1.Ocsp;
+using System.Drawing.Printing;
 
 namespace YummyRestaurantSystem
 {
@@ -380,6 +381,107 @@ namespace YummyRestaurantSystem
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        public static DataTable GetStaffRecord(string IDMatch = "", string nameMatch = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT * FROM Staff";
+            if (IDMatch.Length > 0 && nameMatch.Length > 0)
+            {
+                sql += $" WHERE StaffID LIKE '%{IDMatch}%' AND Name LIKE '%{nameMatch}%'";
+            }
+            else if (IDMatch.Length > 0)
+            {
+                sql += $" WHERE StaffID LIKE '%{IDMatch}%'";
+            }
+            else if (nameMatch.Length > 0)
+            {
+                sql += $" WHERE Name LIKE '%{nameMatch}%'";
+            }
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static void DeleteStaff(string staffID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"DELETE FROM Account WHERE StaffID = '{staffID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            sql = $@"DELETE FROM Staff WHERE StaffID = '{staffID}'";
+            cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        public static string[] GetAllLocID()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT LocID FROM Location";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            string[] LocIDArray = dt.AsEnumerable().Select(r => r.Field<string>("LocID")).ToArray();
+            return LocIDArray;
+        }
+
+        public static bool CreateStaffRecord(string[] stringData)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            if (stringData[0] == null)
+            {
+                string sqlTemp = "SELECT * FROM Staff ORDER BY StaffID DESC LIMIT 1";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(sqlTemp, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                DataRow response = dt.Rows[0];
+                string lastStaffID = (string)response["StaffID"];
+                int numID = int.Parse(lastStaffID.Substring(1)) + 1;
+                stringData[0] = 'S' + numID.ToString().PadLeft(9, '0');
+            }
+
+            string sql = $@"INSERT INTO Staff VALUES ('{stringData[0]}', '{stringData[1]}', '{stringData[2]}','{stringData[3]}', '{stringData[4]}', '{stringData[5]}', '{stringData[6]}', '{stringData[7]}', {stringData[8]}, '{stringData[9]}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool ModifyStaffRecord(string[] stringData)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"INSERT INTO Staff VALUES (
+                '{stringData[0]}',
+                '{stringData[1]}',
+                '{stringData[2]}',
+                '{stringData[3]}',
+                '{stringData[4]}',
+                '{stringData[5]}',
+                '{stringData[6]}',
+                '{stringData[7]}',
+                {stringData[8]},
+                '{stringData[9]}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
         }
     }
 }
