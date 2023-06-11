@@ -65,10 +65,9 @@
             this.lblUserManage.AutoSize = true;
             this.lblUserManage.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserManage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUserManage.Location = new System.Drawing.Point(565, 35);
-            this.lblUserManage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserManage.Location = new System.Drawing.Point(424, 30);
             this.lblUserManage.Name = "lblUserManage";
-            this.lblUserManage.Size = new System.Drawing.Size(595, 32);
+            this.lblUserManage.Size = new System.Drawing.Size(453, 24);
             this.lblUserManage.TabIndex = 16;
             this.lblUserManage.Text = "The Yummy Restaurant System Create Account";
             // 
@@ -77,20 +76,18 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(565, 121);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(424, 105);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(85, 32);
+            this.lblName.Size = new System.Drawing.Size(64, 24);
             this.lblName.TabIndex = 17;
             this.lblName.Text = "Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(749, 125);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtName.Location = new System.Drawing.Point(562, 108);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(405, 25);
+            this.txtName.Size = new System.Drawing.Size(305, 20);
             this.txtName.TabIndex = 18;
             // 
             // lblEmail
@@ -98,20 +95,18 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblEmail.Location = new System.Drawing.Point(565, 160);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(424, 139);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(81, 32);
+            this.lblEmail.Size = new System.Drawing.Size(61, 24);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(749, 166);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtEmail.Location = new System.Drawing.Point(562, 144);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(405, 25);
+            this.txtEmail.Size = new System.Drawing.Size(305, 20);
             this.txtEmail.TabIndex = 20;
             // 
             // lblPhone
@@ -119,28 +114,25 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPhone.Location = new System.Drawing.Point(565, 204);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhone.Location = new System.Drawing.Point(424, 177);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(91, 32);
+            this.lblPhone.Size = new System.Drawing.Size(70, 24);
             this.lblPhone.TabIndex = 21;
             this.lblPhone.Text = "Phone";
             this.lblPhone.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(749, 209);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPhone.Location = new System.Drawing.Point(562, 181);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(405, 25);
+            this.txtPhone.Size = new System.Drawing.Size(305, 20);
             this.txtPhone.TabIndex = 22;
             // 
             // dtpDoB
             // 
-            this.dtpDoB.Location = new System.Drawing.Point(749, 252);
-            this.dtpDoB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpDoB.Location = new System.Drawing.Point(562, 218);
             this.dtpDoB.Name = "dtpDoB";
-            this.dtpDoB.Size = new System.Drawing.Size(405, 25);
+            this.dtpDoB.Size = new System.Drawing.Size(305, 20);
             this.dtpDoB.TabIndex = 23;
             // 
             // lblDoB
@@ -148,10 +140,9 @@
             this.lblDoB.AutoSize = true;
             this.lblDoB.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDoB.Location = new System.Drawing.Point(565, 249);
-            this.lblDoB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDoB.Location = new System.Drawing.Point(424, 216);
             this.lblDoB.Name = "lblDoB";
-            this.lblDoB.Size = new System.Drawing.Size(166, 32);
+            this.lblDoB.Size = new System.Drawing.Size(128, 24);
             this.lblDoB.TabIndex = 24;
             this.lblDoB.Text = "Date of Birth";
             this.lblDoB.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -161,28 +152,25 @@
             this.lblHD.AutoSize = true;
             this.lblHD.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHD.Location = new System.Drawing.Point(565, 294);
-            this.lblHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHD.Location = new System.Drawing.Point(424, 255);
             this.lblHD.Name = "lblHD";
-            this.lblHD.Size = new System.Drawing.Size(129, 32);
+            this.lblHD.Size = new System.Drawing.Size(99, 24);
             this.lblHD.TabIndex = 26;
             this.lblHD.Text = "Hire Date";
             this.lblHD.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dtpHd
             // 
-            this.dtpHd.Location = new System.Drawing.Point(749, 297);
-            this.dtpHd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpHd.Location = new System.Drawing.Point(562, 257);
             this.dtpHd.Name = "dtpHd";
-            this.dtpHd.Size = new System.Drawing.Size(405, 25);
+            this.dtpHd.Size = new System.Drawing.Size(305, 20);
             this.dtpHd.TabIndex = 25;
             // 
             // txtSal
             // 
-            this.txtSal.Location = new System.Drawing.Point(749, 343);
-            this.txtSal.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSal.Location = new System.Drawing.Point(562, 297);
             this.txtSal.Name = "txtSal";
-            this.txtSal.Size = new System.Drawing.Size(405, 25);
+            this.txtSal.Size = new System.Drawing.Size(305, 20);
             this.txtSal.TabIndex = 28;
             // 
             // lblSal
@@ -190,20 +178,18 @@
             this.lblSal.AutoSize = true;
             this.lblSal.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSal.Location = new System.Drawing.Point(565, 337);
-            this.lblSal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSal.Location = new System.Drawing.Point(424, 292);
             this.lblSal.Name = "lblSal";
-            this.lblSal.Size = new System.Drawing.Size(91, 32);
+            this.lblSal.Size = new System.Drawing.Size(70, 24);
             this.lblSal.TabIndex = 27;
             this.lblSal.Text = "Salary";
             this.lblSal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(749, 390);
-            this.txtState.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtState.Location = new System.Drawing.Point(562, 338);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(405, 25);
+            this.txtState.Size = new System.Drawing.Size(305, 20);
             this.txtState.TabIndex = 30;
             // 
             // lblState
@@ -211,10 +197,9 @@
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblState.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblState.Location = new System.Drawing.Point(565, 390);
-            this.lblState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblState.Location = new System.Drawing.Point(424, 338);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(78, 32);
+            this.lblState.Size = new System.Drawing.Size(60, 24);
             this.lblState.TabIndex = 29;
             this.lblState.Text = "State";
             this.lblState.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -225,10 +210,9 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(571, 610);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancel.Location = new System.Drawing.Point(428, 529);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(179, 44);
+            this.btnCancel.Size = new System.Drawing.Size(134, 38);
             this.btnCancel.TabIndex = 31;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -240,10 +224,9 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(977, 610);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSubmit.Location = new System.Drawing.Point(733, 529);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(179, 44);
+            this.btnSubmit.Size = new System.Drawing.Size(134, 38);
             this.btnSubmit.TabIndex = 32;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -252,10 +235,9 @@
             // cboLoc
             // 
             this.cboLoc.FormattingEnabled = true;
-            this.cboLoc.Location = new System.Drawing.Point(749, 444);
-            this.cboLoc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cboLoc.Location = new System.Drawing.Point(562, 385);
             this.cboLoc.Name = "cboLoc";
-            this.cboLoc.Size = new System.Drawing.Size(405, 23);
+            this.cboLoc.Size = new System.Drawing.Size(305, 21);
             this.cboLoc.TabIndex = 33;
             // 
             // lblLocation
@@ -263,20 +245,18 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLocation.Location = new System.Drawing.Point(565, 438);
-            this.lblLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLocation.Location = new System.Drawing.Point(424, 380);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(117, 32);
+            this.lblLocation.Size = new System.Drawing.Size(91, 24);
             this.lblLocation.TabIndex = 34;
             this.lblLocation.Text = "Location";
             this.lblLocation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtJobTitle
             // 
-            this.txtJobTitle.Location = new System.Drawing.Point(749, 492);
-            this.txtJobTitle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtJobTitle.Location = new System.Drawing.Point(562, 426);
             this.txtJobTitle.Name = "txtJobTitle";
-            this.txtJobTitle.Size = new System.Drawing.Size(405, 25);
+            this.txtJobTitle.Size = new System.Drawing.Size(305, 20);
             this.txtJobTitle.TabIndex = 36;
             // 
             // lblJT
@@ -284,10 +264,9 @@
             this.lblJT.AutoSize = true;
             this.lblJT.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJT.Location = new System.Drawing.Point(569, 483);
-            this.lblJT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJT.Location = new System.Drawing.Point(427, 419);
             this.lblJT.Name = "lblJT";
-            this.lblJT.Size = new System.Drawing.Size(115, 32);
+            this.lblJT.Size = new System.Drawing.Size(88, 24);
             this.lblJT.TabIndex = 35;
             this.lblJT.Text = "Job Title";
             this.lblJT.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -300,18 +279,16 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 744);
+            this.panel1.Size = new System.Drawing.Size(230, 645);
             this.panel1.TabIndex = 99;
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(25, 702);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(19, 608);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(37, 15);
+            this.lblTime.Size = new System.Drawing.Size(30, 13);
             this.lblTime.TabIndex = 94;
             this.lblTime.Text = "Time";
             // 
@@ -321,10 +298,9 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(192, 685);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLogout.Location = new System.Drawing.Point(156, 602);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(95, 44);
+            this.btnLogout.Size = new System.Drawing.Size(71, 31);
             this.btnLogout.TabIndex = 93;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -333,10 +309,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 217);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -346,9 +321,9 @@
             // 
             // FrmCreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 744);
+            this.ClientSize = new System.Drawing.Size(1071, 645);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtJobTitle);
             this.Controls.Add(this.lblJT);
@@ -371,7 +346,6 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblUserManage);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmCreateAccount";
             this.Text = "Create Account";
             this.panel1.ResumeLayout(false);
