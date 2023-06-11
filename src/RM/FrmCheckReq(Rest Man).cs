@@ -87,7 +87,7 @@ namespace YummyRestaurantSystem
         {
             lastIndex = e.RowIndex;
             DataTable table = (DataTable)requestTable.DataSource;
-            if (lastIndex >= table.Rows.Count)
+            if (lastIndex < 0 || lastIndex >= table.Rows.Count)
             {
                 return;
             }

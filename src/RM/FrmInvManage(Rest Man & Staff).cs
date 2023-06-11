@@ -72,7 +72,7 @@ namespace YummyRestaurantSystem
 
         private void btnModify_Click(object sender, EventArgs e)
         {
-            if (lastIndex < 0 || lastIndex >= invTable.RowCount) return;
+            if (lastIndex < 0 || lastIndex >= invTable.Rows.Count) return;
 
             DataGridViewRow data = invTable.Rows[lastIndex];
             DataRow record = ((DataRowView)data.DataBoundItem).Row;

@@ -92,7 +92,7 @@ namespace YummyRestaurantSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (lastIndex < 0 || lastIndex >= VIDMappingTable.RowCount) return;
+            if (lastIndex < 0 || lastIndex >= VIDMappingTable.Rows.Count) return;
 
             DataGridViewRow data = VIDMappingTable.Rows[lastIndex];
             string temp = string.Join("\t", data.Cells.Cast<DataGridViewCell>().Select(c => c.Value.ToString()).ToArray());

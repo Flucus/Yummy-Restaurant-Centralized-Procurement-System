@@ -87,7 +87,7 @@ namespace YummyRestaurantSystem
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (lastIndex < 0 || lastIndex >= tempItemTable.RowCount) return;
+            if (lastIndex < 0 || lastIndex >= tempItemTable.Rows.Count) return;
             tempItemTable.Rows.RemoveAt(lastIndex);
         }
 
