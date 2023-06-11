@@ -111,7 +111,7 @@ namespace YummyRestaurantSystem
                 case "Purchase Manager":
                     {
                         this.Visible = false;
-                        FrmMenuPurMan menu = new FrmMenuPurMan();
+                        FrmMenuPurMan menu = new FrmMenuPurMan(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
                     }
