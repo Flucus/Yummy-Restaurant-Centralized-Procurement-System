@@ -314,7 +314,7 @@ namespace YummyRestaurantSystem.src.PM
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmEditPPO_Pur_Man_";
-            this.Text = "FrmEditPPO_Pur_Man_";
+            this.Text = "Edit PPO";
             this.Load += new System.EventHandler(this.FrmEditPPO_Pur_Man__Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
