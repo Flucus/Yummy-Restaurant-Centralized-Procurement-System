@@ -32,5 +32,17 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
+
+        private void btnInvMan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
+        }
+
+        private void btnOrderArrangement_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
+        }
     }
 }
