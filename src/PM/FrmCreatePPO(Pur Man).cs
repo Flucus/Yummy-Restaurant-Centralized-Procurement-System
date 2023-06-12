@@ -14,11 +14,10 @@ namespace YummyRestaurantSystem.src.PM
     public partial class FrmPPO_Pur_Man_ : Form
     {
         public bool logout = false;
-        public FrmPPO_Pur_Man_(string agreeID)
+        public FrmPPO_Pur_Man_()
         {
             InitializeComponent();
-            txtPPOID.Text = agreeID;
-            PPOTable.DataSource = SQLHandler.GetPPOTable(txtPPOID.Text);
+            PPOTable.DataSource = SQLHandler.GetPPOTable();
         }
 
         private void FrmPPO_Pur_Man__Load(object sender, EventArgs e)

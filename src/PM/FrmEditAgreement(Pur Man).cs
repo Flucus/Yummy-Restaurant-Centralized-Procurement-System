@@ -116,8 +116,7 @@ namespace YummyRestaurantSystem
                 if (stringData[2].Equals("P"))
                 {
                     Visible = false;
-                    string agreeID = txtAgreementID.Text;
-                    FrmPPO_Pur_Man_ form = new FrmPPO_Pur_Man_(agreeID);
+                    FrmEditPPO_Pur_Man_ form = new FrmEditPPO_Pur_Man_();
                     form.ShowDialog();
                     if (form.logout)
                     {
