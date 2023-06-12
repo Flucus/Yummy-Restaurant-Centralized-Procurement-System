@@ -88,5 +88,19 @@ namespace YummyRestaurantSystem
             MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
+        private void btnCancel_CPA_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCancel_BPA_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCancel_PPO_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

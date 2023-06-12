@@ -186,6 +186,7 @@ namespace YummyRestaurantSystem
             this.btnCancel_CPA.TabIndex = 94;
             this.btnCancel_CPA.Text = "Cancel";
             this.btnCancel_CPA.UseVisualStyleBackColor = false;
+            this.btnCancel_CPA.Click += new System.EventHandler(this.btnCancel_CPA_Click);
             // 
             // lblItemID_CPA
             // 
@@ -359,6 +360,7 @@ namespace YummyRestaurantSystem
             this.btnCancel_BPA.TabIndex = 72;
             this.btnCancel_BPA.Text = "Cancel";
             this.btnCancel_BPA.UseVisualStyleBackColor = false;
+            this.btnCancel_BPA.Click += new System.EventHandler(this.btnCancel_BPA_Click);
             // 
             // txtPriceBAmount_BPA
             // 
@@ -605,6 +607,7 @@ namespace YummyRestaurantSystem
             this.btnCancel_PPO.TabIndex = 94;
             this.btnCancel_PPO.Text = "Cancel";
             this.btnCancel_PPO.UseVisualStyleBackColor = false;
+            this.btnCancel_PPO.Click += new System.EventHandler(this.btnCancel_PPO_Click);
             // 
             // lblItemID_PPO
             // 
@@ -646,7 +649,7 @@ namespace YummyRestaurantSystem
             this.lblTitle.Location = new System.Drawing.Point(344, 11);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(448, 24);
+            this.lblTitle.Size = new System.Drawing.Size(590, 32);
             this.lblTitle.TabIndex = 92;
             this.lblTitle.Text = "The Yummy Restaurant Create Agreement Item";
             // 
