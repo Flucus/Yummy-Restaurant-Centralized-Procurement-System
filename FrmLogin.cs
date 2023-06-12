@@ -61,10 +61,8 @@ namespace YummyRestaurantSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string acc = txtuser.Text;
-            //string pw = txtpw.Text;
-            string acc = "Test3";
-            string pw = "test4";
+            string acc = txtuser.Text;
+            string pw = txtpw.Text;
             DataRow data = SQLHandler.CheckLogin(acc, pw);
             if (data == null)
             {

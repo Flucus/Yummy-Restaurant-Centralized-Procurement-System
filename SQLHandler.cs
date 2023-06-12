@@ -621,10 +621,11 @@ namespace YummyRestaurantSystem
             return count == 1;
         }
 
-        public static DataTable GetPPOTable(string ppoID)
+        public static DataTable GetPPOTable(string ppoID = "")
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = $"SELECT * FROM PPO WHERE PPO_ID = '{ppoID}'";
+            string sql = $"SELECT * FROM PPO";
+            if (ppoID.Length > 0) sql += $" WHERE PPO_ID = '{ppoID}'";
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -683,7 +684,7 @@ namespace YummyRestaurantSystem
             return dt;
         }
 
-        public static bool UpdateCPAItem(string agreeID , string itemID, string oldItemID)
+        public static bool UpdateCPAItem(string agreeID, string itemID, string oldItemID)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
@@ -730,6 +731,88 @@ namespace YummyRestaurantSystem
                 UnitPrice = {unitPrice}
                 WHERE PPO_ID = '{agreeID}'
                 AND ItemID = '{oldItemID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool CreateAgreement(string[] stringData)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"INSERT INTO Agreement VALUES (
+                '{stringData[0]}',
+                '{stringData[1]}',
+                '{stringData[2]}',
+                '{stringData[3]}',
+                '{stringData[4]}',
+                '{stringData[5]}',
+                '{stringData[6]}' )";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static DataTable GetAllItemDetail()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = @"SELECT i.ItemID, si.SupplierID, si.SupplierItemID, si.Name, si.Category, si.Description
+                FROM Item AS i
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static bool CreateCPAITem(string agreeID, string itemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"INSERT INTO CPAItem VALUES ('{agreeID}', '{itemID}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool CreatePPOItem(string agreeID, string itemID, string quantity, string unitPrice)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"INSERT INTO PPOItem VALUES ('{agreeID}', '{itemID}', {quantity}, {unitPrice})";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool CreateBPAItem(string[] stringData)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"INSERT INTO BPAItem VALUES (
+                '{stringData[0]}',
+                '{stringData[1]}',
+                {stringData[2]},
+                {stringData[3]},
+                {stringData[4]},
+                '{stringData[5]}',
+                {stringData[6]},
+                {stringData[7]},
+                '{stringData[8]}')";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
