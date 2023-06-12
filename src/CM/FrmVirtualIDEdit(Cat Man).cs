@@ -26,7 +26,7 @@ namespace YummyRestaurantSystem
             txtTypeName.Text = (string)record["TypeName"];
             txtVID.Text = (string)record["VirtualID"];
             txtItemID.Text = (string)record["ItemID"];
-            txtItemName.Text = (string)record["ItemName"];
+            txtItemName.Text = (string)record["Name"];
         }
 
         private void timer1_Tick(object sender, EventArgs e)
