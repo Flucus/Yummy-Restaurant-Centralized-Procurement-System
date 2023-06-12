@@ -617,9 +617,9 @@ namespace YummyRestaurantSystem
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTitle.Location = new System.Drawing.Point(258, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(343, 24);
+            this.lblTitle.Size = new System.Drawing.Size(448, 24);
             this.lblTitle.TabIndex = 92;
-            this.lblTitle.Text = "The Yummy Restaurant Create Item";
+            this.lblTitle.Text = "The Yummy Restaurant Create Agreement Item";
             // 
             // panel1
             // 
@@ -712,7 +712,7 @@ namespace YummyRestaurantSystem
             this.Controls.Add(this.tabControlCPA);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCreateAgreement";
-            this.Text = "Create Item";
+            this.Text = "Create Agreement Item";
             this.Load += new System.EventHandler(this.FrmCreateAgreement_Load);
             this.tabControlCPA.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
