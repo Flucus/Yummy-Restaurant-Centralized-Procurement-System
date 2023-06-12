@@ -157,7 +157,7 @@ namespace YummyRestaurantSystem.src.PM
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(134, 35);
             this.btnEdit.TabIndex = 134;
-            this.btnEdit.Text = "Create";
+            this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             // 
             // btnCancel
