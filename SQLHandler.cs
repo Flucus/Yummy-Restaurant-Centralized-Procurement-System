@@ -11,6 +11,7 @@ using Org.BouncyCastle.Utilities;
 using Org.BouncyCastle.Asn1.Ocsp;
 using System.Drawing.Printing;
 using System.Text.RegularExpressions;
+using System.Security.Claims;
 
 namespace YummyRestaurantSystem
 {
@@ -488,7 +489,7 @@ namespace YummyRestaurantSystem
         public static DataTable GetAllAgreementRecord(string agreeID = "", string suppName = "", string AgreementType = "", string createDate = "")
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = @"SELECT DISTINCT a.AgreementID, s.Name AS SupplierName, a.BuyerID, a.AgreementType, a.CreatedDate, a.EffectiveDate, a.State
+            string sql = @"SELECT DISTINCT a.AgreementID, s.Name AS SupplierName, a.BuyerID, a.AgreementType, a.CreatedDate, a.EffectiveDate, a.State, a.TermAndCondition
                 FROM Agreement AS a
                 LEFT JOIN BPAItem AS b ON b.BPA_ID = a.AgreementID
                 LEFT JOIN CPAItem AS c ON c.CPA_ID = a.AgreementID
@@ -529,7 +530,7 @@ namespace YummyRestaurantSystem
 
         public static DataTable[] GetAgreementDetail()
         {
-            DataTable[] result= new DataTable[3];
+            DataTable[] result = new DataTable[3];
 
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
@@ -566,6 +567,174 @@ namespace YummyRestaurantSystem
 
             conn.Close();
             return result;
+        }
+
+        public static bool UpdateAgreement(string[] stringData, string oldType)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql;
+            MySqlDataAdapter adapter;
+
+            if (!stringData[2].Equals(oldType))
+            {
+                string typeTable;
+                string idName;
+                switch (oldType)
+                {
+                    case "B":
+                        typeTable = "BPAItem";
+                        idName = "BPA_ID";
+                        break;
+                    case "C":
+                        typeTable = "CPAItem";
+                        idName = "CPA_ID";
+                        break;
+                    case "P":
+                        typeTable = "PPOItem";
+                        idName = "PPO";
+                        break;
+                    default:
+                        return false;
+                }
+                sql = $"SELECT * FROM {typeTable} WHERE {idName} = '{stringData[0]}'";
+                adapter = new MySqlDataAdapter(sql, conn);
+                DataTable subRecord = new DataTable();
+                adapter.Fill(subRecord);
+                if (subRecord.Rows.Count > 0) return false;
+            }
+
+            sql = $@"UPDATE Agreement SET
+                BuyerID = '{stringData[1]}',
+                AgreementType = '{stringData[2]}',
+                CreatedDate = '{stringData[3]}',
+                EffectiveDate = '{stringData[4]}',
+                State = '{stringData[5]}',
+                TermAndCondition = '{stringData[6]}'
+                WHERE AgreementID = '{stringData[0]}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static DataTable GetPPOTable(string ppoID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $"SELECT * FROM PPO WHERE PPO_ID = '{ppoID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static bool CreatePPO(string ppoID, string locID, string schedule, string currency)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"INSERT INTO PPO VALUES ('{ppoID}', '{locID}', '{schedule}', '{currency}')";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static DataTable GetCPAItemTable(string cpaID = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $"SELECT * FROM CPAItem";
+            if (cpaID.Length > 0) sql += $" WHERE CPA_ID = '{cpaID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+        public static DataTable GetBPAItemTable(string bpaID = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT * FROM BPAItem";
+            if (bpaID.Length > 0) sql += $" WHERE BPA_ID = '{bpaID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+        public static DataTable GetPPOItemTable(string ppoID = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT * FROM PPOItem";
+            if (ppoID.Length > 0) sql += $" WHERE PPO_ID = '{ppoID}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static bool UpdateCPAItem(string agreeID , string itemID, string oldItemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"UPDATE CPAItem SET ItemID = '{itemID}' WHERE CPA_ID = '{agreeID}' AND ItemID = '{oldItemID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool UpdateBPAItem(string[] stringData, string oldItemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"UPDATE BPAItem SET
+                ItemID = '{stringData[1]}',
+                AmountAgreed = {stringData[2]},
+                AmountDelivered = {stringData[3]},
+                UnitPrice = {stringData[4]},
+                Currency = '{stringData[5]}',
+                PriceBreakAmount = {stringData[6]},
+                Discount = {stringData[7]},
+                PriceBreakEffectiveDate = '{stringData[8]}'
+                WHERE BPA_ID = '{stringData[0]}'
+                AND ItemID = '{oldItemID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
+        }
+
+        public static bool UpdatePPOItem(string agreeID, string itemID, string quantity, string unitPrice, string oldItemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"UPDATE PPOItem SET
+                ItemID = '{itemID}',
+                Quantity = {quantity},
+                UnitPrice = {unitPrice}
+                WHERE PPO_ID = '{agreeID}'
+                AND ItemID = '{oldItemID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+
+            conn.Close();
+            return count == 1;
         }
     }
 }

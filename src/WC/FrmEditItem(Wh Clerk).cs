@@ -12,11 +12,14 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmEditItem : Form
     {
+        private string agreeID;
+
         public bool logout = false;
 
-        public FrmEditItem()
+        public FrmEditItem(string agreeID)
         {
             InitializeComponent();
+            this.agreeID = agreeID;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

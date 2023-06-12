@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YummyRestaurantSystem.src.PM;
 
 namespace YummyRestaurantSystem
 {
@@ -20,6 +21,27 @@ namespace YummyRestaurantSystem
         {
             InitializeComponent();
             this.record = record;
+            txtAgreementID.Text = (string)record["AgreementID"];
+            txtBuyer.Text = (string)record["BuyerID"];
+            string typeCode = (string)record["AgreementType"];
+            switch (typeCode)
+            {
+                case "B":
+                    txtAgreementType.Text = "BPA";
+                    break;
+                case "C":
+                    txtAgreementType.Text = "CPA";
+                    break;
+                case "P":
+                    txtAgreementType.Text = "PPO";
+                    break;
+            }
+            createDatePicker.Value = (DateTime)record["CreatedDate"];
+            effectDatePicker.Value = (DateTime)record["EffectiveDate"];
+            string stateCode = (string)record["State"];
+            cboState.Items.AddRange(new string[] { "Pending", "Fulfilled" });
+            cboState.SelectedIndex = stateCode.Equals("P") ? 0 : 1;
+            txtTerms.Text = (string)record["TermAndCondition"];
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -43,5 +65,74 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
+
+        private void editItemBtn_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmEditAgreeItem form = new FrmEditAgreeItem();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                logout = true;
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string[] stringData = new string[7];
+            stringData[0] = txtAgreementID.Text;
+            stringData[1] = txtBuyer.Text;
+            string typeText = txtAgreementType.Text;
+            switch (typeText)
+            {
+                case "BPA":
+                    stringData[2] = "B";
+                    break;
+                case "CPA":
+                    stringData[2] = "C";
+                    break;
+                case "PPO":
+                    stringData[2] = "P";
+                    break;
+                default:
+                    MessageBox.Show("Agreement type must be 'BPA', 'CPA' or 'PPO'.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+            }
+            stringData[3] = createDatePicker.Value.ToString("yyyy-MM-dd");
+            stringData[4] = effectDatePicker.Value.ToString("yyyy-MM-dd");
+            string stateText = cboState.SelectedItem.ToString();
+            stringData[5] = stateText.Equals("Pending") ? "P" : "F";
+            stringData[6] = txtTerms.Text;
+
+
+            if (SQLHandler.UpdateAgreement(stringData, (string)record["AgreementType"]))
+            {
+                MessageBox.Show("The record have been updated.", "Success to edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (stringData[2].Equals("P"))
+                {
+                    Visible = false;
+                    string agreeID = txtAgreementID.Text;
+                    FrmPPO_Pur_Man_ form = new FrmPPO_Pur_Man_(agreeID);
+                    form.ShowDialog();
+                    if (form.logout)
+                    {
+                        logout = true;
+                        Close();
+                    }
+                    else
+                    {
+                        Visible = true;
+                    }
+                }
+                return;
+            }
+            MessageBox.Show("Error occurred, inconsistent in agreement item table .", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
     }
 }
