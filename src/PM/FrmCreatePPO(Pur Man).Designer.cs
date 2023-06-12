@@ -143,7 +143,7 @@ namespace YummyRestaurantSystem.src.PM
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(605, 32);
             this.lblTitle.TabIndex = 112;
-            this.lblTitle.Text = "The Yummy Restaurant Planned Purchase Order";
+            this.lblTitle.Text = "The Yummy Restaurant Planned Purchase Order Create";
             // 
             // txtCurrency
             // 
