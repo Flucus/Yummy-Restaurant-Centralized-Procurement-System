@@ -129,6 +129,12 @@
     <Compile Include="src\PM\FrmEditItem%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmEditItem%28Pur Man%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\PM\FrmEditPPO%28Pur Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PM\FrmEditPPO%28Pur Man%29.Designer.cs">
+      <DependentUpon>FrmEditPPO%28Pur Man%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\PM\FrmCreatePPO%28Pur Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\PM\FrmEditItem%28Pur Man%29.resx">
       <DependentUpon>FrmEditItem%28Pur Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PM\FrmEditPPO%28Pur Man%29.resx">
+      <DependentUpon>FrmEditPPO%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\PM\FrmCreatePPO%28Pur Man%29.resx">
       <DependentUpon>FrmCreatePPO%28Pur Man%29.cs</DependentUpon>
