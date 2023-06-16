@@ -44,5 +44,17 @@ namespace YummyRestaurantSystem
             MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return;
         }
+
+        private void btnIM_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
+        }
+
+        private void btnOA_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            return;
+        }
     }
 }
