@@ -78,13 +78,13 @@ namespace YummyRestaurantSystem
             this.txtPPOID = new System.Windows.Forms.TextBox();
             this.lblPPOID = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.btnCO = new System.Windows.Forms.Button();
-            this.btnOM = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btnCA = new System.Windows.Forms.Button();
+            this.btnCM = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControlCPA.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -653,20 +653,39 @@ namespace YummyRestaurantSystem
             this.lblTitle.TabIndex = 92;
             this.lblTitle.Text = "The Yummy Restaurant Create Agreement Item";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Controls.Add(this.btnCO);
-            this.panel1.Controls.Add(this.btnOM);
             this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.lblTime);
+            this.panel1.Controls.Add(this.btnCA);
+            this.panel1.Controls.Add(this.btnCM);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 744);
             this.panel1.TabIndex = 101;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.Location = new System.Drawing.Point(200, 688);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 39);
+            this.button4.TabIndex = 97;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // lblTime
             // 
@@ -678,62 +697,45 @@ namespace YummyRestaurantSystem
             this.lblTime.TabIndex = 96;
             this.lblTime.Text = "Time";
             // 
-            // btnCO
+            // btnCA
             // 
-            this.btnCO.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCO.ForeColor = System.Drawing.Color.Black;
-            this.btnCO.Location = new System.Drawing.Point(16, 408);
-            this.btnCO.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnCO.Name = "btnCO";
-            this.btnCO.Size = new System.Drawing.Size(271, 44);
-            this.btnCO.TabIndex = 95;
-            this.btnCO.Text = "Create Order";
-            this.btnCO.UseVisualStyleBackColor = false;
+            this.btnCA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCA.ForeColor = System.Drawing.Color.Black;
+            this.btnCA.Location = new System.Drawing.Point(16, 408);
+            this.btnCA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCA.Name = "btnCA";
+            this.btnCA.Size = new System.Drawing.Size(271, 44);
+            this.btnCA.TabIndex = 95;
+            this.btnCA.Text = "Create Agreement";
+            this.btnCA.UseVisualStyleBackColor = false;
+            this.btnCA.Click += new System.EventHandler(this.btnCA_Click);
             // 
-            // btnOM
+            // btnCM
             // 
-            this.btnOM.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOM.ForeColor = System.Drawing.Color.Black;
-            this.btnOM.Location = new System.Drawing.Point(16, 335);
-            this.btnOM.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnOM.Name = "btnOM";
-            this.btnOM.Size = new System.Drawing.Size(271, 44);
-            this.btnOM.TabIndex = 94;
-            this.btnOM.Text = "Order Manage";
-            this.btnOM.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(192, 685);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 44);
-            this.button4.TabIndex = 93;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCM.ForeColor = System.Drawing.Color.Black;
+            this.btnCM.Location = new System.Drawing.Point(16, 335);
+            this.btnCM.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCM.Name = "btnCM";
+            this.btnCM.Size = new System.Drawing.Size(271, 44);
+            this.btnCM.TabIndex = 94;
+            this.btnCM.Text = "Contract Manage";
+            this.btnCM.UseVisualStyleBackColor = false;
+            this.btnCM.Click += new System.EventHandler(this.btnCM_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(29, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 218);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmCreateAgreement
             // 
@@ -771,12 +773,6 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCO;
-        private System.Windows.Forms.Button btnOM;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtAmountAgreed_BPA;
@@ -821,5 +817,11 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblQuantity_PPO;
         private System.Windows.Forms.TextBox txtUnitPrice_PPO;
         private System.Windows.Forms.TextBox txtQuantity_PPO;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Button btnCA;
+        private System.Windows.Forms.Button btnCM;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

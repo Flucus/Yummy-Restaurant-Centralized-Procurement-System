@@ -101,5 +101,11 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
+        }
     }
 }

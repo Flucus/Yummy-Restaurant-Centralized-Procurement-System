@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace YummyRestaurantSystem
     public partial class FrmDetailsRequestRestMan : Form
     {
         private DataRow requestData;
+        private DataRow staffData;
 
         public bool logout = false;
 
@@ -65,6 +67,51 @@ namespace YummyRestaurantSystem
         private void FrmDetailsRequestRestMan_Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void btnIM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmInvManage form = new FrmInvManage(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnOP_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmItemRequest form = new FrmItemRequest(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnCR_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCheckReq form = new FrmCheckReq(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }

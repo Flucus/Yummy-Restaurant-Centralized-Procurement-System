@@ -155,6 +155,7 @@
             this.btnOA.TabIndex = 95;
             this.btnOA.Text = "Order Arrange";
             this.btnOA.UseVisualStyleBackColor = false;
+            this.btnOA.Click += new System.EventHandler(this.btnOA_Click);
             // 
             // btnIM
             // 
@@ -169,6 +170,7 @@
             this.btnIM.TabIndex = 94;
             this.btnIM.Text = "Inventory Manage";
             this.btnIM.UseVisualStyleBackColor = false;
+            this.btnIM.Click += new System.EventHandler(this.btnIM_Click);
             // 
             // pictureBox1
             // 

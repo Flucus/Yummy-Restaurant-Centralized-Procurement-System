@@ -26,11 +26,6 @@ namespace YummyRestaurantSystem
             PPOTable.DataSource = agreeTables[2];
         }
 
-        private void FrmCheckofStatus_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
@@ -46,6 +41,47 @@ namespace YummyRestaurantSystem
         {
             logout = true;
             Close();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
+        }
+
+        private void btnCM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmContractMange form = new FrmContractMange();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnCA_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCreateAgreement form = new FrmCreateAgreement();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void FrmCheckofStatus_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }

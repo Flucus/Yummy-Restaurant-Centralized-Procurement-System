@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmInvModify : Form
     {
+        private DataRow staffData;
         private DataRow restData;
         private DataRow record;
 
@@ -70,6 +72,51 @@ namespace YummyRestaurantSystem
                 return;
             }
             MessageBox.Show("Invalid amount.", "Fail to update", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void btnIM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmInvManage form = new FrmInvManage(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnOP_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmItemRequest form = new FrmItemRequest(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnCR_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCheckReq form = new FrmCheckReq(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }
