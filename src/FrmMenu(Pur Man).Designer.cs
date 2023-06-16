@@ -37,8 +37,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
-            this.btnCO = new System.Windows.Forms.Button();
-            this.btnOM = new System.Windows.Forms.Button();
+            this.btnCA = new System.Windows.Forms.Button();
+            this.btnCM = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
@@ -51,9 +51,10 @@
             this.btnCreOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnCreOrder.Location = new System.Drawing.Point(705, 198);
+            this.btnCreOrder.Location = new System.Drawing.Point(940, 228);
+            this.btnCreOrder.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreOrder.Name = "btnCreOrder";
-            this.btnCreOrder.Size = new System.Drawing.Size(200, 108);
+            this.btnCreOrder.Size = new System.Drawing.Size(267, 125);
             this.btnCreOrder.TabIndex = 15;
             this.btnCreOrder.Text = "Create Agreement";
             this.btnCreOrder.UseVisualStyleBackColor = false;
@@ -65,9 +66,10 @@
             this.btnOrderMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderMan.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderMan.Location = new System.Drawing.Point(294, 198);
+            this.btnOrderMan.Location = new System.Drawing.Point(392, 228);
+            this.btnOrderMan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOrderMan.Name = "btnOrderMan";
-            this.btnOrderMan.Size = new System.Drawing.Size(200, 108);
+            this.btnOrderMan.Size = new System.Drawing.Size(267, 125);
             this.btnOrderMan.TabIndex = 14;
             this.btnOrderMan.Text = "Contract Manage";
             this.btnOrderMan.UseVisualStyleBackColor = false;
@@ -79,9 +81,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(933, 30);
+            this.btnLogout.Location = new System.Drawing.Point(1244, 35);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(126, 34);
+            this.btnLogout.Size = new System.Drawing.Size(168, 39);
             this.btnLogout.TabIndex = 13;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -92,9 +95,10 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(284, 30);
+            this.lblHelloMsg.Location = new System.Drawing.Point(379, 35);
+            this.lblHelloMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHelloMsg.Name = "lblHelloMsg";
-            this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
+            this.lblHelloMsg.Size = new System.Drawing.Size(235, 32);
             this.lblHelloMsg.TabIndex = 12;
             this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
@@ -103,13 +107,14 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Controls.Add(this.btnCO);
-            this.panel1.Controls.Add(this.btnOM);
+            this.panel1.Controls.Add(this.btnCA);
+            this.panel1.Controls.Add(this.btnCM);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.Size = new System.Drawing.Size(307, 744);
             this.panel1.TabIndex = 100;
             // 
             // button4
@@ -118,9 +123,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(150, 596);
+            this.button4.Location = new System.Drawing.Point(200, 688);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(77, 34);
+            this.button4.Size = new System.Drawing.Size(103, 39);
             this.button4.TabIndex = 97;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
@@ -129,44 +135,50 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(19, 608);
+            this.lblTime.Location = new System.Drawing.Point(25, 702);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(30, 13);
+            this.lblTime.Size = new System.Drawing.Size(37, 15);
             this.lblTime.TabIndex = 96;
             this.lblTime.Text = "Time";
             // 
-            // btnCO
+            // btnCA
             // 
-            this.btnCO.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCO.ForeColor = System.Drawing.Color.Black;
-            this.btnCO.Location = new System.Drawing.Point(12, 354);
-            this.btnCO.Name = "btnCO";
-            this.btnCO.Size = new System.Drawing.Size(203, 38);
-            this.btnCO.TabIndex = 95;
-            this.btnCO.Text = "Create Order";
-            this.btnCO.UseVisualStyleBackColor = false;
+            this.btnCA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCA.ForeColor = System.Drawing.Color.Black;
+            this.btnCA.Location = new System.Drawing.Point(16, 408);
+            this.btnCA.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCA.Name = "btnCA";
+            this.btnCA.Size = new System.Drawing.Size(271, 44);
+            this.btnCA.TabIndex = 95;
+            this.btnCA.Text = "Create Agreement";
+            this.btnCA.UseVisualStyleBackColor = false;
+            this.btnCA.Click += new System.EventHandler(this.btnCA_Click);
             // 
-            // btnOM
+            // btnCM
             // 
-            this.btnOM.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOM.ForeColor = System.Drawing.Color.Black;
-            this.btnOM.Location = new System.Drawing.Point(12, 290);
-            this.btnOM.Name = "btnOM";
-            this.btnOM.Size = new System.Drawing.Size(203, 38);
-            this.btnOM.TabIndex = 94;
-            this.btnOM.Text = "Order Manage";
-            this.btnOM.UseVisualStyleBackColor = false;
+            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCM.ForeColor = System.Drawing.Color.Black;
+            this.btnCM.Location = new System.Drawing.Point(16, 335);
+            this.btnCM.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCM.Name = "btnCM";
+            this.btnCM.Size = new System.Drawing.Size(271, 44);
+            this.btnCM.TabIndex = 94;
+            this.btnCM.Text = "Contract Manage";
+            this.btnCM.UseVisualStyleBackColor = false;
+            this.btnCM.Click += new System.EventHandler(this.btnCM_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 189);
+            this.pictureBox1.Size = new System.Drawing.Size(225, 218);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -176,14 +188,15 @@
             // 
             // FrmMenuPurMan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 645);
+            this.ClientSize = new System.Drawing.Size(1428, 744);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCreOrder);
             this.Controls.Add(this.btnOrderMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmMenuPurMan";
             this.Text = "Purchase Manager Menu";
             this.Load += new System.EventHandler(this.FrmMenuPurMan_Load);
@@ -201,8 +214,8 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblHelloMsg;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCO;
-        private System.Windows.Forms.Button btnOM;
+        private System.Windows.Forms.Button btnCA;
+        private System.Windows.Forms.Button btnCM;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
