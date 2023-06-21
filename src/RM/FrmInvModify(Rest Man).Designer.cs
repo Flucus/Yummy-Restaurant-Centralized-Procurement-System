@@ -34,10 +34,8 @@ namespace YummyRestaurantSystem
             this.lblRestaurant = new System.Windows.Forms.Label();
             this.lblItem = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnModify = new System.Windows.Forms.Button();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnCR = new System.Windows.Forms.Button();
@@ -46,6 +44,8 @@ namespace YummyRestaurantSystem
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnModify = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,21 +81,6 @@ namespace YummyRestaurantSystem
             this.txtSearch.Size = new System.Drawing.Size(207, 22);
             this.txtSearch.TabIndex = 18;
             // 
-            // btnModify
-            // 
-            this.btnModify.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModify.ForeColor = System.Drawing.Color.Black;
-            this.btnModify.Location = new System.Drawing.Point(637, 390);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(134, 35);
-            this.btnModify.TabIndex = 21;
-            this.btnModify.Text = "Modify";
-            this.btnModify.UseVisualStyleBackColor = false;
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-            // 
             // txtAmount
             // 
             this.txtAmount.Location = new System.Drawing.Point(564, 260);
@@ -114,21 +99,6 @@ namespace YummyRestaurantSystem
             this.lblAmount.Size = new System.Drawing.Size(85, 24);
             this.lblAmount.TabIndex = 22;
             this.lblAmount.Text = "Amount ";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(478, 390);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 35);
-            this.btnCancel.TabIndex = 24;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // panel1
             // 
@@ -229,6 +199,36 @@ namespace YummyRestaurantSystem
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnModify
+            // 
+            this.btnModify.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModify.ForeColor = System.Drawing.Color.Black;
+            this.btnModify.Location = new System.Drawing.Point(637, 390);
+            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(134, 35);
+            this.btnModify.TabIndex = 21;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCancel.Location = new System.Drawing.Point(478, 390);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(134, 35);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FrmInvModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -259,10 +259,8 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.Label lblRestaurant;
         private System.Windows.Forms.Label lblItem;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCR;
         private System.Windows.Forms.Button btnOP;
@@ -271,5 +269,7 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
