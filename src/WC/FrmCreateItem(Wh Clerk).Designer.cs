@@ -198,9 +198,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(143, 548);
+            this.button4.Location = new System.Drawing.Point(144, 548);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 35);
+            this.button4.Size = new System.Drawing.Size(71, 35);
             this.button4.TabIndex = 93;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
