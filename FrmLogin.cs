@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace YummyRestaurantSystem
 {
@@ -139,9 +140,13 @@ namespace YummyRestaurantSystem
             return;
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        private void txtuser_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnLogin_Click(null, null);
+            }
         }
     }
 }
