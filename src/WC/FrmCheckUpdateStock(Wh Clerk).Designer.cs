@@ -154,6 +154,10 @@ namespace YummyRestaurantSystem.src.WC
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // txtCount
             // 
             this.txtCount.Location = new System.Drawing.Point(443, 300);
@@ -274,6 +278,7 @@ namespace YummyRestaurantSystem.src.WC
             this.Controls.Add(this.panel1);
             this.Name = "FrmCheckUpdate";
             this.Text = "Check / Update Delivery Note Status";
+            this.Load += new System.EventHandler(this.FrmCheckUpdate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

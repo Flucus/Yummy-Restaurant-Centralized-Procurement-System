@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YummyRestaurantSystem.src.WC
+namespace YummyRestaurantSystem.src
 {
-    public partial class FrmCheckUpdate : Form
+    public partial class FrmMenu_Acc_Man_ : Form
     {
-        public FrmCheckUpdate()
+        public FrmMenu_Acc_Man_()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace YummyRestaurantSystem.src.WC
             timer1.Start();
         }
 
-        private void FrmCheckUpdate_Load(object sender, EventArgs e)
+        private void FrmMenu_Acc_Man__Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

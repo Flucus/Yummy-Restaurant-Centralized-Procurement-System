@@ -99,6 +99,12 @@
     <Compile Include="src\Admin\FrmActivityLog%28Admin%29.Designer.cs">
       <DependentUpon>FrmActivityLog%28Admin%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\AM\FrmUpdatePurchaseOrder%28Acc Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AM\FrmUpdatePurchaseOrder%28Acc Man%29.Designer.cs">
+      <DependentUpon>FrmUpdatePurchaseOrder%28Acc Man%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\CM\FrmCategoryCreate%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="src\CM\FrmCategoryEdit%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmCategoryEdit%28Cat Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FrmMenu%28Acc Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FrmMenu%28Acc Man%29.Designer.cs">
+      <DependentUpon>FrmMenu%28Acc Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\PM\FrmCheckofStatus%28Pur Man%29.cs">
       <SubType>Form</SubType>
@@ -330,11 +342,17 @@
     <EmbeddedResource Include="src\Admin\FrmActivityLog%28Admin%29.resx">
       <DependentUpon>FrmActivityLog%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\AM\FrmUpdatePurchaseOrder%28Acc Man%29.resx">
+      <DependentUpon>FrmUpdatePurchaseOrder%28Acc Man%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\CM\FrmCategoryCreate%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryCreate%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\CM\FrmCategoryEdit%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryEdit%28Cat Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FrmMenu%28Acc Man%29.resx">
+      <DependentUpon>FrmMenu%28Acc Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\PM\FrmCheckofStatus%28Pur Man%29.resx">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
