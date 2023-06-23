@@ -32,6 +32,7 @@ namespace YummyRestaurantSystem.src.RM
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdateDeliveryNoteStatus_Rest_Man_));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUDNS = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnCR = new System.Windows.Forms.Button();
             this.btnOP = new System.Windows.Forms.Button();
@@ -43,15 +44,6 @@ namespace YummyRestaurantSystem.src.RM
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblRequestID = new System.Windows.Forms.Label();
             this.txtNoteID = new System.Windows.Forms.TextBox();
-            this.txtUoM = new System.Windows.Forms.TextBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtItemID = new System.Windows.Forms.TextBox();
-            this.lblOrderID = new System.Windows.Forms.Label();
-            this.lblUoM = new System.Windows.Forms.Label();
-            this.lblItemID = new System.Windows.Forms.Label();
-            this.txtOrderID = new System.Windows.Forms.TextBox();
-            this.btnUDNS = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,6 +65,20 @@ namespace YummyRestaurantSystem.src.RM
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 595);
             this.panel1.TabIndex = 102;
+            // 
+            // btnUDNS
+            // 
+            this.btnUDNS.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUDNS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUDNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUDNS.ForeColor = System.Drawing.Color.Black;
+            this.btnUDNS.Location = new System.Drawing.Point(12, 442);
+            this.btnUDNS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUDNS.Name = "btnUDNS";
+            this.btnUDNS.Size = new System.Drawing.Size(203, 35);
+            this.btnUDNS.TabIndex = 103;
+            this.btnUDNS.Text = "Update Delivery Note";
+            this.btnUDNS.UseVisualStyleBackColor = false;
             // 
             // lblTime
             // 
@@ -170,7 +176,7 @@ namespace YummyRestaurantSystem.src.RM
             this.dataGridView1.Location = new System.Drawing.Point(276, 164);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(314, 393);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 393);
             this.dataGridView1.TabIndex = 104;
             // 
             // lblRequestID
@@ -192,126 +198,18 @@ namespace YummyRestaurantSystem.src.RM
             this.txtNoteID.Size = new System.Drawing.Size(207, 22);
             this.txtNoteID.TabIndex = 106;
             // 
-            // txtUoM
-            // 
-            this.txtUoM.Location = new System.Drawing.Point(825, 415);
-            this.txtUoM.Name = "txtUoM";
-            this.txtUoM.Size = new System.Drawing.Size(188, 22);
-            this.txtUoM.TabIndex = 123;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(639, 513);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 35);
-            this.btnCancel.TabIndex = 122;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(879, 513);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(134, 35);
-            this.btnUpdate.TabIndex = 121;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // txtItemID
-            // 
-            this.txtItemID.Location = new System.Drawing.Point(825, 374);
-            this.txtItemID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtItemID.Name = "txtItemID";
-            this.txtItemID.ReadOnly = true;
-            this.txtItemID.Size = new System.Drawing.Size(188, 22);
-            this.txtItemID.TabIndex = 120;
-            // 
-            // lblOrderID
-            // 
-            this.lblOrderID.AutoSize = true;
-            this.lblOrderID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrderID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblOrderID.Location = new System.Drawing.Point(635, 330);
-            this.lblOrderID.Name = "lblOrderID";
-            this.lblOrderID.Size = new System.Drawing.Size(90, 24);
-            this.lblOrderID.TabIndex = 119;
-            this.lblOrderID.Text = "Order ID";
-            // 
-            // lblUoM
-            // 
-            this.lblUoM.AutoSize = true;
-            this.lblUoM.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUoM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUoM.Location = new System.Drawing.Point(635, 413);
-            this.lblUoM.Name = "lblUoM";
-            this.lblUoM.Size = new System.Drawing.Size(53, 24);
-            this.lblUoM.TabIndex = 118;
-            this.lblUoM.Text = "UoM";
-            // 
-            // lblItemID
-            // 
-            this.lblItemID.AutoSize = true;
-            this.lblItemID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblItemID.Location = new System.Drawing.Point(635, 372);
-            this.lblItemID.Name = "lblItemID";
-            this.lblItemID.Size = new System.Drawing.Size(77, 24);
-            this.lblItemID.TabIndex = 117;
-            this.lblItemID.Text = "Item ID";
-            // 
-            // txtOrderID
-            // 
-            this.txtOrderID.Location = new System.Drawing.Point(825, 326);
-            this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.ReadOnly = true;
-            this.txtOrderID.Size = new System.Drawing.Size(188, 22);
-            this.txtOrderID.TabIndex = 125;
-            // 
-            // btnUDNS
-            // 
-            this.btnUDNS.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUDNS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUDNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUDNS.ForeColor = System.Drawing.Color.Black;
-            this.btnUDNS.Location = new System.Drawing.Point(12, 442);
-            this.btnUDNS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUDNS.Name = "btnUDNS";
-            this.btnUDNS.Size = new System.Drawing.Size(203, 35);
-            this.btnUDNS.TabIndex = 103;
-            this.btnUDNS.Text = "Update Delivery Note";
-            this.btnUDNS.UseVisualStyleBackColor = false;
-            // 
             // FrmUpdateDeliveryNoteStatus_Rest_Man_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 595);
-            this.Controls.Add(this.txtOrderID);
-            this.Controls.Add(this.txtUoM);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.txtItemID);
-            this.Controls.Add(this.lblOrderID);
-            this.Controls.Add(this.lblUoM);
-            this.Controls.Add(this.lblItemID);
             this.Controls.Add(this.txtNoteID);
             this.Controls.Add(this.lblRequestID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblRestaurant);
             this.Controls.Add(this.panel1);
             this.Name = "FrmUpdateDeliveryNoteStatus_Rest_Man_";
-            this.Text = "Update Delivery Note Status";
+            this.Text = "Check  Delivery Note";
             this.Load += new System.EventHandler(this.FrmUpdateDeliveryNoteStatus_Rest_Man__Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -336,14 +234,6 @@ namespace YummyRestaurantSystem.src.RM
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblRequestID;
         private System.Windows.Forms.TextBox txtNoteID;
-        private System.Windows.Forms.TextBox txtUoM;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtItemID;
-        private System.Windows.Forms.Label lblOrderID;
-        private System.Windows.Forms.Label lblUoM;
-        private System.Windows.Forms.Label lblItemID;
-        private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Button btnUDNS;
     }
 }
