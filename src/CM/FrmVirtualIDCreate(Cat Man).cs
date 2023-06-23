@@ -12,7 +12,7 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmVirtualIDCreate : Form
     {
-        private bool vaildItemID = false;
+        private bool validItemID = false;
 
         public bool logout = false;
         public bool created = false;
@@ -51,7 +51,7 @@ namespace YummyRestaurantSystem
             if (itemName != null)
             {
                 txtItemName.Text = itemName;
-                vaildItemID = true;
+                validItemID = true;
             }
         }
 
@@ -67,7 +67,7 @@ namespace YummyRestaurantSystem
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (txtTypeName.Text.Length == 0 || !vaildItemID) return;
+            if (txtTypeName.Text.Length == 0 || !validItemID) return;
 
             bool success = SQLHandler.CreateVIDMapping(txtVID.Text, cboTypeID.SelectedItem.ToString(), txtItemID.Text);
             if (!success)

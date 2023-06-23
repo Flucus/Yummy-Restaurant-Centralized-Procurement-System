@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YummyRestaurantSystem.src.Admin;
 
 namespace YummyRestaurantSystem
 {
@@ -40,7 +41,17 @@ namespace YummyRestaurantSystem
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            Visible = false;
+            FrmActivityLog_Admin_ form = new FrmActivityLog_Admin_();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)

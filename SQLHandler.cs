@@ -19,12 +19,41 @@ namespace YummyRestaurantSystem
     {
         private static readonly string connString = "server=127.0.0.1;port=3306;user id=root;password=;database=YummyRestaurantGroupDB;charset=utf8;convert zero datetime=True";
         private static Random random = new Random();
+        private static string currentUserID = "";
 
         private static string GenerateSalt()
         {
             const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             const int length = 16;
             return new string(Enumerable.Range(1, length).Select(_ => chars[random.Next(chars.Length)]).ToArray());
+        }
+
+        private static void RecordActivity(string sql)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string getLast = "SELECT * FROM ActivityLog ORDER BY ActivityID DESC LIMIT 1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            DataRow response = dt.Rows[0];
+            string lastActivityID = (string)response["ActivityID"];
+
+            int numID = int.Parse(lastActivityID.Substring(1)) + 1;
+            string newID = 'A' + numID.ToString().PadLeft(9, '0');
+
+            string currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string processedSql = sql.Replace("'", "\\'");
+
+            string insertSql = $@"INSERT INTO ActivityLog (ActivityID, StaffID, SqlQuery, TIMESTAMP)
+                VALUES ('{newID}', '{currentUserID}', '{processedSql}', '{currentTime}')";
+
+            MySqlCommand cmd = new MySqlCommand(insertSql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
 
         public static DataRow CheckLogin(string acc, string password)
@@ -50,13 +79,22 @@ namespace YummyRestaurantSystem
             }
 
             bool result = hash.Equals(passwordHash);
-            return result ? response : null;
+            if (result)
+            {
+                currentUserID = (string)response["StaffID"];
+                return response;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public static DataRow GetStaffData(string staffID)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $"SELECT * FROM Staff WHERE StaffID = '{staffID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -71,6 +109,7 @@ namespace YummyRestaurantSystem
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $"SELECT * FROM Restaurant WHERE LocID = '{locID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -89,6 +128,7 @@ namespace YummyRestaurantSystem
             {
                 sql += $" AND RequestID LIKE '%{requestMatch}%'";
             }
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -104,6 +144,7 @@ namespace YummyRestaurantSystem
                 JOIN SupplierItem AS s ON s.SupplierID = i.SupplierID AND s.SupplierItemID = i.SupplierItemID
                 JOIN VirtualItem AS v ON v.ItemID = i.ItemID
                 WHERE RequestID = '{requestID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -117,6 +158,7 @@ namespace YummyRestaurantSystem
 
             string typeID = (string)restData["TypeID"];
             string sql = $@"SELECT ItemID FROM VirtualItem WHERE VirtualID = '{VID}' AND TypeID = '{typeID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -132,6 +174,7 @@ namespace YummyRestaurantSystem
                 JOIN Item as i ON i.ItemID = ri.ItemID
                 JOIN SupplierItem as s ON s.SupplierID = i.SupplierID AND s.SupplierItemID = i.SupplierItemID
                 WHERE rr.RequestID = '{RequestID}' AND i.ItemID = '{itemID}'";
+            RecordActivity(sql);
             adapter = new MySqlDataAdapter(sql, conn);
             dt = new DataTable();
             adapter.Fill(dt);
@@ -153,6 +196,7 @@ namespace YummyRestaurantSystem
                 JOIN Item as i ON i.ItemID = v.ItemID
                 JOIN SupplierItem as s ON s.SupplierID = i.SupplierID AND s.SupplierItemID = i.SupplierItemID
                 WHERE v.VirtualID = '{VID}' AND v.TypeID = '{typeID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -170,6 +214,7 @@ namespace YummyRestaurantSystem
 
             string typeID = (string)restData["TypeID"];
             string sql = $@"SELECT ItemID FROM VirtualItem WHERE VirtualID = '{VID}' AND TypeID = '{typeID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -177,6 +222,7 @@ namespace YummyRestaurantSystem
             string itemID = (string)response["ItemID"];
 
             sql = $@"INSERT INTO RequestItem VALUES ('{requestID}', '{itemID}', {quantity})";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -189,6 +235,7 @@ namespace YummyRestaurantSystem
 
             string typeID = (string)restData["TypeID"];
             string sql = $@"SELECT ItemID FROM VirtualItem WHERE VirtualID = '{VID}' AND TypeID = '{typeID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -196,6 +243,7 @@ namespace YummyRestaurantSystem
             string itemID = (string)response["ItemID"];
 
             sql = $@"DELETE FROM RequestItem WHERE RequestID = '{requestID}' AND ItemID = '{itemID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
             conn.Close();
@@ -222,6 +270,7 @@ namespace YummyRestaurantSystem
             {
                 sql += $" WHERE rt.TypeName = '{typeNameMatch}'";
             }
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -234,6 +283,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"DELETE FROM VirtualItem WHERE VirtualID = '{VID}' AND TypeID = '{typeID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
             conn.Close();
@@ -244,6 +294,7 @@ namespace YummyRestaurantSystem
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = "SELECT DISTINCT TypeID, TypeName FROM RestaurantType";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -257,6 +308,7 @@ namespace YummyRestaurantSystem
                 FROM Item AS i
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
                 WHERE ItemID = '{itemID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -271,6 +323,7 @@ namespace YummyRestaurantSystem
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $"SELECT TypeName FROM RestaurantType WHERE TypeID = '{typeID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -288,6 +341,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"INSERT INTO VirtualItem VALUES ('{VID}', '{typeID}', '{itemID}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -301,6 +355,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"UPDATE VirtualItem SET ItemID = '{itemID}' WHERE VirtualID = '{VID}' AND TypeID = '{typeID}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -314,6 +369,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = "SELECT * FROM RestaurantRequest ORDER BY RequestID DESC LIMIT 1";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -328,6 +384,7 @@ namespace YummyRestaurantSystem
             string expDate = (DateTime.Now.AddDays(3)).ToString("yyyy-MM-dd");
 
             sql = $"INSERT INTO RestaurantRequest VALUES ('{newID}', '{managerID}', '{createDate}', '{restID}', '{expDate}', '{remark}', 'P')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
             if (count == 0) return false;
@@ -345,6 +402,7 @@ namespace YummyRestaurantSystem
                 sql += $"('{newID}', '{itemID}', {quantity}), ";
             }
             sql = sql.Substring(0, sql.Length - 2);
+            RecordActivity(sql);
             cmd = new MySqlCommand(sql, conn);
             count = cmd.ExecuteNonQuery();
             if (count == 0) return false;
@@ -367,6 +425,7 @@ namespace YummyRestaurantSystem
             {
                 sql += $" AND si.Name LIKE '%{nameMatch}%'";
             }
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -380,6 +439,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
             string sql = $"UPDATE Inventory SET Count = {count} WHERE LocID = '{locID}' AND ItemID = '{itemID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -401,6 +461,7 @@ namespace YummyRestaurantSystem
             {
                 sql += $" WHERE Name LIKE '%{nameMatch}%'";
             }
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -415,10 +476,12 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $@"DELETE FROM Account WHERE StaffID = '{staffID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
 
             sql = $@"DELETE FROM Staff WHERE StaffID = '{staffID}'";
+            RecordActivity(sql);
             cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
 
@@ -429,6 +492,7 @@ namespace YummyRestaurantSystem
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = "SELECT LocID FROM Location";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -446,6 +510,7 @@ namespace YummyRestaurantSystem
             if (stringData[0] == null)
             {
                 string sqlTemp = "SELECT * FROM Staff ORDER BY StaffID DESC LIMIT 1";
+                RecordActivity(sqlTemp);
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sqlTemp, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -456,6 +521,7 @@ namespace YummyRestaurantSystem
             }
 
             string sql = $@"INSERT INTO Staff VALUES ('{stringData[0]}', '{stringData[1]}', '{stringData[2]}','{stringData[3]}', '{stringData[4]}', '{stringData[5]}', '{stringData[6]}', '{stringData[7]}', {stringData[8]}, '{stringData[9]}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -479,6 +545,7 @@ namespace YummyRestaurantSystem
                 '{stringData[7]}',
                 {stringData[8]},
                 '{stringData[9]}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -520,6 +587,7 @@ namespace YummyRestaurantSystem
                     AND a.CreatedDate <= DATE_ADD('{createDate}', INTERVAL 7 DAY)";
             }
 
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -541,6 +609,7 @@ namespace YummyRestaurantSystem
                 JOIN Item AS i ON i.ItemID = b.ItemID
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
                 JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             result[0] = new DataTable();
             adapter.Fill(result[0]);
@@ -551,6 +620,7 @@ namespace YummyRestaurantSystem
                 JOIN Item AS i ON i.ItemID = c.ItemID
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
                 JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+            RecordActivity(sql);
             adapter = new MySqlDataAdapter(sql, conn);
             result[1] = new DataTable();
             adapter.Fill(result[1]);
@@ -561,6 +631,7 @@ namespace YummyRestaurantSystem
                 JOIN Item AS i ON i.ItemID = p.ItemID
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
                 JOIN Supplier AS s ON s.SupplierID = si.SupplierID";
+            RecordActivity(sql);
             adapter = new MySqlDataAdapter(sql, conn);
             result[2] = new DataTable();
             adapter.Fill(result[2]);
@@ -599,6 +670,7 @@ namespace YummyRestaurantSystem
                         return false;
                 }
                 sql = $"SELECT * FROM {typeTable} WHERE {idName} = '{stringData[0]}'";
+                RecordActivity(sql);
                 adapter = new MySqlDataAdapter(sql, conn);
                 DataTable subRecord = new DataTable();
                 adapter.Fill(subRecord);
@@ -613,6 +685,7 @@ namespace YummyRestaurantSystem
                 State = '{stringData[5]}',
                 TermAndCondition = '{stringData[6]}'
                 WHERE AgreementID = '{stringData[0]}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -626,6 +699,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $"SELECT * FROM PPO";
             if (ppoID.Length > 0) sql += $" WHERE PPO_ID = '{ppoID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -640,6 +714,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"INSERT INTO PPO VALUES ('{ppoID}', '{locID}', '{schedule}', '{currency}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -652,6 +727,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $"SELECT * FROM CPAItem";
             if (cpaID.Length > 0) sql += $" WHERE CPA_ID = '{cpaID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -664,6 +740,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = "SELECT * FROM BPAItem";
             if (bpaID.Length > 0) sql += $" WHERE BPA_ID = '{bpaID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -676,6 +753,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = "SELECT * FROM PPOItem";
             if (ppoID.Length > 0) sql += $" WHERE PPO_ID = '{ppoID}'";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -690,6 +768,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"UPDATE CPAItem SET ItemID = '{itemID}' WHERE CPA_ID = '{agreeID}' AND ItemID = '{oldItemID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -713,6 +792,7 @@ namespace YummyRestaurantSystem
                 PriceBreakEffectiveDate = '{stringData[8]}'
                 WHERE BPA_ID = '{stringData[0]}'
                 AND ItemID = '{oldItemID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -731,6 +811,7 @@ namespace YummyRestaurantSystem
                 UnitPrice = {unitPrice}
                 WHERE PPO_ID = '{agreeID}'
                 AND ItemID = '{oldItemID}'";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -751,6 +832,7 @@ namespace YummyRestaurantSystem
                 '{stringData[4]}',
                 '{stringData[5]}',
                 '{stringData[6]}' )";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -764,6 +846,7 @@ namespace YummyRestaurantSystem
             string sql = @"SELECT i.ItemID, si.SupplierID, si.SupplierItemID, si.Name, si.Category, si.Description
                 FROM Item AS i
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID";
+            RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -778,6 +861,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"INSERT INTO CPAItem VALUES ('{agreeID}', '{itemID}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -791,6 +875,7 @@ namespace YummyRestaurantSystem
             conn.Open();
 
             string sql = $"INSERT INTO PPOItem VALUES ('{agreeID}', '{itemID}', {quantity}, {unitPrice})";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
@@ -813,11 +898,25 @@ namespace YummyRestaurantSystem
                 {stringData[6]},
                 {stringData[7]},
                 '{stringData[8]}')";
+            RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int count = cmd.ExecuteNonQuery();
 
             conn.Close();
             return count == 1;
+        }
+
+        public static DataTable GetActivityLog()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT * FROM ActivityLog";
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
         }
     }
 }
