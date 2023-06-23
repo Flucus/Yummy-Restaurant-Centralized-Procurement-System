@@ -99,6 +99,12 @@
     <Compile Include="src\Admin\FrmActivityLog%28Admin%29.Designer.cs">
       <DependentUpon>FrmActivityLog%28Admin%29.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\AM\FrmUpdatePurchaseOrder%28Acc Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AM\FrmUpdatePurchaseOrder%28Acc Man%29.Designer.cs">
+      <DependentUpon>FrmUpdatePurchaseOrder%28Acc Man%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\CM\FrmCategoryCreate%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="src\CM\FrmCategoryEdit%28Cat Man%29.Designer.cs">
       <DependentUpon>FrmCategoryEdit%28Cat Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FrmMenu%28Acc Man%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FrmMenu%28Acc Man%29.Designer.cs">
+      <DependentUpon>FrmMenu%28Acc Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\PM\FrmCheckofStatus%28Pur Man%29.cs">
       <SubType>Form</SubType>
@@ -147,11 +159,17 @@
     <Compile Include="src\PM\FrmCreatePPO%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCreatePPO%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\RM\FrmUpdateDeliveryNoteStatus%28Rest Man%29.cs">
+    <Compile Include="src\RM\FrmCheckDeliveryNote%28Rest Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\RM\FrmUpdateDeliveryNoteStatus%28Rest Man%29.Designer.cs">
-      <DependentUpon>FrmUpdateDeliveryNoteStatus%28Rest Man%29.cs</DependentUpon>
+    <Compile Include="src\RM\FrmCheckDeliveryNote%28Rest Man%29.Designer.cs">
+      <DependentUpon>FrmCheckDeliveryNote%28Rest Man%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\WC\FrmCheckUpdateStock%28Wh Clerk%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\WC\FrmCheckUpdateStock%28Wh Clerk%29.Designer.cs">
+      <DependentUpon>FrmCheckUpdateStock%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\WC\FrmGenerateDeliveryNote%28Wh Clerk%29.cs">
       <SubType>Form</SubType>
@@ -165,11 +183,11 @@
     <Compile Include="src\WC\FrmReceiveDespatchInstruction%28Wh Clerk%29.Designer.cs">
       <DependentUpon>FrmReceiveDespatchInstruction%28Wh Clerk%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\WC\FrmCreateItem%28Wh Clerk%29.cs">
+    <Compile Include="src\CM\FrmCreateItem%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\WC\FrmCreateItem%28Wh Clerk%29.Designer.cs">
-      <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
+    <Compile Include="src\CM\FrmCreateItem%28Cat Man%29.Designer.cs">
+      <DependentUpon>FrmCreateItem%28Cat Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\RM\FrmDetailsRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
@@ -183,11 +201,11 @@
     <Compile Include="src\PM\FrmEditAgreement%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\WC\FrmEditItem%28Wh Clerk%29.cs">
+    <Compile Include="src\CM\FrmEditItem%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\WC\FrmEditItem%28Wh Clerk%29.Designer.cs">
-      <DependentUpon>FrmEditItem%28Wh Clerk%29.cs</DependentUpon>
+    <Compile Include="src\CM\FrmEditItem%28Cat Man%29.Designer.cs">
+      <DependentUpon>FrmEditItem%28Cat Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\RM\FrmEditRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
@@ -255,11 +273,11 @@
     <Compile Include="src\PM\FrmCreateItem%28Pur Man%29.Designer.cs">
       <DependentUpon>FrmCreateItem%28Pur Man%29.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\WC\FrmItemManage%28Wh Clerk%29.cs">
+    <Compile Include="src\CM\FrmItemManage%28Cat Man%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\WC\FrmItemManage%28Wh Clerk%29.Designer.cs">
-      <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>
+    <Compile Include="src\CM\FrmItemManage%28Cat Man%29.Designer.cs">
+      <DependentUpon>FrmItemManage%28Cat Man%29.cs</DependentUpon>
     </Compile>
     <Compile Include="src\RM\FrmItemRequest%28Rest Man%29.cs">
       <SubType>Form</SubType>
@@ -324,11 +342,17 @@
     <EmbeddedResource Include="src\Admin\FrmActivityLog%28Admin%29.resx">
       <DependentUpon>FrmActivityLog%28Admin%29.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\AM\FrmUpdatePurchaseOrder%28Acc Man%29.resx">
+      <DependentUpon>FrmUpdatePurchaseOrder%28Acc Man%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\CM\FrmCategoryCreate%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryCreate%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\CM\FrmCategoryEdit%28Cat Man%29.resx">
       <DependentUpon>FrmCategoryEdit%28Cat Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FrmMenu%28Acc Man%29.resx">
+      <DependentUpon>FrmMenu%28Acc Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\PM\FrmCheckofStatus%28Pur Man%29.resx">
       <DependentUpon>FrmCheckofStatus%28Pur Man%29.cs</DependentUpon>
@@ -348,8 +372,11 @@
     <EmbeddedResource Include="src\PM\FrmCreatePPO%28Pur Man%29.resx">
       <DependentUpon>FrmCreatePPO%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\RM\FrmUpdateDeliveryNoteStatus%28Rest Man%29.resx">
-      <DependentUpon>FrmUpdateDeliveryNoteStatus%28Rest Man%29.cs</DependentUpon>
+    <EmbeddedResource Include="src\RM\FrmCheckDeliveryNote%28Rest Man%29.resx">
+      <DependentUpon>FrmCheckDeliveryNote%28Rest Man%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\WC\FrmCheckUpdateStock%28Wh Clerk%29.resx">
+      <DependentUpon>FrmCheckUpdateStock%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\WC\FrmGenerateDeliveryNote%28Wh Clerk%29.resx">
       <DependentUpon>FrmGenerateDeliveryNote%28Wh Clerk%29.cs</DependentUpon>
@@ -357,8 +384,8 @@
     <EmbeddedResource Include="src\WC\FrmReceiveDespatchInstruction%28Wh Clerk%29.resx">
       <DependentUpon>FrmReceiveDespatchInstruction%28Wh Clerk%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\WC\FrmCreateItem%28Wh Clerk%29.resx">
-      <DependentUpon>FrmCreateItem%28Wh Clerk%29.cs</DependentUpon>
+    <EmbeddedResource Include="src\CM\FrmCreateItem%28Cat Man%29.resx">
+      <DependentUpon>FrmCreateItem%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\RM\FrmDetailsRequest%28Rest Man%29.resx">
       <DependentUpon>FrmDetailsRequest%28Rest Man%29.cs</DependentUpon>
@@ -366,8 +393,8 @@
     <EmbeddedResource Include="src\PM\FrmEditAgreement%28Pur Man%29.resx">
       <DependentUpon>FrmEditAgreement%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\WC\FrmEditItem%28Wh Clerk%29.resx">
-      <DependentUpon>FrmEditItem%28Wh Clerk%29.cs</DependentUpon>
+    <EmbeddedResource Include="src\CM\FrmEditItem%28Cat Man%29.resx">
+      <DependentUpon>FrmEditItem%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\RM\FrmEditRequest%28Rest Man%29.resx">
       <DependentUpon>FrmEditRequest%28Rest Man%29.cs</DependentUpon>
@@ -402,8 +429,8 @@
     <EmbeddedResource Include="src\PM\FrmCreateItem%28Pur Man%29.resx">
       <DependentUpon>FrmCreateItem%28Pur Man%29.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\WC\FrmItemManage%28Wh Clerk%29.resx">
-      <DependentUpon>FrmItemManage%28Wh Clerk%29.cs</DependentUpon>
+    <EmbeddedResource Include="src\CM\FrmItemManage%28Cat Man%29.resx">
+      <DependentUpon>FrmItemManage%28Cat Man%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\RM\FrmItemRequest%28Rest Man%29.resx">
       <DependentUpon>FrmItemRequest%28Rest Man%29.cs</DependentUpon>

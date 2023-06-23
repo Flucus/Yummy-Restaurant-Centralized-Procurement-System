@@ -1,7 +1,7 @@
 ﻿
 namespace YummyRestaurantSystem.src.WC
 {
-    partial class FrmGenerateDeliveryNote
+    partial class FrmCheckUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace YummyRestaurantSystem.src.WC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGenerateDeliveryNote));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCheckUpdate));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRDI = new System.Windows.Forms.Button();
             this.btnGDN = new System.Windows.Forms.Button();
@@ -39,12 +39,17 @@ namespace YummyRestaurantSystem.src.WC
             this.btnIM = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblRestaurant = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnGenerate = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtCount = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblOrderID = new System.Windows.Forms.Label();
+            this.lblUoM = new System.Windows.Forms.Label();
+            this.lblItemID = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblRestaurant = new System.Windows.Forms.Label();
+            this.txtLocID = new System.Windows.Forms.TextBox();
+            this.txtItemID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -64,7 +69,7 @@ namespace YummyRestaurantSystem.src.WC
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 595);
-            this.panel1.TabIndex = 103;
+            this.panel1.TabIndex = 104;
             // 
             // btnRDI
             // 
@@ -149,36 +154,16 @@ namespace YummyRestaurantSystem.src.WC
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblRestaurant
+            // timer1
             // 
-            this.lblRestaurant.AutoSize = true;
-            this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRestaurant.Location = new System.Drawing.Point(269, 28);
-            this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(432, 24);
-            this.lblRestaurant.TabIndex = 104;
-            this.lblRestaurant.Text = "The Yummy Restaurant Logistic Management";
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label1
+            // txtCount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(269, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 24);
-            this.label1.TabIndex = 105;
-            this.label1.Text = "Generate Delivery Note";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 173);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(758, 326);
-            this.dataGridView1.TabIndex = 106;
+            this.txtCount.Location = new System.Drawing.Point(443, 300);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.Size = new System.Drawing.Size(188, 22);
+            this.txtCount.TabIndex = 136;
             // 
             // btnCancel
             // 
@@ -186,46 +171,114 @@ namespace YummyRestaurantSystem.src.WC
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(273, 538);
+            this.btnCancel.Location = new System.Drawing.Point(257, 452);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 35);
-            this.btnCancel.TabIndex = 107;
+            this.btnCancel.TabIndex = 135;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // btnGenerate
+            // btnUpdate
             // 
-            this.btnGenerate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerate.Location = new System.Drawing.Point(897, 538);
-            this.btnGenerate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(134, 35);
-            this.btnGenerate.TabIndex = 108;
-            this.btnGenerate.Text = "Generate";
-            this.btnGenerate.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Location = new System.Drawing.Point(509, 452);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(134, 35);
+            this.btnUpdate.TabIndex = 134;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // timer1
+            // lblOrderID
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblOrderID.Location = new System.Drawing.Point(253, 142);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(72, 24);
+            this.lblOrderID.TabIndex = 132;
+            this.lblOrderID.Text = "Loc ID";
             // 
-            // FrmGenerateDeliveryNote
+            // lblUoM
+            // 
+            this.lblUoM.AutoSize = true;
+            this.lblUoM.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUoM.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUoM.Location = new System.Drawing.Point(253, 298);
+            this.lblUoM.Name = "lblUoM";
+            this.lblUoM.Size = new System.Drawing.Size(81, 24);
+            this.lblUoM.TabIndex = 131;
+            this.lblUoM.Text = "COUNT";
+            // 
+            // lblItemID
+            // 
+            this.lblItemID.AutoSize = true;
+            this.lblItemID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblItemID.Location = new System.Drawing.Point(253, 217);
+            this.lblItemID.Name = "lblItemID";
+            this.lblItemID.Size = new System.Drawing.Size(77, 24);
+            this.lblItemID.TabIndex = 130;
+            this.lblItemID.Text = "Item ID";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(710, 94);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(314, 393);
+            this.dataGridView1.TabIndex = 127;
+            // 
+            // lblRestaurant
+            // 
+            this.lblRestaurant.AutoSize = true;
+            this.lblRestaurant.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblRestaurant.Location = new System.Drawing.Point(253, 28);
+            this.lblRestaurant.Name = "lblRestaurant";
+            this.lblRestaurant.Size = new System.Drawing.Size(352, 24);
+            this.lblRestaurant.TabIndex = 126;
+            this.lblRestaurant.Text = "Check / Update Delivery Note Status";
+            // 
+            // txtLocID
+            // 
+            this.txtLocID.Location = new System.Drawing.Point(443, 144);
+            this.txtLocID.Name = "txtLocID";
+            this.txtLocID.Size = new System.Drawing.Size(188, 22);
+            this.txtLocID.TabIndex = 138;
+            // 
+            // txtItemID
+            // 
+            this.txtItemID.Location = new System.Drawing.Point(443, 217);
+            this.txtItemID.Name = "txtItemID";
+            this.txtItemID.Size = new System.Drawing.Size(188, 22);
+            this.txtItemID.TabIndex = 139;
+            // 
+            // FrmCheckUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 595);
-            this.Controls.Add(this.btnGenerate);
+            this.Controls.Add(this.txtItemID);
+            this.Controls.Add(this.txtLocID);
+            this.Controls.Add(this.txtCount);
             this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.lblOrderID);
+            this.Controls.Add(this.lblUoM);
+            this.Controls.Add(this.lblItemID);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRestaurant);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmGenerateDeliveryNote";
-            this.Text = "Generate Delivery Note";
-            this.Load += new System.EventHandler(this.FrmGenerateDeliveryNote_Load);
+            this.Name = "FrmCheckUpdate";
+            this.Text = "Check / Update Delivery Note Status";
+            this.Load += new System.EventHandler(this.FrmCheckUpdate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -238,18 +291,23 @@ namespace YummyRestaurantSystem.src.WC
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnRDI;
         private System.Windows.Forms.Button btnGDN;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button btnOA;
         private System.Windows.Forms.Button btnIM;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblRestaurant;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.Button btnRDI;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtCount;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblOrderID;
+        private System.Windows.Forms.Label lblUoM;
+        private System.Windows.Forms.Label lblItemID;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblRestaurant;
+        private System.Windows.Forms.TextBox txtLocID;
+        private System.Windows.Forms.TextBox txtItemID;
     }
 }

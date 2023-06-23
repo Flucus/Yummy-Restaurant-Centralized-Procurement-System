@@ -40,12 +40,16 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVID = new System.Windows.Forms.Button();
+            this.btnCM = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
-            this.btnOA = new System.Windows.Forms.Button();
-            this.btnIM = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblSupplierItemID = new System.Windows.Forms.Label();
+            this.lblSupplierID = new System.Windows.Forms.Label();
+            this.txtSupplierItemID = new System.Windows.Forms.TextBox();
+            this.txtSupplierID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +67,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(549, 136);
+            this.txtName.Location = new System.Drawing.Point(603, 249);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(277, 22);
             this.txtName.TabIndex = 32;
@@ -73,7 +77,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblName.Location = new System.Drawing.Point(412, 130);
+            this.lblName.Location = new System.Drawing.Point(412, 243);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(110, 24);
             this.lblName.TabIndex = 31;
@@ -84,7 +88,7 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCategory.Location = new System.Drawing.Point(412, 199);
+            this.lblCategory.Location = new System.Drawing.Point(412, 293);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(96, 24);
             this.lblCategory.TabIndex = 33;
@@ -93,14 +97,14 @@
             // cboCat
             // 
             this.cboCat.FormattingEnabled = true;
-            this.cboCat.Location = new System.Drawing.Point(549, 205);
+            this.cboCat.Location = new System.Drawing.Point(603, 299);
             this.cboCat.Name = "cboCat";
             this.cboCat.Size = new System.Drawing.Size(277, 20);
             this.cboCat.TabIndex = 34;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(549, 285);
+            this.txtDescription.Location = new System.Drawing.Point(603, 353);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(277, 22);
             this.txtDescription.TabIndex = 36;
@@ -110,7 +114,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDescription.Location = new System.Drawing.Point(412, 283);
+            this.lblDescription.Location = new System.Drawing.Point(412, 347);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(116, 24);
             this.lblDescription.TabIndex = 35;
@@ -122,7 +126,7 @@
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.Black;
-            this.btnCreate.Location = new System.Drawing.Point(677, 412);
+            this.btnCreate.Location = new System.Drawing.Point(729, 463);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(134, 35);
             this.btnCreate.TabIndex = 37;
@@ -135,7 +139,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCancel.Location = new System.Drawing.Point(416, 412);
+            this.btnCancel.Location = new System.Drawing.Point(416, 463);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 35);
             this.btnCancel.TabIndex = 38;
@@ -146,9 +150,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnVID);
+            this.panel1.Controls.Add(this.btnCM);
             this.panel1.Controls.Add(this.lblTime);
-            this.panel1.Controls.Add(this.btnOA);
-            this.panel1.Controls.Add(this.btnIM);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -156,6 +160,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 595);
             this.panel1.TabIndex = 101;
+            // 
+            // btnVID
+            // 
+            this.btnVID.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVID.ForeColor = System.Drawing.Color.Black;
+            this.btnVID.Location = new System.Drawing.Point(12, 330);
+            this.btnVID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVID.Name = "btnVID";
+            this.btnVID.Size = new System.Drawing.Size(203, 35);
+            this.btnVID.TabIndex = 104;
+            this.btnVID.Text = "Vitural ID Mapping";
+            this.btnVID.UseVisualStyleBackColor = false;
+            // 
+            // btnCM
+            // 
+            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCM.ForeColor = System.Drawing.Color.Black;
+            this.btnCM.Location = new System.Drawing.Point(12, 272);
+            this.btnCM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCM.Name = "btnCM";
+            this.btnCM.Size = new System.Drawing.Size(203, 35);
+            this.btnCM.TabIndex = 103;
+            this.btnCM.Text = "Category Manage";
+            this.btnCM.UseVisualStyleBackColor = false;
             // 
             // lblTime
             // 
@@ -165,32 +197,6 @@
             this.lblTime.Size = new System.Drawing.Size(29, 12);
             this.lblTime.TabIndex = 102;
             this.lblTime.Text = "Time";
-            // 
-            // btnOA
-            // 
-            this.btnOA.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOA.ForeColor = System.Drawing.Color.Black;
-            this.btnOA.Location = new System.Drawing.Point(12, 326);
-            this.btnOA.Name = "btnOA";
-            this.btnOA.Size = new System.Drawing.Size(203, 35);
-            this.btnOA.TabIndex = 95;
-            this.btnOA.Text = "Order Arrange";
-            this.btnOA.UseVisualStyleBackColor = false;
-            // 
-            // btnIM
-            // 
-            this.btnIM.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnIM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIM.ForeColor = System.Drawing.Color.Black;
-            this.btnIM.Location = new System.Drawing.Point(12, 268);
-            this.btnIM.Name = "btnIM";
-            this.btnIM.Size = new System.Drawing.Size(203, 35);
-            this.btnIM.TabIndex = 94;
-            this.btnIM.Text = "Inventory Manage";
-            this.btnIM.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -219,11 +225,51 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lblSupplierItemID
+            // 
+            this.lblSupplierItemID.AutoSize = true;
+            this.lblSupplierItemID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplierItemID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSupplierItemID.Location = new System.Drawing.Point(412, 184);
+            this.lblSupplierItemID.Name = "lblSupplierItemID";
+            this.lblSupplierItemID.Size = new System.Drawing.Size(158, 24);
+            this.lblSupplierItemID.TabIndex = 102;
+            this.lblSupplierItemID.Text = "Supplier Item ID";
+            // 
+            // lblSupplierID
+            // 
+            this.lblSupplierID.AutoSize = true;
+            this.lblSupplierID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplierID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSupplierID.Location = new System.Drawing.Point(412, 127);
+            this.lblSupplierID.Name = "lblSupplierID";
+            this.lblSupplierID.Size = new System.Drawing.Size(112, 24);
+            this.lblSupplierID.TabIndex = 103;
+            this.lblSupplierID.Text = "Supplier ID";
+            // 
+            // txtSupplierItemID
+            // 
+            this.txtSupplierItemID.Location = new System.Drawing.Point(603, 184);
+            this.txtSupplierItemID.Name = "txtSupplierItemID";
+            this.txtSupplierItemID.Size = new System.Drawing.Size(277, 22);
+            this.txtSupplierItemID.TabIndex = 104;
+            // 
+            // txtSupplierID
+            // 
+            this.txtSupplierID.Location = new System.Drawing.Point(603, 127);
+            this.txtSupplierID.Name = "txtSupplierID";
+            this.txtSupplierID.Size = new System.Drawing.Size(277, 22);
+            this.txtSupplierID.TabIndex = 105;
+            // 
             // FrmCreateItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 595);
+            this.Controls.Add(this.txtSupplierID);
+            this.Controls.Add(this.txtSupplierItemID);
+            this.Controls.Add(this.lblSupplierID);
+            this.Controls.Add(this.lblSupplierItemID);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreate);
@@ -257,11 +303,15 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnOA;
-        private System.Windows.Forms.Button btnIM;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnVID;
+        private System.Windows.Forms.Button btnCM;
+        private System.Windows.Forms.Label lblSupplierItemID;
+        private System.Windows.Forms.Label lblSupplierID;
+        private System.Windows.Forms.TextBox txtSupplierItemID;
+        private System.Windows.Forms.TextBox txtSupplierID;
     }
 }
