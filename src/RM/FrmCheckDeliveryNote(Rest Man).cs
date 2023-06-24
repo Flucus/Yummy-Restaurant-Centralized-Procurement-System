@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem.src.RM
 {
-    public partial class FrmUpdateDeliveryNoteStatus_Rest_Man_ : Form
+    public partial class FrmCheckDeliveryNoteStatus_Rest_Man_ : Form
     {
-        public FrmUpdateDeliveryNoteStatus_Rest_Man_()
+        public FrmCheckDeliveryNoteStatus_Rest_Man_()
         {
             InitializeComponent();
         }

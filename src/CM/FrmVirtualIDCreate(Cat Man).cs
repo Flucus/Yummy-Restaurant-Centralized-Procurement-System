@@ -71,7 +71,7 @@ namespace YummyRestaurantSystem
         {
             if (txtTypeName.Text.Length == 0 || !validItemID) return;
 
-            Match match = Regex.Match(txtVID.Text, @"V\d{9}";
+            Match match = Regex.Match(txtVID.Text, @"V\d{9}");
             if (!match.Success)
             {
                 MessageBox.Show("Incorrect VID format.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
