@@ -14,6 +14,8 @@ namespace YummyRestaurantSystem
     {
         private DataRow staffData;
 
+        public bool logout = false;
+
         public FrmMenuPurMan(DataRow staffData)
         {
             InitializeComponent();
@@ -21,6 +23,11 @@ namespace YummyRestaurantSystem
 
             string name = (string)staffData["Name"];
             lblHelloMsg.Text = $"Hello {name}!";
+        }
+
+        private void FrmMenuPurMan_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -31,28 +38,14 @@ namespace YummyRestaurantSystem
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            logout = true;
             Close();
-        }
-
-        private void btnOrderMan_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmContractMange form = new FrmContractMange();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
         }
 
         private void btnCreOrder_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FrmCreateAgreement form = new FrmCreateAgreement();
+            FrmCreateAgreementItem form = new FrmCreateAgreementItem();
             form.ShowDialog();
             if (form.logout)
             {
@@ -62,11 +55,6 @@ namespace YummyRestaurantSystem
             {
                 Visible = true;
             }
-        }
-
-        private void FrmMenuPurMan_Load(object sender, EventArgs e)
-        {
-            timer1.Start();
         }
 
         private void btnCM_Click(object sender, EventArgs e)
@@ -84,7 +72,7 @@ namespace YummyRestaurantSystem
             }
         }
 
-        private void btnCA_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Visible = false;
             FrmCreateAgreement form = new FrmCreateAgreement();

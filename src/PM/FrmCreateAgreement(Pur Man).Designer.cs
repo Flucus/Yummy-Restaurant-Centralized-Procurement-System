@@ -1,5 +1,5 @@
 ﻿
-namespace YummyRestaurantSystem.src.PM
+namespace YummyRestaurantSystem
 {
     partial class FrmCreateAgreement
     {

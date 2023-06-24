@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem
 {
-    public partial class FrmCreateAgreement : Form
+    public partial class FrmCreateAgreementItem : Form
     {
 
         public bool logout = false;
 
-        public FrmCreateAgreement()
+        public FrmCreateAgreementItem()
         {
             InitializeComponent();
             DataTable itemData = SQLHandler.GetAllItemDetail();

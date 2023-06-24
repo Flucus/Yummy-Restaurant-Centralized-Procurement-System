@@ -1,7 +1,7 @@
 ﻿
 namespace YummyRestaurantSystem
 {
-    partial class FrmCreateAgreement
+    partial class FrmCreateAgreementItem
     {
         /// <summary>
         /// Required designer variable.

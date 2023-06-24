@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YummyRestaurantSystem.src.PM
+namespace YummyRestaurantSystem
 {
     public partial class FrmPPO_Pur_Man_ : Form
     {
