@@ -12,6 +12,8 @@ namespace YummyRestaurantSystem.src.WC
 {
     public partial class FrmGenerateDeliveryNote : Form
     {
+        public bool logout = false;
+
         public FrmGenerateDeliveryNote()
         {
             InitializeComponent();

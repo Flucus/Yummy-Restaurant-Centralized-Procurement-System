@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YummyRestaurantSystem.src;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace YummyRestaurantSystem
@@ -119,6 +120,14 @@ namespace YummyRestaurantSystem
                     {
                         this.Visible = false;
                         FrmMenuWhClerk menu = new FrmMenuWhClerk();
+                        menu.ShowDialog();
+                        this.Visible = true;
+                    }
+                    break;
+                case "Accounting Manager":
+                    {
+                        this.Visible = false;
+                        FrmMenu_Acc_Man_ menu = new FrmMenu_Acc_Man_();
                         menu.ShowDialog();
                         this.Visible = true;
                     }

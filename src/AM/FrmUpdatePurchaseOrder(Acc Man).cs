@@ -12,6 +12,8 @@ namespace YummyRestaurantSystem.src.AM
 {
     public partial class FrmUpdatePurchaseOrder_Acc_Man_ : Form
     {
+        public bool logout = false;
+
         public FrmUpdatePurchaseOrder_Acc_Man_()
         {
             InitializeComponent();
@@ -26,6 +28,17 @@ namespace YummyRestaurantSystem.src.AM
         private void FrmUpdatePurchaseOrder_Acc_Man__Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }

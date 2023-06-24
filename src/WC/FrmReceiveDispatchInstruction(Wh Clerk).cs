@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem.src.WC
 {
-    public partial class FrmReceiveDespatchInstruction : Form
+    public partial class FrmReceiveDispatchInstruction : Form
     {
-        public FrmReceiveDespatchInstruction()
+        public bool logout = false;
+
+        public FrmReceiveDispatchInstruction()
         {
             InitializeComponent();
         }
@@ -26,6 +28,17 @@ namespace YummyRestaurantSystem.src.WC
         {
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YummyRestaurantSystem.src.AM;
 
 namespace YummyRestaurantSystem.src
 {
@@ -26,6 +27,21 @@ namespace YummyRestaurantSystem.src
         private void FrmMenu_Acc_Man__Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void btnCategoryManage_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmUpdatePurchaseOrder_Acc_Man_ form = new FrmUpdatePurchaseOrder_Acc_Man_();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }

@@ -35,14 +35,14 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblHelloMsg = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRDI = new System.Windows.Forms.Button();
+            this.btnGDN = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnOA = new System.Windows.Forms.Button();
             this.btnIM = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnRDI = new System.Windows.Forms.Button();
-            this.btnGDN = new System.Windows.Forms.Button();
             this.btnGN = new System.Windows.Forms.Button();
             this.btnRD = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -55,10 +55,10 @@
             this.btnOrderArrangement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderArrangement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderArrangement.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderArrangement.Location = new System.Drawing.Point(705, 197);
-            this.btnOrderArrangement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrderArrangement.Location = new System.Drawing.Point(940, 227);
+            this.btnOrderArrangement.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnOrderArrangement.Name = "btnOrderArrangement";
-            this.btnOrderArrangement.Size = new System.Drawing.Size(200, 108);
+            this.btnOrderArrangement.Size = new System.Drawing.Size(267, 125);
             this.btnOrderArrangement.TabIndex = 15;
             this.btnOrderArrangement.Text = "Order Arrange";
             this.btnOrderArrangement.UseVisualStyleBackColor = false;
@@ -70,10 +70,10 @@
             this.btnInvMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvMan.ForeColor = System.Drawing.Color.Black;
-            this.btnInvMan.Location = new System.Drawing.Point(294, 197);
-            this.btnInvMan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInvMan.Location = new System.Drawing.Point(392, 227);
+            this.btnInvMan.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnInvMan.Name = "btnInvMan";
-            this.btnInvMan.Size = new System.Drawing.Size(200, 108);
+            this.btnInvMan.Size = new System.Drawing.Size(267, 125);
             this.btnInvMan.TabIndex = 14;
             this.btnInvMan.Text = "Inventory Manage";
             this.btnInvMan.UseVisualStyleBackColor = false;
@@ -85,10 +85,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(933, 20);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(1244, 23);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(126, 34);
+            this.btnLogout.Size = new System.Drawing.Size(168, 39);
             this.btnLogout.TabIndex = 13;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -99,9 +99,10 @@
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(284, 30);
+            this.lblHelloMsg.Location = new System.Drawing.Point(379, 35);
+            this.lblHelloMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHelloMsg.Name = "lblHelloMsg";
-            this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
+            this.lblHelloMsg.Size = new System.Drawing.Size(235, 32);
             this.lblHelloMsg.TabIndex = 12;
             this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
@@ -117,78 +118,10 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(230, 645);
+            this.panel1.Size = new System.Drawing.Size(307, 744);
             this.panel1.TabIndex = 100;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(144, 594);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 38);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(19, 609);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(30, 13);
-            this.lblTime.TabIndex = 101;
-            this.lblTime.Text = "Time";
-            // 
-            // btnOA
-            // 
-            this.btnOA.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOA.ForeColor = System.Drawing.Color.Black;
-            this.btnOA.Location = new System.Drawing.Point(12, 353);
-            this.btnOA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOA.Name = "btnOA";
-            this.btnOA.Size = new System.Drawing.Size(203, 38);
-            this.btnOA.TabIndex = 95;
-            this.btnOA.Text = "Order Arrange";
-            this.btnOA.UseVisualStyleBackColor = false;
-            this.btnOA.Click += new System.EventHandler(this.btnOA_Click);
-            // 
-            // btnIM
-            // 
-            this.btnIM.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnIM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIM.ForeColor = System.Drawing.Color.Black;
-            this.btnIM.Location = new System.Drawing.Point(12, 290);
-            this.btnIM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIM.Name = "btnIM";
-            this.btnIM.Size = new System.Drawing.Size(203, 38);
-            this.btnIM.TabIndex = 94;
-            this.btnIM.Text = "Inventory Manage";
-            this.btnIM.UseVisualStyleBackColor = false;
-            this.btnIM.Click += new System.EventHandler(this.btnIM_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 188);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnRDI
             // 
@@ -196,9 +129,10 @@
             this.btnRDI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRDI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRDI.ForeColor = System.Drawing.Color.Black;
-            this.btnRDI.Location = new System.Drawing.Point(12, 484);
+            this.btnRDI.Location = new System.Drawing.Point(16, 558);
+            this.btnRDI.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRDI.Name = "btnRDI";
-            this.btnRDI.Size = new System.Drawing.Size(203, 38);
+            this.btnRDI.Size = new System.Drawing.Size(271, 44);
             this.btnRDI.TabIndex = 104;
             this.btnRDI.Text = "Receive Despatch";
             this.btnRDI.UseVisualStyleBackColor = false;
@@ -209,12 +143,80 @@
             this.btnGDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGDN.ForeColor = System.Drawing.Color.Black;
-            this.btnGDN.Location = new System.Drawing.Point(12, 423);
+            this.btnGDN.Location = new System.Drawing.Point(16, 488);
+            this.btnGDN.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGDN.Name = "btnGDN";
-            this.btnGDN.Size = new System.Drawing.Size(203, 38);
+            this.btnGDN.Size = new System.Drawing.Size(271, 44);
             this.btnGDN.TabIndex = 103;
             this.btnGDN.Text = "Generate Note";
             this.btnGDN.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.Location = new System.Drawing.Point(192, 685);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 44);
+            this.button1.TabIndex = 102;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Location = new System.Drawing.Point(25, 703);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(37, 15);
+            this.lblTime.TabIndex = 101;
+            this.lblTime.Text = "Time";
+            // 
+            // btnOA
+            // 
+            this.btnOA.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnOA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOA.ForeColor = System.Drawing.Color.Black;
+            this.btnOA.Location = new System.Drawing.Point(16, 407);
+            this.btnOA.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnOA.Name = "btnOA";
+            this.btnOA.Size = new System.Drawing.Size(271, 44);
+            this.btnOA.TabIndex = 95;
+            this.btnOA.Text = "Order Arrange";
+            this.btnOA.UseVisualStyleBackColor = false;
+            // 
+            // btnIM
+            // 
+            this.btnIM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIM.ForeColor = System.Drawing.Color.Black;
+            this.btnIM.Location = new System.Drawing.Point(16, 335);
+            this.btnIM.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnIM.Name = "btnIM";
+            this.btnIM.Size = new System.Drawing.Size(271, 44);
+            this.btnIM.TabIndex = 94;
+            this.btnIM.Text = "Inventory Manage";
+            this.btnIM.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 217);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnGN
             // 
@@ -222,13 +224,14 @@
             this.btnGN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGN.ForeColor = System.Drawing.Color.Black;
-            this.btnGN.Location = new System.Drawing.Point(294, 423);
-            this.btnGN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGN.Location = new System.Drawing.Point(392, 488);
+            this.btnGN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnGN.Name = "btnGN";
-            this.btnGN.Size = new System.Drawing.Size(200, 108);
+            this.btnGN.Size = new System.Drawing.Size(267, 125);
             this.btnGN.TabIndex = 101;
             this.btnGN.Text = "Generate Note";
             this.btnGN.UseVisualStyleBackColor = false;
+            this.btnGN.Click += new System.EventHandler(this.btnGN_Click);
             // 
             // btnRD
             // 
@@ -236,19 +239,20 @@
             this.btnRD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRD.ForeColor = System.Drawing.Color.Black;
-            this.btnRD.Location = new System.Drawing.Point(705, 423);
-            this.btnRD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRD.Location = new System.Drawing.Point(940, 488);
+            this.btnRD.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnRD.Name = "btnRD";
-            this.btnRD.Size = new System.Drawing.Size(200, 108);
+            this.btnRD.Size = new System.Drawing.Size(267, 125);
             this.btnRD.TabIndex = 102;
             this.btnRD.Text = "Receive Despatch";
             this.btnRD.UseVisualStyleBackColor = false;
+            this.btnRD.Click += new System.EventHandler(this.btnRD_Click);
             // 
             // FrmMenuWhClerk
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 645);
+            this.ClientSize = new System.Drawing.Size(1428, 744);
             this.Controls.Add(this.btnRD);
             this.Controls.Add(this.btnGN);
             this.Controls.Add(this.panel1);
@@ -256,7 +260,7 @@
             this.Controls.Add(this.btnInvMan);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FrmMenuWhClerk";
             this.Text = "Warehouse Clerk Menu";
             this.Load += new System.EventHandler(this.FrmMenuWhClerk_Load);

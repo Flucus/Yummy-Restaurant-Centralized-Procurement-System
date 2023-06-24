@@ -12,6 +12,8 @@ namespace YummyRestaurantSystem.src.WC
 {
     public partial class FrmCheckUpdate : Form
     {
+        public bool logout= false;
+
         public FrmCheckUpdate()
         {
             InitializeComponent();

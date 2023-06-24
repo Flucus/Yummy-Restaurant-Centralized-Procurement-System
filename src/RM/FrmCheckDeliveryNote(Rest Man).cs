@@ -12,6 +12,10 @@ namespace YummyRestaurantSystem.src.RM
 {
     public partial class FrmCheckDeliveryNoteStatus_Rest_Man_ : Form
     {
+        private DataRow staffData;
+
+        public bool logout = false;
+
         public FrmCheckDeliveryNoteStatus_Rest_Man_()
         {
             InitializeComponent();
@@ -26,6 +30,12 @@ namespace YummyRestaurantSystem.src.RM
         private void FrmUpdateDeliveryNoteStatus_Rest_Man__Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
         }
     }
 }

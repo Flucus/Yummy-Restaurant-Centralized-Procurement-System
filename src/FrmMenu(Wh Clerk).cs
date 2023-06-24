@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YummyRestaurantSystem.src.WC;
 
 namespace YummyRestaurantSystem
 {
@@ -35,26 +36,62 @@ namespace YummyRestaurantSystem
 
         private void btnInvMan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return;
+            Visible = false;
+            FrmCheckUpdate form = new FrmCheckUpdate();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
         private void btnOrderArrangement_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return;
+            Visible = false;
+            FrmOrderArrange_Wh_Clerk_ form = new FrmOrderArrange_Wh_Clerk_();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
-        private void btnIM_Click(object sender, EventArgs e)
+        private void btnGN_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return;
+            Visible = false;
+            FrmGenerateDeliveryNote form = new FrmGenerateDeliveryNote();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
 
-        private void btnOA_Click(object sender, EventArgs e)
+        private void btnRD_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not required in prototype version.", "Not implemented", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            return;
+            Visible = false;
+            FrmReceiveDispatchInstruction form = new FrmReceiveDispatchInstruction();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }

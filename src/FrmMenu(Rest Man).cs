@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YummyRestaurantSystem.src.RM;
 
 namespace YummyRestaurantSystem
 {
@@ -130,6 +131,21 @@ namespace YummyRestaurantSystem
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnCheckDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCheckDeliveryNoteStatus_Rest_Man_ form = new FrmCheckDeliveryNoteStatus_Rest_Man_(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }
