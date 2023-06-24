@@ -109,15 +109,23 @@ namespace YummyRestaurantSystem.src.PM
         private void btnEdit_BPA_Click(object sender, EventArgs e)
         {
             string[] stringData = new string[9];
-            stringData[0] = txtBPAID.Text;
-            stringData[1] = txtNewItemID_BPA.Text;
-            stringData[2] = int.Parse(txtAmountAgreed_BPA.Text).ToString();
-            stringData[3] = int.Parse(txtAmountDelivered_BPA.Text).ToString();
-            stringData[4] = float.Parse(txtUnitPrice_BPA.Text).ToString();
-            stringData[5] = txtlCurrency_BPA.Text;
-            stringData[6] = int.Parse(txtPriceBAmount_BPA.Text).ToString();
-            stringData[7] = float.Parse(txtDiscount_BPA.Text).ToString();
-            stringData[8] = dateTimePickerBPA.Value.ToString("yyyy-MM-dd");
+            try
+            {
+                stringData[0] = txtBPAID.Text;
+                stringData[1] = txtNewItemID_BPA.Text;
+                stringData[2] = int.Parse(txtAmountAgreed_BPA.Text).ToString();
+                stringData[3] = int.Parse(txtAmountDelivered_BPA.Text).ToString();
+                stringData[4] = float.Parse(txtUnitPrice_BPA.Text).ToString();
+                stringData[5] = txtlCurrency_BPA.Text;
+                stringData[6] = int.Parse(txtPriceBAmount_BPA.Text).ToString();
+                stringData[7] = float.Parse(txtDiscount_BPA.Text).ToString();
+                stringData[8] = dateTimePickerBPA.Value.ToString("yyyy-MM-dd");
+            }
+            catch
+            {
+                MessageBox.Show("Invalid data or data format.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             if (SQLHandler.UpdateBPAItem(stringData, txtItemID_BPA.Text))
             {
@@ -148,8 +156,15 @@ namespace YummyRestaurantSystem.src.PM
 
         private void btnEdit_PPO_Click(object sender, EventArgs e)
         {
-            string quantity = int.Parse(txtQuantity_PPO.Text).ToString();
-            string unitPrice = float.Parse(txtUnitPrice_PPO.Text).ToString();
+            int tempQty;
+            float tempUP;
+            if (!int.TryParse(txtQuantity_PPO.Text, out tempQty) || !float.TryParse(txtUnitPrice_PPO.Text, out tempUP))
+            {
+                MessageBox.Show("Invalid data or data format.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            string quantity = tempQty.ToString();
+            string unitPrice = tempUP.ToString();
             if (SQLHandler.UpdatePPOItem(txtPPOID.Text, txtNewItemID_PPO.Text, quantity, unitPrice, txtItemID_PPO.Text))
             {
                 MessageBox.Show("The change have updated to database.", "Success to edit", MessageBoxButtons.OK, MessageBoxIcon.Information);

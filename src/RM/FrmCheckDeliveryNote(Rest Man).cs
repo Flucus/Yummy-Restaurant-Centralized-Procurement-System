@@ -16,9 +16,10 @@ namespace YummyRestaurantSystem.src.RM
 
         public bool logout = false;
 
-        public FrmCheckDeliveryNoteStatus_Rest_Man_()
+        public FrmCheckDeliveryNoteStatus_Rest_Man_(DataRow staffData)
         {
             InitializeComponent();
+            this.staffData = staffData;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

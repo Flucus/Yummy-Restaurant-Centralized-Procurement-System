@@ -13,7 +13,7 @@ namespace YummyRestaurantSystem
     public partial class FrmCreateAccount : Form
     {
 
-        private static readonly IReadOnlyCollection<string> JobTitleSet = new HashSet<string> { "Restaurant Manager", "Restaurant Staff", "Category Manager", "Buyer", "Administrator", "Purchase Manager", "Warehouse Clerk" };
+        private static readonly IReadOnlyCollection<string> JobTitleSet = new HashSet<string> { "Restaurant Manager", "Restaurant Staff", "Category Manager", "Buyer", "Administrator", "Purchase Manager", "Warehouse Clerk", "Accounting Manager" };
 
         public bool logout = false;
         public bool created = false;
@@ -56,6 +56,12 @@ namespace YummyRestaurantSystem
             if (!JobTitleSet.Contains(txtJobTitle.Text))
             {
                 MessageBox.Show("Invalid job title.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (cboLoc.SelectedItem==null)
+            {
+                MessageBox.Show("Invalid location.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 

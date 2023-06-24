@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -63,9 +64,8 @@ namespace YummyRestaurantSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string input = txtQuantity.Text.Trim();
-            int quantity = string.IsNullOrEmpty(input) ? 0 : int.Parse(input);
-            if (txtItemName.Text.Length == 0 && quantity <= 0) return;
+            int quantity;
+            if (txtItemName.Text.Length == 0 || !int.TryParse(txtQuantity.Text, out quantity) || quantity <= 0) return;
 
             foreach (DataGridViewRow data in tempItemTable.Rows)
             {
@@ -106,7 +106,7 @@ namespace YummyRestaurantSystem
                 }
                 item.Rows.Add(dRow);
             }
-            item.Rows.RemoveAt(item.Rows.Count-1);
+            item.Rows.RemoveAt(item.Rows.Count - 1);
 
             bool scuccss = SQLHandler.CreateRestaurantRequest(staffData, restData, item, txtRemark.Text);
             if (!scuccss)

@@ -67,6 +67,7 @@ namespace YummyRestaurantSystem
                     return;
                 }
                 MessageBox.Show("Record updated.", "Edit complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
             MessageBox.Show("Invalid item ID.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }

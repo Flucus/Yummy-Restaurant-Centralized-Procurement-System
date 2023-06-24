@@ -80,7 +80,7 @@ namespace YummyRestaurantSystem
             stringData[6] = txtPriceBAmount_BPA.Text;
             stringData[7] = txtDiscount_BPA.Text;
             stringData[8] = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            if (SQLHandler.CreateStaffRecord(stringData))
+            if (SQLHandler.CreateBPAItem(stringData))
             {
                 MessageBox.Show("New record have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;

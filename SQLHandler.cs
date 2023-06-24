@@ -357,7 +357,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
 
-            string sql = $"UPDATE VirtualItem SET ItemID = '{itemID}' WHERE VirtualID = '{VID}' AND TypeID = '{typeID}')";
+            string sql = $"UPDATE VirtualItem SET ItemID = '{itemID}' WHERE VirtualID = '{VID}' AND TypeID = '{typeID}'";
             RecordActivity(sql);
             try
             {
@@ -403,6 +403,7 @@ namespace YummyRestaurantSystem
                 int quantity = (int)row["Quantity"];
 
                 DataRow res = GetItemByVIDTypeID(VID, typeID);
+                if (res == null) return false;
                 string itemID = (string)res["ItemID"];
 
                 sql += $"('{newID}', '{itemID}', {quantity}), ";
