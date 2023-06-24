@@ -959,5 +959,25 @@ namespace YummyRestaurantSystem
 
             return dt;
         }
+
+        public static DataTable GetDeliveryNoteDetails(string noteID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $@"SELECT dn.DeliveryDate, si.Category, si.Name, oi.Quantity, oi.UoM, si.Description
+                FROM DeliveryNote AS dn
+                JOIN DeliveryNotePurchaseOrder AS dnpo ON dn.NoteID = dnpo.NoteID
+                JOIN PurchaseOrder AS po ON po.OrderID = dnpo.OrderID
+                JOIN OrderItem AS oi ON oi.OrderID = po.OrderID
+                JOIN Item AS i on i.ItemID = oi.ItemID
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                WHERE dn.NoteID = '{noteID}'";
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
     }
 }
