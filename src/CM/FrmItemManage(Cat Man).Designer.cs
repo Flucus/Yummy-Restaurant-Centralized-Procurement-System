@@ -42,12 +42,13 @@
             this.txtItemName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVID = new System.Windows.Forms.Button();
+            this.btnCM = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnVID = new System.Windows.Forms.Button();
-            this.btnCM = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,6 +179,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnVID);
             this.panel1.Controls.Add(this.btnCM);
             this.panel1.Controls.Add(this.lblTime);
@@ -188,6 +190,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 595);
             this.panel1.TabIndex = 101;
+            // 
+            // btnVID
+            // 
+            this.btnVID.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVID.ForeColor = System.Drawing.Color.Black;
+            this.btnVID.Location = new System.Drawing.Point(12, 329);
+            this.btnVID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVID.Name = "btnVID";
+            this.btnVID.Size = new System.Drawing.Size(203, 35);
+            this.btnVID.TabIndex = 106;
+            this.btnVID.Text = "Vitural ID Mapping";
+            this.btnVID.UseVisualStyleBackColor = false;
+            // 
+            // btnCM
+            // 
+            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCM.ForeColor = System.Drawing.Color.Black;
+            this.btnCM.Location = new System.Drawing.Point(12, 271);
+            this.btnCM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCM.Name = "btnCM";
+            this.btnCM.Size = new System.Drawing.Size(203, 35);
+            this.btnCM.TabIndex = 105;
+            this.btnCM.Text = "Category Manage";
+            this.btnCM.UseVisualStyleBackColor = false;
             // 
             // lblTime
             // 
@@ -225,33 +255,19 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnVID
+            // button1
             // 
-            this.btnVID.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnVID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVID.ForeColor = System.Drawing.Color.Black;
-            this.btnVID.Location = new System.Drawing.Point(12, 329);
-            this.btnVID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnVID.Name = "btnVID";
-            this.btnVID.Size = new System.Drawing.Size(203, 35);
-            this.btnVID.TabIndex = 106;
-            this.btnVID.Text = "Vitural ID Mapping";
-            this.btnVID.UseVisualStyleBackColor = false;
-            // 
-            // btnCM
-            // 
-            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCM.ForeColor = System.Drawing.Color.Black;
-            this.btnCM.Location = new System.Drawing.Point(12, 271);
-            this.btnCM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCM.Name = "btnCM";
-            this.btnCM.Size = new System.Drawing.Size(203, 35);
-            this.btnCM.TabIndex = 105;
-            this.btnCM.Text = "Category Manage";
-            this.btnCM.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(12, 392);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(203, 35);
+            this.button1.TabIndex = 107;
+            this.button1.Text = "Item Manage";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmItemManage
             // 
@@ -302,5 +318,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnVID;
         private System.Windows.Forms.Button btnCM;
+        private System.Windows.Forms.Button button1;
     }
 }
