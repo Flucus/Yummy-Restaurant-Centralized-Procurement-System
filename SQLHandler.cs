@@ -342,11 +342,14 @@ namespace YummyRestaurantSystem
 
             string sql = $"INSERT INTO VirtualItem VALUES ('{VID}', '{typeID}', '{itemID}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool UpdateVIDMapping(string VID, string typeID, string itemID)
@@ -356,11 +359,14 @@ namespace YummyRestaurantSystem
 
             string sql = $"UPDATE VirtualItem SET ItemID = '{itemID}' WHERE VirtualID = '{VID}' AND TypeID = '{typeID}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool CreateRestaurantRequest(DataRow staffData, DataRow restData, DataTable item, string remark)
@@ -403,12 +409,14 @@ namespace YummyRestaurantSystem
             }
             sql = sql.Substring(0, sql.Length - 2);
             RecordActivity(sql);
-            cmd = new MySqlCommand(sql, conn);
-            count = cmd.ExecuteNonQuery();
-            if (count == 0) return false;
-
-            conn.Close();
-            return true;
+            try
+            {
+                cmd = new MySqlCommand(sql, conn);
+                count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static DataTable GetInventoryByLocID(string locID, string nameMatch = "")
@@ -480,7 +488,7 @@ namespace YummyRestaurantSystem
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
 
-            sql = $@"DELETE FROM Staff WHERE StaffID = '{staffID}'";
+            sql = $@"UPDATE Staff SET State = 'Leave' WHERE StaffID = '{staffID}'";
             RecordActivity(sql);
             cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
@@ -522,11 +530,14 @@ namespace YummyRestaurantSystem
 
             string sql = $@"INSERT INTO Staff VALUES ('{stringData[0]}', '{stringData[1]}', '{stringData[2]}','{stringData[3]}', '{stringData[4]}', '{stringData[5]}', '{stringData[6]}', '{stringData[7]}', {stringData[8]}, '{stringData[9]}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool ModifyStaffRecord(string[] stringData)
@@ -546,11 +557,14 @@ namespace YummyRestaurantSystem
                 {stringData[8]},
                 '{stringData[9]}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static DataTable GetAllAgreementRecord(string agreeID = "", string suppName = "", string AgreementType = "", string createDate = "")
@@ -686,12 +700,14 @@ namespace YummyRestaurantSystem
                 TermAndCondition = '{stringData[6]}'
                 WHERE AgreementID = '{stringData[0]}'";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static DataTable GetPPOTable(string ppoID = "")
@@ -715,11 +731,14 @@ namespace YummyRestaurantSystem
 
             string sql = $"INSERT INTO PPO VALUES ('{ppoID}', '{locID}', '{schedule}', '{currency}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static DataTable GetCPAItemTable(string cpaID = "")
@@ -769,11 +788,14 @@ namespace YummyRestaurantSystem
 
             string sql = $"UPDATE CPAItem SET ItemID = '{itemID}' WHERE CPA_ID = '{agreeID}' AND ItemID = '{oldItemID}'";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool UpdateBPAItem(string[] stringData, string oldItemID)
@@ -793,11 +815,14 @@ namespace YummyRestaurantSystem
                 WHERE BPA_ID = '{stringData[0]}'
                 AND ItemID = '{oldItemID}'";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool UpdatePPOItem(string agreeID, string itemID, string quantity, string unitPrice, string oldItemID)
@@ -812,11 +837,14 @@ namespace YummyRestaurantSystem
                 WHERE PPO_ID = '{agreeID}'
                 AND ItemID = '{oldItemID}'";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool CreateAgreement(string[] stringData)
@@ -833,11 +861,14 @@ namespace YummyRestaurantSystem
                 '{stringData[5]}',
                 '{stringData[6]}' )";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static DataTable GetAllItemDetail()
@@ -862,11 +893,14 @@ namespace YummyRestaurantSystem
 
             string sql = $"INSERT INTO CPAItem VALUES ('{agreeID}', '{itemID}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool CreatePPOItem(string agreeID, string itemID, string quantity, string unitPrice)
@@ -876,11 +910,14 @@ namespace YummyRestaurantSystem
 
             string sql = $"INSERT INTO PPOItem VALUES ('{agreeID}', '{itemID}', {quantity}, {unitPrice})";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static bool CreateBPAItem(string[] stringData)
@@ -899,11 +936,14 @@ namespace YummyRestaurantSystem
                 {stringData[7]},
                 '{stringData[8]}')";
             RecordActivity(sql);
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            int count = cmd.ExecuteNonQuery();
-
-            conn.Close();
-            return count == 1;
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
 
         public static DataTable GetActivityLog()

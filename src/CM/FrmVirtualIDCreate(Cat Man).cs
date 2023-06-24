@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -69,10 +71,17 @@ namespace YummyRestaurantSystem
         {
             if (txtTypeName.Text.Length == 0 || !validItemID) return;
 
+            Match match = Regex.Match(txtVID.Text, @"V\d{9}";
+            if (!match.Success)
+            {
+                MessageBox.Show("Incorrect VID format.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             bool success = SQLHandler.CreateVIDMapping(txtVID.Text, cboTypeID.SelectedItem.ToString(), txtItemID.Text);
             if (!success)
             {
-                MessageBox.Show("Incorrect VID format.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             MessageBox.Show("New Virtual ID mapping have inserted into database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
