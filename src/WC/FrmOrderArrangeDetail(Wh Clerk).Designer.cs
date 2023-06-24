@@ -41,6 +41,8 @@ namespace YummyRestaurantSystem
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnRDI = new System.Windows.Forms.Button();
+            this.btnGDN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,7 +86,9 @@ namespace YummyRestaurantSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnRDI);
             this.panel1.Controls.Add(this.lblTime);
+            this.panel1.Controls.Add(this.btnGDN);
             this.panel1.Controls.Add(this.btnOA);
             this.panel1.Controls.Add(this.btnIM);
             this.panel1.Controls.Add(this.button4);
@@ -157,6 +161,32 @@ namespace YummyRestaurantSystem
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnRDI
+            // 
+            this.btnRDI.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRDI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRDI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRDI.ForeColor = System.Drawing.Color.Black;
+            this.btnRDI.Location = new System.Drawing.Point(12, 472);
+            this.btnRDI.Name = "btnRDI";
+            this.btnRDI.Size = new System.Drawing.Size(203, 38);
+            this.btnRDI.TabIndex = 106;
+            this.btnRDI.Text = "Receive Despatch";
+            this.btnRDI.UseVisualStyleBackColor = false;
+            // 
+            // btnGDN
+            // 
+            this.btnGDN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGDN.ForeColor = System.Drawing.Color.Black;
+            this.btnGDN.Location = new System.Drawing.Point(12, 411);
+            this.btnGDN.Name = "btnGDN";
+            this.btnGDN.Size = new System.Drawing.Size(203, 38);
+            this.btnGDN.TabIndex = 105;
+            this.btnGDN.Text = "Generate Note";
+            this.btnGDN.UseVisualStyleBackColor = false;
+            // 
             // FrmOrderArrangeDetail_Wh_Clerk_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,5 +220,7 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnRDI;
+        private System.Windows.Forms.Button btnGDN;
     }
 }
