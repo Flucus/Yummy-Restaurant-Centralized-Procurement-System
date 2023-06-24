@@ -242,9 +242,9 @@ namespace YummyRestaurantSystem.src.WC
             this.lblRestaurant.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRestaurant.Location = new System.Drawing.Point(253, 28);
             this.lblRestaurant.Name = "lblRestaurant";
-            this.lblRestaurant.Size = new System.Drawing.Size(352, 24);
+            this.lblRestaurant.Size = new System.Drawing.Size(305, 24);
             this.lblRestaurant.TabIndex = 126;
-            this.lblRestaurant.Text = "Check / Update Delivery Note Status";
+            this.lblRestaurant.Text = "Check / Update Inventory Stock";
             // 
             // txtLocID
             // 
@@ -277,7 +277,7 @@ namespace YummyRestaurantSystem.src.WC
             this.Controls.Add(this.lblRestaurant);
             this.Controls.Add(this.panel1);
             this.Name = "FrmCheckUpdate";
-            this.Text = "Check / Update Delivery Note Status";
+            this.Text = "Check / Update Inventory Stock";
             this.Load += new System.EventHandler(this.FrmCheckUpdate_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

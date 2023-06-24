@@ -50,6 +50,7 @@
             this.lblCategory = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +96,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnVID);
             this.panel1.Controls.Add(this.btnCM);
             this.panel1.Controls.Add(this.lblTime);
@@ -261,6 +263,20 @@
             this.lblName.TabIndex = 107;
             this.lblName.Text = "Item Name";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(12, 389);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(203, 35);
+            this.button1.TabIndex = 107;
+            this.button1.Text = "Item Manage";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // FrmEditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -313,5 +329,6 @@
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button button1;
     }
 }
