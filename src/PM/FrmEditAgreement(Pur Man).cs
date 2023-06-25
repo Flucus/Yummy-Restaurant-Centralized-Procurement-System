@@ -130,7 +130,7 @@ namespace YummyRestaurantSystem
                 }
                 return;
             }
-            MessageBox.Show("Error occurred, inconsistent in agreement item table .", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Constraint violation, inconsistent in agreement item table .", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnCM_Click(object sender, EventArgs e)

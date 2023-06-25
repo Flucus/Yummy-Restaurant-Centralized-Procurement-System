@@ -63,7 +63,7 @@ namespace YummyRestaurantSystem
                 bool success = SQLHandler.UpdateVIDMapping(txtVID.Text, txtTypeID.Text, txtItemID.Text);
                 if (!success)
                 {
-                    MessageBox.Show("Error occurred.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Constraint violation.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 MessageBox.Show("Record updated.", "Edit complete", MessageBoxButtons.OK, MessageBoxIcon.Information);

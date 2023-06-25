@@ -142,7 +142,7 @@ namespace YummyRestaurantSystem
             bool success = SQLHandler.RemoveItemFromRequest(restData, txtRequestID.Text, txtItemID.Text);
             if (!success)
             {
-                MessageBox.Show("Something went wrong.", "Error occurred", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Constraint violation.", "Fail to remove", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             UpdateItemTable();
         }

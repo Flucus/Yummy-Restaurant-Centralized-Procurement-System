@@ -81,7 +81,7 @@ namespace YummyRestaurantSystem
             bool success = SQLHandler.CreateVIDMapping(txtVID.Text, cboTypeID.SelectedItem.ToString(), txtItemID.Text);
             if (!success)
             {
-                MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             MessageBox.Show("New Virtual ID mapping have inserted into database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

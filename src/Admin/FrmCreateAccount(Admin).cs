@@ -84,7 +84,7 @@ namespace YummyRestaurantSystem
                 MessageBox.Show("New staff record have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void FrmCreateAccount_Load(object sender, EventArgs e)

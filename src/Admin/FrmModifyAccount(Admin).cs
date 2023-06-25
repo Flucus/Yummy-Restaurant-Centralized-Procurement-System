@@ -99,7 +99,7 @@ namespace YummyRestaurantSystem
                 MessageBox.Show("Record have been updated.", "Success to modify", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Error occurred.", "Fail to modify", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Constraint violation.", "Fail to modify", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
         }
 

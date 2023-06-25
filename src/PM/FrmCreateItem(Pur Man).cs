@@ -55,7 +55,7 @@ namespace YummyRestaurantSystem
                 MessageBox.Show("New record have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnCreate_PPO_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace YummyRestaurantSystem
                 MessageBox.Show("New record have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnCreate_BPA_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace YummyRestaurantSystem
                 MessageBox.Show("New record have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void btnCancel_CPA_Click(object sender, EventArgs e)

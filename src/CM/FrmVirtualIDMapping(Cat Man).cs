@@ -99,7 +99,7 @@ namespace YummyRestaurantSystem
                 bool success = SQLHandler.DeleteVIDMapping(VID, typeID);
                 if (!success)
                 {
-                    MessageBox.Show("Error occurred.", "Fail to delete", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Constraint violation.", "Fail to delete", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
                 UpdateVIDMappingTable();

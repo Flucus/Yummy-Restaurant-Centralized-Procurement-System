@@ -111,7 +111,7 @@ namespace YummyRestaurantSystem
             bool scuccss = SQLHandler.CreateRestaurantRequest(staffData, restData, item, txtRemark.Text);
             if (!scuccss)
             {
-                MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             MessageBox.Show("New request have uploaded to database.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
