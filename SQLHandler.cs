@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -253,11 +253,12 @@ namespace YummyRestaurantSystem
         public static DataTable GetVIDMapping(string itemNameMatch, string typeNameMatch)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = @"SELECT v.VirtualID, v.TypeID, rt.TypeName, v.ItemID, si.Name, si.Category, si.Description
+            string sql = @"SELECT v.VirtualID, v.TypeID, rt.TypeName, v.ItemID, si.Name, c.CategoryName, si.Description
                 FROM VirtualItem AS v
                 JOIN RestaurantType AS rt ON rt.TypeID = v.TypeID
                 JOIN Item AS i ON i.ItemID = v.ItemID
-                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID";
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Category AS c ON c.CategoryID = si.CategoryID";
             if (itemNameMatch.Length > 0 && typeNameMatch.Length > 0)
             {
                 sql += $" WHERE si.Name LIKE '%{itemNameMatch}%' AND rt.TypeName = '{typeNameMatch}'";
@@ -423,12 +424,13 @@ namespace YummyRestaurantSystem
         public static DataTable GetInventoryByLocID(string locID, string nameMatch = "")
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = $@"SELECT vi.VirtualID, si.Name, iv.Count, si.Category, si.Description
+            string sql = $@"SELECT vi.VirtualID, si.Name, iv.Count, c.CategoryName, si.Description
                 FROM Inventory AS iv
                 JOIN Restaurant AS r ON r.LocID = iv.LocID
                 JOIN VirtualItem AS vi ON vi.ItemID = iv.ItemID AND vi.TypeID = r.TypeID
                 JOIN Item AS i ON i.ItemID = iv.ItemID
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Category AS c ON c.CategoryID = si.CategoryID
                 WHERE r.LocID = '{locID}'";
             if (nameMatch.Length > 0)
             {
@@ -875,9 +877,10 @@ namespace YummyRestaurantSystem
         public static DataTable GetAllItemDetail()
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = @"SELECT i.ItemID, si.SupplierID, si.SupplierItemID, si.Name, si.Category, si.Description
+            string sql = @"SELECT i.ItemID, si.SupplierID, si.SupplierItemID, si.Name, c.CategoryName, si.Description
                 FROM Item AS i
-                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID";
+                JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Category AS c ON c.CategoryID = si.CategoryID";
             RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -963,13 +966,14 @@ namespace YummyRestaurantSystem
         public static DataTable GetDeliveryNoteDetails(string noteID)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = $@"SELECT dn.DeliveryDate, si.Category, si.Name, oi.Quantity, oi.UoM, si.Description
+            string sql = $@"SELECT dn.DeliveryDate, c.CategoryName, si.Name, oi.Quantity, oi.UoM, si.Description
                 FROM DeliveryNote AS dn
                 JOIN DeliveryNotePurchaseOrder AS dnpo ON dn.NoteID = dnpo.NoteID
                 JOIN PurchaseOrder AS po ON po.OrderID = dnpo.OrderID
                 JOIN OrderItem AS oi ON oi.OrderID = po.OrderID
                 JOIN Item AS i on i.ItemID = oi.ItemID
                 JOIN SupplierItem AS si ON si.SupplierID = i.SupplierID AND si.SupplierItemID = i.SupplierItemID
+                JOIN Category AS c ON c.CategoryID = si.CategoryID
                 WHERE dn.NoteID = '{noteID}'";
             RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
@@ -978,6 +982,34 @@ namespace YummyRestaurantSystem
             if (dt.Rows.Count == 0) return null;
 
             return dt;
+        }
+
+        public static DataTable GetInventory()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT * FROM Inventory";
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static void UpdateInventory(string locID, string itemID, int newCount)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"UPDATE Inventory SET
+                Count = {newCount}
+                WHERE LocID = '{locID}' AND ItemID = '{itemID}'";
+            RecordActivity(sql);
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }
