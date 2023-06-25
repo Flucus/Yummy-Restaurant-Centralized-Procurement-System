@@ -1090,7 +1090,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
             string categoryID = GetCategoryIdByName(CName);
-            string sql = $@"UPDATE SupplierItem SET Name = {itemName}, CategoryID = '{categoryID}', Description = '{desc}'
+            string sql = $@"UPDATE SupplierItem SET Name = '{itemName}', CategoryID = '{categoryID}', Description = '{desc}'
                 WHERE SupplierID = '{sid}' AND SupplierItemID = '{siid}'";
             RecordActivity(sql);
             MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -1152,7 +1152,7 @@ namespace YummyRestaurantSystem
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
-            string sql = $@"UPDATE SupplierItem SET CategoryName = {cname}, Description = '{desc}'
+            string sql = $@"UPDATE SupplierItem SET CategoryName = '{cname}', Description = '{desc}'
                 WHERE CategoryID = '{cid}'";
             RecordActivity(sql);
             try
