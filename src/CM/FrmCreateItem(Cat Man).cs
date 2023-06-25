@@ -19,6 +19,12 @@ namespace YummyRestaurantSystem
         public FrmCreateItem()
         {
             InitializeComponent();
+            DataTable categoryTable = SQLHandler.GetAllCategoryName();
+            foreach (DataRow row in categoryTable.Rows)
+            {
+                string typeID = (string)row["CategoryName"];
+                cboCat.Items.Add(typeID);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,6 +47,22 @@ namespace YummyRestaurantSystem
         private void FrmCreateItem_Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (cboCat.SelectedItem == null)
+            {
+                MessageBox.Show("Invalid category.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (SQLHandler.CreateItem(txtSupplierID.Text, txtSupplierItemID.Text, txtName.Text, cboCat.SelectedItem.ToString(), txtDescription.Text))
+            {
+                MessageBox.Show("New item have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Error occurred.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

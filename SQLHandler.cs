@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -1010,6 +1010,110 @@ namespace YummyRestaurantSystem
             cmd.ExecuteNonQuery();
 
             conn.Close();
+        }
+
+        public static DataTable GetItem(string itemName = null, string itemID = null)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $@"SELECT i.ItemID, s.SupplierID, s.SupplierItemID, s.Name, c.CategoryName, s.Description
+                FROM Item as i
+                JOIN SupplierItem as s ON s.SupplierID = i.SupplierID AND s.SupplierItemID = i.SupplierItemID
+                JOIN Category AS c ON c.CategoryID = s.CategoryID";
+            if (itemName != null && itemID != null)
+            {
+                sql += $" WHERE i.ItemID LIKE '%{itemID}%' AND s.name LIKE '%{itemName}%'";
+            }
+            else if (itemName != null)
+            {
+                sql += $" WHERE s.name LIKE '%{itemName}%'";
+            }
+            else if (itemID != null)
+            {
+                sql += $" WHERE i.ItemID LIKE '%{itemID}%'";
+            }
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0)
+                return null;
+
+            return dt;
+        }
+
+        public static bool DeleteItem(string itemID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"DELETE FROM Item WHERE ItemID = '{itemID}'";
+            RecordActivity(sql);
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count == 1;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
+        }
+
+        public static DataTable GetAllCategoryName()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = "SELECT DISTINCT CategoryID, CategoryName FROM Category";
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        public static string GetCategoryIdByName(string cname)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $"SELECT CategoryID FROM Category WHERE CategoryName = '{cname}'";
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 1)
+            {
+                string categoryID = (string)dt.Rows[0]["CategoryID"];
+                return categoryID;
+            }
+            return null;
+        }
+
+        public static void UpdateItem(string sid, string siid, string itemName, string CName, string desc)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+            string categoryID = GetCategoryIdByName(CName);
+            string sql = $@"UPDATE SupplierItem SET Name = {itemName}, CategoryID = '{categoryID}', Description = '{desc}'
+                WHERE SupplierID = '{sid}' AND SupplierItemID = '{siid}'";
+            RecordActivity(sql);
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static bool CreateItem(string sid, string siid, string itemName, string CName, string desc)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string categoryID = GetCategoryIdByName(CName);
+            string sql = $"INSERT INTO SupplierItem VALUES ('{sid}', '{siid}', '{itemName}', '{categoryID}', '{desc}')";
+            RecordActivity(sql);
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
         }
     }
 }
