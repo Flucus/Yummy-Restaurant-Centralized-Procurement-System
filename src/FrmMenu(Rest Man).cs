@@ -147,5 +147,20 @@ namespace YummyRestaurantSystem
                 Visible = true;
             }
         }
+
+        private void btnCDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCheckDeliveryNoteStatus_Rest_Man_ form = new FrmCheckDeliveryNoteStatus_Rest_Man_(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
     }
 }

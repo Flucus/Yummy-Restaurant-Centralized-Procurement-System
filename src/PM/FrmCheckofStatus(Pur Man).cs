@@ -83,5 +83,20 @@ namespace YummyRestaurantSystem
         {
             timer1.Start();
         }
+
+        private void btnCA_Click_1(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCreateAgreement form = new FrmCreateAgreement();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
     }
 }
