@@ -37,6 +37,7 @@ namespace YummyRestaurantSystem
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.lblAmount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCDN = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.btnCR = new System.Windows.Forms.Button();
             this.btnOP = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@ namespace YummyRestaurantSystem
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnModify = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnCDN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +117,21 @@ namespace YummyRestaurantSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 645);
             this.panel1.TabIndex = 101;
+            // 
+            // btnCDN
+            // 
+            this.btnCDN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCDN.ForeColor = System.Drawing.Color.Black;
+            this.btnCDN.Location = new System.Drawing.Point(12, 474);
+            this.btnCDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCDN.Name = "btnCDN";
+            this.btnCDN.Size = new System.Drawing.Size(203, 38);
+            this.btnCDN.TabIndex = 104;
+            this.btnCDN.Text = "Check Delivery Note";
+            this.btnCDN.UseVisualStyleBackColor = false;
+            this.btnCDN.Click += new System.EventHandler(this.btnCDN_Click);
             // 
             // lblTime
             // 
@@ -230,20 +245,6 @@ namespace YummyRestaurantSystem
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnCDN
-            // 
-            this.btnCDN.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCDN.ForeColor = System.Drawing.Color.Black;
-            this.btnCDN.Location = new System.Drawing.Point(12, 474);
-            this.btnCDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCDN.Name = "btnCDN";
-            this.btnCDN.Size = new System.Drawing.Size(203, 38);
-            this.btnCDN.TabIndex = 104;
-            this.btnCDN.Text = "Check Delivery Note";
-            this.btnCDN.UseVisualStyleBackColor = false;
             // 
             // FrmInvModify
             // 

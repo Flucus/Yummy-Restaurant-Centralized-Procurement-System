@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YummyRestaurantSystem;
+using YummyRestaurantSystem.src.RM;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace YummyRestaurantSystem
@@ -203,6 +204,21 @@ namespace YummyRestaurantSystem
         {
             Visible = false;
             FrmCheckReq form = new FrmCheckReq(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnCDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCheckDeliveryNoteStatus_Rest_Man_ form = new FrmCheckDeliveryNoteStatus_Rest_Man_(staffData);
             form.ShowDialog();
             if (form.logout)
             {
