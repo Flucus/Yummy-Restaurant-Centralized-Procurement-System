@@ -273,6 +273,7 @@ namespace YummyRestaurantSystem
             this.btnCA.TabIndex = 125;
             this.btnCA.Text = "Create Agreement";
             this.btnCA.UseVisualStyleBackColor = false;
+            this.btnCA.Click += new System.EventHandler(this.btnCA_Click_1);
             // 
             // button4
             // 
