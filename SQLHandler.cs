@@ -294,7 +294,7 @@ namespace YummyRestaurantSystem
         public static DataTable GetAllRestaurantType()
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = "SELECT DISTINCT TypeID, TypeName FROM RestaurantType";
+            string sql = "SELECT TypeID, TypeName FROM RestaurantType";
             RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
@@ -1058,10 +1058,10 @@ namespace YummyRestaurantSystem
             finally { conn.Close(); }
         }
 
-        public static DataTable GetAllCategoryName()
+        public static DataTable GetAllCategory()
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
-            string sql = "SELECT DISTINCT CategoryID, CategoryName FROM Category";
+            string sql = "SELECT * FROM Category";
             RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();

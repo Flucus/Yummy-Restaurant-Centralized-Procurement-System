@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,7 @@ namespace YummyRestaurantSystem
         public FrmCreateItem()
         {
             InitializeComponent();
-            DataTable categoryTable = SQLHandler.GetAllCategoryName();
+            DataTable categoryTable = SQLHandler.GetAllCategory();
             foreach (DataRow row in categoryTable.Rows)
             {
                 string typeID = (string)row["CategoryName"];
