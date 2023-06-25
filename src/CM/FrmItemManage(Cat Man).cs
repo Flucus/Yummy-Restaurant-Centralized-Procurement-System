@@ -83,6 +83,7 @@ namespace YummyRestaurantSystem
             form.ShowDialog();
             if (form.logout)
             {
+                logout = true;
                 Close();
             }
             else
@@ -99,6 +100,7 @@ namespace YummyRestaurantSystem
             form.ShowDialog();
             if (form.logout)
             {
+                logout = true;
                 Close();
             }
             else
