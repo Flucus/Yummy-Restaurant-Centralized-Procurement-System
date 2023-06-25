@@ -13,9 +13,10 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmMenuWhClerk : Form
     {
-        public FrmMenuWhClerk()
+        public FrmMenuWhClerk(DataRow staffData)
         {
             InitializeComponent();
+            lblHelloMsg.Text = $"Hello {(string)staffData["Name"]}!";
         }
 
         private void timer1_Tick(object sender, EventArgs e)

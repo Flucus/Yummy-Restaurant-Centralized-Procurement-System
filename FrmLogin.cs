@@ -119,7 +119,7 @@ namespace YummyRestaurantSystem
                 case "Warehouse Clerk":
                     {
                         this.Visible = false;
-                        FrmMenuWhClerk menu = new FrmMenuWhClerk();
+                        FrmMenuWhClerk menu = new FrmMenuWhClerk(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
                     }
