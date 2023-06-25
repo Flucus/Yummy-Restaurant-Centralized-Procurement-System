@@ -109,5 +109,50 @@ namespace YummyRestaurantSystem
                 dataGridView1.DataSource = SQLHandler.GetItem();
             }
         }
+
+        private void btnCM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCategoryManage form = new FrmCategoryManage();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnVID_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmVirtualIDMapping form = new FrmVirtualIDMapping();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmItemManage form = new FrmItemManage();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
     }
 }
