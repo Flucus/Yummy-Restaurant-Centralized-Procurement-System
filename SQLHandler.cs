@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -1109,6 +1109,28 @@ namespace YummyRestaurantSystem
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+
+                string getLast = "SELECT * FROM Item ORDER BY ItemID DESC LIMIT 1";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                DataRow response = dt.Rows[0];
+                string lastItemID = (string)response["ItemID"];
+                int numID = int.Parse(lastItemID.Substring(1)) + 1;
+                string newID = 'I' + numID.ToString().PadLeft(9, '0');
+
+                sql = $"INSERT INTO Item VALUES ('{newID}', '{sid}', '{siid}')";
+                RecordActivity(sql);
+                cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                
+                return true;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
+        }
+
                 int count = cmd.ExecuteNonQuery();
                 return count != 0;
             }
