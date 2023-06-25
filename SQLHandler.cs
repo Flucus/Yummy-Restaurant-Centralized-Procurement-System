@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -1124,13 +1124,66 @@ namespace YummyRestaurantSystem
                 RecordActivity(sql);
                 cmd = new MySqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
-                
+
                 return true;
             }
             catch { return false; }
             finally { conn.Close(); }
         }
 
+        public static bool DeleteCategory(string CID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"DELETE FROM Category WHERE CategoryID = '{CID}'";
+            RecordActivity(sql);
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count == 1;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
+        }
+
+        public static bool UpdateCategory(string cid, string cname, string desc)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+            string sql = $@"UPDATE SupplierItem SET CategoryName = {cname}, Description = '{desc}'
+                WHERE CategoryID = '{cid}'";
+            RecordActivity(sql);
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
+        }
+
+        public static bool CreateCategory(string cname, string desc)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string getLast = "SELECT * FROM Category ORDER BY CategoryID DESC LIMIT 1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            DataRow response = dt.Rows[0];
+            string lastItemID = (string)response["CategoryID"];
+            int numID = int.Parse(lastItemID.Substring(1)) + 1;
+            string newID = 'C' + numID.ToString().PadLeft(9, '0');
+
+            string sql = $"INSERT INTO Category VALUES ('{newID}', '{cname}', '{desc}')";
+            RecordActivity(sql);
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
                 int count = cmd.ExecuteNonQuery();
                 return count != 0;
             }

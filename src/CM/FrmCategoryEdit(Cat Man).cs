@@ -4,20 +4,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace YummyRestaurantSystem
 {
     public partial class FrmCategoryEdit_Cat_Man_ : Form
     {
+        private DataRow catRecord;
 
         public bool logout = false;
 
-        public FrmCategoryEdit_Cat_Man_()
+        public FrmCategoryEdit_Cat_Man_(DataRow catRecord)
         {
             InitializeComponent();
+            this.catRecord = catRecord;
+
+            txtCategoryID.Text = (string)catRecord["CategoryID"];
+            txtCategoryName.Text = (string)catRecord["CategoryName"];
+            txtDescription.Text = (string)catRecord["Description"];
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -70,6 +78,16 @@ namespace YummyRestaurantSystem
             {
                 Visible = true;
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (SQLHandler.UpdateCategory(txtCategoryID.Text, txtCategoryName.Text, txtDescription.Text))
+            {
+                MessageBox.Show("Category record have been updated.", "Success to edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Constraint violation.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }
