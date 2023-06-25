@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +33,7 @@ namespace YummyRestaurantSystem
             txtSupplierID.Text = (string)itemRecord["SupplierID"];
             txtSupplierItemID.Text = (string)itemRecord["SupplierItemID"];
             txtName.Text = (string)itemRecord["Name"];
-            cboCategory.SelectedIndex = cboCategory.FindString((string)itemRecord["Category"]);
+            cboCategory.SelectedIndex = cboCategory.FindString((string)itemRecord["CategoryName"]);
             txtDescription.Text = (string)itemRecord["Description"];
         }
 
