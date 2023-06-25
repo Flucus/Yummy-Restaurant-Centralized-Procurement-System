@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,6 +71,30 @@ namespace YummyRestaurantSystem.src.PM
         {
             logout = true;
             Close();
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int lastIndex = e.RowIndex;
+            if (lastIndex < 0 || lastIndex >= dataGridView3.Rows.Count) return;
+
+            DataGridViewRow data = dataGridView3.Rows[lastIndex];
+            DataRow record = ((DataRowView)data.DataBoundItem).Row;
+
+            txtPPOID.Text = (string)record["PPO_ID"];
+            txtLocalID.Text = (string)record["LocID"];
+            txtDeliverySchedule.Text = (string)record["DeliverySchedule"];
+            txtCurrency.Text = (string)record["Currency"];
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (SQLHandler.UpdatePPO(txtPPOID.Text, txtLocalID.Text, txtDeliverySchedule.Text, txtCurrency.Text))
+            {
+                MessageBox.Show("PPO record have been updated.", "Success to edit", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Constraint violation.", "Fail to edit", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

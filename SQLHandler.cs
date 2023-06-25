@@ -744,6 +744,27 @@ namespace YummyRestaurantSystem
             finally { conn.Close(); }
         }
 
+        public static bool UpdatePPO(string agreeID, string locID, string schedule, string currency)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $@"UPDATE PPO SET
+                LocID = '{locID}',
+                DeliverySchedule = '{schedule}',
+                Currency = '{currency}'
+                WHERE PPO_ID = '{agreeID}'";
+            RecordActivity(sql);
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
+        }
+
         public static DataTable GetCPAItemTable(string cpaID = "")
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
@@ -1152,7 +1173,7 @@ namespace YummyRestaurantSystem
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
-            string sql = $@"UPDATE SupplierItem SET CategoryName = '{cname}', Description = '{desc}'
+            string sql = $@"UPDATE Category SET CategoryName = '{cname}', Description = '{desc}'
                 WHERE CategoryID = '{cid}'";
             RecordActivity(sql);
             try

@@ -17,6 +17,7 @@ namespace YummyRestaurantSystem
         public FrmCreateAgreement()
         {
             InitializeComponent();
+            cboState.Items.AddRange(new string[] { "Pending", "Fulfilled" });
         }
 
         private void FrmCreateAgreement_Load(object sender, EventArgs e)
@@ -43,13 +44,15 @@ namespace YummyRestaurantSystem
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            if (cboState.SelectedItem == null) return;
+
             string[] stringData = new string[7];
             stringData[0] = txtAgreementID.Text;
             stringData[1] = txtBuyerID.Text;
             stringData[2] = txtAgreementType.Text;
             stringData[3] = dateTimePicker2.Value.ToString("yyyy-MM-dd");
             stringData[4] = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            stringData[5] = cboState.SelectedItem.ToString();
+            stringData[5] = cboState.SelectedItem.ToString().Substring(0, 1);
             stringData[6] = txtTerms.Text;
 
             if (SQLHandler.CreateAgreement(stringData))
