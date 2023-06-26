@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace YummyRestaurantSystem.src.WC
 {
-    public partial class FrmReceiveDispatchInstruction : Form
+    public partial class FrmReceiveDespatchInstruction : Form
     {
         public bool logout = false;
 
-        public FrmReceiveDispatchInstruction()
+        public FrmReceiveDespatchInstruction()
         {
             InitializeComponent();
         }

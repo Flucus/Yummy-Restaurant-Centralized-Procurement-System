@@ -83,7 +83,7 @@ namespace YummyRestaurantSystem
         private void btnRD_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FrmReceiveDispatchInstruction form = new FrmReceiveDispatchInstruction();
+            FrmReceiveDespatchInstruction form = new FrmReceiveDespatchInstruction();
             form.ShowDialog();
             if (form.logout)
             {
