@@ -42,10 +42,8 @@ namespace YummyRestaurantSystem.src.AM
             this.btnCancel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblState = new System.Windows.Forms.Label();
-            this.txtItemID_CPA = new System.Windows.Forms.TextBox();
-            this.lblIBuyerID = new System.Windows.Forms.Label();
-            this.txtCPAID = new System.Windows.Forms.TextBox();
-            this.lblAgreementID = new System.Windows.Forms.Label();
+            this.txtOrderID = new System.Windows.Forms.TextBox();
+            this.lblOrderID = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,56 +171,36 @@ namespace YummyRestaurantSystem.src.AM
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblState.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblState.Location = new System.Drawing.Point(250, 311);
+            this.lblState.Location = new System.Drawing.Point(250, 235);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(60, 24);
             this.lblState.TabIndex = 142;
             this.lblState.Text = "State";
             // 
-            // txtItemID_CPA
+            // txtOrderID
             // 
-            this.txtItemID_CPA.Location = new System.Drawing.Point(405, 222);
-            this.txtItemID_CPA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtItemID_CPA.Name = "txtItemID_CPA";
-            this.txtItemID_CPA.ReadOnly = true;
-            this.txtItemID_CPA.Size = new System.Drawing.Size(188, 22);
-            this.txtItemID_CPA.TabIndex = 141;
+            this.txtOrderID.Location = new System.Drawing.Point(405, 133);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.ReadOnly = true;
+            this.txtOrderID.Size = new System.Drawing.Size(188, 22);
+            this.txtOrderID.TabIndex = 139;
             // 
-            // lblIBuyerID
+            // lblOrderID
             // 
-            this.lblIBuyerID.AutoSize = true;
-            this.lblIBuyerID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIBuyerID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblIBuyerID.Location = new System.Drawing.Point(250, 216);
-            this.lblIBuyerID.Name = "lblIBuyerID";
-            this.lblIBuyerID.Size = new System.Drawing.Size(92, 24);
-            this.lblIBuyerID.TabIndex = 140;
-            this.lblIBuyerID.Text = "Buyer ID";
-            // 
-            // txtCPAID
-            // 
-            this.txtCPAID.Location = new System.Drawing.Point(405, 133);
-            this.txtCPAID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCPAID.Name = "txtCPAID";
-            this.txtCPAID.ReadOnly = true;
-            this.txtCPAID.Size = new System.Drawing.Size(188, 22);
-            this.txtCPAID.TabIndex = 139;
-            // 
-            // lblAgreementID
-            // 
-            this.lblAgreementID.AutoSize = true;
-            this.lblAgreementID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgreementID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAgreementID.Location = new System.Drawing.Point(250, 133);
-            this.lblAgreementID.Name = "lblAgreementID";
-            this.lblAgreementID.Size = new System.Drawing.Size(137, 24);
-            this.lblAgreementID.TabIndex = 138;
-            this.lblAgreementID.Text = "Agreement ID";
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblOrderID.Location = new System.Drawing.Point(250, 133);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(90, 24);
+            this.lblOrderID.TabIndex = 138;
+            this.lblOrderID.Text = "Order ID";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(405, 315);
+            this.comboBox1.Location = new System.Drawing.Point(405, 239);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(188, 20);
             this.comboBox1.TabIndex = 143;
@@ -234,17 +212,15 @@ namespace YummyRestaurantSystem.src.AM
             this.ClientSize = new System.Drawing.Size(1071, 595);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblState);
-            this.Controls.Add(this.txtItemID_CPA);
-            this.Controls.Add(this.lblIBuyerID);
-            this.Controls.Add(this.txtCPAID);
-            this.Controls.Add(this.lblAgreementID);
+            this.Controls.Add(this.txtOrderID);
+            this.Controls.Add(this.lblOrderID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblTile);
             this.Controls.Add(this.panel1);
             this.Name = "FrmUpdatePurchaseOrder_Acc_Man_";
-            this.Text = "Update PurchaseOrder";
+            this.Text = "Update Purchase Order";
             this.Load += new System.EventHandler(this.FrmUpdatePurchaseOrder_Acc_Man__Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -267,10 +243,8 @@ namespace YummyRestaurantSystem.src.AM
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblState;
-        private System.Windows.Forms.TextBox txtItemID_CPA;
-        private System.Windows.Forms.Label lblIBuyerID;
-        private System.Windows.Forms.TextBox txtCPAID;
-        private System.Windows.Forms.Label lblAgreementID;
+        private System.Windows.Forms.TextBox txtOrderID;
+        private System.Windows.Forms.Label lblOrderID;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnCM;
     }
