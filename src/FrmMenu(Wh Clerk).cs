@@ -50,35 +50,6 @@ namespace YummyRestaurantSystem
             }
         }
 
-        private void btnOrderArrangement_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmOrderArrange_Wh_Clerk_ form = new FrmOrderArrange_Wh_Clerk_();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
-        }
-
-        private void btnGN_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmGenerateDeliveryNote form = new FrmGenerateDeliveryNote();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
-        }
 
         private void btnRD_Click(object sender, EventArgs e)
         {
