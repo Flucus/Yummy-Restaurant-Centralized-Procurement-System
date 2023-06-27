@@ -8,14 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace YummyRestaurantSystem
+namespace YummyRestaurantSystem.src.AM
 {
-    public partial class FrmOrderArrange_Wh_Clerk_ : Form
+    public partial class FrmDeliveryNoteView : Form
     {
-
-        public bool logout = false;
-
-        public FrmOrderArrange_Wh_Clerk_()
+        public FrmDeliveryNoteView()
         {
             InitializeComponent();
         }
@@ -26,18 +23,7 @@ namespace YummyRestaurantSystem
             timer1.Start();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            logout = true;
-            Close();
-        }
-
-        private void FrmOrderArrange_Wh_Clerk__Load(object sender, EventArgs e)
+        private void FrmDeliveryNoteView_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

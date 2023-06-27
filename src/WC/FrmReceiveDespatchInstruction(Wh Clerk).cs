@@ -40,5 +40,9 @@ namespace YummyRestaurantSystem.src.WC
             logout = true;
             Close();
         }
+
+        private void btnOA_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }
