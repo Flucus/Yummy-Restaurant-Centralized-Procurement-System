@@ -32,7 +32,7 @@ namespace YummyRestaurantSystem.src
         private void btnCategoryManage_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FrmUpdatePurchaseOrder_Acc_Man_ form = new FrmUpdatePurchaseOrder_Acc_Man_();
+            FrmApprovePurchaseOrder form = new FrmApprovePurchaseOrder();
             form.ShowDialog();
             if (form.logout)
             {

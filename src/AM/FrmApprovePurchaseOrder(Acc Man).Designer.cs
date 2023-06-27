@@ -1,7 +1,7 @@
 ﻿
 namespace YummyRestaurantSystem.src.AM
 {
-    partial class FrmUpdatePurchaseOrder_Acc_Man_
+    partial class FrmApprovePurchaseOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -30,21 +30,23 @@ namespace YummyRestaurantSystem.src.AM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdatePurchaseOrder_Acc_Man_));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmApprovePurchaseOrder));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCM = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTile = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnConifrm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblState = new System.Windows.Forms.Label();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.lblOrderID = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCDN = new System.Windows.Forms.Button();
+            this.btnVDN = new System.Windows.Forms.Button();
+            this.btnAPO = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,7 +55,9 @@ namespace YummyRestaurantSystem.src.AM
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btnCM);
+            this.panel1.Controls.Add(this.btnCDN);
+            this.panel1.Controls.Add(this.btnVDN);
+            this.panel1.Controls.Add(this.btnAPO);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -63,20 +67,6 @@ namespace YummyRestaurantSystem.src.AM
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 595);
             this.panel1.TabIndex = 102;
-            // 
-            // btnCM
-            // 
-            this.btnCM.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnCM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCM.ForeColor = System.Drawing.Color.Black;
-            this.btnCM.Location = new System.Drawing.Point(14, 280);
-            this.btnCM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCM.Name = "btnCM";
-            this.btnCM.Size = new System.Drawing.Size(203, 35);
-            this.btnCM.TabIndex = 98;
-            this.btnCM.Text = "Update PurchaseOrder";
-            this.btnCM.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -123,23 +113,23 @@ namespace YummyRestaurantSystem.src.AM
             this.lblTile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTile.Location = new System.Drawing.Point(250, 28);
             this.lblTile.Name = "lblTile";
-            this.lblTile.Size = new System.Drawing.Size(230, 24);
+            this.lblTile.Size = new System.Drawing.Size(241, 24);
             this.lblTile.TabIndex = 105;
-            this.lblTile.Text = "Update Purchase Order";
+            this.lblTile.Text = "Approve Purchase Order";
             // 
-            // btnUpdate
+            // btnConifrm
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdate.Location = new System.Drawing.Point(925, 516);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(134, 35);
-            this.btnUpdate.TabIndex = 135;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnConifrm.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnConifrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConifrm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConifrm.ForeColor = System.Drawing.Color.Black;
+            this.btnConifrm.Location = new System.Drawing.Point(925, 516);
+            this.btnConifrm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConifrm.Name = "btnConifrm";
+            this.btnConifrm.Size = new System.Drawing.Size(134, 35);
+            this.btnConifrm.TabIndex = 135;
+            this.btnConifrm.Text = "Conifrm";
+            this.btnConifrm.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
@@ -205,7 +195,49 @@ namespace YummyRestaurantSystem.src.AM
             this.comboBox1.Size = new System.Drawing.Size(188, 20);
             this.comboBox1.TabIndex = 143;
             // 
-            // FrmUpdatePurchaseOrder_Acc_Man_
+            // btnCDN
+            // 
+            this.btnCDN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCDN.ForeColor = System.Drawing.Color.Black;
+            this.btnCDN.Location = new System.Drawing.Point(12, 419);
+            this.btnCDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCDN.Name = "btnCDN";
+            this.btnCDN.Size = new System.Drawing.Size(213, 35);
+            this.btnCDN.TabIndex = 105;
+            this.btnCDN.Text = "Create Delivery Note";
+            this.btnCDN.UseVisualStyleBackColor = false;
+            // 
+            // btnVDN
+            // 
+            this.btnVDN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVDN.ForeColor = System.Drawing.Color.Black;
+            this.btnVDN.Location = new System.Drawing.Point(12, 351);
+            this.btnVDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVDN.Name = "btnVDN";
+            this.btnVDN.Size = new System.Drawing.Size(213, 35);
+            this.btnVDN.TabIndex = 104;
+            this.btnVDN.Text = "View Delivery Note";
+            this.btnVDN.UseVisualStyleBackColor = false;
+            // 
+            // btnAPO
+            // 
+            this.btnAPO.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAPO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAPO.ForeColor = System.Drawing.Color.Black;
+            this.btnAPO.Location = new System.Drawing.Point(12, 288);
+            this.btnAPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAPO.Name = "btnAPO";
+            this.btnAPO.Size = new System.Drawing.Size(213, 35);
+            this.btnAPO.TabIndex = 103;
+            this.btnAPO.Text = "Approve PurchaseOrder";
+            this.btnAPO.UseVisualStyleBackColor = false;
+            // 
+            // FrmApprovePurchaseOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -216,11 +248,11 @@ namespace YummyRestaurantSystem.src.AM
             this.Controls.Add(this.lblOrderID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnConifrm);
             this.Controls.Add(this.lblTile);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmUpdatePurchaseOrder_Acc_Man_";
-            this.Text = "Update Purchase Order";
+            this.Name = "FrmApprovePurchaseOrder";
+            this.Text = "Approve Purchase Order";
             this.Load += new System.EventHandler(this.FrmUpdatePurchaseOrder_Acc_Man__Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -239,13 +271,15 @@ namespace YummyRestaurantSystem.src.AM
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTile;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnConifrm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblState;
         private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Label lblOrderID;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnCM;
+        private System.Windows.Forms.Button btnCDN;
+        private System.Windows.Forms.Button btnVDN;
+        private System.Windows.Forms.Button btnAPO;
     }
 }
