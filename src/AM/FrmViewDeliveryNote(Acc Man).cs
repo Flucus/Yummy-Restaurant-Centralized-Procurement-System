@@ -12,9 +12,13 @@ namespace YummyRestaurantSystem.src.AM
 {
     public partial class FrmDeliveryNoteView : Form
     {
+        public bool logout = false;
+
         public FrmDeliveryNoteView()
         {
             InitializeComponent();
+            dataGridView1.DataSource = SQLHandler.GetDeliveryNotePO();
+            dateTimePicker1.Value = DateTime.Now.AddDays(2);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -26,6 +30,27 @@ namespace YummyRestaurantSystem.src.AM
         private void FrmDeliveryNoteView_Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtNoteID_TextChanged(object sender, EventArgs e)
+        {
+            string noteMatch = txtNoteID.Text;
+            string locMatch = txtLocID.Text;
+            DateTime createDate = dateTimePicker1.Value;
+            string dateString = createDate > DateTime.Now ? "" : createDate.ToString("yyyy-MM-dd");
+
+            dataGridView1.DataSource = SQLHandler.GetDeliveryNotePO(noteMatch, locMatch, dateString);
         }
     }
 }

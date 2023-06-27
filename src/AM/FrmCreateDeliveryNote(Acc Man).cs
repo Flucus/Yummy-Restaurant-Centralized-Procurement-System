@@ -12,6 +12,8 @@ namespace YummyRestaurantSystem.src.AM
 {
     public partial class FrmDeliveryNoteCreate : Form
     {
+        public bool logout = false;
+
         public FrmDeliveryNoteCreate()
         {
             InitializeComponent();
@@ -31,6 +33,27 @@ namespace YummyRestaurantSystem.src.AM
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            logout = true;
+            Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            if (SQLHandler.CreateDeliveryNotePO(txtOrderID.Text, txtLocID.Text, dateTimePicker1.Value))
+            {
+                MessageBox.Show("New purchase order delivery note have inserted to database.", "Success to create", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Constraint violation.", "Fail to create", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

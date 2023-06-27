@@ -12,11 +12,14 @@ namespace YummyRestaurantSystem.src.AM
 {
     public partial class FrmApprovePurchaseOrder : Form
     {
+        private int lastIndex = -1;
+
         public bool logout = false;
 
         public FrmApprovePurchaseOrder()
         {
             InitializeComponent();
+            dataGridView1.DataSource = SQLHandler.GetPendingPO();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -39,6 +42,25 @@ namespace YummyRestaurantSystem.src.AM
         {
             logout = true;
             Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lastIndex = e.RowIndex;
+            if (lastIndex < 0 || lastIndex >= dataGridView1.Rows.Count) return;
+
+            DataGridViewRow data = dataGridView1.Rows[lastIndex];
+            DataRow record = ((DataRowView)data.DataBoundItem).Row;
+            txtOrderID.Text = (string)record["OrderID"];
+        }
+
+        private void btnConifrm_Click(object sender, EventArgs e)
+        {
+            if (txtOrderID.Text.Length == 0) return;
+
+            SQLHandler.UpdatePurchaseOrderState(txtOrderID.Text, "D");
+            txtOrderID.Text = "";
+            dataGridView1.DataSource = SQLHandler.GetPendingPO();
         }
     }
 }

@@ -127,7 +127,7 @@ namespace YummyRestaurantSystem
                 case "Accounting Manager":
                     {
                         this.Visible = false;
-                        FrmMenu_Acc_Man_ menu = new FrmMenu_Acc_Man_();
+                        FrmMenu_Acc_Man_ menu = new FrmMenu_Acc_Man_(staffData);
                         menu.ShowDialog();
                         this.Visible = true;
                     }

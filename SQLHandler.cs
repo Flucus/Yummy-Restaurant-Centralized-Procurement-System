@@ -12,6 +12,7 @@ using Org.BouncyCastle.Asn1.Ocsp;
 using System.Drawing.Printing;
 using System.Text.RegularExpressions;
 using System.Security.Claims;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace YummyRestaurantSystem
 {
@@ -1210,6 +1211,102 @@ namespace YummyRestaurantSystem
             }
             catch { return false; }
             finally { conn.Close(); }
+        }
+
+        public static DataTable GetDeliveryNotePO(string noteMatch = "", string locMatch = "", string dateMatch = "")
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = @"SELECT dn.NoteID, dn.DeliveryDate, dn.State, dnpo.OrderID, dnpo.LocID, po.AgreementID, po.CreatedDate, oi.ItemID, oi.Quantity, oi.UoM, oi.UnitPrice
+                FROM DeliveryNote AS dn
+                JOIN DeliveryNotePurchaseOrder AS dnpo ON dnpo.NoteID = dn.NoteID
+                JOIN PurchaseOrder AS po ON po.OrderID = dnpo.OrderID
+                JOIN OrderItem AS oi ON oi.OrderID = po.OrderID";
+
+            string connector = "WHERE";
+            if (noteMatch.Length > 0)
+            {
+                sql += $" WHERE dn.NoteID LIKE '%{noteMatch}%'";
+                connector = "AND";
+            }
+            if (locMatch.Length > 0)
+            {
+                sql += $" {connector} dnpo.LocID LIKE '%{locMatch}%'";
+                connector = "AND";
+            }
+            if (dateMatch.Length > 0)
+            {
+                sql += $@" {connector} dn.DeliveryDate >= DATE_SUB('{dateMatch}', INTERVAL 7 DAY)
+                    AND dn.DeliveryDate <= DATE_ADD('{dateMatch}', INTERVAL 7 DAY)";
+            }
+
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static void UpdatePurchaseOrderState(string orderID, string state)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"UPDATE DeliveryNote SET State = '{state}' WHERE OrderID = '{orderID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        public static bool CreateDeliveryNotePO(string orderID, string locID, DateTime deDate)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string getLast = "SELECT * FROM Item DeliveryNote BY NoteID DESC LIMIT 1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            DataRow response = dt.Rows[0];
+            string lastNoteID = (string)response["NoteID"];
+            int numID = int.Parse(lastNoteID.Substring(1)) + 1;
+            string newID = 'N' + numID.ToString().PadLeft(9, '0');
+
+            string date = deDate.ToString("yyyy-MM-dd");
+
+            string sql = $"INSERT INTO DeliveryNote VALUES ('{newID}', '{date}', 'C')";
+            RecordActivity(sql);
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            try
+            {
+                UpdatePurchaseOrderState(orderID, "F");
+                sql = $"INSERT INTO DeliveryNotePurchaseOrder VALUES ('{newID}', '{orderID}', '{locID}')";
+                cmd = new MySqlCommand(sql, conn);
+                int count = cmd.ExecuteNonQuery();
+                return count != 0;
+            }
+            catch { return false; }
+            finally { conn.Close(); }
+        }
+
+        public static DataTable GetPendingPO()
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = @"SELECT po.OrderID, po.AgreementID, po.LocID, po.CreatedDate, po.ExpectedDeliveryDate, oi.ItemID, oi.Quantity, oi.UoM, oi.UnitPrice
+                FROM PurchaseOrder AS po
+                JOIN OrderItem AS oi ON oi.OrderID = po.OrderID
+                WHERE po.State = 'P'";
+
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
         }
     }
 }
