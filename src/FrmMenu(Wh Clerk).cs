@@ -13,9 +13,11 @@ namespace YummyRestaurantSystem
 {
     public partial class FrmMenuWhClerk : Form
     {
+        private DataRow staffData;
         public FrmMenuWhClerk(DataRow staffData)
         {
             InitializeComponent();
+            this.staffData = staffData;
             lblHelloMsg.Text = $"Hello {(string)staffData["Name"]}!";
         }
 
@@ -54,7 +56,7 @@ namespace YummyRestaurantSystem
         private void btnRD_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FrmReceiveDespatchInstruction form = new FrmReceiveDespatchInstruction();
+            FrmReceiveDespatchInstruction form = new FrmReceiveDespatchInstruction(staffData);
             form.ShowDialog();
             if (form.logout)
             {

@@ -12,11 +12,16 @@ namespace YummyRestaurantSystem.src.WC
 {
     public partial class FrmReceiveDespatchInstruction : Form
     {
+        private DataRow staffData;
+        private int lastIndex = -1;
+
         public bool logout = false;
 
-        public FrmReceiveDespatchInstruction()
+        public FrmReceiveDespatchInstruction(DataRow staffData)
         {
             InitializeComponent();
+            this.staffData = staffData;
+            dataGridView1.DataSource = SQLHandler.GetDispatchInstruction((string)staffData["LocID"]);
         }
 
         private void FrmLogisticManagement_Load(object sender, EventArgs e)
@@ -41,8 +46,29 @@ namespace YummyRestaurantSystem.src.WC
             Close();
         }
 
-        private void btnOA_Click(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                    }
+            lastIndex = e.RowIndex;
+            txtItemID.Text = "";
+            txtRestaurantID.Text = "";
+            if (lastIndex < 0 || lastIndex >= dataGridView1.Rows.Count) return;
+
+            DataGridViewRow data = dataGridView1.Rows[lastIndex];
+            DataRow record = ((DataRowView)data.DataBoundItem).Row;
+            txtItemID.Text = (string)record["REquestID"];
+            txtRestaurantID.Text = (string)record["RestaurantID"];
+
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            if (txtItemID.Text.Length == 0 || txtRestaurantID.Text.Length == 0) return;
+
+            DataGridViewRow data = dataGridView1.Rows[lastIndex];
+            DataRow record = ((DataRowView)data.DataBoundItem).Row;
+            SQLHandler.CreateDeliveryNoteRR(txtItemID.Text, txtRestaurantID.Text, dateTimePicker1.Value);
+
+            dataGridView1.DataSource = SQLHandler.GetDispatchInstruction((string)staffData["LocID"]);
+        }
     }
 }

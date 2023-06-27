@@ -1284,6 +1284,7 @@ namespace YummyRestaurantSystem
             {
                 UpdatePurchaseOrderState(orderID, "F");
                 sql = $"INSERT INTO DeliveryNotePurchaseOrder VALUES ('{newID}', '{orderID}', '{locID}')";
+                RecordActivity(sql);
                 cmd = new MySqlCommand(sql, conn);
                 int count = cmd.ExecuteNonQuery();
                 return count != 0;
@@ -1307,6 +1308,66 @@ namespace YummyRestaurantSystem
             if (dt.Rows.Count == 0) return null;
 
             return dt;
+        }
+
+        public static DataTable GetDispatchInstruction(string locID)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            string sql = $@"SELECT rr.RequestID, rr.RestaurantID, rr.ExpectedDeliveryDate, ri.ItemID, ri.Quantity, rr.Remark
+                FROM RestaurantRequest AS rr
+                JOIN RequestItem AS ri ON ri.RequestID = po.RequestID
+                JOIN Inventory AS in ON in.itemID = ri.itemID
+                WHERE rr.State = 'P' AND in.LocID = '{locID}' AND in.Count >= ri.Quantity";
+
+            RecordActivity(sql);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+
+            return dt;
+        }
+
+        public static void UpdateRestaurantRequestState(string requestID, string state)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"UPDATE RestaurantRequest SET State = '{state}' WHERE RequestID = '{requestID}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        public static void CreateDeliveryNoteRR(string requestID, string restID, DateTime deDate)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string getLast = "SELECT * FROM Item DeliveryNote BY NoteID DESC LIMIT 1";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            DataRow response = dt.Rows[0];
+            string lastNoteID = (string)response["NoteID"];
+            int numID = int.Parse(lastNoteID.Substring(1)) + 1;
+            string newID = 'N' + numID.ToString().PadLeft(9, '0');
+
+            string date = deDate.ToString("yyyy-MM-dd");
+
+            string sql = $"INSERT INTO DeliveryNote VALUES ('{newID}', '{date}', 'D')";
+            RecordActivity(sql);
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            UpdateRestaurantRequestState(requestID, "C");
+            sql = $"INSERT INTO DeliveryNoteRestaurantRequest VALUES ('{newID}', '{requestID}', '{restID}')";
+            RecordActivity(sql);
+            cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }
