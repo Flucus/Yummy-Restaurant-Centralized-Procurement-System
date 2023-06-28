@@ -76,7 +76,7 @@ namespace YummyRestaurantSystem.src.WC
         private void btnIM_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FrmCheckUpdate form = new FrmCheckUpdate();
+            FrmCheckUpdate form = new FrmCheckUpdate(staffData);
             form.ShowDialog();
             if (form.logout)
             {

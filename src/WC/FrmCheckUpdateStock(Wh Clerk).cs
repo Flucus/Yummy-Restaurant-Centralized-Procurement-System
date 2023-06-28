@@ -14,14 +14,16 @@ namespace YummyRestaurantSystem.src.WC
 {
     public partial class FrmCheckUpdate : Form
     {
+        private DataRow staffData;
         private int lastIndex = -1;
 
         public bool logout = false;
 
-        public FrmCheckUpdate()
+        public FrmCheckUpdate(DataRow staffData)
         {
             InitializeComponent();
             dataGridView1.DataSource = SQLHandler.GetInventory();
+            this.staffData = staffData;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -72,7 +74,7 @@ namespace YummyRestaurantSystem.src.WC
         private void btnIM_Click(object sender, EventArgs e)
         {
             Visible = false;
-            FrmCheckUpdate form = new FrmCheckUpdate();
+            FrmCheckUpdate form = new FrmCheckUpdate(staffData);
             form.ShowDialog();
             if (form.logout)
             {

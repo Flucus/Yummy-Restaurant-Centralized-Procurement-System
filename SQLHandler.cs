@@ -29,6 +29,47 @@ namespace YummyRestaurantSystem
             return new string(Enumerable.Range(1, length).Select(_ => chars[random.Next(chars.Length)]).ToArray());
         }
 
+        public static bool ChangePassword(string accName, string oldPassword, string newPassword)
+        {
+            MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
+            conn.Open();
+
+            string sql = $"SELECT * FROM Account WHERE AccName = '{accName}'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            if (dt.Rows.Count == 0) return false;
+
+            DataRow response = dt.Rows[0];
+            string passwordHash = (string)response["Hash"];
+            string salt = (string)response["Salt"];
+
+            SHA256Managed crypt = new SHA256Managed();
+            string hash = string.Empty;
+            byte[] crypto = crypt.ComputeHash(Encoding.ASCII.GetBytes(oldPassword + salt));
+            foreach (byte theByte in crypto)
+            {
+                hash += theByte.ToString("x2");
+            }
+            bool result = hash.Equals(passwordHash);
+            if (!result) return false;
+
+
+            string newSalt = GenerateSalt();
+            hash = string.Empty;
+            crypto = crypt.ComputeHash(Encoding.ASCII.GetBytes(newPassword + newSalt));
+            foreach (byte theByte in crypto)
+            {
+                hash += theByte.ToString("x2");
+            }
+
+            sql = $"UPDATE Account SET Hash = '{hash}', Salt = '{newSalt}' WHERE AccName = '{accName}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            int count = cmd.ExecuteNonQuery();
+            conn.Close();
+            return count == 1;
+        }
+
         private static void RecordActivity(string sql)
         {
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };

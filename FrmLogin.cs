@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -145,7 +146,10 @@ namespace YummyRestaurantSystem
 
         private void btnforgot_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Unspported in prototye version.", "Fail to open", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            this.Visible = false;
+            FrmChangePW menu = new FrmChangePW();
+            menu.ShowDialog();
+            this.Visible = true;
             return;
         }
 

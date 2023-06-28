@@ -27,5 +27,25 @@ namespace YummyRestaurantSystem
             lblTime.Text = DateTime.Now.ToString("hh:mm:ss tt");
             timer1.Start();
         }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            if (txtNewPasswd.Text != txtConfirmNewPasswd.Text)
+            {
+                MessageBox.Show("Can't confirm new password.", "Fail to change password", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            if (SQLHandler.ChangePassword(txtuser.Text, txtOldPasswd.Text, txtNewPasswd.Text))
+            {
+                MessageBox.Show("Your password have been updated.", "Success to change password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Incorrect old password.", "Fail to change password", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
