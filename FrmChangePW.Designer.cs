@@ -39,18 +39,18 @@ namespace YummyRestaurantSystem
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cbnShowPw = new System.Windows.Forms.CheckBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNewPasswd = new System.Windows.Forms.TextBox();
+            this.txtConfirmNewPasswd = new System.Windows.Forms.TextBox();
             this.txtuser = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOldPasswd = new System.Windows.Forms.TextBox();
             this.lblRestaurant = new System.Windows.Forms.Label();
-            this.lblRequestID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblOldPasswd = new System.Windows.Forms.Label();
+            this.lblNewPasswd = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblConfirmNewPasswd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -138,19 +138,19 @@ namespace YummyRestaurantSystem
             this.cbnShowPw.Text = "ShowPassword";
             this.cbnShowPw.UseVisualStyleBackColor = true;
             // 
-            // btnLogin
+            // btnChange
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(739, 471);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(134, 35);
-            this.btnLogin.TabIndex = 8;
-            this.btnLogin.Text = "Change";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnChange.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.ForeColor = System.Drawing.Color.Black;
+            this.btnChange.Location = new System.Drawing.Point(739, 471);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(134, 35);
+            this.btnChange.TabIndex = 8;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = false;
             // 
             // btnCancel
             // 
@@ -166,21 +166,21 @@ namespace YummyRestaurantSystem
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtNewPasswd
             // 
-            this.textBox1.Location = new System.Drawing.Point(620, 276);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 22);
-            this.textBox1.TabIndex = 27;
+            this.txtNewPasswd.Location = new System.Drawing.Point(620, 276);
+            this.txtNewPasswd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNewPasswd.Name = "txtNewPasswd";
+            this.txtNewPasswd.Size = new System.Drawing.Size(305, 22);
+            this.txtNewPasswd.TabIndex = 27;
             // 
-            // textBox2
+            // txtConfirmNewPasswd
             // 
-            this.textBox2.Location = new System.Drawing.Point(620, 340);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 22);
-            this.textBox2.TabIndex = 31;
+            this.txtConfirmNewPasswd.Location = new System.Drawing.Point(620, 340);
+            this.txtConfirmNewPasswd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmNewPasswd.Name = "txtConfirmNewPasswd";
+            this.txtConfirmNewPasswd.Size = new System.Drawing.Size(305, 22);
+            this.txtConfirmNewPasswd.TabIndex = 31;
             // 
             // txtuser
             // 
@@ -190,13 +190,13 @@ namespace YummyRestaurantSystem
             this.txtuser.Size = new System.Drawing.Size(305, 22);
             this.txtuser.TabIndex = 32;
             // 
-            // textBox3
+            // txtOldPasswd
             // 
-            this.textBox3.Location = new System.Drawing.Point(620, 213);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(305, 22);
-            this.textBox3.TabIndex = 33;
+            this.txtOldPasswd.Location = new System.Drawing.Point(620, 213);
+            this.txtOldPasswd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOldPasswd.Name = "txtOldPasswd";
+            this.txtOldPasswd.Size = new System.Drawing.Size(305, 22);
+            this.txtOldPasswd.TabIndex = 33;
             // 
             // lblRestaurant
             // 
@@ -209,38 +209,38 @@ namespace YummyRestaurantSystem
             this.lblRestaurant.TabIndex = 104;
             this.lblRestaurant.Text = "Change Password";
             // 
-            // lblRequestID
+            // lblUserName
             // 
-            this.lblRequestID.AutoSize = true;
-            this.lblRequestID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRequestID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRequestID.Location = new System.Drawing.Point(364, 156);
-            this.lblRequestID.Name = "lblRequestID";
-            this.lblRequestID.Size = new System.Drawing.Size(114, 24);
-            this.lblRequestID.TabIndex = 141;
-            this.lblRequestID.Text = "User Name";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUserName.Location = new System.Drawing.Point(364, 156);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(114, 24);
+            this.lblUserName.TabIndex = 141;
+            this.lblUserName.Text = "User Name";
             // 
-            // label1
+            // lblOldPasswd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(364, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 24);
-            this.label1.TabIndex = 142;
-            this.label1.Text = "Old Password";
+            this.lblOldPasswd.AutoSize = true;
+            this.lblOldPasswd.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOldPasswd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblOldPasswd.Location = new System.Drawing.Point(364, 213);
+            this.lblOldPasswd.Name = "lblOldPasswd";
+            this.lblOldPasswd.Size = new System.Drawing.Size(140, 24);
+            this.lblOldPasswd.TabIndex = 142;
+            this.lblOldPasswd.Text = "Old Password";
             // 
-            // label2
+            // lblNewPasswd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(364, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 24);
-            this.label2.TabIndex = 143;
-            this.label2.Text = "New Password";
+            this.lblNewPasswd.AutoSize = true;
+            this.lblNewPasswd.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewPasswd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblNewPasswd.Location = new System.Drawing.Point(364, 276);
+            this.lblNewPasswd.Name = "lblNewPasswd";
+            this.lblNewPasswd.Size = new System.Drawing.Size(150, 24);
+            this.lblNewPasswd.TabIndex = 143;
+            this.lblNewPasswd.Text = "New Password";
             // 
             // label3
             // 
@@ -252,35 +252,35 @@ namespace YummyRestaurantSystem
             this.label3.Size = new System.Drawing.Size(0, 24);
             this.label3.TabIndex = 144;
             // 
-            // label4
+            // lblConfirmNewPasswd
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(364, 342);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(228, 24);
-            this.label4.TabIndex = 145;
-            this.label4.Text = "Confirm New Password";
+            this.lblConfirmNewPasswd.AutoSize = true;
+            this.lblConfirmNewPasswd.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmNewPasswd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblConfirmNewPasswd.Location = new System.Drawing.Point(364, 342);
+            this.lblConfirmNewPasswd.Name = "lblConfirmNewPasswd";
+            this.lblConfirmNewPasswd.Size = new System.Drawing.Size(228, 24);
+            this.lblConfirmNewPasswd.TabIndex = 145;
+            this.lblConfirmNewPasswd.Text = "Confirm New Password";
             // 
             // FrmChangePW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 595);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblConfirmNewPasswd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblRequestID);
+            this.Controls.Add(this.lblNewPasswd);
+            this.Controls.Add(this.lblOldPasswd);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.lblRestaurant);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtOldPasswd);
             this.Controls.Add(this.txtuser);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmNewPasswd);
+            this.Controls.Add(this.txtNewPasswd);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cbnShowPw);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.panel1);
             this.Name = "FrmChangePW";
             this.Text = "Change Password";
@@ -303,17 +303,17 @@ namespace YummyRestaurantSystem
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.CheckBox cbnShowPw;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNewPasswd;
+        private System.Windows.Forms.TextBox txtConfirmNewPasswd;
         private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOldPasswd;
         private System.Windows.Forms.Label lblRestaurant;
-        private System.Windows.Forms.Label lblRequestID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblOldPasswd;
+        private System.Windows.Forms.Label lblNewPasswd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblConfirmNewPasswd;
     }
 }
