@@ -1316,7 +1316,7 @@ namespace YummyRestaurantSystem
             string sql = $@"SELECT rr.RequestID, rr.RestaurantID, rr.ExpectedDeliveryDate, ri.ItemID, ri.Quantity, rr.Remark
                 FROM RestaurantRequest AS rr
                 JOIN RequestItem AS ri ON ri.RequestID = rr.RequestID
-                JOIN Inventory AS in ON in.itemID = ri.itemID
+                RIGHT JOIN Inventory AS in ON in.ItemID = ri.ItemID
                 WHERE rr.State = 'P' AND in.LocID = '{locID}' AND in.Count >= ri.Quantity";
 
             RecordActivity(sql);
@@ -1345,7 +1345,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
 
-            string getLast = "SELECT * FROM Item DeliveryNote ORDER BY NoteID DESC LIMIT 1";
+            string getLast = "SELECT * FROM DeliveryNote ORDER BY NoteID DESC LIMIT 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
