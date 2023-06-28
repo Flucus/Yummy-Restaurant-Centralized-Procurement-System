@@ -1316,7 +1316,7 @@ namespace YummyRestaurantSystem
             string sql = $@"SELECT rr.RequestID, rr.RestaurantID, rr.ExpectedDeliveryDate, ri.ItemID, ri.Quantity, rr.Remark
                 FROM RestaurantRequest AS rr
                 JOIN RequestItem AS ri ON ri.RequestID = rr.RequestID
-                RIGHT JOIN Inventory AS in ON in.ItemID = ri.ItemID
+                INNER JOIN Inventory AS in ON in.ItemID = ri.ItemID
                 WHERE rr.State = 'P' AND in.LocID = '{locID}' AND in.Count >= ri.Quantity";
 
             RecordActivity(sql);
