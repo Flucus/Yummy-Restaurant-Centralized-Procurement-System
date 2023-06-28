@@ -1265,7 +1265,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
 
-            string getLast = "SELECT * FROM Item DeliveryNote ORDER BY NoteID DESC LIMIT 1";
+            string getLast = "SELECT * FROM DeliveryNote ORDER BY NoteID DESC LIMIT 1";
             MySqlDataAdapter adapter = new MySqlDataAdapter(getLast, conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
