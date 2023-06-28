@@ -59,9 +59,9 @@ namespace YummyRestaurantSystem.src
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 744);
+            this.panel1.Size = new System.Drawing.Size(230, 645);
             this.panel1.TabIndex = 101;
             // 
             // btnCDN
@@ -70,13 +70,14 @@ namespace YummyRestaurantSystem.src
             this.btnCDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCDN.ForeColor = System.Drawing.Color.Black;
-            this.btnCDN.Location = new System.Drawing.Point(4, 514);
-            this.btnCDN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnCDN.Location = new System.Drawing.Point(3, 445);
+            this.btnCDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCDN.Name = "btnCDN";
-            this.btnCDN.Size = new System.Drawing.Size(284, 44);
+            this.btnCDN.Size = new System.Drawing.Size(213, 38);
             this.btnCDN.TabIndex = 108;
             this.btnCDN.Text = "Create Delivery Note";
             this.btnCDN.UseVisualStyleBackColor = false;
+            this.btnCDN.Click += new System.EventHandler(this.btnCDN_Click);
             // 
             // btnVDN
             // 
@@ -84,13 +85,14 @@ namespace YummyRestaurantSystem.src
             this.btnVDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVDN.ForeColor = System.Drawing.Color.Black;
-            this.btnVDN.Location = new System.Drawing.Point(4, 429);
-            this.btnVDN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnVDN.Location = new System.Drawing.Point(3, 372);
+            this.btnVDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVDN.Name = "btnVDN";
-            this.btnVDN.Size = new System.Drawing.Size(284, 44);
+            this.btnVDN.Size = new System.Drawing.Size(213, 38);
             this.btnVDN.TabIndex = 107;
             this.btnVDN.Text = "View Delivery Note";
             this.btnVDN.UseVisualStyleBackColor = false;
+            this.btnVDN.Click += new System.EventHandler(this.btnVDN_Click);
             // 
             // btnAPO
             // 
@@ -98,13 +100,14 @@ namespace YummyRestaurantSystem.src
             this.btnAPO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAPO.ForeColor = System.Drawing.Color.Black;
-            this.btnAPO.Location = new System.Drawing.Point(4, 350);
-            this.btnAPO.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnAPO.Location = new System.Drawing.Point(3, 303);
+            this.btnAPO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAPO.Name = "btnAPO";
-            this.btnAPO.Size = new System.Drawing.Size(284, 44);
+            this.btnAPO.Size = new System.Drawing.Size(213, 38);
             this.btnAPO.TabIndex = 106;
             this.btnAPO.Text = "Approve PurchaseOrder";
             this.btnAPO.UseVisualStyleBackColor = false;
+            this.btnAPO.Click += new System.EventHandler(this.btnAPO_Click);
             // 
             // button4
             // 
@@ -112,31 +115,31 @@ namespace YummyRestaurantSystem.src
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(192, 685);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.button4.Location = new System.Drawing.Point(144, 594);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 44);
+            this.button4.Size = new System.Drawing.Size(71, 38);
             this.button4.TabIndex = 97;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(25, 702);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(19, 608);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(37, 15);
+            this.lblTime.Size = new System.Drawing.Size(30, 13);
             this.lblTime.TabIndex = 96;
             this.lblTime.Text = "Time";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 218);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 189);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -150,23 +153,23 @@ namespace YummyRestaurantSystem.src
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnLogout.Location = new System.Drawing.Point(1224, 35);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnLogout.Location = new System.Drawing.Point(918, 30);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(168, 39);
+            this.btnLogout.Size = new System.Drawing.Size(126, 34);
             this.btnLogout.TabIndex = 103;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblHelloMsg
             // 
             this.lblHelloMsg.AutoSize = true;
             this.lblHelloMsg.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHelloMsg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblHelloMsg.Location = new System.Drawing.Point(359, 35);
-            this.lblHelloMsg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHelloMsg.Location = new System.Drawing.Point(269, 30);
             this.lblHelloMsg.Name = "lblHelloMsg";
-            this.lblHelloMsg.Size = new System.Drawing.Size(235, 32);
+            this.lblHelloMsg.Size = new System.Drawing.Size(178, 24);
             this.lblHelloMsg.TabIndex = 102;
             this.lblHelloMsg.Text = "Hello [UserName]!";
             // 
@@ -176,10 +179,10 @@ namespace YummyRestaurantSystem.src
             this.btnApprovePO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApprovePO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApprovePO.ForeColor = System.Drawing.Color.Black;
-            this.btnApprovePO.Location = new System.Drawing.Point(392, 228);
-            this.btnApprovePO.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnApprovePO.Location = new System.Drawing.Point(294, 198);
+            this.btnApprovePO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApprovePO.Name = "btnApprovePO";
-            this.btnApprovePO.Size = new System.Drawing.Size(267, 125);
+            this.btnApprovePO.Size = new System.Drawing.Size(200, 108);
             this.btnApprovePO.TabIndex = 104;
             this.btnApprovePO.Text = "Approve Purchase Order";
             this.btnApprovePO.UseVisualStyleBackColor = false;
@@ -191,10 +194,10 @@ namespace YummyRestaurantSystem.src
             this.btnViewDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewDN.ForeColor = System.Drawing.Color.Black;
-            this.btnViewDN.Location = new System.Drawing.Point(963, 228);
-            this.btnViewDN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnViewDN.Location = new System.Drawing.Point(722, 198);
+            this.btnViewDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewDN.Name = "btnViewDN";
-            this.btnViewDN.Size = new System.Drawing.Size(267, 125);
+            this.btnViewDN.Size = new System.Drawing.Size(200, 108);
             this.btnViewDN.TabIndex = 105;
             this.btnViewDN.Text = "View Delivery Note";
             this.btnViewDN.UseVisualStyleBackColor = false;
@@ -206,10 +209,10 @@ namespace YummyRestaurantSystem.src
             this.btnCreateDN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateDN.ForeColor = System.Drawing.Color.Black;
-            this.btnCreateDN.Location = new System.Drawing.Point(392, 472);
-            this.btnCreateDN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnCreateDN.Location = new System.Drawing.Point(294, 409);
+            this.btnCreateDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateDN.Name = "btnCreateDN";
-            this.btnCreateDN.Size = new System.Drawing.Size(267, 125);
+            this.btnCreateDN.Size = new System.Drawing.Size(200, 108);
             this.btnCreateDN.TabIndex = 106;
             this.btnCreateDN.Text = "Create Delivery Note";
             this.btnCreateDN.UseVisualStyleBackColor = false;
@@ -217,16 +220,15 @@ namespace YummyRestaurantSystem.src
             // 
             // FrmMenu_Acc_Man_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 744);
+            this.ClientSize = new System.Drawing.Size(1071, 645);
             this.Controls.Add(this.btnCreateDN);
             this.Controls.Add(this.btnViewDN);
             this.Controls.Add(this.btnApprovePO);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu_Acc_Man_";
             this.Text = "FrmMenu Acc Man";
             this.Load += new System.EventHandler(this.FrmMenu_Acc_Man__Load);
