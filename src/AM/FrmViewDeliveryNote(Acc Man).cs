@@ -52,5 +52,50 @@ namespace YummyRestaurantSystem.src.AM
 
             dataGridView1.DataSource = SQLHandler.GetDeliveryNotePO(noteMatch, locMatch, dateString);
         }
+
+        private void btnAPO_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmApprovePurchaseOrder form = new FrmApprovePurchaseOrder();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnVDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmDeliveryNoteView form = new FrmDeliveryNoteView();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnCDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmDeliveryNoteCreate form = new FrmDeliveryNoteCreate();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
     }
 }

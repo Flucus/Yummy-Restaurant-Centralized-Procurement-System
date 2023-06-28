@@ -74,5 +74,60 @@ namespace YummyRestaurantSystem.src
                 Visible = true;
             }
         }
+
+        private void btnAPO_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmApprovePurchaseOrder form = new FrmApprovePurchaseOrder();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnVDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmDeliveryNoteView form = new FrmDeliveryNoteView();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnCDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmDeliveryNoteCreate form = new FrmDeliveryNoteCreate();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
