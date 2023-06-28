@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,6 +67,36 @@ namespace YummyRestaurantSystem.src.WC
         {
             logout = true;
             Close();
+        }
+
+        private void btnIM_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmCheckUpdate form = new FrmCheckUpdate();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
+
+        private void btnRDI_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmReceiveDespatchInstruction form = new FrmReceiveDespatchInstruction(staffData);
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
         }
     }
 }
