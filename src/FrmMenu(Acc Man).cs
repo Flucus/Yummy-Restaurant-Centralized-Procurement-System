@@ -59,5 +59,20 @@ namespace YummyRestaurantSystem.src
                 Visible = true;
             }
         }
+
+        private void btnCreateDN_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            FrmDeliveryNoteCreate form = new FrmDeliveryNoteCreate();
+            form.ShowDialog();
+            if (form.logout)
+            {
+                Close();
+            }
+            else
+            {
+                Visible = true;
+            }
+        }
     }
 }

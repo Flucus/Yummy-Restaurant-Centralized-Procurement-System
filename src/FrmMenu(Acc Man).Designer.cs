@@ -213,6 +213,7 @@ namespace YummyRestaurantSystem.src
             this.btnCreateDN.TabIndex = 106;
             this.btnCreateDN.Text = "Create Delivery Note";
             this.btnCreateDN.UseVisualStyleBackColor = false;
+            this.btnCreateDN.Click += new System.EventHandler(this.btnCreateDN_Click);
             // 
             // FrmMenu_Acc_Man_
             // 
@@ -225,7 +226,7 @@ namespace YummyRestaurantSystem.src
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblHelloMsg);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMenu_Acc_Man_";
             this.Text = "FrmMenu Acc Man";
             this.Load += new System.EventHandler(this.FrmMenu_Acc_Man__Load);
