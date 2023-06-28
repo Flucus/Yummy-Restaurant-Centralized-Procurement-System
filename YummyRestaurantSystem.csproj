@@ -93,6 +93,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmChangePW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePW.Designer.cs">
+      <DependentUpon>FrmChangePW.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Admin\FrmActivityLog%28Admin%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     <Compile Include="SQLHandler.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePW.resx">
+      <DependentUpon>FrmChangePW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Admin\FrmActivityLog%28Admin%29.resx">
       <DependentUpon>FrmActivityLog%28Admin%29.cs</DependentUpon>
