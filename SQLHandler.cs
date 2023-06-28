@@ -1253,7 +1253,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             conn.Open();
 
-            string sql = $"UPDATE DeliveryNote SET State = '{state}' WHERE OrderID = '{orderID}'";
+            string sql = $"UPDATE PurchaseOrder SET State = '{state}' WHERE OrderID = '{orderID}'";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
 
@@ -1315,7 +1315,7 @@ namespace YummyRestaurantSystem
             MySqlConnection conn = new MySqlConnection { ConnectionString = connString };
             string sql = $@"SELECT rr.RequestID, rr.RestaurantID, rr.ExpectedDeliveryDate, ri.ItemID, ri.Quantity, rr.Remark
                 FROM RestaurantRequest AS rr
-                JOIN RequestItem AS ri ON ri.RequestID = po.RequestID
+                JOIN RequestItem AS ri ON ri.RequestID = rr.RequestID
                 JOIN Inventory AS in ON in.itemID = ri.itemID
                 WHERE rr.State = 'P' AND in.LocID = '{locID}' AND in.Count >= ri.Quantity";
 
