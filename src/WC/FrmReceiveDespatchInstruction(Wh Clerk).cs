@@ -69,6 +69,8 @@ namespace YummyRestaurantSystem.src.WC
             SQLHandler.CreateDeliveryNoteRR(txtItemID.Text, txtRestaurantID.Text, dateTimePicker1.Value);
 
             dataGridView1.DataSource = SQLHandler.GetDispatchInstruction((string)staffData["LocID"]);
+            txtItemID.Text = "";
+            txtRestaurantID.Text = "";
         }
     }
 }
