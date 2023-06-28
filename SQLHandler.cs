@@ -1316,8 +1316,8 @@ namespace YummyRestaurantSystem
             string sql = $@"SELECT rr.RequestID, rr.RestaurantID, rr.ExpectedDeliveryDate, ri.ItemID, ri.Quantity, rr.Remark
                 FROM RestaurantRequest AS rr
                 JOIN RequestItem AS ri ON ri.RequestID = rr.RequestID
-                INNER JOIN Inventory AS in ON in.ItemID = ri.ItemID
-                WHERE rr.State = 'P' AND in.LocID = '{locID}' AND in.Count >= ri.Quantity";
+                JOIN Inventory AS inv ON inv.ItemID = ri.ItemID
+                WHERE rr.State = 'P' AND inv.LocID = '{locID}' AND inv.Count >= ri.Quantity";
 
             RecordActivity(sql);
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
