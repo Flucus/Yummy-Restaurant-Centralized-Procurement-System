@@ -90,17 +90,7 @@ namespace YummyRestaurantSystem.src.WC
 
         private void btnRDI_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            FrmReceiveDespatchInstruction form = new FrmReceiveDespatchInstruction(staffData);
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
+
         }
     }
 }
