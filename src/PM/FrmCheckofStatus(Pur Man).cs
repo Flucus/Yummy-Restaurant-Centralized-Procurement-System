@@ -51,17 +51,7 @@ namespace YummyRestaurantSystem
 
         private void btnCM_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            FrmContractMange form = new FrmContractMange();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
+            Close();
         }
 
         private void btnCA_Click(object sender, EventArgs e)
