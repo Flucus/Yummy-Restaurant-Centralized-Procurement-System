@@ -85,10 +85,5 @@ namespace YummyRestaurantSystem.src.AM
                 Visible = true;
             }
         }
-
-        private void btnCDN_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

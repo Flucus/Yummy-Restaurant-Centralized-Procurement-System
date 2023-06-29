@@ -68,11 +68,6 @@ namespace YummyRestaurantSystem.src.AM
             }
         }
 
-        private void btnVDN_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnCDN_Click(object sender, EventArgs e)
         {
             Visible = false;

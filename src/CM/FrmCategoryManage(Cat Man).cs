@@ -44,21 +44,6 @@ namespace YummyRestaurantSystem
             timer1.Start();
         }
 
-        private void btnCM_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmCategoryManage form = new FrmCategoryManage();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
-        }
-
         private void btnVID_Click(object sender, EventArgs e)
         {
             Visible = false;

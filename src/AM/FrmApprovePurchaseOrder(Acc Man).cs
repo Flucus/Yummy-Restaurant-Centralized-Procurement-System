@@ -63,11 +63,6 @@ namespace YummyRestaurantSystem.src.AM
             dataGridView1.DataSource = SQLHandler.GetPendingPO();
         }
 
-        private void btnAPO_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnVDN_Click(object sender, EventArgs e)
         {
             Visible = false;
@@ -97,5 +92,7 @@ namespace YummyRestaurantSystem.src.AM
                 Visible = true;
             }
         }
+
+        
     }
 }

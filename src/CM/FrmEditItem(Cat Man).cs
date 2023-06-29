@@ -103,17 +103,7 @@ namespace YummyRestaurantSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            FrmItemManage form = new FrmItemManage();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
+            Close();
         }
     }
 }
