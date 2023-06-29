@@ -85,20 +85,5 @@ namespace YummyRestaurantSystem.src.AM
                 Visible = true;
             }
         }
-
-        private void btnCDN_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmDeliveryNoteCreate form = new FrmDeliveryNoteCreate();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
-        }
     }
 }

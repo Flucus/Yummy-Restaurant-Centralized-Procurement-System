@@ -102,17 +102,7 @@ namespace YummyRestaurantSystem
 
         private void btnCR_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            FrmCheckReq form = new FrmCheckReq(staffData);
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
+            Close();
         }
 
         private void btnCDN_Click(object sender, EventArgs e)

@@ -109,17 +109,7 @@ namespace YummyRestaurantSystem
 
         private void btnIM_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            FrmInvManage form = new FrmInvManage(staffData);
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
+
         }
 
         private void btnOP_Click(object sender, EventArgs e)

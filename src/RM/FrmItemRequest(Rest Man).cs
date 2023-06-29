@@ -141,17 +141,7 @@ namespace YummyRestaurantSystem
 
         private void btnOP_Click(object sender, EventArgs e)
         {
-            Visible = false;
-            FrmItemRequest form = new FrmItemRequest(staffData);
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
+
         }
 
         private void btnCR_Click(object sender, EventArgs e)

@@ -63,21 +63,6 @@ namespace YummyRestaurantSystem.src.AM
             dataGridView1.DataSource = SQLHandler.GetPendingPO();
         }
 
-        private void btnAPO_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmApprovePurchaseOrder form = new FrmApprovePurchaseOrder();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
-        }
-
         private void btnVDN_Click(object sender, EventArgs e)
         {
             Visible = false;
@@ -107,5 +92,7 @@ namespace YummyRestaurantSystem.src.AM
                 Visible = true;
             }
         }
+
+        
     }
 }

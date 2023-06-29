@@ -68,21 +68,6 @@ namespace YummyRestaurantSystem.src.AM
             }
         }
 
-        private void btnVDN_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            FrmDeliveryNoteView form = new FrmDeliveryNoteView();
-            form.ShowDialog();
-            if (form.logout)
-            {
-                Close();
-            }
-            else
-            {
-                Visible = true;
-            }
-        }
-
         private void btnCDN_Click(object sender, EventArgs e)
         {
             Visible = false;
